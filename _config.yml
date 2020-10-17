@@ -1,11 +1,11 @@
-name: Blog
-author: WEILIN 
-url: 
+name: A Blog
+author: Lightfish Zhang
+url: https://lightfish-zhang.github.io
+resume_site: https://lightfish-zhang.github.io
 baseurl: 
-resume_site: 
-description: 
-github_username: 
-github: 
+description: you website desc
+github_username: lightfish-zhang
+github: https://github.com/lightfish-zhang
 plugins: [jekyll-paginate]
 permalink: /:year-:month-:day-:title
 paginate: 12
@@ -15,8 +15,8 @@ highlighter: rouge
 markdown: kramdown
 comments :
   gitalk :
-    clientID : 
-    clientSecret : 
-    repo : 
-    owner : 
-    admin : 
+    clientID : xxx
+    clientSecret : xxx
+    repo : lightfish-zhang.github.io
+    owner : lightfish-zhang
+    admin : lightfish-zhang
