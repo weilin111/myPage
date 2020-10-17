@@ -345,7 +345,7 @@ ax.quiver(xx, yy, zz, u, v, w, length=1,arrow_length_ratio=3)
 ```
 
 
-![png](output_24_0.png)
+![png](img\output_24_0.png)
 
 -------------
 
@@ -381,7 +381,7 @@ sph(-0.1,0.1,0.0031)
 ```
 
 
-![png](output_26_0.png)
+![png](img\output_26_0.png)
 
 
 
@@ -390,7 +390,7 @@ sph(-25,-5,0.5)
 ```
 
 
-![png](output_27_0.png)
+![png](img\output_27_0.png)
 
 
 
@@ -399,7 +399,7 @@ sph(-10.74,10.74,0.031)
 ```
 
 
-![png](output_28_0.png)
+![png](img\output_28_0.png)
 
 
 # 运算
@@ -428,7 +428,7 @@ sympy.plot(planck,(x,0,1e12))
 ```
 
 
-![png](output_31_0.png)
+![png](img\output_31_0.png)
 
 
 
@@ -473,7 +473,7 @@ plt.pcolor(xx,xx,abss,cmap='rainbow',norm=LogNorm())
 
 
 
-![png](output_34_1.png)
+![png](img\output_34_1.png)
 
 
 
@@ -535,7 +535,7 @@ run()
 
 
 
-![png](output_36_1.png)
+![png](img\output_36_1.png)
 
 
 # 在无限大平面诱导的电荷
@@ -568,7 +568,7 @@ plt.pcolor(xx,xx,ee)
 
 
 
-![png](output_38_1.png)
+![png](img\output_38_1.png)
 
 
 
@@ -589,7 +589,7 @@ ax.plot_surface(xx, xx,ee, rstride=1, cstride=1, cmap='rainbow')
 
 
 
-![png](output_39_1.png)
+![png](img\output_39_1.png)
 
 
 # 一维波包的演化
@@ -701,7 +701,7 @@ plt.savefig('磁矩.svg')
 ```
 
 
-![png](output_46_0.png)
+![png](img\output_46_0.png)
 
 
 
