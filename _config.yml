@@ -1,11 +1,11 @@
-name: A Blog
-author: Lightfish Zhang
-url: https://lightfish-zhang.github.io
-resume_site: https://lightfish-zhang.github.io
+name: LostLand of Sirius
+author: WEILIN
+url: https://weilin111.github.io/myPage/
+resume_site: https://weilin111.github.io/myPage/
 baseurl: 
-description: you website desc
-github_username: lightfish-zhang
-github: https://github.com/lightfish-zhang
+description: wuhu
+github_username: weilin
+github: 
 plugins: [jekyll-paginate]
 permalink: /:year-:month-:day-:title
 paginate: 12
@@ -17,6 +17,6 @@ comments :
   gitalk :
     clientID : xxx
     clientSecret : xxx
-    repo : lightfish-zhang.github.io
-    owner : lightfish-zhang
-    admin : lightfish-zhang
+    repo : 
+    owner : 
+    admin : 
