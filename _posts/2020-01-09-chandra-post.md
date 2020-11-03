@@ -3,7 +3,7 @@ layout: post
 title: 钱德拉
 date:   2020-3-26 00:00:00 +0800
 category: 美丽是真理的光辉
-thumbnail: style/image/bag.jpg
+thumbnail: style/image/bag.png
 icon: web
 ---
 

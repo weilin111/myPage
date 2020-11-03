@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 伟大的冯·诺伊曼·
-date:   2020-3-26 00:00:00 +0800
+date:   2020-3-10 00:00:00 +0800
 category: genius
 thumbnail: style/image/fengmian/1-10.jpg
 icon: web
