@@ -10,7 +10,7 @@ icon: book
 * content
 {:toc}
 
-![png](\myPage\style\image\about_w.png)
+![png](\myPage\style\image\about_w.jpg)
 
 ##end
 
