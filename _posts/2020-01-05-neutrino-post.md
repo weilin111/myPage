@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 波动方程Green函数
-date: 2000-10-25 00:00:00 +0800
+title: Neutirno
+date: 2020-10-1 00:00:00 +0800
 category: Nihil eos tempore tempore sint ex non aperiam.
-thumbnail: style/image/fengmian/1-10.png
+thumbnail: style/image/fengmian/1-23.jpg
 icon: book
 ---
 
