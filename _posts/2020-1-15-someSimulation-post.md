@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Some simulation 
-date:   2020-2-20 00:00:00 +0800
+date:   2020-9-20 00:00:00 +0800
 category: Minima voluptatum illum nihil aspernatur.
-thumbnail: style/image/fengmian/1-10.jpg
+thumbnail: style/image/fengmian/1-10.png
 icon: book
 ---
 
