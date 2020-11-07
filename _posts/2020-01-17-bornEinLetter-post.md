@@ -11,7 +11,7 @@ icon: web
 
 $$ \theta $$
 
-
+$ \theta $
 
 
 
