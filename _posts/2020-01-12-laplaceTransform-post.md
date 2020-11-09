@@ -11,6 +11,8 @@ icon: game
 * content
 {:toc}
 
+
+最后的Laplace
 希望人没事
 
 ![png](\myPage\style\image\aplace_长图0.png)
