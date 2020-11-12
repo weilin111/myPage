@@ -3,7 +3,7 @@ layout: post
 title: Kill La Kill
 date:   2020-11-12 00:00:00 +0800
 category: 又是一部绝世好番
-thumbnail: style/image/Twitter/1-2-17.jpg
+thumbnail: style/image/fengmian/2-17.jpg
 icon: web
 ---
 
