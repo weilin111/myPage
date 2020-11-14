@@ -3,7 +3,7 @@ layout: post
 title: Kill La Kill
 date:   2020-11-12 00:00:00 +0800
 category: 又是一部绝世好番
-thumbnail: style/image\KILL_LA_KILL\1-2.jpg
+thumbnail: style/image\KILL_LA_KILL\1-9.jpg
 icon: web
 ---
 
@@ -45,7 +45,7 @@ icon: web
 ![png](\myPage\style\image\KILL_LA_KILL\1-6.png)
 ![png](\myPage\style\image\KILL_LA_KILL\1-7.png)
 ![png](\myPage\style\image\KILL_LA_KILL\1-8.png)
-
+![png](\myPage\style\image\KILL_LA_KILL\1-9.png)
 
 
 
