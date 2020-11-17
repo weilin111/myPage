@@ -8,14 +8,17 @@ icon: game
 ---
 
 # WSL
+启用WSL服务
 
+直接在windiws商店找到ubuntu安装就好了
 
+更换源
 
+安装编译需要的包
 
 
 
 # CMAKE
-
 
 
 
@@ -31,6 +34,8 @@ icon: game
 
 
 # G4
+
+
 
 
 
