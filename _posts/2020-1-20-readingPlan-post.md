@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 传记阅读
+title: 读书
 date:   2020-11-7 00:00:00 +0800
 category: illo voluptatem ullam
 thumbnail: style/image/Twitter/1-125.jpg
