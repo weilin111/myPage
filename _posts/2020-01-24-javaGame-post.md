@@ -57,7 +57,8 @@ todo
     彩蛋
 
 
-
+![png](/myPage/style/image/javaGame/1.png)
+![png](/myPage/style/image/javaGame/2.png)
 
 
 
