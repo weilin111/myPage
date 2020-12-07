@@ -29,9 +29,19 @@ icon: book
 
 2.mu tau中微子 的CC NC事件是什么反应啊？ shower？ track？
 
+    ？
 
 
-3.
+
+3.ICECUBE如何看超高能中微子？SK为什么能看低能中微子？
+
+    ？
+
+
+
+4.
+
+
 
 
 
