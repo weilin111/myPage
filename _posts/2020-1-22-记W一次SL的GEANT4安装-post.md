@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WSL の GRANT4
-date:   2020-11-5 00:00:00 +0800
+date:   2020-12-5 00:00:00 +0800
 category: lawful evil
 thumbnail: style/image/Twitter/2-18.jpg
 icon: game
@@ -68,11 +68,18 @@ XMing
 
 
 
-要做的
+TEST4
+
+    基于B5  因为预处理的工作实在费劲
+    
 
     muon在体积里衰变 每个step取出数据
 
+    可以打印muon的track 
 
+    但能量的控制似乎出了问题  这需要看看代码了
+
+    如何在每个step之后把数据取出来 成为首要的问题了
 
 
 
