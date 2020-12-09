@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Neutirno
+title: Multi
 date: 2020-12-10 00:00:00 +0800
 category: (#`O′)
-thumbnail: style/image/wave.gif
+thumbnail: style/image/wavy.gif
 icon: book
 ---
 
