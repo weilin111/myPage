@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在写个游戏
-date:   2020-11-21 00:00:00 +0800
+date:   2020-12-21 00:00:00 +0800
 category: OOP yyds！
 thumbnail: style/image/Twitter/1-71.jpg
 icon: game
@@ -41,7 +41,7 @@ todo_v2
 
         如何开场呢？
 
-    按钮字体
+    按钮字体调整
 
         ！
 
@@ -54,6 +54,12 @@ todo_v2
         ！
 
     加入音乐
+
+    eventBox debug
+
+    美术调整
+
+    说明加入
 
     报告撰写
 
