@@ -81,6 +81,16 @@ TEST4
 
     如何在每个step之后把数据取出来 成为首要的问题了
 
+    eventAction 
+
+    UserSteppingAction
+
+    用evetything全盘搜索去找源代码
+
+        G4track
+
+        G4step
+
 
 
 # ROOT
