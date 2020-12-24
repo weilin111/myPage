@@ -15,18 +15,18 @@ $$\nu\  \times \text{SN}\ 🌠$$
 
 2020年9月26日
 
-## SN模型 {#sn模型 .title2}
+## SN模型 {#sn模型 .title2} 
 
 CCSN与中微子密切相关
 
 SN按照光谱分类很多，但与中微子过程关系并不大
 
-![](\myPage\style\neutrino\media\image1.png){width="4.1198217410323705in"
+![](\myPage\style\image\neutrino\media\image1.png){width="4.1198217410323705in"
 height="0.22916885389326333in"}
 
 ### CCSN 物理图像
 
-![](\myPage\style\neutrino\media\image2.png){width="1.875825678040245in"
+![](\myPage\style\image\neutrino\media\image2.png){width="1.875825678040245in"
 height="1.452380796150481in"}
 
 #### PRE-SN {#pre-sn .style2}
@@ -149,15 +149,15 @@ JUNO BOOK 73
 
 #### pinching parameter *α* {#pinching-parameter-α .style2}
 
-![](\myPage\style\neutrino\media\image3.png){width="3.963570647419073in"
+![](\myPage\style\image\neutrino\media\image3.png){width="3.963570647419073in"
 height="5.116000656167979in"}
 
 #### 能量 {#能量 .style2}
 
-![](\myPage\style\neutrino\media\image4.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image4.png){width="5.768055555555556in"
 height="0.5541666666666667in"}
 
-![](\myPage\style\neutrino\media\image5.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image5.png){width="5.768055555555556in"
 height="0.7909722222222222in"}
 
 典型SN 能量，5\~50MeV
@@ -178,22 +178,22 @@ height="0.7909722222222222in"}
 
 电子中微子球半径最大，它的平均能量也最低
 
-![](\myPage\style\neutrino\media\image6.png){width="2.413842957130359in"
+![](\myPage\style\image\neutrino\media\image6.png){width="2.413842957130359in"
 height="1.9047615923009624in"}
 
 ### CCSN-1
 
 1411.7058.pdf
 
-![](\myPage\style\neutrino\media\image7.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image7.png){width="5.768055555555556in"
 height="0.6208333333333333in"}
 
 中微子分布函数
 
-![](\myPage\style\neutrino\media\image8.png){width="2.7353390201224848in"
+![](\myPage\style\image\neutrino\media\image8.png){width="2.7353390201224848in"
 height="1.3197025371828521in"}
 
-![](\myPage\style\neutrino\media\image9.png){width="4.662058180227471in"
+![](\myPage\style\image\neutrino\media\image9.png){width="4.662058180227471in"
 height="0.5683256780402449in"}
 
 #### 特点： {#特点 .style2}
@@ -239,13 +239,13 @@ Monte Carlo
 
 15倍原始太阳质量
 
-![](\myPage\style\neutrino\media\image10.png){width="3.762082239720035in"
+![](\myPage\style\image\neutrino\media\image10.png){width="3.762082239720035in"
 height="1.3453018372703411in"}
 
-![](\myPage\style\neutrino\media\image11.png){width="3.9665430883639545in"
+![](\myPage\style\image\neutrino\media\image11.png){width="3.9665430883639545in"
 height="0.6702230971128609in"}
 
-![](\myPage\style\neutrino\media\image12.png){width="2.4625010936132985in"
+![](\myPage\style\image\neutrino\media\image12.png){width="2.4625010936132985in"
 height="3.6133825459317586in"}
 
 Thomas Janka
@@ -260,10 +260,10 @@ Christian Cardall
 
 每年几个
 
-![](\myPage\style\neutrino\media\image13.png){width="4.110833333333333in"
+![](\myPage\style\image\neutrino\media\image13.png){width="4.110833333333333in"
 height="1.7314971566054242in"}
 
-![](\myPage\style\neutrino\media\image14.png){width="3.7705172790901136in"
+![](\myPage\style\image\neutrino\media\image14.png){width="3.7705172790901136in"
 height="1.8956517935258093in"}
 
 ## 计算 {#计算 .title2}
@@ -295,17 +295,17 @@ $$t\sim\frac{100\sim 10\ \ \text{km}}{0.16\ c} = 0.001875\ s$$
 
 反弹时间\~ms
 
-![](\myPage\style\neutrino\media\image15.png){width="3.3229166666666665in"
+![](\myPage\style\image\neutrino\media\image15.png){width="3.3229166666666665in"
 height="3.0625in"}
 
 ### 能谱 
 
-![](\myPage\style\neutrino\media\image16.png){width="2.6770833333333335in"
+![](\myPage\style\image\neutrino\media\image16.png){width="2.6770833333333335in"
 height="2.0163560804899388in"}
 
 白矮星最大密度 \~1e7 g/cm3
 
-![](\myPage\style\neutrino\media\image17.png){width="2.4340277777777777in"
+![](\myPage\style\image\neutrino\media\image17.png){width="2.4340277777777777in"
 height="2.5277777777777777in"} 以此估计电子的空间尺度
 
 由不确定关系导出动量 导出能量
@@ -314,15 +314,15 @@ Pre-SN 克服电子简并压 坍缩 密度变大
 
 带入1e8 g/cm3 进行计算
 
-![](\myPage\style\neutrino\media\image18.png){width="3.09375in"
+![](\myPage\style\image\neutrino\media\image18.png){width="3.09375in"
 height="0.9053149606299212in"}
 
 主要是正负电子对湮灭产生中微子
 
 0.511+0.417 \~1MeV
 
-![](\myPage\style\neutrino\media\image19.png){width="2.1319444444444446in"
-height="1.6979166666666667in"}![](\myPage\style\neutrino\media\image21.png){width="2.3229166666666665in"
+![](\myPage\style\image\neutrino\media\image19.png){width="2.1319444444444446in"
+height="1.6979166666666667in"}![](\myPage\style\image\neutrino\media\image21.png){width="2.3229166666666665in"
 height="2.736111111111111in"}中微子不能逃逸最小密度 1e11 g/cm3
 
 代入计算
@@ -341,10 +341,10 @@ height="2.736111111111111in"}中微子不能逃逸最小密度 1e11 g/cm3
 
 $A + B \rightarrow A + B + \nu_{x} + \overline{\nu_{x}}$
 
-![](\myPage\style\neutrino\media\image22.png){width="3.5364840332458445in"
+![](\myPage\style\image\neutrino\media\image22.png){width="3.5364840332458445in"
 height="1.5573031496062992in"}
 
-![](\myPage\style\neutrino\media\image23.png){width="6.302083333333333in"
+![](\myPage\style\image\neutrino\media\image23.png){width="6.302083333333333in"
 height="2.713888888888889in"}
 
 ### 典型值
@@ -355,27 +355,27 @@ height="2.713888888888889in"}
 
 中微子反应截面 1e-42 cm2
 
-![](\myPage\style\neutrino\media\image24.png){width="4.568573928258967in"
+![](\myPage\style\image\neutrino\media\image24.png){width="4.568573928258967in"
 height="3.32in"}
 
 ### 中微子反应截面
 
 JUNO BOOK figure4-2
 
-![](\myPage\style\neutrino\media\image25.png){width="4.395865048118985in"
+![](\myPage\style\image\neutrino\media\image25.png){width="4.395865048118985in"
 height="3.4687751531058617in"}
 
 #### IBD {#ibd .style2}
 
 astro-ph/0302055
 
-![](\myPage\style\neutrino\media\image26.png){width="2.4335444006999123in"
+![](\myPage\style\image\neutrino\media\image26.png){width="2.4335444006999123in"
 height="0.6750579615048119in"}
 
-![](\myPage\style\neutrino\media\image27.png){width="4.453166010498688in"
+![](\myPage\style\image\neutrino\media\image27.png){width="4.453166010498688in"
 height="2.0555555555555554in"}
 
-![](\myPage\style\neutrino\media\image28.png){width="4.036698381452318in"
+![](\myPage\style\image\neutrino\media\image28.png){width="4.036698381452318in"
 height="2.3833333333333333in"}
 
 #### CC {#cc .style2}
@@ -386,7 +386,7 @@ height="2.3833333333333333in"}
 
 非弹性散射 激发原子核
 
-![](\myPage\style\neutrino\media\image29.png){width="3.3333573928258966in"
+![](\myPage\style\image\neutrino\media\image29.png){width="3.3333573928258966in"
 height="0.46354549431321085in"}
 
 #### ES {#es .style2}
@@ -409,16 +409,16 @@ $$P_{\nu_{\alpha} \rightarrow \nu_{\beta}} = \left| \sum_{j}^{}{U_{\text{αj}}U_
 
 ## GEANT4 {#geant4 .title2}
 
-![](\myPage\style\neutrino\media\image30.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image30.png){width="5.768055555555556in"
 height="2.7180555555555554in"}
 
-![](\myPage\style\neutrino\media\image31.png){width="5.638491907261592in"
+![](\myPage\style\image\neutrino\media\image31.png){width="5.638491907261592in"
 height="3.1715682414698163in"}
 
-![](\myPage\style\neutrino\media\image32.png){width="4.73053258967629in"
+![](\myPage\style\image\neutrino\media\image32.png){width="4.73053258967629in"
 height="3.642156605424322in"}
 
-![](\myPage\style\neutrino\media\image33.png){width="4.322555774278215in"
+![](\myPage\style\image\neutrino\media\image33.png){width="4.322555774278215in"
 height="2.431372484689414in"}
 
 ### 液闪 效率标定
@@ -429,7 +429,7 @@ height="2.431372484689414in"}
 
 ### SK
 
-![](\myPage\style\neutrino\media\image34.png){width="3.349245406824147in"
+![](\myPage\style\image\neutrino\media\image34.png){width="3.349245406824147in"
 height="2.197833552055993in"}
 
 #### 参数 {#参数 .style2}
@@ -460,7 +460,7 @@ As the energy threshold of Super-Kamiokande is about E th o ≈ 3.5 MeV
 
 #### 预计 {#预计 .style2}
 
-![](\myPage\style\neutrino\media\image35.png){width="4.690277777777778in"
+![](\myPage\style\image\neutrino\media\image35.png){width="4.690277777777778in"
 height="1.7172090988626423in"}
 
 At a statistical false alarm rate of 1 per century, detection could be
@@ -487,16 +487,16 @@ exceeding the expected background.
 
 Marti-SuperK-Gd-2.pdf
 
-![](\myPage\style\neutrino\media\image36.png){width="4.651076115485564in"
+![](\myPage\style\image\neutrino\media\image36.png){width="4.651076115485564in"
 height="0.6145877077865267in"}
 
-![](\myPage\style\neutrino\media\image37.png){width="5.458372703412073in"
+![](\myPage\style\image\neutrino\media\image37.png){width="5.458372703412073in"
 height="0.6562543744531933in"}
 
-![](\myPage\style\neutrino\media\image38.png){width="3.151065179352581in"
+![](\myPage\style\image\neutrino\media\image38.png){width="3.151065179352581in"
 height="1.505219816272966in"}
 
-![](\myPage\style\neutrino\media\image39.png){width="3.4218996062992124in"
+![](\myPage\style\image\neutrino\media\image39.png){width="3.4218996062992124in"
 height="2.557310804899388in"}
 
 ### HK
@@ -533,7 +533,7 @@ E.  利用似然函数计算重建信号与SN信号的匹配程度
 
 判断SN信号来自于哪一种超新星模型
 
-![](\myPage\style\neutrino\media\image40.png){width="4.393064304461943in"
+![](\myPage\style\image\neutrino\media\image40.png){width="4.393064304461943in"
 height="0.6939206036745407in"}
 
 后期的结论讨论
@@ -542,7 +542,7 @@ HK可以利用SN信号区分是哪一种模型
 
 ### JUNO
 
-![](\myPage\style\neutrino\media\image41.png){width="3.7in"
+![](\myPage\style\image\neutrino\media\image41.png){width="3.7in"
 height="2.9644346019247596in"}
 
 #### 参数 {#参数-1 .style2}
@@ -569,16 +569,16 @@ PMT 17000 20-inch
 
 JUNO BOOK table4-1
 
-![](\myPage\style\neutrino\media\image42.png){width="3.740890201224847in"
+![](\myPage\style\image\neutrino\media\image42.png){width="3.740890201224847in"
 height="1.583999343832021in"}
 
-![](\myPage\style\neutrino\media\image43.png){width="4.036055336832896in"
+![](\myPage\style\image\neutrino\media\image43.png){width="4.036055336832896in"
 height="2.9062904636920384in"}
 
-![](\myPage\style\neutrino\media\image44.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image44.png){width="5.768055555555556in"
 height="2.2222222222222223in"}
 
-![](\myPage\style\neutrino\media\image45.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image45.png){width="5.768055555555556in"
 height="3.3743055555555554in"}
 
 #### 超新星定向 {#超新星定向 .style2}
@@ -595,19 +595,19 @@ height="3.3743055555555554in"}
 
 ARXIV:1910.11068
 
-![](\myPage\style\neutrino\media\image46.png){width="3.362431102362205in"
+![](\myPage\style\image\neutrino\media\image46.png){width="3.362431102362205in"
 height="0.7205216535433071in"}
 
-![](\myPage\style\neutrino\media\image47.png){width="4.395999562554681in"
+![](\myPage\style\image\neutrino\media\image47.png){width="4.395999562554681in"
 height="0.6372244094488189in"}
 
 2008.06647.pdf
 
-![](\myPage\style\neutrino\media\image48.png){width="2.8997703412073492in"
-height="1.6537696850393702in"}![](\myPage\style\neutrino\media\image49.png){width="2.65994094488189in"
+![](\myPage\style\image\neutrino\media\image48.png){width="2.8997703412073492in"
+height="1.6537696850393702in"}![](\myPage\style\image\neutrino\media\image49.png){width="2.65994094488189in"
 height="1.6547615923009624in"}
 
-![](\myPage\style\neutrino\media\image50.png){width="2.89832895888014in"
+![](\myPage\style\image\neutrino\media\image50.png){width="2.89832895888014in"
 height="1.75in"}
 
 #### 参数 {#参数-2 .style2}
@@ -618,7 +618,7 @@ Stanford & fermi lab
 
 四个 10 kton Ar fiducial volume
 
-![](\myPage\style\neutrino\media\image51.png){width="2.2976192038495187in"
+![](\myPage\style\image\neutrino\media\image51.png){width="2.2976192038495187in"
 height="0.96168416447944in"}
 
 电子中微子
@@ -629,7 +629,7 @@ $$\nu_{e} + \text{Ar} \rightarrow e^{-} + K^{*}$$
 
 截面
 
-![](\myPage\style\neutrino\media\image52.png){width="3.7080555555555557in"
+![](\myPage\style\image\neutrino\media\image52.png){width="3.7080555555555557in"
 height="3.4741262029746283in"}
 
 最低中微子能量 5MeV
@@ -646,7 +646,7 @@ CC事件：电子轨迹+子核退激发光
 
 NC事件：核退激发光
 
-![](\myPage\style\neutrino\media\image53.png){width="2.6630949256342955in"
+![](\myPage\style\image\neutrino\media\image53.png){width="2.6630949256342955in"
 height="1.45209864391951in"}
 
 #### 预计 {#预计-2 .style2}
@@ -655,14 +655,14 @@ SN
 
 10 kpc：3000 event
 
-![](\myPage\style\neutrino\media\image54.png){width="3.7588932633420824in"
+![](\myPage\style\image\neutrino\media\image54.png){width="3.7588932633420824in"
 height="1.0119050743657043in"}
 
-![](\myPage\style\neutrino\media\image55.png){width="2.6830063429571305in"
-height="1.7372025371828521in"}![](\myPage\style\neutrino\media\image56.png){width="2.5917541557305337in"
+![](\myPage\style\image\neutrino\media\image55.png){width="2.6830063429571305in"
+height="1.7372025371828521in"}![](\myPage\style\image\neutrino\media\image56.png){width="2.5917541557305337in"
 height="1.823526902887139in"}
 
-![](\myPage\style\neutrino\media\image57.png){width="4.452055993000875in"
+![](\myPage\style\image\neutrino\media\image57.png){width="4.452055993000875in"
 height="2.0947069116360453in"}
 
 #### 超新星定向 {#超新星定向-1 .style2}
@@ -675,37 +675,37 @@ ICHEP: Point_Res_ICHEP_2020_07_AJRoeth%20(1).pdf
 
 Daughter flipping 优化
 
-![](\myPage\style\neutrino\media\image58.png){width="1.685521653543307in"
+![](\myPage\style\image\neutrino\media\image58.png){width="1.685521653543307in"
 height="1.7083333333333333in"}
 
 精度（MC仿真）
 
 \~5°
 
-![](\myPage\style\neutrino\media\image59.png){width="3.2323239282589675in"
+![](\myPage\style\image\neutrino\media\image59.png){width="3.2323239282589675in"
 height="1.7559995625546807in"}
 
 #### 摘录 {#摘录-1 .style2}
 
-![](\myPage\style\neutrino\media\image60.png){width="3.9338692038495187in"
+![](\myPage\style\image\neutrino\media\image60.png){width="3.9338692038495187in"
 height="2.892856517935258in"}
 
-![](\myPage\style\neutrino\media\image61.png){width="3.9566426071741034in"
+![](\myPage\style\image\neutrino\media\image61.png){width="3.9566426071741034in"
 height="1.3975131233595801in"}
 
-![](\myPage\style\neutrino\media\image62.png){width="4.345648512685914in"
+![](\myPage\style\image\neutrino\media\image62.png){width="4.345648512685914in"
 height="5.327999781277341in"}
 
-![](\myPage\style\neutrino\media\image63.png){width="3.56in"
+![](\myPage\style\image\neutrino\media\image63.png){width="3.56in"
 height="1.3989698162729658in"}
 
-![](\myPage\style\neutrino\media\image64.png){width="3.84in"
+![](\myPage\style\image\neutrino\media\image64.png){width="3.84in"
 height="1.3762051618547682in"}
 
-![](\myPage\style\neutrino\media\image65.png){width="3.666984908136483in"
+![](\myPage\style\image\neutrino\media\image65.png){width="3.666984908136483in"
 height="1.450125765529309in"}
 
-![](\myPage\style\neutrino\media\image66.png){width="4.1390912073490815in"
+![](\myPage\style\image\neutrino\media\image66.png){width="4.1390912073490815in"
 height="3.9879997812773404in"}
 
 ### KamLand
@@ -715,13 +715,13 @@ It has lower energy thresholds
 
 ### NovA
 
-![](\myPage\style\neutrino\media\image67.png){width="5.3817935258092735in"
+![](\myPage\style\image\neutrino\media\image67.png){width="5.3817935258092735in"
 height="2.022222222222222in"}
 
-![](\myPage\style\neutrino\media\image68.png){width="2.272222222222222in"
+![](\myPage\style\image\neutrino\media\image68.png){width="2.272222222222222in"
 height="1.9886625109361329in"}
 
-![](\myPage\style\neutrino\media\image69.png){width="3.1286537620297463in"
+![](\myPage\style\image\neutrino\media\image69.png){width="3.1286537620297463in"
 height="2.408076334208224in"}
 
 2005.07155.pdf
@@ -761,15 +761,15 @@ release for a core-collapse supernova occurring in our galaxy 30kpc直径
 
 #### 预测 {#预测 .style2}
 
-![](\myPage\style\neutrino\media\image70.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image70.png){width="5.768055555555556in"
 height="1.8305555555555555in"}
 
-![](\myPage\style\neutrino\media\image71.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image71.png){width="5.768055555555556in"
 height="2.74375in"}
 
 ### ICECUBE
 
-![](\myPage\style\neutrino\media\image72.png){width="5.069101049868767in"
+![](\myPage\style\image\neutrino\media\image72.png){width="5.069101049868767in"
 height="2.504643482064742in"}
 
 first detection of high-energy neutrinos of extraterrestrial origin in
@@ -779,19 +779,19 @@ In addition, its high uptime and low detector noise make it a valuable
 asset to search for and detect the MeV energy neutrinos from a Galactic
 supernova
 
-![](\myPage\style\neutrino\media\image73.png){width="3.2239818460192478in"
+![](\myPage\style\image\neutrino\media\image73.png){width="3.2239818460192478in"
 height="1.6041786964129483in"}
 
 A ν¯e interacting in the ice will produce a 20 MeV positron via inverse
 beta decay, and the Cherenkov emission from each positron will create
 much less than one photoelectron per optical sensor on average.
 
-![](\myPage\style\neutrino\media\image74.png){width="4.556159230096238in"
+![](\myPage\style\image\neutrino\media\image74.png){width="4.556159230096238in"
 height="1.5529122922134733in"}
 
 #### 高能中微子 {#高能中微子 .style2}
 
-![](\myPage\style\neutrino\media\image75.png){width="4.648780621172353in"
+![](\myPage\style\image\neutrino\media\image75.png){width="4.648780621172353in"
 height="2.692665135608049in"}
 
 at PeV (1015 eV) energies, extragalactic space becomes opaque to
@@ -806,10 +806,10 @@ substantially above 10 PeV, searches for ultra-high-energy (UHE)
 neutrinos in this energy range have already placed significant
 constraints \[39, 40\] on the composition of UHE cosmic rays,
 
-![](\myPage\style\neutrino\media\image76.png){width="3.2509820647419074in"
+![](\myPage\style\image\neutrino\media\image76.png){width="3.2509820647419074in"
 height="2.8873698600174977in"}
 
-![](\myPage\style\neutrino\media\image77.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image77.png){width="5.768055555555556in"
 height="3.515972222222222in"}
 
 高能事件可以指向
@@ -838,10 +838,10 @@ For progenitors that are not overly light and distances up to the center
 of our Galaxy, IceCube is the best instrument to detect neutrino flux
 variations during the accretion phase
 
-![](\myPage\style\neutrino\media\image78.png){width="3.8224037620297464in"
+![](\myPage\style\image\neutrino\media\image78.png){width="3.8224037620297464in"
 height="1.4910411198600175in"}
 
-![](\myPage\style\neutrino\media\image79.png){width="4.026569335083114in"
+![](\myPage\style\image\neutrino\media\image79.png){width="4.026569335083114in"
 height="1.4349442257217848in"}
 
 图很有问题！
@@ -859,7 +859,7 @@ explosion.
 
 1000s的前后时间窗口
 
-![](\myPage\style\neutrino\media\image80.png){width="2.7838648293963253in"
+![](\myPage\style\image\neutrino\media\image80.png){width="2.7838648293963253in"
 height="3.876160323709536in"}
 
 #### Blazer（耀变体 {#blazer耀变体 .style2}
@@ -884,7 +884,7 @@ ICEUBE 中微子 (IC-170922A)
 
 2033
 
-![](\myPage\style\neutrino\media\image81.png){width="5.768055555555556in"
+![](\myPage\style\image\neutrino\media\image81.png){width="5.768055555555556in"
 height="2.722916666666667in"}
 
 While IceCube-Gen2 is designed to reconstruct neutrinos with energies at
@@ -911,7 +911,7 @@ compared to IceCube.
 
 科学目标
 
-![](\myPage\style\neutrino\media\image82.png){width="4.06341426071741in"
+![](\myPage\style\image\neutrino\media\image82.png){width="4.06341426071741in"
 height="2.478360673665792in"}
 
 #### SN {#sn .style2}
@@ -939,7 +939,7 @@ parameterized to fit the observation of SN1987A.
 
 ### 多信使时代
 
-![](\myPage\style\neutrino\media\image83.png){width="4.10490157480315in"
+![](\myPage\style\image\neutrino\media\image83.png){width="4.10490157480315in"
 height="2.66873031496063in"}
 
 GW170817 双中子星并和
