@@ -130,16 +130,28 @@ icon: book
 
     ！
 
-16.如何计算反应的截面
+16.如何计算反应的截面？
 
     ！
 
 
 
-17.如何顺手的进行翻译
+17.如何顺手的进行翻译？
+
+    !
+
+18.linux、ananconda 命令overview
+
+    
+    source 
+    
+    bashrc
+
+    export
+
+    echo
 
 
-18.
 
 
 19.
