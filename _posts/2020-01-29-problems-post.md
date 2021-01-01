@@ -197,7 +197,16 @@ icon: book
 
 17.如何顺手的进行翻译？
 
-    !
+    短语
+
+    动词
+
+    介词
+
+    名称
+
+
+
 
 18.linux、ananconda 命令overview
 
@@ -265,7 +274,13 @@ icon: book
 
 
 
+22.muon+衰变能谱？
 
+    ！
+
+23.
+
+    ！
 
 
 
