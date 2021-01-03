@@ -10,7 +10,9 @@ icon: book
 
 当王建国在想东西的时候他在想些什么。。。。。
 
-❓❓❓❓❓❓❓❓problem stack
+❓❓❓❓❓❓❓❓
+
+problem stack
 
     需要思考与回答的问题
 
@@ -197,13 +199,47 @@ icon: book
 
 17.如何顺手的进行翻译？
 
+    脑袋里有东西尔
+
     短语
 
     动词
 
+        stream through
+
+        comtemplate
+
+        quest
+
+        undergo
+
+        exert
+
+        repel
+
+        manifest
+
+
+
     介词
 
+        in terms of 依据
+
+        in charge of
+
+        in the manner of 
+
+    形容词
+
+        elusive  难以捉摸的
+
+        respective 
+
     名称
+
+        a thermal background neutrinos, a remnant of Big Bang
+
+
 
 
 
@@ -212,12 +248,19 @@ icon: book
 
     
     source 
-    
+
+
+
     bashrc
+        
+        terminal启动时候执行的指令  直接加入就行了
 
     export
 
+
     echo
+
+        类似print
 
     同时执行多条指令 
         
@@ -249,6 +292,8 @@ icon: book
 
     内线
 
+        积掉传播子
+
     外线
 
     费曼图的和
@@ -277,6 +322,8 @@ icon: book
 22.muon+衰变能谱？
 
     ！
+
+
 
 23.
 
