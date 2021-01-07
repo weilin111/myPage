@@ -85,6 +85,7 @@ problem stack
 
     cdf对抽样是重要的
 
+
 8.L-S耦合？Zeemman效应？ 超精细结构？
 
     ！ 
@@ -219,6 +220,8 @@ problem stack
 
         manifest
 
+        recap 扼要重新叙述
+
 
 
     介词
@@ -327,7 +330,7 @@ problem stack
 
 
 
-23.
+23.word 是用什么写的？ Latex？
 
     ！
 
