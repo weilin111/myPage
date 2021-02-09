@@ -340,7 +340,7 @@ problem stack
     ！
     陶哲轩？
 
-    close
+    close📕
 
 25.mafia里面的汽车ai怎么弄？
 
@@ -350,7 +350,15 @@ problem stack
 
     !
 
-27. 
+27.卡方统计量？
+
+    ！
+
+28.
+
+
+
+
 
 
 
