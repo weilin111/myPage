@@ -1,8 +1,17 @@
----
-layout: default
----
+--- layout: default ---
 
 <div class="main-content index-page clearfix" style="background-image: url(gamma.png)">
+
+    <script>
+        function tobottom(evt) {
+
+            if (evt.which == 40) {
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+
+        }
+        document.addEventListener("keydown", tobottom, false);
+    </script>
 
     <div id="particles-js">
         <a>?</a>
@@ -15,39 +24,6 @@ layout: default
     <!-- stats.js -->
     <script src="stats.js"></script>
     <script>
-    var count_particles, stats, update;
-    stats = new Stats;
-    stats.setMode(0);
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = '0px';
-    stats.domElement.style.top = '0px';
-    document.body.appendChild(stats.domElement);
-    count_particles = document.querySelector('.js-count-particles');
-    update = function() {
-        stats.begin();
-        stats.end();
-        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-        }
-        requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
-    </script>
-        
-
-
-
-
-
-    <div class="post-lists">    
-
-        <!-- scripts -->
-        <script src="particles.js"></script>
-        <script src="app.js"></script>
-
-        <!-- stats.js -->
-        <script src="stats.js"></script>
-        <script>
         var count_particles, stats, update;
         stats = new Stats;
         stats.setMode(0);
@@ -60,13 +36,21 @@ layout: default
             stats.begin();
             stats.end();
             if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
             }
             requestAnimationFrame(update);
         };
         requestAnimationFrame(update);
-        </script>
-            
+    </script>
+
+
+
+
+
+
+    <div class="post-lists">
+
+
 
 
 
@@ -84,8 +68,7 @@ layout: default
                     <div class="item-slant"></div>
                     <div class="item-label">
                         <div class="item-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                        <br />
-                        {{ post.date | date: "%b %d, %Y" }}
+                            <br /> {{ post.date | date: "%b %d, %Y" }}
                         </div>
                         <div class="item-meta clearfix">
                             <div class="item-meta-ico {% if post.icon %}bg-ico-{{ post.icon }}{% endif %}" style="background: url({{ '/style/image/bg-ico.png' | prepend: site.baseurl }}) no-repeat;background-size: 40px auto;"></div>
@@ -106,14 +89,12 @@ layout: default
         <ol class="page-navigator">
             {% if paginator.previous_page %}
             <li class="prev"><a href="{{ paginator.previous_page_path | relative_url }}">←</a></li>
-            {% endif %}
-            {% for page in (1..paginator.total_pages) %}
+            {% endif %} {% for page in (1..paginator.total_pages) %}
             <li {% if page==paginator.page %} class="current" {% endif %}>
                 <a href="{% if page == 1 %}{{  '/' | prepend: site.baseurl }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">{{
                     page }}</a>
             </li>
-            {% endfor %}
-            {% if paginator.next_page %}
+            {% endfor %} {% if paginator.next_page %}
             <li class="next"><a href="{{ paginator.next_page_path | relative_url }}">→</a></li>
             {% endif %}
         </ol>

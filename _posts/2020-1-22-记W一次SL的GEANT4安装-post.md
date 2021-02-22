@@ -12,6 +12,8 @@ icon: game
 
 byr 发现了整合包   感谢上传的老铁
 
+https://blog.csdn.net/magefreehome/article/details/91792312
+
 
 # WSL
 
