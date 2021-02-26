@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WSL の GRANT4
-date:   2020-12-5 00:00:00 +0800
+date:   2021-2-5 00:00:00 +0800
 category: lawful evil
 thumbnail: style/image/Twitter/2-18.jpg
 icon: game
@@ -92,6 +92,17 @@ TEST4
         G4track
 
         G4step
+
+sensitive detector
+
+    ！
+
+detector
+
+    defineMaterial
+
+    defineVolume
+
 
 
 
