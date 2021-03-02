@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Kill La Kill
+title: 👍👍👍
 date:   2020-11-12 00:00:00 +0800
 category: 又是一部绝世好番
 thumbnail: style/image/KILL_LA_KILL/1-7.jpg
 icon: web
 ---
 
+# KILL LA KILL 
 沙雕
 
 荒诞
@@ -46,6 +47,28 @@ icon: web
 ![png](\myPage\style\image\KILL_LA_KILL\1-7.png)
 ![png](\myPage\style\image\KILL_LA_KILL\1-8.png)
 ![png](\myPage\style\image\KILL_LA_KILL\1-9.png)
+
+
+
+# 宇宙パトロールルル子
+
+2021年3月2日
+
+够纯 够简单 够浓烈  
+
+简单直接
+
+太可爱
+
+
+![png](\myPage\style\image\luluco/1463717011_1_10_9722e1161c9e208d73eafd4a157694f4.jpg)
+ ![png](\myPage\style\image\luluco/1466158288_2_10_6a5da7ec1b9f22d2bd4b7bc18cdb55e4.jpg)
+ ![png](\myPage\style\image\luluco/20885002_1_d2.jpg)
+ ![png](\myPage\style\image\luluco/20885003_1_d2.jpg)
+ ![png](\myPage\style\image\luluco/710649.jpg)
+ ![png](\myPage\style\image\luluco/936ebb83.jpg)
+ ![png](\myPage\style\image\luluco/OIP.jpg)
+ ![png](\myPage\style\image\luluco/下载.jpg)
 
 
 
