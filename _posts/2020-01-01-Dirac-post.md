@@ -21,9 +21,9 @@ icon: book
 
 ![png](\myPage\style\image\电场规范_长图0.png)
 
-# 中微子
+<!-- # 中微子 -->
 
-![png](\myPage\style\image\neutrino.png)
+<!-- ![png](\myPage\style\image\neutrino.png) -->
 
 # 天体物理讲座
 

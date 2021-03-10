@@ -956,7 +956,7 @@ ICEUBE 中微子 (IC-170922A)
 
 AGN, GRBs, TDEs, SNe or kilonovae
 
-## Detectors Summary {#detectors-summary .title2}
+<!-- ## Detectors Summary {#detectors-summary .title2}
 
 <table>
 <thead>
@@ -1135,7 +1135,7 @@ AGN, GRBs, TDEs, SNe or kilonovae
 <td></td>
 </tr>
 </tbody>
-</table>
+</table> -->
 
 ## 意义 {#意义 .title2}
 
