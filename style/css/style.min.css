@@ -324,6 +324,10 @@ textarea:-ms-input-placeholder {
     float: right
 }
 
+#paticlees-js {
+    height：300px；
+}
+
 .browsehappy {
     position: fixed;
     z-index: 999;
