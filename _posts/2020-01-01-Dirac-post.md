@@ -25,9 +25,6 @@ icon: book
 
 <!-- ![png](\myPage\style\image\neutrino.png) -->
 
-# 天体物理讲座
-
-![png](\myPage\style\image\天体物理讲座.png)
 
 
 ##end
