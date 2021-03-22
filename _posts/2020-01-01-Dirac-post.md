@@ -16,7 +16,15 @@ icon: book
 
 # Fermi 
 
-![png](\myPage\style\image\Dirac.png)
+![png](\myPage\style\image\miRule_长图0.png)
+
+# 群
+
+![png](style\image\IMG_20191014_102242.jpg)
+
+# Green funtion
+
+![png](style\image\green.png)
 
 # 电动
 
