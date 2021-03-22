@@ -12,6 +12,9 @@ icon: book
 
 # Dirac
 
+![png](\myPage\style\image\Dirac.png)
+
+# Fermi 
 
 ![png](\myPage\style\image\Dirac.png)
 
@@ -20,6 +23,8 @@ icon: book
 ![png](\myPage\style\image\力学复习提纲_长图0.png)
 
 ![png](\myPage\style\image\电场规范_长图0.png)
+
+
 
 <!-- # 中微子 -->
 
