@@ -1,13 +1,16 @@
 ---
 layout: post
 title: 👍👍👍
-date:   2020-11-12 00:00:00 +0800
+date:   2020-11-11 00:00:00 +0800
 category: 又是一部绝世好番
 thumbnail: style/image/KILL_LA_KILL/1-7.jpg
 icon: web
 ---
 
 # KILL LA KILL 
+
+
+
 沙雕
 
 荒诞
@@ -72,7 +75,11 @@ icon: web
 
 
 
+# EVA 新世纪福音战士
 
+
+
+# 别对映相研出手
 
 
 

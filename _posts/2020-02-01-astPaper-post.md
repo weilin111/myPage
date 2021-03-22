@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multi
-date: 2020-12-10 00:00:00 +0800
+date: 2020-12-23 00:00:00 +0800
 category: (#`O′)
 thumbnail: style/image/Twitter/2-30.jpg
 icon: book
@@ -13,13 +13,13 @@ icon: book
 
 # 天体物理讲座
 
-![png](\myPage\style\image\天体物理讲座.png)
-
+![png](\myPage\style\image\class3_长图0.jpg)
 
 
 # PPT
 
 
+![png](\myPage\style\image\ast_长图0.jpg)
 
 
 # 报告

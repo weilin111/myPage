@@ -14,12 +14,18 @@ particlesJS.load('particles-js', 'particles.json', function() {
 particlesJS('particles-js',
 
     {
+        // canvas: {
+        //     el: canvas_el,
+        //     w: 500,
+        //     // h: canvas_el.offsetHeight,
+        //     h: 300
+        // },
         "particles": {
             "number": {
                 "value": 100,
                 "density": {
                     "enable": true,
-                    "value_area": 500
+                    "value_area": 1500
                 }
             },
             "color": {
