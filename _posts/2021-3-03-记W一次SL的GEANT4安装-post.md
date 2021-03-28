@@ -10,7 +10,7 @@ icon: game
 * content
 {:toc}
 
-byr 发现了整合包   感谢上传的老铁
+byr 整合包   官网也可
 
 https://blog.csdn.net/magefreehome/article/details/91792312
 
@@ -25,6 +25,8 @@ https://blog.csdn.net/magefreehome/article/details/91792312
 更换源  
 
 安装编译需要的包
+
+https://geant4.web.cern.ch/
 
 
 # WSL的可视化 XLaunch
@@ -77,17 +79,11 @@ TEST4
 
     muon在体积里衰变 每个step取出数据
 
-    可以打印muon的track 
-
-    但能量的控制似乎出了问题  这需要看看代码了
-
-    如何在每个step之后把数据取出来 成为首要的问题了
-
     eventAction 
 
     UserSteppingAction
 
-    用evetything全盘搜索去找源代码
+    用evetything找
 
         G4track
 
@@ -111,6 +107,10 @@ constant 文件
 # JSAP
 
 GDML
+
+中子本底谱
+
+
 
 
 
