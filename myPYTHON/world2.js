@@ -3,7 +3,8 @@ function create_phy_Object(xyz, v) {
         name: "wenmd",
         xyz: [0, 0, 0],
         velocity: [0, 0, 0],
-        mass: 1
+        mass: 1,
+        charge: 1,
 
     }
     phy_Object.xyz = xyz
@@ -23,7 +24,7 @@ var UI = function(canvas_id) {
 
         t: 0,
 
-        gravity: 10,
+        gravity: 0,
 
         fps: 60,
 
@@ -31,10 +32,19 @@ var UI = function(canvas_id) {
 
         stop: false,
 
+        gravity_active: false,
 
+        EM_active: true,
 
+        E: function(xyz) {
+            center = [250, 400, 0]
+            dx = center[0] - xyz[0]
+            return [dx / Math.abs(dx), 0, 0]
+        },
 
-
+        B: function(xyz) {
+            return [0, 0, 1]
+        }
 
 
     }
@@ -49,10 +59,10 @@ var UI = function(canvas_id) {
     var particle_ring = function() {
         // center = [event.offsetX, event.offsetY]
 
-        n = 10
-        center = [canvas.width * Math.random(), canvas.height * Math.random()]
-        r = Math.random() * 250
-        v = [Math.random() * 200, Math.random() * 200, Math.random()]
+        let n = 10
+        let center = [canvas.width * Math.random(), canvas.height * Math.random()]
+        let r = Math.random() * 250
+        let v = [Math.random() * 200, Math.random() * 200, Math.random()]
         for (let i = 0; i < n; i++) {
 
             let x = center[0] + r * Math.cos(Math.PI * 2 * i / n)
@@ -65,38 +75,63 @@ var UI = function(canvas_id) {
 
 
 
-    var E = function(xyz) {
-        return 0
-    }
 
-    var B = function(xyz) {
-            return 0
-        }
-        // EM module
-        /*
-        todo 
-            EM module
-                calcule
-                vector 
-            interaction
-                emit as drag
-            special key
-                ring flower
-            
+    // EM module
+    /*
+    todo 
+        EM module
+            calcule
+            vector 
+        interaction
+            emit as drag
+        special key
+            ring flower
+                团的速度bug
+        速度vector箭头
 
-        */
+    */
 
     var vector_cross = function(a, b) {
-        return [0, 0, 0]
+        return [a[1] * b[2], -a[0] * b[2], 0]
     }
+
+
+
 
 
     var collider = function() {
         return
     }
 
+    var gravity_module = function(i) {
+        world.phy_Object_list[i].velocity[1] += world.gravity * 1 / world.fps
+        world.phy_Object_list[i].velocity[1] %= 500
+        world.phy_Object_list[i].xyz[0] += world.dt * world.phy_Object_list[i].velocity[0]
+        world.phy_Object_list[i].xyz[0] = world.phy_Object_list[i].xyz[0] % canvas.width
+
+        world.phy_Object_list[i].xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1]) % canvas.height
+            // world.phy_Object_list[i].xyz[2] += world.dt * world.phy_Object_list[i].velocity[2]
+
+    }
+
+    var EM_module = function(i) {
+        p = world.phy_Object_list[i]
+        fb = vector_cross(p.velocity, world.B(p.xyz))
+        fe = world.E(p.xyz)
+            // console.log(fb)
+            // console.log(fe)
+
+        p.velocity[0] += fb[0] * p.charge / p.mass * world.dt + fe[0] * p.charge / p.mass * world.dt
+        p.velocity[1] += fb[1] * p.charge / p.mass * world.dt + fe[1] * p.charge / p.mass * world.dt
+
+        p.xyz[0] += world.dt * world.phy_Object_list[i].velocity[0]
+        p.xyz[0] = world.phy_Object_list[i].xyz[0] % canvas.width
+
+        p.xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1]) % canvas.height
+            // p.xyz[2] += world.dt * world.phy_Object_list[i].velocity[2]
 
 
+    }
 
 
     var canvas = document.getElementById(canvas_id)
@@ -110,14 +145,13 @@ var UI = function(canvas_id) {
 
         pen.stroke()
         for (var i in world.phy_Object_list) {
-            world.phy_Object_list[i].velocity[1] += world.gravity * 1 / world.fps
-            world.phy_Object_list[i].velocity[1] %= 500
-            world.phy_Object_list[i].xyz[0] += world.dt * world.phy_Object_list[i].velocity[0]
-            world.phy_Object_list[i].xyz[0] = world.phy_Object_list[i].xyz[0] % canvas.width
+            if (world.gravity_active) {
+                gravity_module(i)
+            }
 
-            world.phy_Object_list[i].xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1]) % canvas.height
-            world.phy_Object_list[i].xyz[2] += world.dt * world.phy_Object_list[i].velocity[2]
-
+            if (world.EM_active) {
+                EM_module(i)
+            }
             // pen.fillRect(world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1],
             //     20,
             //     20)
@@ -145,7 +179,7 @@ var UI = function(canvas_id) {
 
 
 
-        add_phy_Object(create_phy_Object([Math.random() * 200, Math.random() * 200, Math.random()], [Math.random() * 200, Math.random() * 200, Math.random()]),
+        add_phy_Object(create_phy_Object([Math.random() * canvas.width, Math.random() * canvas.height, Math.random()], [Math.random() * 100, Math.random() * 100, Math.random()]),
 
         )
     })
@@ -188,4 +222,4 @@ var UI = function(canvas_id) {
 }
 
 
-UI("draw")
+UI("draw2")
