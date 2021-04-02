@@ -10,6 +10,10 @@ icon: book
 * content
 {:toc}
 
+# KATRIN
+
+![png]({{'/style/image/随写/KATRIN_长图0.png' | prepend : site.baseurl }})
+
 # Dirac
 
 ![png](\myPage\style\image\Dirac.png)
