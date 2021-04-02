@@ -8,6 +8,7 @@ function create_phy_Object(xyz, v) {
         track_steppoint_list: [],
 
 
+
     }
     phy_Object.xyz = xyz
     phy_Object.velocity = v
@@ -28,7 +29,7 @@ var UI = function(canvas_id) {
 
         gravity: 0,
 
-        fps: 60,
+        fps: 25,
 
         dt: 1 / 60,
 
@@ -40,14 +41,16 @@ var UI = function(canvas_id) {
 
         draw_track: true,
 
+        track_steppoint_maxNumber: 100,
+
         E: function(xyz) {
             center = [250, 400, 0]
             dx = center[0] - xyz[0]
-            return [100 * dx / Math.abs(dx), 0, 0]
+            return [100 * dx / 500, 0, 0]
         },
 
         B: function(xyz) {
-            return [0, 0, 1]
+            return [0, 0, 2 * xyz[0] / 500]
         }
 
 
@@ -71,7 +74,7 @@ var UI = function(canvas_id) {
 
             let x = center[0] + r * Math.cos(Math.PI * 2 * i / n)
             let y = center[1] + r * Math.sin(Math.PI * 2 * i / n)
-            console.log(x, y)
+                // console.log(x, y)
             add_phy_Object(create_phy_Object([x, y, Math.random()], v))
 
         }
@@ -113,8 +116,15 @@ var UI = function(canvas_id) {
         world.phy_Object_list[i].xyz[0] += world.dt * world.phy_Object_list[i].velocity[0]
         world.phy_Object_list[i].xyz[0] = world.phy_Object_list[i].xyz[0] % canvas.width
 
+        if (world.phy_Object_list[i].xyz[0] < 0) {
+            world.phy_Object_list[i].xyz[0] += canvas.width
+        }
+        if (world.phy_Object_list[i].xyz[1] < 0) {
+            world.phy_Object_list[i].xyz[1] += canvas.height
+        }
+
         world.phy_Object_list[i].xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1]) % canvas.height
-            // world.phy_Object_list[i].xyz[2] += world.dt * world.phy_Object_list[i].velocity[2]
+
 
     }
 
@@ -134,6 +144,12 @@ var UI = function(canvas_id) {
         p.xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1]) % canvas.height
             // p.xyz[2] += world.dt * world.phy_Object_list[i].velocity[2]
 
+        if (world.phy_Object_list[i].xyz[0] < 0) {
+            world.phy_Object_list[i].xyz[0] += canvas.width
+        }
+        if (world.phy_Object_list[i].xyz[1] < 0) {
+            world.phy_Object_list[i].xyz[1] += canvas.height
+        }
 
     }
 
@@ -170,22 +186,28 @@ var UI = function(canvas_id) {
         pen.stroke()
 
         for (var i in world.phy_Object_list) {
-            if (world.gravity_active) {
-                gravity_module(i)
-            }
+
 
             if (world.EM_active) {
                 EM_module(i)
             }
+            if (world.gravity_active) {
+                gravity_module(i)
+            }
             // pen.fillRect(world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1],
             //     20,
             //     20)
-            world.phy_Object_list[i].track_steppoint_list.push([world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], world.phy_Object_list[i].xyz[2]])
-            pen.fillText("🌸", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1],
 
-            )
+            world.phy_Object_list[i].track_steppoint_list.push([world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], world.phy_Object_list[i].xyz[2]])
+            if (world.phy_Object_list[i].track_steppoint_list.length > world.track_steppoint_maxNumber) {
+                world.phy_Object_list[i].track_steppoint_list.shift()
+            }
+
+            pen.fillText("🌸", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], )
             if (world.draw_track) {
+
                 pen.fillStyle = "#00eeff"
+
                 for (j in world.phy_Object_list[i].track_steppoint_list) {
 
                     pen.fillRect(world.phy_Object_list[i].track_steppoint_list[j][0], world.phy_Object_list[i].track_steppoint_list[j][1], 2, 2)
@@ -222,9 +244,9 @@ var UI = function(canvas_id) {
 
 
     canvas.addEventListener("keydown", function(event) {
-        console.log(event.key)
+        // console.log(event.key)
 
-        console.log(timer)
+        // console.log(timer)
 
         switch (event.key) {
             case "s":
