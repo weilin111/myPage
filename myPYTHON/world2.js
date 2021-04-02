@@ -5,6 +5,8 @@ function create_phy_Object(xyz, v) {
         velocity: [0, 0, 0],
         mass: 1,
         charge: 1,
+        track_steppoint_list: [],
+
 
     }
     phy_Object.xyz = xyz
@@ -36,10 +38,12 @@ var UI = function(canvas_id) {
 
         EM_active: true,
 
+        draw_track: true,
+
         E: function(xyz) {
             center = [250, 400, 0]
             dx = center[0] - xyz[0]
-            return [dx / Math.abs(dx), 0, 0]
+            return [100 * dx / Math.abs(dx), 0, 0]
         },
 
         B: function(xyz) {
@@ -137,13 +141,34 @@ var UI = function(canvas_id) {
     var canvas = document.getElementById(canvas_id)
     var pen = canvas.getContext("2d")
 
+    var draw_E = function() {
+
+        n = 10
+            // pen.beginPath()
+        for (var i = 0; i < n; i++) {
+
+            pen.moveTo(canvas.width * i / n, 0)
+            pen.lineTo(canvas.width * i / n, canvas.height)
+            pen.fillText("" + world.E([canvas.width * i / n, 0, 0]), canvas.width * i / n, 100)
+
+        }
+        // pen.stroke()
+
+
+    }
+
+
+
 
     var update = function() {
         pen.clearRect(0, 0, canvas.width, canvas.height)
             // pen.fillRect(50, 50, 20 * Math.random(), 200)
         pen.rect(0, 0, canvas.width, canvas.height)
 
+        draw_E()
+
         pen.stroke()
+
         for (var i in world.phy_Object_list) {
             if (world.gravity_active) {
                 gravity_module(i)
@@ -155,10 +180,22 @@ var UI = function(canvas_id) {
             // pen.fillRect(world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1],
             //     20,
             //     20)
-
+            world.phy_Object_list[i].track_steppoint_list.push([world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], world.phy_Object_list[i].xyz[2]])
             pen.fillText("🌸", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1],
 
             )
+            if (world.draw_track) {
+                pen.fillStyle = "#00eeff"
+                for (j in world.phy_Object_list[i].track_steppoint_list) {
+
+                    pen.fillRect(world.phy_Object_list[i].track_steppoint_list[j][0], world.phy_Object_list[i].track_steppoint_list[j][1], 2, 2)
+                        //优化
+
+                }
+                pen.fillStyle = "#000000"
+            }
+
+
 
             // fillText arc rect
             // pen.rect(0, 0, canvas.width, canvas.height)
@@ -176,7 +213,6 @@ var UI = function(canvas_id) {
         //清除动画
         // clearInterval(timer);
     canvas.addEventListener("click", function(event) {
-
 
 
         add_phy_Object(create_phy_Object([Math.random() * canvas.width, Math.random() * canvas.height, Math.random()], [Math.random() * 100, Math.random() * 100, Math.random()]),
