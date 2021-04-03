@@ -5,9 +5,18 @@
 
 
 <head>
+
     <center>
-        wdnmd
+        <a id="title" style="font-size: 200px;">
+            SIRIUS
+
+        </a>
     </center>
+
+    <script src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js">
+        // $("#title").css("font-size", xxx - large)
+    </script>
+
 
 
 </head>
@@ -59,7 +68,40 @@
 
     </div>
 
+    <script>
+        var change_count = 0
+
+
+        function get_random_Color() {
+            //定义数组，值为1—f
+            var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+            //颜色的值为16进制并且开头为#，
+            str = "#";
+            //我们需要的是一个6位的十六进制所以循环6次
+            for (var i = 0; i < 6; i++) {
+                //随机产生的数做数组的索引，索引值只能为整数所以需要转换为整型通过索引获得数组的值,
+                str += num[parseInt(Math.random() * 16)];
+            }
+            return str;
+        }
+
+        var start_color = get_random_Color()
+        var end_color = get_random_Color()
+        var fps = 30
+        var change_title = function(fps) {
+            $("#title").css("color", color_gradient_point(start_color, end_color, change_count, fps))
+
+            change_count = (change_count + 1) % fps
+        }
+        setInterval(function() {
+            console.log(color_gradient_point(start_color, end_color, change_count, fps))
+            change_title(fps)
+        }, 1000 / fps)
+    </script>
 
 </body>
+
+
+
 
 </html>

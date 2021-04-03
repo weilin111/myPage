@@ -17,6 +17,68 @@ function create_phy_Object(xyz, v) {
 }
 
 
+/**
+ * 16进制颜色字符串转RGB
+ * @param color {Sting}
+ * @returns {number[]}
+ */
+function stringToRGB(color) {
+    let r, g, b;
+    if (color.length === 4) { //4位颜色处理,简写模式
+        r = parseInt(color.substring(1, 2) + color.substring(1, 2), 16);
+        g = parseInt(color.substring(2, 3) + color.substring(2, 3), 16);
+        b = parseInt(color.substring(3) + color.substring(3), 16)
+    } else { //7位颜色字符串处理
+        r = parseInt(color.substring(1, 3), 16);
+        g = parseInt(color.substring(3, 5), 16);
+        b = parseInt(color.substring(5), 16)
+    }
+    return [r, g, b]
+}
+
+/**
+ * 255RGB转16进制颜色字符串
+ * @param r {Number} 0-255红色分量
+ * @param g {Number} 0-255绿色分量
+ * @param b {Number} 0-255蓝色分量
+ * @returns {string} 16进制颜色字符串
+ */
+function rgbToString(r, g, b) {
+    return "#" + r.toString(16) + g.toString(16) + b.toString(16);
+}
+
+function color_gradient(start, end, step_number) {
+    let res = []
+    start_code = stringToRGB(start)
+    end_code = stringToRGB(end)
+    dx = end_code[0] - start_code[0]
+    dy = end_code[1] - start_code[1]
+    dz = end_code[2] - start_code[2]
+    for (var i = 0; i < step_number; i++) {
+        res.push(
+            rgbToString(start_code[0] + Math.round(dx * i / step_number), start_code[1] + Math.round(dy * i / step_number), start_code[2] + Math.round(dz * i / step_number))
+        )
+    }
+    return res
+}
+
+function color_gradient_point(start, end, i, step_number) {
+    // let res = ""
+    start_code = stringToRGB(start)
+    end_code = stringToRGB(end)
+    dx = end_code[0] - start_code[0]
+    dy = end_code[1] - start_code[1]
+    dz = end_code[2] - start_code[2]
+    res = rgbToString(start_code[0] + Math.round(dx * i / step_number), start_code[1] + Math.round(dy * i / step_number), start_code[2] + Math.round(dz * i / step_number))
+    return res
+}
+
+
+// ————————————————
+// 版权声明：本文为CSDN博主「GIS开发者」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+// 原文链接：https://blog.csdn.net/GISuuser/article/details/84875008
+
+
 
 var UI = function(canvas_id) {
 
@@ -46,11 +108,13 @@ var UI = function(canvas_id) {
         E: function(xyz) {
             center = [250, 400, 0]
             dx = center[0] - xyz[0]
-            return [100 * dx / 500, 0, 0]
+            dy = center[1] - xyz[1]
+            return [100 * dx / 500, 100 * dy / 500, 0]
         },
 
         B: function(xyz) {
-            return [0, 0, 2 * xyz[0] / 500]
+            // return [0, 0, 2 * xyz[0] / 500]
+            return [0, 0, 0]
         }
 
 
@@ -116,14 +180,14 @@ var UI = function(canvas_id) {
         world.phy_Object_list[i].xyz[0] += world.dt * world.phy_Object_list[i].velocity[0]
         world.phy_Object_list[i].xyz[0] = world.phy_Object_list[i].xyz[0] % canvas.width
 
-        if (world.phy_Object_list[i].xyz[0] < 0) {
-            world.phy_Object_list[i].xyz[0] += canvas.width
-        }
-        if (world.phy_Object_list[i].xyz[1] < 0) {
-            world.phy_Object_list[i].xyz[1] += canvas.height
-        }
+        // if (world.phy_Object_list[i].xyz[0] < 0) {
+        //     world.phy_Object_list[i].xyz[0] += canvas.width
+        // }
+        // if (world.phy_Object_list[i].xyz[1] < 0) {
+        //     world.phy_Object_list[i].xyz[1] += canvas.height
+        // }
 
-        world.phy_Object_list[i].xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1]) % canvas.height
+        world.phy_Object_list[i].xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1])
 
 
     }
@@ -139,17 +203,18 @@ var UI = function(canvas_id) {
         p.velocity[1] += fb[1] * p.charge / p.mass * world.dt + fe[1] * p.charge / p.mass * world.dt
 
         p.xyz[0] += world.dt * world.phy_Object_list[i].velocity[0]
-        p.xyz[0] = world.phy_Object_list[i].xyz[0] % canvas.width
+        p.xyz[0] = world.phy_Object_list[i].xyz[0]
 
-        p.xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1]) % canvas.height
-            // p.xyz[2] += world.dt * world.phy_Object_list[i].velocity[2]
+        p.xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1])
 
-        if (world.phy_Object_list[i].xyz[0] < 0) {
-            world.phy_Object_list[i].xyz[0] += canvas.width
-        }
-        if (world.phy_Object_list[i].xyz[1] < 0) {
-            world.phy_Object_list[i].xyz[1] += canvas.height
-        }
+
+        // p.xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1]) % canvas.height
+        // if (world.phy_Object_list[i].xyz[0] < 0) {
+        //     world.phy_Object_list[i].xyz[0] += canvas.width
+        // }
+        // if (world.phy_Object_list[i].xyz[1] < 0) {
+        //     world.phy_Object_list[i].xyz[1] += canvas.height
+        // }
 
     }
 
@@ -178,7 +243,6 @@ var UI = function(canvas_id) {
 
     var update = function() {
         pen.clearRect(0, 0, canvas.width, canvas.height)
-            // pen.fillRect(50, 50, 20 * Math.random(), 200)
         pen.rect(0, 0, canvas.width, canvas.height)
 
         draw_E()
@@ -187,59 +251,89 @@ var UI = function(canvas_id) {
 
         for (var i in world.phy_Object_list) {
 
+            //00000000000000-------------------------CALCULATER---------------------------00000000000000000000000
+            if (true) {
+                if (world.EM_active) {
+                    EM_module(i)
+                }
+                if (world.gravity_active) {
+                    gravity_module(i)
+                }
 
-            if (world.EM_active) {
-                EM_module(i)
-            }
-            if (world.gravity_active) {
-                gravity_module(i)
-            }
-            // pen.fillRect(world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1],
-            //     20,
-            //     20)
+                if (world.phy_Object_list[i].xyz[0] <= 0 || world.phy_Object_list[i].xyz[0] >= canvas.width) {
+                    world.phy_Object_list[i].velocity[0] *= -1
+                }
 
-            world.phy_Object_list[i].track_steppoint_list.push([world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], world.phy_Object_list[i].xyz[2]])
-            if (world.phy_Object_list[i].track_steppoint_list.length > world.track_steppoint_maxNumber) {
-                world.phy_Object_list[i].track_steppoint_list.shift()
+                if (world.phy_Object_list[i].xyz[1] <= 0 || world.phy_Object_list[i].xyz[1] >= canvas.height) {
+                    world.phy_Object_list[i].velocity[1] *= -1
+                }
+
+                world.phy_Object_list[i].track_steppoint_list.push([world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], world.phy_Object_list[i].xyz[2]])
+
+                if (world.phy_Object_list[i].track_steppoint_list.length > world.track_steppoint_maxNumber) {
+                    world.phy_Object_list[i].track_steppoint_list.shift()
+                }
+
             }
+
+            //00000000000000-------------------------DRAW---------------------------00000000000000000000000
+            pen.fillStyle = "#000000"
 
             pen.fillText("🌸", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], )
+
             if (world.draw_track) {
 
-                pen.fillStyle = "#00eeff"
+                start_color = "#00eeff"
+                end_color = "#ff0000"
+                color_box = color_gradient(start_color, end_color, world.phy_Object_list[i].track_steppoint_list.length)
+
 
                 for (j in world.phy_Object_list[i].track_steppoint_list) {
-
-                    pen.fillRect(world.phy_Object_list[i].track_steppoint_list[j][0], world.phy_Object_list[i].track_steppoint_list[j][1], 2, 2)
-                        //优化
+                    pen.fillStyle = color_box[j]
+                    pen.fillRect(world.phy_Object_list[i].track_steppoint_list[j][0], world.phy_Object_list[i].track_steppoint_list[j][1], 3, 3)
+                        //需要优化
 
                 }
-                pen.fillStyle = "#000000"
+
             }
 
-
-
-            // fillText arc rect
-            // pen.rect(0, 0, canvas.width, canvas.height)
-
-            // pen.stroke()
 
         }
     }
 
-
-
     var timer = setInterval(function() {
-            update()
-        }, 1000 / world.fps)
-        //清除动画
-        // clearInterval(timer);
+        update()
+    }, 1000 / world.fps)
+
+
+
     canvas.addEventListener("click", function(event) {
 
 
         add_phy_Object(create_phy_Object([Math.random() * canvas.width, Math.random() * canvas.height, Math.random()], [Math.random() * 100, Math.random() * 100, Math.random()]),
 
         )
+    })
+
+    var now_mousedown_position = [0, 0]
+
+    canvas.addEventListener("mousedown", function(event) {
+
+        console.log(event.offsetX, event.offsetY)
+        now_mousedown_position[0] = event.offsetX
+        now_mousedown_position[1] = event.offsetY
+
+
+    })
+
+    canvas.addEventListener("mouseup", function(event) {
+
+        xyz = [event.offsetX, event.offsetY, 0]
+        dx = -event.offsetX + now_mousedown_position[0]
+        dy = -event.offsetY + now_mousedown_position[1]
+        v = [dx, dy, 0]
+        add_phy_Object(create_phy_Object(xyz, v))
+
     })
 
 
