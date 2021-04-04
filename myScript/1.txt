@@ -1,13 +1,3 @@
----
-layout: post
-title: 读书摘
-date: 2020-12-21 00:00:00 +0800
-category: (^\^) windows
-thumbnail: style/image/Twitter/1-60.jpg
-icon: book
----
-
-
 ![png]({{'/style/image/书摘/屏幕截图 2021-04-03 222603.png ' | prepend : site.baseurl }})
 ![png]({{'/style/image/书摘/屏幕截图 2021-04-03 141656.png ' | prepend : site.baseurl }})
 ![png]({{'/style/image/书摘/屏幕截图 2021-04-02 135724.png ' | prepend : site.baseurl }})
