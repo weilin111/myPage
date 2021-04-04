@@ -14,7 +14,10 @@
     </center>
 
     <script src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js">
-        // $("#title").css("font-size", xxx - large)
+    </script>
+
+    <script>
+        $("#title").css("font-size", "300px")
     </script>
 
 
@@ -80,7 +83,8 @@
             //我们需要的是一个6位的十六进制所以循环6次
             for (var i = 0; i < 6; i++) {
                 //随机产生的数做数组的索引，索引值只能为整数所以需要转换为整型通过索引获得数组的值,
-                str += num[parseInt(Math.random() * 16)];
+
+                str += num[parseInt(Math.random() * 15)];
             }
             return str;
         }
@@ -91,10 +95,13 @@
         var change_title = function(fps) {
             $("#title").css("color", color_gradient_point(start_color, end_color, change_count, fps))
 
+            // size = "" + (Math.round(50 * Math.sin(2 * Math.PI * change_count / fps)) + 100) + "px"
+            // $("#title").css("font-size", size)
+
             change_count = (change_count + 1) % fps
         }
         setInterval(function() {
-            console.log(color_gradient_point(start_color, end_color, change_count, fps))
+            // console.log(color_gradient_point(start_color, end_color, change_count, fps))
             change_title(fps)
         }, 1000 / fps)
     </script>

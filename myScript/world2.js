@@ -69,7 +69,11 @@ function color_gradient_point(start, end, i, step_number) {
     dx = end_code[0] - start_code[0]
     dy = end_code[1] - start_code[1]
     dz = end_code[2] - start_code[2]
-    res = rgbToString(start_code[0] + Math.round(dx * i / step_number), start_code[1] + Math.round(dy * i / step_number), start_code[2] + Math.round(dz * i / step_number))
+
+    r = start_code[0] + Math.round(dx * Math.sin(Math.PI * i / step_number))
+    g = start_code[1] + Math.round(dy * Math.sin(Math.PI * i / step_number))
+    b = start_code[2] + Math.round(dz * Math.sin(Math.PI * i / step_number))
+    res = rgbToString(r, g, b)
     return res
 }
 

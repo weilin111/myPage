@@ -2,7 +2,7 @@
     <div class="navbar-container">
         <a href="{{ '/' | prepend: site.baseurl }}" class="navbar-logo">
             <img src="{{ '/style/image/browserify-icon.svg' | prepend: site.baseurl }}" alt="{{ site.name }}" />
-            <span>{{ site.name }}</span>
+            <span id="header_title">{{ site.name }}</span>
             <img src="{{ '/style/image/nu2.gif' | prepend: site.baseurl }}" class="navbar-logo">
         </a>
         <div class="navbar-menu">
@@ -18,4 +18,9 @@
             </ul>
         </div>
     </div>
+    <script src="{{ '/myScript/utils.js' | prepend: site.baseurl    }}   ">
+    </script>
+    <script>
+        change_title_color("header_title")
+    </script>
 </header>
