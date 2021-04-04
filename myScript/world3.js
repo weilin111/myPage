@@ -43,7 +43,7 @@ var get_UI = function() {
 
 
         var litle_dot = {
-            xyz: [0, 0, 0],
+            xyz: [200, 200, 0],
             color: "#ff0000",
         }
 
@@ -159,6 +159,11 @@ var get_UI = function() {
 
         }
 
+
+        var draw_little_dot = function(l) {
+            pen.fillText("🐟", l.xyz[0], l.xyz[1])
+        }
+
         let start_color = get_random_Color()
         let end_color = get_random_Color()
 
@@ -168,6 +173,7 @@ var get_UI = function() {
             pen.rect(0, 0, canvas.width, canvas.height)
 
             // draw_E()
+            draw_little_dot(litle_dot)
 
             pen.stroke()
 
@@ -264,7 +270,7 @@ var get_UI = function() {
             // console.log(timer)
 
             switch (event.key) {
-                case "s":
+                case "2":
                     if (world.stop) {
                         timer = setInterval(update, 1000 / world.fps)
                     } else {
@@ -288,11 +294,20 @@ var get_UI = function() {
             }
 
             canvas.addEventListener("keypress", (event) => {
-
+                // console.log(event.key)
                 switch (event.key) {
-
-
-
+                    case "w":
+                        litle_dot.xyz[1] -= 1
+                        break
+                    case "s":
+                        litle_dot.xyz[1] += 1
+                        break
+                    case "a":
+                        litle_dot.xyz[0] -= 1
+                        break
+                    case "d":
+                        litle_dot.xyz[0] += 1
+                        break
                 }
 
             })
