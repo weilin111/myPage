@@ -90,3 +90,22 @@ var change_title_color = function(title_id) {
     }, 1000 / fps)
 
 }
+
+
+function create_phy_Object(xyz, v) {
+    var phy_Object = {
+        name: "wenmd",
+        xyz: [0, 0, 0],
+        velocity: [0, 0, 0],
+        mass: 1,
+        charge: 1,
+        track_steppoint_list: [],
+
+
+
+    }
+    phy_Object.xyz = xyz
+    phy_Object.velocity = v
+
+    return phy_Object
+}
