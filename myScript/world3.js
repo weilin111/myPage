@@ -41,6 +41,7 @@ var get_UI = function() {
 
         world.dt = 1 / world.fps
 
+        tem_xyz = [0, 0, 0]
 
         var litle_dot = {
             xyz: [200, 200, 0],
@@ -107,13 +108,6 @@ var get_UI = function() {
             world.phy_Object_list[i].velocity[1] %= 500
             world.phy_Object_list[i].xyz[0] += world.dt * world.phy_Object_list[i].velocity[0]
             world.phy_Object_list[i].xyz[0] = world.phy_Object_list[i].xyz[0] % canvas.width
-
-            // if (world.phy_Object_list[i].xyz[0] < 0) {
-            //     world.phy_Object_list[i].xyz[0] += canvas.width
-            // }
-            // if (world.phy_Object_list[i].xyz[1] < 0) {
-            //     world.phy_Object_list[i].xyz[1] += canvas.height
-            // }
 
             world.phy_Object_list[i].xyz[1] = (world.phy_Object_list[i].xyz[1] + world.dt * world.phy_Object_list[i].velocity[1])
 
@@ -228,14 +222,25 @@ var get_UI = function() {
             }
         }
 
-        var timer = setInterval(function() {
+        // var timer = setInterval(function() {
+        //     update()
+        // }, 1000 / world.fps)
+
+
+        function draw_by_request_frame() {
+            requestAnimationFrame(draw_by_request_frame)
             update()
-        }, 1000 / world.fps)
+        }
+        draw_by_request_frame()
+
+
+
 
 
 
         canvas.addEventListener("click", function(event) {
 
+            tem_xyz = [event.offsetX, event.offsetY, 0]
 
             add_phy_Object(create_phy_Object([Math.random() * canvas.width, Math.random() * canvas.height, Math.random()], [Math.random() * 100, Math.random() * 100, Math.random()]),
 
@@ -264,13 +269,31 @@ var get_UI = function() {
         })
 
 
+        function emitter() {
+            // let xyz = [300, 300, 0]
+            let count = 25
+
+            function add() {
+                add_phy_Object(create_phy_Object([tem_xyz[0], tem_xyz[1], 0], [0, 0, 0]))
+                count -= 1
+                if (count == 0) {
+                    clearInterval(t)
+                    fireKeyEvent(document.getElementById("draw3"), "keydown", "r")
+                }
+            }
+
+            var t = setInterval(() => {
+                add()
+            }, 1000 / 4);
+        }
+
         canvas.addEventListener("keydown", function(event) {
             // console.log(event.key)
 
             // console.log(timer)
 
             switch (event.key) {
-                case "2":
+                case "p":
                     if (world.stop) {
                         timer = setInterval(update, 1000 / world.fps)
                     } else {
@@ -290,6 +313,9 @@ var get_UI = function() {
 
                     particle_ring()
                     break;
+                case "2":
+                    emitter()
+                    break
 
             }
 

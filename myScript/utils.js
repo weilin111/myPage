@@ -109,3 +109,16 @@ function create_phy_Object(xyz, v) {
 
     return phy_Object
 }
+
+
+
+function fireKeyEvent(element, evtType, keyChar) {
+    element.focus();
+    var KeyboardEventInit = { key: keyChar, code: "", location: 0, repeat: false, isComposing: false };
+    var evtObj = new KeyboardEvent(evtType, KeyboardEventInit);
+    element.dispatchEvent(evtObj);
+}
+
+// ————————————————
+// 版权声明：本文为CSDN博主「小宇巴巴」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+// 原文链接：https://blog.csdn.net/xuefu2008/article/details/108727693
