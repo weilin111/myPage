@@ -16,6 +16,8 @@
     <script src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js">
     </script>
     <script src="utils.js"></script>
+    <script src="three.js"></script>
+
 
     <script>
         $("#title").css("font-size", "300px")
@@ -25,9 +27,9 @@
 
 </head>
 
-<body>
+<body style="background-color: black;">
 
-    <div id="123" style="float: left;">
+    <!-- <div id="123" style="float: left;">
         <p>
             📕
         </p>
@@ -48,13 +50,13 @@
     </canvas>
         <script src="world.js">
         </script>
-    </div>
-
+    </div> -->
+    <!-- 
     <div style="float: left;">
         <p>
             🐱
         </p>
-        <canvas id="draw2" width="500" height="800" tabindex="0">
+        <canvas id="draw2" width="600" height="800" tabindex="0">
 
             <center>
                 秋刀鱼的滋味
@@ -70,41 +72,45 @@
         <script src="world2.js">
         </script>
 
-    </div>
+    </div> -->
 
     <div style="float: left;">
         <p>
             🍻
         </p>
-        <canvas id="draw3" width="500" height="800" tabindex="0">
+
+        <canvas id="draw3" width="1200" height="800" tabindex="0">
 
         
     
         </canvas>
-        <script src="world3.js">
-        </script>
+
+        <script src="world3.js"></script>
+
 
     </div>
 
+
+
+    <div style="float: left;">
+        <p>
+            🍻
+        </p>
+
+        <canvas id="draw4" width="1200" height="800" tabindex="0">
+
+        
+    
+        </canvas>
+        <script type="module" src="world4.js"></script>
+
+    </div>
 
 
     <script>
         var change_count = 0
 
 
-        function get_random_Color() {
-            //定义数组，值为1—f
-            var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
-            //颜色的值为16进制并且开头为#，
-            str = "#";
-            //我们需要的是一个6位的十六进制所以循环6次
-            for (var i = 0; i < 6; i++) {
-                //随机产生的数做数组的索引，索引值只能为整数所以需要转换为整型通过索引获得数组的值,
-
-                str += num[parseInt(Math.random() * 15)];
-            }
-            return str;
-        }
 
         var start_color = get_random_Color()
         var end_color = get_random_Color()

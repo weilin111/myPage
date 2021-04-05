@@ -25,7 +25,7 @@ var get_UI = function() {
             track_steppoint_maxNumber: 100,
 
             E: function(xyz) {
-                center = [250, 400, 0]
+                center = [600, 400, 0]
                 dx = center[0] - xyz[0]
                 dy = center[1] - xyz[1]
                 return [100 * dx / 500, 100 * dy / 500, 0]
