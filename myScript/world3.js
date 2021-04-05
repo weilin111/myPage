@@ -265,7 +265,6 @@ var get_UI = function() {
             dy = -event.offsetY + now_mousedown_position[1]
             v = [dx, dy, 0]
             add_phy_Object(create_phy_Object(xyz, v))
-
         })
 
 

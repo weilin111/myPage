@@ -21,6 +21,9 @@
 
     <script>
         $("#title").css("font-size", "300px")
+        document.getElementById("title").onclick = () => {
+            fireKeyEvent(document.getElementById("draw3"), "keydown", "2")
+        }
     </script>
 
 
