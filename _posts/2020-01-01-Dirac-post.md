@@ -13,7 +13,7 @@ icon: book
 # FOR FUN
 
 
-<a href="{{'myScript/1.html' | prepend : site.baseurl }}" target="_blank">FOR FUN</a>
+<a href="{{'/myScript/1.html' | prepend : site.baseurl }}" target="_blank">FOR FUN</a>
 
 # NEUTRINO OSCILLATION
 
