@@ -119,6 +119,51 @@ function fireKeyEvent(element, evtType, keyChar) {
     element.dispatchEvent(evtObj);
 }
 
+
+function get_cool_display(url) {
+    var request = new XMLHttpRequest()
+    request.open("get", url) /*设置请求方法与路径*/
+    request.send(null) /*不发送数据到服务器*/
+    request.onload = function() { /*XHR对象获取到返回信息后执行*/
+        if (request.status == 200) { /*返回状态为200，即为数据获取成功*/
+            var json = JSON.parse(request.responseText)
+            json.sort(function() {
+                return (0.5 - Math.random())
+            })
+        }
+        // console.log(json)
+        let s = '<div id="to_change"> '
+        let s_end = '</div>'
+        for (var index = 0; index != 10; index++) {
+            s += '<p>' + index + ". " + json[index] + '</p>'
+
+        }
+        s += s_end
+        $(".post-content").append(s)
+        for (var index = 10; json.length - index != 1; index++) {
+            // console.log(json[index])
+            s = '<p>' + index + ". " + json[index] + '</p>'
+            $(".post-content").append(s)
+        }
+        change_title_color("to_change")
+
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 // ————————————————
 // 版权声明：本文为CSDN博主「小宇巴巴」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 // 原文链接：https://blog.csdn.net/xuefu2008/article/details/108727693
