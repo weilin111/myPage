@@ -121,6 +121,10 @@ function fireKeyEvent(element, evtType, keyChar) {
 
 
 function get_cool_display(url) {
+
+    $(".post-content").css("color", "#ffffff")
+    $(".post-content").css("background", "#000000")
+
     var request = new XMLHttpRequest()
     request.open("get", url) /*设置请求方法与路径*/
     request.send(null) /*不发送数据到服务器*/
