@@ -125,6 +125,7 @@ function get_cool_display(url) {
     $(".post-content").css("color", "#ffffff")
     $(".post-content").css("background", "#000000")
 
+
     var request = new XMLHttpRequest()
     request.open("get", url) /*设置请求方法与路径*/
     request.send(null) /*不发送数据到服务器*/
@@ -135,7 +136,14 @@ function get_cool_display(url) {
                 return (0.5 - Math.random())
             })
         }
-        // console.log(json)
+
+
+        let s0 = '<div  id="to_change1" style="font-size:60px;">' + "📕冷知识:" + json.length + '</div>'
+        $(".post-content").append(s0)
+
+
+
+
         let s = '<div id="to_change"> '
         let s_end = '</div>'
         for (var index = 0; index != 10; index++) {
@@ -149,11 +157,10 @@ function get_cool_display(url) {
             s = '<p>' + index + ". " + json[index] + '</p>'
             $(".post-content").append(s)
         }
+
+
         change_title_color("to_change")
-
-
-
-
+        change_title_color("to_change1")
 
     }
 }
