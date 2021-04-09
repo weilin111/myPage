@@ -3,7 +3,7 @@ layout: post
 title: 👍👍👍
 date:   2020-11-11 00:00:00 +0800
 category: 又是一部绝世好番
-thumbnail: style/image/KILL_LA_KILL/1-7.jpg
+thumbnail: style/image/KILL_LA_KILL/1-8.png
 icon: web
 ---
 

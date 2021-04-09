@@ -18,13 +18,19 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 
-from . import views
+from . import views,testdb
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('page/',views.hello),
     path(r"sirius/",views.sirius),
-    path(r"",views.sirius)
+    path(r"",views.sirius),
+    path(r"1/",testdb.testdb),
+    path(r"2/",testdb.testdb_out),
+    path(r"3/",testdb.testdb2),
+    path(r"4/",testdb.testdb_out2),
+
+
 
 ]
 # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
