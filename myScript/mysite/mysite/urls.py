@@ -25,10 +25,8 @@ urlpatterns = [
     path('page/',views.hello),
     path(r"sirius/",views.sirius),
     path(r"",views.sirius),
-    path(r"1/",testdb.testdb),
-    path(r"2/",testdb.testdb_out),
-    path(r"3/",testdb.testdb2),
-    path(r"4/",testdb.testdb_out2),
+    path(r"1/",testdb.fun_fact),
+
 
 
 
