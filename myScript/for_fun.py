@@ -1,72 +1,78 @@
+# 写个A star 
+# 2021年4月10日
 import numpy as np
-import matplotlib.pyplot as plt
 
+# 写个A star 
+# 2021年4月10日
 
-#图搜索 bfs
-ver_tex_number=10
-
-a_matrix=[]
-for i in range(ver_tex_number):
-    a_matrix.append([0]*ver_tex_number)
-
-for i in range(ver_tex_number):
-    a_matrix[2][i]=1
-
-for i in range(ver_tex_number):
-    a_matrix[i][2]=1
-
-from collections import deque
-def graph_bfs(a):
-    visited_list=[]
-    start=(0,0)
-    q=deque()
-    q.append(start)
+def A_start(a,start=(5,5),end=(9,9)):
+    def distance2end(i,j):
+        # return int(np.sqrt((end[0]-i)**2+(end[1]-j)**2))
+        return abs(j-end[1])+abs(i-end[0])
+    res=[]
+    dic={}
+    dic[start]=[0,distance2end( start[0],start[1] )]
+    # [cost,goal]
+    to_be_check=[]
+    to_be_check.append(start)
     check=list(range(len(a)))
 
-    res=[]
-
+#----------------------------
+    def get_best():
+        min_cost_and_goal=100000
+        now=None
+        for i in to_be_check:
+            if(dic[i][0]+dic[i][1]<min_cost_and_goal):
+                min_cost_and_goal=dic[i][0]+dic[i][1]
+                now=i
+        to_be_check.remove(now)
+        return now
+#-----------------------------
     dire=[[1,0],[0,-1],[-1,0],[0,1]]
 
-    while(len(q)>0):
-        now=q.popleft()
-        visited_list.append( (now[0],now[1]) )
-        for direction in dire:
+    while(len(to_be_check)>0):
+        now=get_best()
+    
+        res.append(now)
+        for direction in dire[:]:
             i=now[0]+direction[0]
             j=now[1]+direction[1]
-            if (i in check and j in check and ( (i,j) not in visited_list )):
-                q.append( (i,j))
-
-        if(a[now[0]][now[1]]==2):
-            res.append([now[0],now[1]])
+            if (i in check and j in check and ( (i,j) not in to_be_check ) and a[i][j]!=WALL and (i,j) not in res):
+                if (i,j) not in dic:
+                    dic[(i,j)]=[dic[now][0]+1,distance2end(i,j)]
+                else:
+                    if (dic[(i,j)][0]+dic[(i,j)][1]>(dic[now][0]+1+distance2end(i,j))):
+                        dic[(i,j)]=[dic[now][0]+1,distance2end(i,j)]
+                to_be_check.append((i,j))
+        if now==end:
             break
-        res.append([now[0],now[1]])
-    
+
     return res
-        
-a_matrix[1][3]=2
-solution=graph_bfs(a_matrix)
 
-def graw_scheme(g,solution):
-    # s=np.array(solution)
-    vlines=np.linspace(-0.5,len(g)-0.5,len(g))
-    hlines=np.linspace(-0.5,len(g)-0.5,len(g))
+# 日期 需要提取路径
+a_matrix=[]
+ver_tex_number=10
+END=2
+WALL=0
+ROAD=1
+for i in range(ver_tex_number):
+    a_matrix.append([ROAD]*ver_tex_number)
 
-    plt.vlines(vlines,min(vlines),max(vlines))
-    plt.hlines(hlines,min(hlines),max(hlines))
-    plt.gca().set_aspect(1)
+# for i in range(3,ver_tex_number-3):
+#     a_matrix[2][i]=WALL
 
-    count=0
-    for i in solution:
-        plt.text(i[0],i[1],str(count))
-        count+=1
-    # plt.scatter(s[:,0]+0.5,s[:,1]+0.5)
+# for i in range(3,ver_tex_number-3):
+#     a_matrix[i][2]=WALL
 
+for i in a_matrix:
+    print(i)
 
+a_matrix[9][9]=END
 
-    # plt.axis('off')
-    
-    
-
-
+# ---------------------
+# fig = plt.figure(figsize=(10, 8), dpi=180)
+solution=A_start(a_matrix)
+# graw_scheme(a_matrix,solution,title="DFS with WALL")
 
 
+#----------------------

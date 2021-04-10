@@ -41,7 +41,7 @@ var get_UI = function() {
 
         world.dt = 1 / world.fps
 
-        tem_xyz = [0, 0, 0]
+        tem_xyz = [200, 300, 0]
 
         var litle_dot = {
             xyz: [200, 200, 0],
@@ -235,6 +235,7 @@ var get_UI = function() {
 
 
 
+        emitter()
 
 
 
