@@ -1,10 +1,7 @@
 var get_UI = function() {
     var UI2 = function(canvas_id) {
-
         var world = {
             phy_Object_list: [],
-
-
 
             t: 0,
 
@@ -344,9 +341,9 @@ var get_UI = function() {
 
 
     }
-
     return UI2
 }
+
 
 
 get_UI()("draw3")
