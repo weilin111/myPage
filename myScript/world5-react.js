@@ -19,7 +19,7 @@ class World1 extends React.Component {
     }
 }
 
-for(var i=0;i<3;i++){
+for(var i=0;i<11;i++){
     let s="canvas_"+i
     ReactDOM.render(<World1 canvas_id={s} />, document.querySelector('#testReact'+i))
 
