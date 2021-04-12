@@ -1,4 +1,4 @@
-var get_UI = function() {
+function get_UI() {
     var UI2 = function(canvas_id) {
         var world = {
             phy_Object_list: [],
@@ -37,8 +37,11 @@ var get_UI = function() {
         }
 
         world.dt = 1 / world.fps
+        var canvas = document.getElementById(canvas_id)
+        var pen = canvas.getContext("2d")
+        let tem_xyz = [canvas.width * Math.random(), canvas.height * Math.random(), 0]
+        console.log(tem_xyz)
 
-        tem_xyz = [200, 300, 0]
 
         var litle_dot = {
             xyz: [200, 200, 0],
@@ -131,8 +134,9 @@ var get_UI = function() {
         }
 
 
-        var canvas = document.getElementById(canvas_id)
-        var pen = canvas.getContext("2d")
+
+
+
 
         var draw_E = function() {
 
@@ -161,7 +165,7 @@ var get_UI = function() {
 
         var update = function() {
             pen.clearRect(0, 0, canvas.width, canvas.height)
-            pen.rect(0, 0, canvas.width, canvas.height)
+                // pen.rect(0, 0, canvas.width, canvas.height)
 
             // draw_E()
             draw_little_dot(litle_dot)
@@ -208,7 +212,7 @@ var get_UI = function() {
 
                     for (j in world.phy_Object_list[i].track_steppoint_list) {
                         pen.fillStyle = color_box[j]
-                        pen.fillRect(world.phy_Object_list[i].track_steppoint_list[j][0], world.phy_Object_list[i].track_steppoint_list[j][1], 3, 3)
+                        pen.fillRect(world.phy_Object_list[i].track_steppoint_list[j][0], world.phy_Object_list[i].track_steppoint_list[j][1], 2, 2)
                             //需要优化
 
                     }
@@ -232,7 +236,6 @@ var get_UI = function() {
 
 
 
-        emitter()
 
 
 
@@ -275,7 +278,7 @@ var get_UI = function() {
                 count -= 1
                 if (count == 0) {
                     clearInterval(t)
-                    fireKeyEvent(document.getElementById("draw3"), "keydown", "r")
+                    fireKeyEvent(document.getElementById(canvas_id), "keydown", "r")
                 }
             }
 
@@ -338,12 +341,9 @@ var get_UI = function() {
 
         })
 
+        emitter()
 
 
     }
     return UI2
 }
-
-
-
-get_UI()("draw3")

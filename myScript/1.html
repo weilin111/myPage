@@ -20,6 +20,8 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 
+    <script src="world3.js"></script>
+
     <script>
         $("#title").css("font-size", "100px")
         document.getElementById("title").onclick = () => {
@@ -28,10 +30,13 @@
     </script>
 
 
+    <script src="https://cdn.bootcss.com/babel-standalone/6.24.0/babel.js"></script>
+
+
 
 </head>
 
-<body style="background-color: black;">
+<body id="body" style="background-color: black;">
 
     <div id="like_button_container"></div>
     <script>
@@ -70,24 +75,41 @@
         <canvas id="draw3" width="1200" height="800" tabindex="0">
         </canvas>
 
-        <script src="world3.js"></script>
+        <script>
+            get_UI()("draw3")
+        </script>
     </div>
 
-
-
-    <div style="float: left;">
+    <!-- <div style="float: left;">
         <p>
             🍻
         </p>
-
         <canvas id="draw4" width="1200" height="800" tabindex="0">
-
-        
-    
         </canvas>
         <script type="module" src="world4.js"></script>
 
-    </div>
+    </div> -->
+
+    <!-- 2021年4月12日 -->
+
+    <div id="testReact" style="float: left;"></div>
+    <div id="testReact0" style="float: left;"></div>
+    <div id="testReact1" style="float: left;"></div>
+    <div id="testReact2" style="float: left;"></div>
+    <div id="testReact3" style="float: left;"></div>
+    <div id="testReact4" style="float: left;"></div>
+    <div id="testReact5" style="float: left;"></div>
+    <div id="testReact6" style="float: left;"></div>
+    <div id="testReact7" style="float: left;"></div>
+    <script type="text/babel" src="world5-react.js"></script>
+
+
+
+
+
+
+
+
 
 
 
@@ -109,6 +131,8 @@
             change_title(fps)
         }, 1000 / fps)
     </script>
+
+
 
 </body>
 

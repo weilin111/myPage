@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <center>
+        <a id="title" style="font-size: 100px;">
+                SIRIUS
+    
+            </a>
+    </center>
+
+    <script src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js">
+    </script>
+    <script src="utils.js"></script>
+    <script src="three.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="world3.js"></script>
+
+    <script>
+        $("#title").css("font-size", "100px")
+        document.getElementById("title").onclick = () => {
+            fireKeyEvent(document.getElementById("draw3"), "keydown", "2")
+        }
+    </script>
+
+    <script>
+        change_title_color("title")
+    </script>
+
+
+    <script src="https://cdn.bootcss.com/babel-standalone/6.24.0/babel.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="text" >
+    <a>
+    <p>wwwwwwwwwwwwww</p>
+    <p>wwwwwwwwwwwwww</p>
+    <p>wwwwwwwwwwwwww</p>
+    <p>wwwwwwwwwwwwww</p>
+    <p>wwwwwwwwwwwwww</p>
+    <p>wwwwwwwwwwwwww</p>
+    <p>wwwwwwwwwwwwww</p>
+
+    </a>
+    </div>
+    <div id="forReact_0"></div>
+    <div id="forReact_1"></div>
+    <div id="forReact_2"></div>
+    <div id="forReact_3"></div>
+
+
+    <script type="text/babel" src="./for_2.js">
+    </script>
+
+    <iframe src="1.html" style="width:100%;height:100%;z-index:-1000; max-width:100%;display: block; position:fixed "></iframe>
+
+
+</body>
+
+
+
+
+
+</html>
