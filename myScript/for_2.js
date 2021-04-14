@@ -51,7 +51,7 @@ class Table extends React.Component{
         const rows=[]
         for(let index=0;index<this.props.data.length;index++){
             rows.push(
-                <TableRow row_data={this.props.data[index]}/>
+                <TableRow row_data={this.props.data[index]}  key={index}/>
             )
         }
         return <table className="123">
@@ -110,7 +110,7 @@ class TableWithSearch extends React.Component{
             }
         }
 
-        return <div >
+        return <div key="constant-table" >
         <Search_bar handleFilterChange={this.handleFilterChange}/>
         <Table data={data} filter_text={this.state.filter_text}/>
 
@@ -187,7 +187,15 @@ let Table_data=[
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
-["$Einstrin  \\; Equation $","$G_{\\mu\\nu}=8\\pi G T_{\\mu \\nu}  $"],
+["$Einstein  \\; Equation $","$G_{\\mu\\nu}=8\\pi G T_{\\mu \\nu}  $"],
+["$Dirac \\; Equation $","$(i  \\not \\partial-m)\\psi=0  $"],
+["$Schrödinger \\; Equation  $","$ i\\partial_t \\psi=\\hat{H}\\psi $"],
+["$Maxwell \\;Equation $","$F_{\\mu\\nu}=\\partial_\\mu A_\\nu-\\partial_\\nu A_\\mu $"],
+["$Pauli \\; Matrix $","$\\begin{bmatrix} 0 & 1 \\\\ 1 & 0\\end{bmatrix}   \\begin{bmatrix} 0 & -i \\\\ i & 0\\end{bmatrix}  \\begin{bmatrix} 1 & 0 \\\\ 0 & -1\\end{bmatrix}$"],
+["$Fermi-Dirac \\; Distribution $","$f(E)= \\frac{1}{e^{ (E-E_F)/k_BT  }  \\quad +1 } $"],
+["$Maxwell \\; Distribution $","$f(v)=\\sqrt{\\frac{2}{\\pi} (\\frac{m}{k_B T})^3 } \\; v^2  exp(\\frac{-m v^2}{2k_B T}) $"],
+["$Bose-Einstein \\;Distribution $","$ f(E)= \\frac{1}{e^{ (E-\\mu)/k_BT  }  \\quad -1 }$"],
+["$Guass \\; Distribution $","$ \\frac{1}{\\sqrt{2\\pi}\\sigma}exp(-\\frac{(x-\\mu)^2}{2\\sigma^2})$"],
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],

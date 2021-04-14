@@ -1,4 +1,6 @@
 from django.http import HttpResponse
+from django.http import JsonResponse
+
 
 from myDB.models import cool_knowledge
  
@@ -34,5 +36,15 @@ def fun_fact(request):
     #     response1 += var.piece_of_cool + " "
 
     response = list1[random.randint(0,len(list1)-1)].piece_of_cool
+
+    print(request.method)
+
+    if(request.method=="GET"):
+        return JsonResponse({"fun_fact":response},json_dumps_params={'ensure_ascii':False})
+        # return 
+
+
+
+
     return HttpResponse("<p>" + response + "</p>")
 
