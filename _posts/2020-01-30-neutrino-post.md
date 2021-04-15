@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Neutirno
+title: Neutirno🌠
 date: 2020-12-12 00:00:00 +0800
 category: Nihil eos tempore tempore sint ex non aperiam.
-thumbnail: style/image/Twitter/5-30.jpg
+thumbnail: style/image/Twitter/6-176.jpg
 icon: book
 ---
 

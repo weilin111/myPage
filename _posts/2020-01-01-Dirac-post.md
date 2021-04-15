@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 瞎写
+title: ✨
 date: 2021-3-30 00:00:00 +0800
-category: xjier写写
-thumbnail: style/image/Twitter/5-125.jpg
+category: random write
+thumbnail: style/image/Twitter/6-202.jpg
 icon: book
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: Multi
 date: 2020-12-23 00:00:00 +0800
 category: (#`O′)
-thumbnail: style/image/Twitter/5-130.jpg
+thumbnail: style/image/Twitter/5-66.jpg
 icon: book
 ---
 
