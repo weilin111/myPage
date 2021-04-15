@@ -3,7 +3,7 @@ layout: post
 title: 常数表
 date: 2021-4-11 00:00:00 +0800
 category: query
-thumbnail: style/image/Twitter/6-111.jpg
+thumbnail: style/image/Twitter/5-52.jpg
 icon: book
 ---
 

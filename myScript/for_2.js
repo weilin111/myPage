@@ -185,7 +185,7 @@ let Table_data=[
 ["$k_B$","$1.38e-23 \\quad [J/K]$"],
 ["$M_{Chandrasekhar} $","$1.433 \\quad [M_{sum}] $"],
 ["$H_0 $","$ 67.8 \\quad [km/s/Mpc]$"],
-["$#_{atomOfUniverse} $","$ 1e80$"],
+["$N_{atomOfUniverse} $","$ 1e80$"],
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$Gradient \\; in\\; xyz \\;Coor $","$(\\partial_x,\\partial_y,\\partial_z ) $"],
