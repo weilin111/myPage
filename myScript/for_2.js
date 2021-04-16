@@ -92,7 +92,7 @@ class TableWithSearch extends React.Component{
     }
 
     filter(text){
-        return text.indexOf(this.state.filter_text)>=0
+        return text.toLowerCase().indexOf(this.state.filter_text.toLowerCase())>=0
     }
 
     componentDidUpdate(){
@@ -189,22 +189,45 @@ let Table_data=[
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$\\nabla \\; in\\; xyz \\;Coor $","$(\\partial_x,\\partial_y,\\partial_z ) $"],
-["$\\nabla \\; in\\; Cylinder \\;Coor $","$( ) $"],
-["$\\nabla \\; in\\; Spherical \\;Coor $","$( ) $"],
+["$\\nabla \\; in\\; Cylinder \\;Coor $","$(\\partial_r,\\frac{1}{r}\\partial_\\theta, \\partial_z) $"],
+["$\\nabla \\; in\\; Spherical \\;Coor $","$(\\partial_r,\\frac{1}{r}\\partial_\\theta, \\frac{1}{r \\sin\\theta}\\partial_\\phi) $"],
+
+["$\\nabla^2 \\; in\\; xyz \\;Coor $","$( ) $"],
+["$\\nabla^2 \\; in\\; Cylinder \\;Coor $","$( ) $"],
 ["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( ) $"],
-["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( ) $"],
-["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( ) $"],
+
+["$\\nabla \\times \\; in\\; xyz \\;Coor $","$( ) $"],
+["$\\nabla \\times \\; in\\; Cylinder \\;Coor $","$( ) $"],
+["$\\nabla \\times \\; in\\; Spherical \\;Coor $","$( ) $"],
+
+["$\\nabla \\cdot A\\; in\\; xyz \\;Coor $","$\\partial_xA_x+\\partial_yA_y+\\partial_zA_z $"],
+["$\\nabla \\cdot A\\; in\\; Cylinder \\;Coor $","$\\frac{1}{r} \\partial_r(rA_r) +\\frac{1}{r}\\partial_{\\theta}A_\\theta +\\partial_zA_z$"],
+["$\\nabla \\cdot A\\; in\\; Spherical \\;Coor $","$\\frac{1}{r}\\partial_r^2(rA_r) +\\frac{1}{r \\sin\\theta} \\partial_\\theta(\\sin\\theta A_\\theta )  +\\frac{1}{r \\sin\\theta} \\partial_\\phi A_\\phi$"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$Synchrotron \\; Formula$","$P=\\frac{2e^2c\\beta^4}{3\\rho^2}(\\frac{E}{mc^2})^2  $"],
+["$ $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$Newton \\;Equation $","$ F=ma $"],
 ["$Laplace \\;Equation $","$ \\nabla^2\\phi=0 $"],
-["$Wave \\;Equation $","$ \\nabla^2\\phi=0 $"],
+["$Wave \\;Equation $","$ \\nabla^2\\phi=\\partial^2_t $"],
+["$KdV \\; Equation  $","$\\partial_t\\phi+6\\phi\\partial_x\\phi+\\partial_x^3\\phi=0 $"],
+
 ["$Einstein  \\; Equation $","$G_{\\mu\\nu}=8\\pi G T_{\\mu \\nu}  $"],
 ["$Dirac \\; Equation $","$(i  \\not \\partial-m)\\psi=0  $"],
 ["$Schrödinger \\; Equation  $","$ i\\partial_t \\psi=\\hat{H}\\psi $"],
 ["$Maxwell \\;Equation $","$F_{\\mu\\nu}=\\partial_\\mu A_\\nu-\\partial_\\nu A_\\mu $"],
 ["$Pauli \\; Matrix $","$\\begin{bmatrix} 0 & 1 \\\\ 1 & 0\\end{bmatrix}   \\begin{bmatrix} 0 & -i \\\\ i & 0\\end{bmatrix}  \\begin{bmatrix} 1 & 0 \\\\ 0 & -1\\end{bmatrix}$"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
 ["$Fermi-Dirac \\; Distribution $","$f(E)= \\frac{1}{e^{ (E-E_F)/k_BT  }  \\quad +1 } $"],
 ["$Maxwell \\; Distribution $","$f(v)=\\sqrt{\\frac{2}{\\pi} (\\frac{m}{k_B T})^3 } \\; v^2  exp(\\frac{-m v^2}{2k_B T}) $"],
 ["$Bose-Einstein \\;Distribution $","$ f(E)= \\frac{1}{e^{ (E-\\mu)/k_BT  }  \\quad -1 }$"],

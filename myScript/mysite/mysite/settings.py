@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'l@=-q9(exohx#$*61+3a@y%sb^lt#5!2a339jqxxa%baba6#o7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'localhost']
 
@@ -123,14 +123,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/mysite/repo/'
-
-
+STATIC_URL = "repo/"
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    BASE_DIR / "mysite/repo/",
-    '/mysite/repo/',
-]
+    os.path.join(BASE_DIR,"mysite/repo"),
+    ]
 
 
 
