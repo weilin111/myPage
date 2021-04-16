@@ -125,7 +125,7 @@ USE_TZ = True
 
 STATIC_URL = "repo/"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"mysite/repo"),
+    os.path.join(BASE_DIR,"repo/"),
     ]
 
 
