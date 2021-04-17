@@ -100,6 +100,11 @@ class TableWithSearch extends React.Component{
         // console.log("mathjax update")
     }
 
+    componentDidMount(){
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+      
+    }
+
     render(){
 
         const data=[]
