@@ -214,7 +214,7 @@ function add_visit_to_db() {
     let url = "https://sirius1334.love/1/"
     $.get("https://sirius1334.love/1", (data) => {
 
-
+        // #pass
     })
 
 
