@@ -102,7 +102,10 @@ class TableWithSearch extends React.Component{
 
     componentDidMount(){
         MathJax.Hub.Queue(["Typeset",MathJax.Hub])
-      
+        $.ajax( 
+             {url:"https:sirius1334.love/1",
+             dataType:"jsonp",
+             success: (data)=>{console.log(data) },} )
     }
 
     render(){
