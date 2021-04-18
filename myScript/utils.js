@@ -177,31 +177,35 @@ function get_cool_display(url) {
 
 
 
-    function show_visited_data() {
+}
 
-        $(".post-content").css("color", "#ffffff")
-        $(".post-content").css("background", "#000000")
-    
-        url="https://sirius1334.love/1/"
-        var request = new XMLHttpRequest()
-        request.open("get", url) /*设置请求方法与路径*/
-        request.send(null) /*不发送数据到服务器*/
-        request.onload = function() { /*XHR对象获取到返回信息后执行*/
-            if (request.status == 200) { /*返回状态为200，即为数据获取成功*/
-                var json = JSON.parse(request.responseText)
 
-    
-            let s = '<div id="visited_table"> '
-            let s_end = '</div>'
-            s+="total_visited_count: //"
-            s+=json.total_count
-            $(".post-content").append(s)
 
-    
-    
-            change_title_color("visited_table")
-    
-        }
+
+
+function show_visited_data() {
+
+    $(".post-content").css("color", "#ffffff")
+    $(".post-content").css("background", "#000000")
+
+    let url = "https://sirius1334.love/1/"
+    $.get("https://sirius1334.love/1", (data) => {
+
+        let json = data.responseJSON
+        let s = '<div id="visited_table"> '
+        let s_end = '</div>'
+        s += "total_visited_count: //"
+        s += json.total_count
+        s += s_end
+        $(".post-content").append(s)
+
+
+
+        change_title_color("visited_table")
+
+
+    })
+
 
 
 
@@ -211,17 +215,3 @@ function get_cool_display(url) {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-// ————————————————
-// 版权声明：本文为CSDN博主「小宇巴巴」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-// 原文链接：https://blog.csdn.net/xuefu2008/article/details/108727693

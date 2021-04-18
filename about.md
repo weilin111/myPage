@@ -12,7 +12,8 @@ title: About site
 sirius1334
 
 
-
+  <script src="{{ '/myScript/utils.js' | prepend: site.baseurl    }}   ">
+    </script>
 <script>
     window.onload = show_visited_data()
 </script>
