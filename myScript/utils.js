@@ -191,11 +191,11 @@ function show_visited_data() {
     let url = "https://sirius1334.love/1/"
     $.get("https://sirius1334.love/1", (data) => {
 
-        let json = data.responseJSON
+
         let s = '<div id="visited_table"> '
         let s_end = '</div>'
-        s += "total_visited_count: //"
-        s += json.total_count
+        s += "total_visited_count: "
+        s += data.total_count
         s += s_end
         $(".post-content").append(s)
 
@@ -207,6 +207,15 @@ function show_visited_data() {
     })
 
 
+    function add_visit_to_db() {
+
+
+        let url = "https://sirius1334.love/1/"
+        $.get("https://sirius1334.love/1", (data) => {
+
+
+
+        })
 
 
 
@@ -214,4 +223,4 @@ function show_visited_data() {
 
 
 
-}
+    }
