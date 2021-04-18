@@ -21,35 +21,26 @@ function get_UI() {
 
             track_steppoint_maxNumber: 100,
 
+            E: function(xyz) {
+                center = [600, 400, 1]
+                dx = center[0] - xyz[0]
+                dy = center[1] - xyz[1]
+                return [100 * dx / 500, 100 * dy / 500, 0]
+            },
+
+            B: function(xyz) {
+                // return [0, 0, 2 * xyz[0] / 500]
+                return [0, 0, 0]
+            }
 
 
         }
-
-
-
 
         world.dt = 1 / world.fps
         var canvas = document.getElementById(canvas_id)
         var pen = canvas.getContext("2d")
-        let tem_xyz = [canvas.width * Math.random(), canvas.height * Math.random(), Math.random()]
+        let tem_xyz = [canvas.width * Math.random(), canvas.height * Math.random(), 0]
         console.log(tem_xyz)
-        var E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
-
-        function E(xyz) {
-            let center = [E_tem_xyz[0], E_tem_xyz[1], E_tem_xyz[2]]
-            let dx = center[0] - xyz[0]
-            let dy = center[1] - xyz[1]
-            return [100 * dx / 500, 100 * dy / 500, 0]
-        }
-
-        function B(xyz) {
-            if (tem_xyz[2] > 0.5) {
-                return [0, 0, 0.5 + 0.7 * Math.random()]
-            }
-            return [0, 0, 0]
-        }
-
-
 
 
         var litle_dot = {
@@ -125,8 +116,8 @@ function get_UI() {
 
         var EM_module = function(i) {
             p = world.phy_Object_list[i]
-            fb = vector_cross(p.velocity, B(p.xyz))
-            fe = E(p.xyz)
+            fb = vector_cross(p.velocity, world.B(p.xyz))
+            fe = world.E(p.xyz)
                 // console.log(fb)
                 // console.log(fe)
 
@@ -155,7 +146,7 @@ function get_UI() {
 
                 pen.moveTo(canvas.width * i / n, 0)
                 pen.lineTo(canvas.width * i / n, canvas.height)
-                pen.fillText("" + E([canvas.width * i / n, 0, 0]), canvas.width * i / n, 100)
+                pen.fillText("" + world.E([canvas.width * i / n, 0, 0]), canvas.width * i / n, 100)
 
             }
             // pen.stroke()
@@ -166,8 +157,6 @@ function get_UI() {
 
         var draw_little_dot = function(l) {
             pen.fillText("🐟", l.xyz[0], l.xyz[1])
-            pen.fillText("✨", E_tem_xyz[0], E_tem_xyz[1])
-
         }
 
         let start_color = get_random_Color()
@@ -253,7 +242,6 @@ function get_UI() {
         canvas.addEventListener("click", function(event) {
 
             tem_xyz = [event.offsetX, event.offsetY, 0]
-            E_tem_xyz = [event.offsetX, event.offsetY, 0]
 
             add_phy_Object(create_phy_Object([Math.random() * canvas.width, Math.random() * canvas.height, Math.random()], [Math.random() * 100, Math.random() * 100, Math.random()]),
 
@@ -291,7 +279,6 @@ function get_UI() {
                 if (count == 0) {
                     clearInterval(t)
                     fireKeyEvent(document.getElementById(canvas_id), "keydown", "r")
-                    E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
                 }
             }
 

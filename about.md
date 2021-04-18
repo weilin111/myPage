@@ -13,5 +13,7 @@ sirius1334
 
 
 
-
+<script>
+    window.onload = show_visited_data()
+</script>
 

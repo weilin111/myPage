@@ -113,114 +113,11 @@ function create_phy_Object(xyz, v) {
 
 
 function fireKeyEvent(element, evtType, keyChar) {
-    // element.focus();
+    element.focus();
     var KeyboardEventInit = { key: keyChar, code: "", location: 0, repeat: false, isComposing: false };
     var evtObj = new KeyboardEvent(evtType, KeyboardEventInit);
     element.dispatchEvent(evtObj);
 }
-
-
-function get_cool_display(url) {
-
-    $(".post-content").css("color", "#ffffff")
-    $(".post-content").css("background", "#000000")
-
-
-    var request = new XMLHttpRequest()
-    request.open("get", url) /*设置请求方法与路径*/
-    request.send(null) /*不发送数据到服务器*/
-    request.onload = function() { /*XHR对象获取到返回信息后执行*/
-        if (request.status == 200) { /*返回状态为200，即为数据获取成功*/
-            var json = JSON.parse(request.responseText)
-            json.sort(function() {
-                return (0.5 - Math.random())
-            })
-        }
-
-
-        let s0 = '<div  id="to_change1" style="font-size:60px;">' + "📕冷知识:" + json.length + '</div>'
-        $(".post-content").append(s0)
-
-
-
-
-        let s = '<div id="to_change"> '
-        let s_end = '</div>'
-        for (var index = 0; index != 10; index++) {
-            s += '<p>' + index + ". " + json[index] + '</p>'
-
-        }
-        s += s_end
-        $(".post-content").append(s)
-        for (var index = 10; json.length - index != 1; index++) {
-            // console.log(json[index])
-            s = '<p>' + index + ". " + json[index] + '</p>'
-            $(".post-content").append(s)
-        }
-
-
-        change_title_color("to_change")
-        change_title_color("to_change1")
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    function show_visited_data() {
-
-        $(".post-content").css("color", "#ffffff")
-        $(".post-content").css("background", "#000000")
-    
-        url="https://sirius1334.love/1/"
-        var request = new XMLHttpRequest()
-        request.open("get", url) /*设置请求方法与路径*/
-        request.send(null) /*不发送数据到服务器*/
-        request.onload = function() { /*XHR对象获取到返回信息后执行*/
-            if (request.status == 200) { /*返回状态为200，即为数据获取成功*/
-                var json = JSON.parse(request.responseText)
-
-    
-            let s = '<div id="visited_table"> '
-            let s_end = '</div>'
-            s+="total_visited_count: //"
-            s+=json.total_count
-            $(".post-content").append(s)
-
-    
-    
-            change_title_color("visited_table")
-    
-        }
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
 
 // ————————————————
 // 版权声明：本文为CSDN博主「小宇巴巴」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
