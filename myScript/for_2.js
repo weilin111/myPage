@@ -172,9 +172,6 @@ class Search_bar extends React.Component{
 
 
 
-
-
-
 let Table_data=[
 ["$N_A$","$6.023e23$ "],
 ["$c$","$3e8  \\quad  [m/s]$"],
@@ -213,19 +210,26 @@ let Table_data=[
 ["$\\nabla \\cdot A\\; in\\; Spherical \\;Coor $","$\\frac{1}{r}\\partial_r^2(rA_r) +\\frac{1}{r \\sin\\theta} \\partial_\\theta(\\sin\\theta A_\\theta )  +\\frac{1}{r \\sin\\theta} \\partial_\\phi A_\\phi$"],
 ["$ $","$ $"],
 ["$ $","$ $"],
-// 矢量分析
+// ----------------------
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
-["$Fourier Transform $","$ $"],
-["$Laplace Transform $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+// 矢量分析---------------
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$Fourier \\; Transform $","$\\mathcal{L}[t]=\\phi(\\omega) = \\frac{1}{2\\pi} \\int_{-\\infty}^{+\\infty}f(x) e^{- i \\omega t} {\\rm d} t $"],
+["$Laplace \\; Transform $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$Synchrotron \\; Formula$","$P=\\frac{2e^2c\\beta^4}{3\\rho^2}(\\frac{E}{mc^2})^2  $"],
-["$ $","$E=mc^2 $"],
-["$ $","$E=h\nu $"],
-["$BlackBody Rad $","$ $"],
-["$ideal gas$","$ $"],
+["$ $","$E=mc^2=\\frac{m_0c^2}{\\sqrt{1+v^2/c^2}} $"],
+["$ $","$E=h \\nu $"],
+["$BlackBody \\;Rad $","$ $"],
+["$Ideal \\; Gas$","$ PV=NTR$"],
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
@@ -254,6 +258,8 @@ let Table_data=[
 ["$ $","$ $"]
 ]
 ReactDOM.render(<TableWithSearch className="cool_table"  data={Table_data}/>, document.querySelector('#forReact_0'))
+
+
 
 
 
