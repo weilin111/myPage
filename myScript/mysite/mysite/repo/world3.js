@@ -42,9 +42,19 @@ function get_UI() {
             return [100 * dx / 500, 100 * dy / 500, 0]
         }
 
+        var r_0 = Math.sqrt(canvas.width * canvas.width + canvas.height * canvas.height)
+
         function B(xyz) {
+
+
             if (tem_xyz[2] > 0.5) {
-                return [0, 0, 0.5 + 0.7 * Math.random()]
+                let dx = canvas.width - xyz[0]
+                let dy = canvas.height - xyz[1]
+                let r = Math.sqrt(dx * dx + dy * dy)
+                if (r > r_0) {
+                    return [0, 0, 0]
+                }
+                return [0, 0, 3 * Math.exp(1.5 * (r / r_0 - 1))]
             }
             return [0, 0, 0]
         }
@@ -195,11 +205,11 @@ function get_UI() {
                     }
 
                     if (world.phy_Object_list[i].xyz[0] <= 0 || world.phy_Object_list[i].xyz[0] >= canvas.width) {
-                        world.phy_Object_list[i].velocity[0] *= -1
+                        world.phy_Object_list[i].velocity[0] *= -0.3
                     }
-
+                    // *=-1 or 0 
                     if (world.phy_Object_list[i].xyz[1] <= 0 || world.phy_Object_list[i].xyz[1] >= canvas.height) {
-                        world.phy_Object_list[i].velocity[1] *= -1
+                        world.phy_Object_list[i].velocity[1] *= -0.3
                     }
 
                     world.phy_Object_list[i].track_steppoint_list.push([world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], world.phy_Object_list[i].xyz[2]])
@@ -252,7 +262,7 @@ function get_UI() {
 
         canvas.addEventListener("click", function(event) {
 
-            tem_xyz = [event.offsetX, event.offsetY, 0]
+            tem_xyz = [event.offsetX, event.offsetY, Math.random()]
             E_tem_xyz = [event.offsetX, event.offsetY, 0]
 
             add_phy_Object(create_phy_Object([Math.random() * canvas.width, Math.random() * canvas.height, Math.random()], [Math.random() * 100, Math.random() * 100, Math.random()]),
