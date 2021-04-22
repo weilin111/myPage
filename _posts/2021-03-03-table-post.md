@@ -14,7 +14,10 @@ icon: book
 
 <div id="forReact_0"></div>
 
-<div id="forReact_1"></div>
+<div id="forReact_1">
+<img src="https://sirius1334.love/2/" />
+
+</div>
 
 
 <script type="text/babel" src="{{ '/myScript/for_2.js'  | prepend : site.baseurl }}"></script>
