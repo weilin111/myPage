@@ -19,9 +19,15 @@ def fun_fact(request):
     t=str(time.ctime())
     
     index=int(len(list_t))-1
-    c=list_t[index].total_visited_count
+    if index<0:
+        c=0
+    else:
+        c=list_t[index].total_visited_count
     visited_number1=visited_number(visit_time=t,total_visited_count=c+1)
     visited_number1.save()
+
+
+
     list_t=visited_number.objects.all()
 
 # ----------------------------
