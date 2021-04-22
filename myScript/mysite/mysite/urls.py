@@ -26,5 +26,7 @@ urlpatterns = [
     path(r"sirius/",views.sirius),
     path(r"",views.sirius),
     path(r"1/",testdb.fun_fact),
+    path(r"2/",testdb.get_random_pic),
+
 ] 
 # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

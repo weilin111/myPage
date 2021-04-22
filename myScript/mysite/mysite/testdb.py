@@ -6,6 +6,7 @@ from myDB.models import cool_knowledge
 from myDB.models import visited_number
 import time
 import random
+import json
 # 数据库操作
 
 def fun_fact(request):
@@ -34,7 +35,15 @@ def fun_fact(request):
 
     print(request.method+" from "+str(request.META["REMOTE_ADDR"]) +"  "+ t)
     if(request.method=="GET"):
-        return JsonResponse({"fun_fact":response,"time":"1","total_count":c+1},json_dumps_params={'ensure_ascii':False})
+        return JsonResponse({"fun_fact":response,"time":t,"total_count":c+1},json_dumps_params={'ensure_ascii':False})
         # return 
     return HttpResponse("<p>" + response + "</p>")
 
+def get_random_pic(request):
+    with open("/home/ubuntu/pluto/myPage/myScript/mysite/cache/pic.json","r",encoding="utf-8") as f:
+        b=json.load(f)
+    name=b[random.randint(0,len(b)-1)]
+    image_data=open(name,"rb").read()
+
+
+    return HttpResponse(image_data,content_type="image/png")
