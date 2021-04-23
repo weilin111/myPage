@@ -82,13 +82,13 @@ function get_UI() {
             let n = 10
             let center = [canvas.width * Math.random(), canvas.height * Math.random()]
             let r = Math.random() * 250
-            let v = [Math.random() * 200, Math.random() * 200, Math.random()]
+            let v = [Math.random() * 50, Math.random() * 50, 0]
             for (let i = 0; i < n; i++) {
 
                 // center[0] + r * Math.cos(Math.PI * 2 * i / n)
                 // center[1] + r * Math.sin(Math.PI * 2 * i / n)
                     // console.log(x, y)
-                add_phy_Object(create_phy_Object([center[0] + r * Math.cos(Math.PI * 2 * i / n), center[1] + r * Math.sin(Math.PI * 2 * i / n), 0], v))
+                add_phy_Object(create_phy_Object([center[0] + r * Math.cos(Math.PI * 2 * i / n), center[1] + r * Math.sin(Math.PI * 2 * i / n), 0], [v[0],v[1],v[2]]))
 
             }
         }
@@ -378,7 +378,7 @@ function get_UI() {
 
 
         })
-
+        particle_ring()
         emitter()
 
 
