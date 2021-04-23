@@ -15,7 +15,7 @@ icon: book
 <div id="forReact_0"></div>
 
 <div id="forReact_1">
-<img src="https://sirius1334.love/2/" />
+<!-- <img src="https://sirius1334.love/2/" /> -->
 
 </div>
 

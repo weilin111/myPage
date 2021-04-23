@@ -15,7 +15,7 @@ def fun_fact(request):
     # 通过objects这个模型管理器的all()获得所有数据行，相当于SQL中的SELECT * FROM
     list1 = cool_knowledge.objects.all()
     response = list1[random.randint(0,len(list1)-1)].piece_of_cool
-# ----------------------------
+#----------------------------
     list_t=visited_number.objects.all()
     t=str(time.ctime())
     
@@ -31,9 +31,9 @@ def fun_fact(request):
 
     list_t=visited_number.objects.all()
 
-# ----------------------------
+#----------------------------
+    print("fun_fact: "+request.method+" from "+str(request.META["REMOTE_ADDR"]) +"  "+ t)
 
-    print(request.method+" from "+str(request.META["REMOTE_ADDR"]) +"  "+ t)
     if(request.method=="GET"):
         return JsonResponse({"fun_fact":response,"time":t,"total_count":c+1},json_dumps_params={'ensure_ascii':False})
         # return 
@@ -45,5 +45,8 @@ def get_random_pic(request):
     name=b[random.randint(0,len(b)-1)]
     image_data=open(name,"rb").read()
 
+
+    t=str(time.ctime())
+    print("pic: "+request.method+" from "+str(request.META["REMOTE_ADDR"]) +"  "+ t)
 
     return HttpResponse(image_data,content_type="image/png")

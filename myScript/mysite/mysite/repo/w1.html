@@ -5,6 +5,7 @@
 
 <head>
 
+
     <center>
         <a id="title" style="font-size: 100px;">
             SIRIUS!!
@@ -52,9 +53,34 @@
 
 <body style="background-color: black;">
 
+    <div id="links" >
+        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/1')"  ><p  >fun fact</p></div>
+        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/2')"><p  >random pic</p></div>
+        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://weilin111.github.io/myPage/2021-04-10-table-post')"><p  >constant table</p></div>
+        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick=""><p  >Achilles 3</p></div>
 
+        <!--
+        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/')"><p  >!</p></div>
+        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/')"><p  >!</p></div>
+        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;"  onclick="window.open('https://www.sirius1334.love/')"><p  >!</p></div> -->
 
-    <div style="float: left;">
+    </div>
+
+    <script>
+
+        change_title_color("links")
+
+        {
+        for(let i=0 ;i<$("#links").children("div").length;i++){
+            $("#links").children("div")[i].onmouseover=(e)=>{$(e.target).css({"font-size":"45px"})}
+
+            $("#links").children("div")[i].onmouseout=(e)=>{$(e.target).css({"font-size":"30px"})}
+
+        }
+        }
+    </script>
+<!-- ----------------000000000000000000------------------------------ -->
+    <div >
         <p>
             🍻
         </p>
@@ -75,23 +101,9 @@
 
 
 
-    <div style="float: left;">
-        <p>
-            🍻
-        </p>
 
-        <canvas id="draw4" width="1200" height="800" tabindex="0">
 
-        
     
-        </canvas>
-        <script>
-            get_UI()("draw4")
-        </script>
-
-    </div>
-
-
 
 
 </body>

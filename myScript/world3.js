@@ -34,6 +34,7 @@ function get_UI() {
         let tem_xyz = [canvas.width * Math.random(), canvas.height * Math.random(), Math.random()]
         console.log(tem_xyz)
         var E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
+        var is_field_move_with_cursor=false
 
         function E(xyz) {
             let center = [E_tem_xyz[0], E_tem_xyz[1], E_tem_xyz[2]]
@@ -81,13 +82,13 @@ function get_UI() {
             let n = 10
             let center = [canvas.width * Math.random(), canvas.height * Math.random()]
             let r = Math.random() * 250
-            let v = [Math.random() * 200, Math.random() * 200, Math.random()]
+            let v = [Math.random() * 50, Math.random() * 50, 0]
             for (let i = 0; i < n; i++) {
 
-                let x = center[0] + r * Math.cos(Math.PI * 2 * i / n)
-                let y = center[1] + r * Math.sin(Math.PI * 2 * i / n)
+                // center[0] + r * Math.cos(Math.PI * 2 * i / n)
+                // center[1] + r * Math.sin(Math.PI * 2 * i / n)
                     // console.log(x, y)
-                add_phy_Object(create_phy_Object([x, y, Math.random()], v))
+                add_phy_Object(create_phy_Object([center[0] + r * Math.cos(Math.PI * 2 * i / n), center[1] + r * Math.sin(Math.PI * 2 * i / n), 0], [v[0],v[1],v[2]]))
 
             }
         }
@@ -219,6 +220,7 @@ function get_UI() {
                     }
 
                 }
+                //00000000000000-------------------------CALCULATER---------------------------00000000000000000000000
 
                 //00000000000000-------------------------DRAW---------------------------00000000000000000000000
                 pen.fillStyle = "#000000"
@@ -239,6 +241,7 @@ function get_UI() {
                     }
 
                 }
+                //00000000000000-------------------------DRAW---------------------------00000000000000000000000
 
 
             }
@@ -292,8 +295,7 @@ function get_UI() {
 
 
         function emitter() {
-            // let xyz = [300, 300, 0]
-            let count = 25
+            let count = 20
 
             function add() {
                 add_phy_Object(create_phy_Object([tem_xyz[0], tem_xyz[1], 0], [0, 0, 0]))
@@ -339,8 +341,23 @@ function get_UI() {
                 case "2":
                     emitter()
                     break
+                case "m":
+                    is_field_move_with_cursor=!is_field_move_with_cursor
+                    
 
             }
+
+            canvas.addEventListener("mousemove",(event)=>{
+                
+                
+                tem_xyz = [event.offsetX, event.offsetY, tem_xyz[2]]
+                if(is_field_move_with_cursor){
+                E_tem_xyz = [event.offsetX, event.offsetY, 0]
+
+                }
+                // console.log(tem_xyz)
+            })
+
 
             canvas.addEventListener("keypress", (event) => {
                 // console.log(event.key)
@@ -363,7 +380,7 @@ function get_UI() {
 
 
         })
-
+        particle_ring()
         emitter()
 
 

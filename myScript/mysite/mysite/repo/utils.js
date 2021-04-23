@@ -91,6 +91,23 @@ var change_title_color = function(title_id) {
 
 }
 
+var change_title_color_by_class = function(title_id) {
+
+    var change_count = 0
+    var start_color = get_random_Color()
+    var end_color = get_random_Color()
+    var fps = 45
+    var change_title = function(fps) {
+        $("." + title_id).css("color", color_gradient_point(start_color, end_color, change_count, fps))
+        change_count = (change_count + 1) % fps
+    }
+    setInterval(function() {
+        change_title(fps)
+    }, 1000 / fps)
+
+}
+
+
 
 function create_phy_Object(xyz, v) {
     var phy_Object = {
