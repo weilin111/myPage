@@ -7,3 +7,7 @@ def hello(request):
 
 def sirius(request):
     return render(request,"w1.html")
+
+
+def test_3js(request):
+    return render(request,"w2.html")
