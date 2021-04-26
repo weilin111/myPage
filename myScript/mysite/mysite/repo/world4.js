@@ -1,11 +1,85 @@
 import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/examples/jsm/controls/OrbitControls.js';
 import { GUI } from 'https://threejsfundamentals.org/threejs/../3rdparty/dat.gui.module.js';
-import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/examples/jsm/loaders/GLTFLoader.js';
+// import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/examples/jsm/loaders/GLTFLoader.js';
+
+
+
+function get_torus_knot(radius, p, q) {
+    const g = new THREE.TorusKnotGeometry(radius, 0.12, 256, 48, p, q)
+    const m = new THREE.MeshStandardMaterial({ color: get_random_Color() })
+    const mesh = new THREE.Mesh(g, m)
+        // console([p, q])
+    return mesh
+
+}
+
+function rotate_on_self(mesh, xyz) {
+    let center = new THREE.Vector3();
+    mesh.geometry.computeBoundingBox();
+    mesh.geometry.boundingBox.getCenter(center);
+    let x = center.x;
+    let y = center.y;
+    let z = center.z;
+
+    // 把对象放到坐标原点
+    mesh.geometry.center();
+
+    // 绕轴旋转
+    mesh.rotation.x += xyz[0]
+    mesh.rotation.y += xyz[1]
+    mesh.rotation.z += xyz[2]
+
+
+    // 再把对象放回原来的地方
+    mesh.geometry.translate(x, y, z);
+    // 版权声明：本文为CSDN博主「六弦的闷音」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+    // 原文链接：https://blog.csdn.net/qzmrock/article/details/106175750
+
+}
+
+function get_parameter_surface(func) {
+
+    const m = new THREE.MeshStandardMaterial({ color: get_random_Color() })
+    const p = new THREE.ParametricGeometry(func, 128, 128)
+    const mesh = new THREE.Mesh(p, m)
+
+    return mesh
+}
+
+
+
+function klein(v, u, target) {
+
+    u *= Math.PI;
+    v *= 2 * Math.PI;
+
+    u = u * 2;
+    let x, z;
+    if (u < Math.PI) {
+
+        x = 3 * Math.cos(u) * (1 + Math.sin(u)) + (2 * (1 - Math.cos(u) / 2)) * Math.cos(u) * Math.cos(v);
+        z = -8 * Math.sin(u) - 2 * (1 - Math.cos(u) / 2) * Math.sin(u) * Math.cos(v);
+
+    } else {
+
+        x = 3 * Math.cos(u) * (1 + Math.sin(u)) + (2 * (1 - Math.cos(u) / 2)) * Math.cos(v + Math.PI);
+        z = -8 * Math.sin(u);
+
+    }
+
+    const y = -2 * (1 - Math.cos(u) / 2) * Math.sin(v);
+
+    target.set(x, y, z);
+
+}
+
+
+
 
 
 
 function world_3js(container_id) {
-    const canvas = document.querySelector('#'+container_id);
+    const canvas = document.querySelector('#' + container_id);
     const renderer = new THREE.WebGLRenderer({ canvas });
 
     const fov = 45;
@@ -75,82 +149,117 @@ function world_3js(container_id) {
         cube.position.y = 4
     }
 
-    var sphere_group=0
+
+    var sphere_group = 0
+
+
     {
-        const g= new THREE.Group();
+        const g = new THREE.Group();
         const sphereRadius = 3;
         const sphereWidthDivisions = 32;
         const sphereHeightDivisions = 16;
-        let n=20
-        let xyz=[1,8,1]
-        let r=4
+        let n = 20
+        let xyz = [1, 8, 1]
+        let r = 4
         const sphereGeo = new THREE.SphereGeometry(sphereRadius, sphereWidthDivisions, sphereHeightDivisions);
         const sphereMat = new THREE.MeshStandardMaterial({ color: get_random_Color() });
         const mesh0 = new THREE.Mesh(sphereGeo, sphereMat);
-        
-        mesh0.position.x=xyz[0]
-        mesh0.position.y=xyz[1]
-        mesh0.position.z=xyz[2]
-        // mesh0.scale.multiplyScalar(0.75);
+
+        mesh0.position.x = xyz[0]
+        mesh0.position.y = xyz[1]
+        mesh0.position.z = xyz[2]
+            // mesh0.scale.multiplyScalar(0.75);
 
         g.add(mesh0)
 
-        const color_list=color_gradient(get_random_Color(),get_random_Color(),n)
+        const color_list = color_gradient(get_random_Color(), get_random_Color(), n)
 
-        for (let i=0;i<n;i++){
-            
-            const mesh=mesh0.clone()
+        for (let i = 0; i < n; i++) {
 
-            mesh.material=new THREE.MeshStandardMaterial({ color: color_list[i] });
+            const mesh = mesh0.clone()
 
-            mesh.position.x=xyz[0] +r*Math.sin(2 * Math.PI * i/n)
-            mesh.position.y=xyz[1] + r* Math.cos(2 * Math.PI * i/n);
-            mesh.position.z=xyz[2]
-            
-            mesh.scale.multiplyScalar(0.01 + 0.01*i);
+            mesh.material = new THREE.MeshStandardMaterial({ color: color_list[i] });
 
-            
+            mesh.position.x = xyz[0] + r * Math.sin(2 * Math.PI * i / n)
+            mesh.position.y = xyz[1] + r * Math.cos(2 * Math.PI * i / n);
+            mesh.position.z = xyz[2]
+
+            mesh.scale.multiplyScalar(0.01 + 0.01 * i);
+
+
             g.add(mesh)
 
         }
-   
-        sphere_group=g
+
+        sphere_group = g
         scene.add(g)
     }
-    
-    
+
+    // -----add_by_funtion---2021年4月26日---------------
+
+    var torus_knot_group = new THREE.Group()
+    var text_mesh = 0
+    var mobius = 0
+    var klein_mesh = 0
 
 
 
+    {
+        for (let i = 0; i < 6; i++) {
+            for (let j = 0; j < 6; j++) {
+                const g = get_torus_knot(1.5, 2 + i, 3 + j)
+                g.position.x = -16 + 6 * i
+                g.position.y = 5 + 6 * j
+                g.position.z = -10
+                torus_knot_group.add(g)
+
+            }
+        }
+
+        // const g = new THREE.TextGeometry("Beauty", { size: 14 })
+        // const m = new THREE.MeshStandardMaterial({ color: get_random_Color() })
+        // text_mesh = new THREE.Mesh(g, m)
+        // scene.add(text_mesh)
+
+        const mobius_func = function(u, t, target) {
+            u *= Math.PI;
+            t *= 2 * Math.PI;
+
+            u = u * 2;
+            const phi = u / 2;
+            const major = 2.25,
+                a = 0.125,
+                b = 0.65;
+
+            let x = a * Math.cos(t) * Math.cos(phi) - b * Math.sin(t) * Math.sin(phi);
+            const z = a * Math.cos(t) * Math.sin(phi) + b * Math.sin(t) * Math.cos(phi);
+            const y = (major + x) * Math.sin(u);
+            x = (major + x) * Math.cos(u);
+
+            target.set(x, y, z);
+
+        }
+
+        mobius = get_parameter_surface(mobius_func)
+        mobius.position.y = 15
+        mobius.position.x = 20
 
 
+        klein_mesh = get_parameter_surface(klein)
+        klein_mesh.position.y = 15
+        klein_mesh.position.x = -20
+        klein_mesh.scale.multiplyScalar(0.6);
 
 
+        scene.add(klein_mesh)
+        scene.add(mobius)
 
 
+        scene.add(torus_knot_group)
+    }
 
-    // {
-    //     const gltfLoader = new GLTFLoader();
-    //     gltfLoader.load('https://threejsfundamentals.org/threejs/resources/models/cartoon_lowpoly_small_city_free_pack/scene.gltf', (gltf) => {
-    //         const root = gltf.scene;
-    //         scene.add(root);
 
-    //         // compute the box that contains all the stuff
-    //         // from root and below
-    //         const box = new THREE.Box3().setFromObject(root);
-
-    //         const boxSize = box.getSize(new THREE.Vector3()).length();
-    //         const boxCenter = box.getCenter(new THREE.Vector3());
-
-    //         // set the camera to frame the box
-    //         frameArea(boxSize * 0.5, boxSize, boxCenter, camera);
-
-    //         // update the Trackball controls to handle the new size
-    //         controls.maxDistance = boxSize * 10;
-    //         controls.target.copy(boxCenter);
-    //         controls.update();
-    //     });
-    // }
+    //--------2021年4月26日-----------------------------
 
     class ColorGUIHelper {
         constructor(object, prop) {
@@ -203,21 +312,24 @@ function world_3js(container_id) {
         cube.rotation.x += 0.01
         cube.rotation.y += 0.01
 
-        sphere_group.rotation.z+=0.01
-        // sphere_group.rotation.y+=0.01
-
-
-
         sphere.position.y = 4 + 2 * Math.cos(Math.PI * 2 * t / 60)
-
         t = (t + 1) % 60
+
+        sphere_group.rotation.z += 0.01
+
+        for (let i = 0; i < torus_knot_group.children.length; i++) {
+            rotate_on_self(torus_knot_group.children[i], [0, 0.01, 0.01])
+        }
+        rotate_on_self(mobius, [0.01, 0.01, 0.01])
+
+        rotate_on_self(klein_mesh, [0.01, 0.01, 0.01])
+
 
         renderer.render(scene, camera);
 
 
-
-
         requestAnimationFrame(render);
+
     }
 
     requestAnimationFrame(render);
