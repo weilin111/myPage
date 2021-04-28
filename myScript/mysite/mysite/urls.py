@@ -28,6 +28,8 @@ urlpatterns = [
     path(r"1/",testdb.fun_fact),
     path(r"2/",testdb.get_random_pic),
     path(r"3/",views.test_3js),
+    path(r"4/",views.post_space),
+    path(r"post_data/",views.post_space_data),
 
 
 ] 

@@ -39,7 +39,7 @@ function rotate_on_self(mesh, xyz) {
 
 function get_parameter_surface(func) {
 
-    const m = new THREE.MeshStandardMaterial({ color: get_random_Color() })
+    const m = new THREE.MeshNormalMaterial({ color: get_random_Color() })
     const p = new THREE.ParametricGeometry(func, 128, 128)
     const mesh = new THREE.Mesh(p, m)
 

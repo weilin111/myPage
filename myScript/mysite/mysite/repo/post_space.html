@@ -1,0 +1,87 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+
+
+<head>
+
+
+    <center>
+        <a id="title" style="font-size: 100px;">
+            Taps Space
+
+        </a>
+    </center>
+
+    <script src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js">
+    </script>
+    <script src="{% static '/utils.js' %}"></script>
+    <script src="{% static '/three.js' %}"></script>
+
+
+    <script>
+        $("#title").css("font-size", "100px")
+        document.getElementById("title").onclick = () => {
+            fireKeyEvent(document.getElementById("draw3"), "keydown", "2")
+        }
+    </script>
+
+    <script>
+        var change_count = 0
+
+
+
+        var start_color = get_random_Color()
+        var end_color = get_random_Color()
+        var fps = 30
+        var change_title = function(fps) {
+            $("#title").css("color", color_gradient_point(start_color, end_color, change_count, fps))
+
+            // size = "" + (Math.round(50 * Math.sin(2 * Math.PI * change_count / fps)) + 100) + "px"
+            // $("#title").css("font-size", size)
+
+            change_count = (change_count + 1) % fps
+        }
+        setInterval(function() {
+            // console.log(color_gradient_point(start_color, end_color, change_count, fps))
+            change_title(fps)
+        }, 1000 / fps)
+    </script>
+    <script src="{% static '/world3.js' %}"></script>
+
+
+</head>
+
+<body style="background-color: black;">
+<div >
+<textarea style=" background-color:rgb(0, 0, 0); font-size: 18px;font-weight:500" name="space" id="space" cols="75" rows="40">
+
+</textarea>
+<button style="display: flex; background-color: aqua; width:fit-content;height:fit-content;font-size:60px" id="send_bnt">
+    update
+   </button>
+
+<script>
+
+var  update_space=function(){
+$.post("https://www.sirius1334.love/post_data/",{"text":$("#space").val()},(data)=>{
+   
+$("#space").val($.parseJSON(data).text)
+},"text")}
+
+$("#send_bnt")[0].onclick=update_space
+
+$.get("https://www.sirius1334.love/post_data/",(data)=>{
+   $("#space").val(data.text)
+   })
+
+change_title_color("space")
+
+</script>
+</div>
+
+
+</body>
+
+
+</html>
