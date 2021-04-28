@@ -6,7 +6,7 @@ import { GUI } from 'https://threejsfundamentals.org/threejs/../3rdparty/dat.gui
 
 function get_torus_knot(radius, p, q) {
     const g = new THREE.TorusKnotGeometry(radius, 0.12, 256, 48, p, q)
-    const m = new THREE.MeshStandardMaterial({ color: get_random_Color() })
+    const m = new THREE.MeshStandardMaterial({ color: get_random_Color(), wireframe: true, metalness: 0.2 })
     const mesh = new THREE.Mesh(g, m)
         // console([p, q])
     return mesh
@@ -39,7 +39,11 @@ function rotate_on_self(mesh, xyz) {
 
 function get_parameter_surface(func) {
 
+<<<<<<< HEAD
     const m = new THREE.MeshNormalMaterial({ color: get_random_Color() })
+=======
+    const m = new THREE.MeshNormalMaterial({ wireframe: true })
+>>>>>>> a57b152a1172183b1122f78799b0c46f902bf499
     const p = new THREE.ParametricGeometry(func, 128, 128)
     const mesh = new THREE.Mesh(p, m)
 
@@ -140,7 +144,7 @@ function world_3js(container_id) {
     {
         const cubeSize = 4;
         const cubeGeo = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
-        const cubeMat = new THREE.MeshPhongMaterial({ color: '#00ff00' });
+        const cubeMat = new THREE.MeshPhongMaterial({ color: '#00fff0', shininess: 150, envMaps: "refraction" });
         const mesh = new THREE.Mesh(cubeGeo, cubeMat);
         mesh.position.set(cubeSize + 1, cubeSize / 2, 0);
         scene.add(mesh);
