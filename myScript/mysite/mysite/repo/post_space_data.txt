@@ -1,8 +1,34 @@
 
 
+maybe i can get data from APJ ?  and make the code to a lib that can be use  repeatly
+
+done to acm
+
+i still have to read the boring book unity 
+
+what i going to do in the next step ? have no idea right now ? but i will likely to find famous ACM journal and use python script get the abstrct data like i do to PRL today this afternoon 
+
+i make a new shortcut which doesnot crush with the original keys that is (alt + s) and after key down the color of the bnt will change ,then we know the update have been done
+
+can you tell me a joke?
+
+i still have a lot of homework to do in this holiday of a week
+
+found new css makes the background become color-gradient display
+
+i have bind the shift+enter into save the tap to cloud server
+
+where to find my way ? 
+
+maybe you shuold find some css for this textarea and bind a shortcut key for the update button
+
+in mathematic you dont understand things you just get uesd to it
+
+the anwser my friend is blowing in the wind
+
 we dont have the money so we have to think
 
-nuclear reactor analysis 2021年4月28日
+nuclear reactor analysis 
 
 listen to your mom 
 she knows better

@@ -54,16 +54,20 @@
 
 <body style="background-color: black;">
 <div >
-<textarea style=" background-color:rgb(0, 0, 0); font-size: 18px;font-weight:500" name="space" id="space" cols="75" rows="40">
+
+    <button style="box-shadow:0 0 10px #FFF;display: flex; background-color: aqua; width:fit-content;height:fit-content;font-size:60px" id="send_bnt">
+        <span style="color:white">update</span> <span style="color: aqua;">(alt+s)</span>
+       </button>
+<textarea style="margin-top: 20px  ;overflow-x:hidden; box-shadow:0 0 10px #FFF;background-color:rgb(0, 0, 0); font-size: 18px;font-weight:500" name="space" id="space" cols="75" rows="40" >
 
 </textarea>
-<button style="display: flex; background-color: aqua; width:fit-content;height:fit-content;font-size:60px" id="send_bnt">
-    update
-   </button>
+
 
 <script>
 
 var  update_space=function(){
+set_color_linear_gradient("send_bnt")
+
 $.post("https://www.sirius1334.love/post_data/",{"text":$("#space").val()},(data)=>{
    
 $("#space").val($.parseJSON(data).text)
@@ -75,8 +79,24 @@ $.get("https://www.sirius1334.love/post_data/",(data)=>{
    $("#space").val(data.text)
    })
 
-change_title_color("space")
+$("#space")[0].onkeydown=(event)=>{
+    if ( event.keyCode==13  ){
+        if (event.shiftKey){
+        update_space()
 
+        }
+    }
+    if ( event.key=="s"  ){
+        if (event.altKey){
+        update_space()
+
+        }
+    }
+}
+
+
+change_title_color("space")
+set_color_linear_gradient("send_bnt")
 </script>
 </div>
 

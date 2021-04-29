@@ -139,3 +139,19 @@ function fireKeyEvent(element, evtType, keyChar) {
 // ————————————————
 // 版权声明：本文为CSDN博主「小宇巴巴」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 // 原文链接：https://blog.csdn.net/xuefu2008/article/details/108727693
+
+
+function set_color_linear_gradient(element_id){
+    let s="linear-gradient(to bottom left,"+get_random_Color()+","+get_random_Color()  +     ")"
+    $("#"+element_id).css({"background":s})
+    // 2021年4月29日
+}
+
+
+
+
+
+
+
+
+
