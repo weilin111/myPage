@@ -1,4 +1,5 @@
 
+shortcut upcase and lowercase didnot in handle
 
 maybe i can get data from APJ ?  and make the code to a lib that can be use  repeatly
 
