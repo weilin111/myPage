@@ -11,10 +11,20 @@ icon: book
 * content
 {:toc}
 
+
+
+
 # PYTHON
 
+
+# TEX & WORD
 
 
 
 # MMA
+
+
+
+# MANIM
+
 
