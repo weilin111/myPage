@@ -54,7 +54,7 @@ class Table extends React.Component{
                 <TableRow row_data={this.props.data[index]}  key={index}/>
             )
         }
-        return <table className="123">
+        return <table style={{ borderRadius:10}}  className="123">
             <thead>
             <tr>
             <th>NAME  </th>
@@ -159,7 +159,7 @@ class Search_bar extends React.Component{
     }
 
     render(){
-        return <form style={{size:100}} onSubmit={this.handleSubmit}>
+        return <form style={{  borderRadius:10,marginTop:20 ,size:100}} onSubmit={this.handleSubmit}>
             search: <input type="text" value={this.state.value} onChange={this.handleChange} style={{backgroundColor:'#ff0000',color:"#ffffff"}}/>
         </form>
 
