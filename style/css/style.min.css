@@ -781,6 +781,8 @@ div#paticlees-js {
     animation-duration: .5s
 }
 
+
+
 .index-page {
     padding: 120px 20px 0
 }
@@ -1110,8 +1112,14 @@ div#paticlees-js {
     padding: 100px 60px 20px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    border-radius: 10px;
+    font-weight: 500;
 }
+
+
+
+
 
 .post-content p {
     word-wrap: break-word;
@@ -2468,11 +2476,12 @@ a.navbar-logo span {
     width: 819px;
     text-align: left;
     background: #fff;
-    box-shadow: 0 2px 4px rgb(113, 6, 252);
+    box-shadow: 0 50px 100px rgb(113, 6, 252);
     padding-left: 40px;
     padding-right: 24px;
     font-size: 16px;
-    margin-bottom: 22px
+    margin-bottom: 22px;
+    border-radius: 10px;
 }
 
 .post-container-full {

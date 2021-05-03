@@ -30,6 +30,8 @@ urlpatterns = [
     path(r"3/",views.test_3js),
     path(r"4/",views.post_space),
     path(r"post_data/",views.post_space_data),
+    path(r"paper_item",testdb.get_paper_item),
+
 
 
 ] 

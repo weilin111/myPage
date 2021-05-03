@@ -130,7 +130,7 @@ function create_phy_Object(xyz, v) {
 
 
 function fireKeyEvent(element, evtType, keyChar) {
-    element.focus();
+    // element.focus();
     var KeyboardEventInit = { key: keyChar, code: "", location: 0, repeat: false, isComposing: false };
     var evtObj = new KeyboardEvent(evtType, KeyboardEventInit);
     element.dispatchEvent(evtObj);

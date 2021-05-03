@@ -7,6 +7,7 @@ from myDB.models import visited_number
 import time
 import random
 import json
+import os
 # 数据库操作
 
 def fun_fact(request):
@@ -50,3 +51,19 @@ def get_random_pic(request):
     print("pic: "+request.method+" from "+str(request.META["REMOTE_ADDR"]) +"  "+ t)
 
     return HttpResponse(image_data,content_type="image/png")
+
+
+def get_paper_item(request):
+
+    base=r"/home/ubuntu/weilin/1_Playground/"
+    file_name_list=os.listdir(base)
+    json_list=[]
+    for i in file_name_list:
+        if "." not in i :
+            for j in os.listdir(base+i):
+                json_list.append(base+i+"/"+j)
+    with open(json_list[random.randint(0,len(json_list)-1)],"r",encoding="utf-8") as f:
+        s=json.load(f)
+
+    return JsonResponse(s[random.randint(0,len(s)-1)],safe=False,json_dumps_params={'ensure_ascii':False})
+    

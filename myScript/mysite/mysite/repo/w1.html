@@ -52,32 +52,39 @@
 </head>
 
 <body style="background-color: black;">
-
-    <div id="links" style="box-shadow:0 0 10px ;width: 500px;">
-        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/1')">
+    <div>
+    <div id="links" style="box-shadow:0 0 10px ;width: 500px; float:left;">
+        <div style="width:auto;font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/1')">
             <p>fun fact</p>
         </div>
-        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/2')">
+        <div style="width:auto;font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/2')">
             <p>random pic</p>
         </div>
-        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://weilin111.github.io/myPage/2021-04-10-table-post')">
+        <div style="width:auto;font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://weilin111.github.io/myPage/2021-04-10-table-post')">
             <p>constant table</p>
         </div>
-        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/3')">
+        <div style="width:auto;font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/3')">
             <p>Achilles 3</p>
         </div>
 
-        <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/4')">
+        <div style="width:auto;font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/4')">
             <p>Tap Space</p>
         </div>
         
+
+
+   
 
         <!--
         <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/')"><p  >!</p></div>
         <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/')"><p  >!</p></div>
         <div style="font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;"  onclick="window.open('https://www.sirius1334.love/')"><p  >!</p></div> -->
-
     </div>
+
+
+    <div id="paper_items"style="padding:20px;font-weight: 1000; color:#fff; float:left;box-shadow:0 0 10px #FFF;width: 400px; margin-left: 20px; ">
+    </div>
+</div>
 
     <script>
         change_title_color("links")
@@ -98,14 +105,37 @@
 
             }
         }
+
+        {
+            $.get("https://www.sirius1334.love/paper_item",(data)=>{
+
+                $("#paper_items").append(
+                "<p><span style='font-size:24px' >Title:  </span>" +  data.title + " </p>"+
+                "<p><span style='font-size:24px' >Authors:  </span>" + data.authors + " </p>"+
+                "<p><span style='font-size:24px' >Journal-Id:  </span>"+ data.journal_id + " </p>"+
+                "<p><span style='font-size:24px' >Abstract:  </span>"+ data.abstract + " </p>"+
+                "<p><span style='font-size:24px' >Summary:  </span>" + data.summary + " </p>"
+                
+                )
+            }
+            
+            
+            )
+            
+        change_title_color("paper_items")
+
+
+        }
+
+
     </script>
     <!-- ----------------000000000000000000------------------------------ -->
-    <div style="box-shadow:0 0 10px #FFF">
+    <div style="clear:both;   margin-top:30px" >
         <p>
             🍻
         </p>
 
-        <canvas id="draw3" width="1200" height="800" tabindex="0">
+        <canvas style="box-shadow:0 0 10px #FFF" id="draw3" width="1200" height="800" tabindex="0">
 
         
     
@@ -113,9 +143,6 @@
         <script>
             get_UI()("draw3")
         </script>
-
-
-
 
     </div>
 
