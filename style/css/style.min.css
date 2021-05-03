@@ -790,6 +790,11 @@ div#paticlees-js {
     padding: 120px 20px 0
 }
 
+.index-page .main-content .clearfix{
+    box-shadow: 0 50px 100px rgb(113, 6, 252);
+
+}
+
 .index-page .post-list-item-container .item-label {
     padding: 10px 20px 40px
 }
