@@ -2520,7 +2520,8 @@ a.navbar-logo span {
         display: none
     }
     .post-container .post-content {
-        width: 100%
+        width: 100%;
+        min-height: 400px
     }
     .post-container-full {
         width: 100%;
