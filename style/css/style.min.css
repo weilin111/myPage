@@ -796,7 +796,6 @@ div#paticlees-js {
 
 .index-page .post-list-item-container .item-label {
     padding: 10px 20px 40px;
-    border-radius:20px
 }
 
 .post-lists {
@@ -825,7 +824,9 @@ div#paticlees-js {
     border-radius: 3px;
     background-color: #fff;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
-    box-shadow: 0 1px 10px rgba(0, 0, 0, .9)
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .9);
+    border-radius:20px
+
 }
 
 .post-list-item-container:hover {
