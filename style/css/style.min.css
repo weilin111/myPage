@@ -795,7 +795,8 @@ div#paticlees-js {
 
 
 .index-page .post-list-item-container .item-label {
-    padding: 10px 20px 40px
+    padding: 10px 20px 40px;
+    border-radius:20px;
 }
 
 .post-lists {
