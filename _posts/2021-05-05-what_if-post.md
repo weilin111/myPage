@@ -27,7 +27,6 @@ What if
 
 ![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224447.png' | prepend : site.baseurl }})
 
-![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224459.png' | prepend : site.baseurl }})
 
 
 

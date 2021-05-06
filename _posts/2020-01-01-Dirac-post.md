@@ -14,17 +14,20 @@ icon: book
 
 # 关于特殊函数
 
-## 球
+### 球
 
 2021年5月6日
 
+![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224541.png' | prepend : site.baseurl }})
+
+
+
+![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224611.png' | prepend : site.baseurl }})
 
 
 ![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224624.png' | prepend : site.baseurl }})
-![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224541.png' | prepend : site.baseurl }})
-![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224611.png' | prepend : site.baseurl }})
 
-## 柱
+### 柱
 
 !
 
