@@ -20,14 +20,13 @@ icon: book
 
 
 
-![png]({{'/style/image/书摘/屏幕截图 2021-05-06 224541.png' | prepend : site.baseurl }})
-![png]({{'/style/image/书摘/屏幕截图 2021-05-06 224611.png' | prepend : site.baseurl }})
-![png]({{'/style/image/书摘/屏幕截图 2021-05-06 224624.png' | prepend : site.baseurl }})
+![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224624.png' | prepend : site.baseurl }})
+![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224541.png' | prepend : site.baseurl }})
+![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224611.png' | prepend : site.baseurl }})
 
 ## 柱
 
-！
-
+!
 
 
 
