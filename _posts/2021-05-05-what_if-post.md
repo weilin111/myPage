@@ -13,11 +13,19 @@ What if 那些古怪又令人忧心的问题
 
 # 问题集
 
-1.
+## 1.穿越地心
 
-2.
+![png]({{'/style/image/书摘/屏幕截图 2021-05-06 224430.png' | prepend : site.baseurl }})
 
-3.
+![png]({{'/style/image/书摘/屏幕截图 2021-05-06 224447.png' | prepend : site.baseurl }})
+
+![png]({{'/style/image/书摘/屏幕截图 2021-05-06 224459.png' | prepend : site.baseurl }})
+
+
+
+## 2.
+
+## 3.
 
 
 
