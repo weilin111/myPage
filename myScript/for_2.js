@@ -198,8 +198,8 @@ let Table_data=[
 ["$\\nabla \\; in\\; Spherical \\;Coor $","$(\\partial_r,\\frac{1}{r}\\partial_\\theta, \\frac{1}{r \\sin\\theta}\\partial_\\phi) $"],
 
 ["$\\nabla^2 \\; in\\; xyz \\;Coor $","$ \\partial^2_x+\\partial^2_y+\\partial^2_z  $"],
-["$\\nabla^2 \\; in\\; Cylinder \\;Coor $","$ $"],
-["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( ) $"],
+["$\\nabla^2 \\; in\\; Cylinder \\;Coor $","$  \\frac{1}{r} \\partial_r(r \\partial_r )+\\frac{1}{r^2}\\partial_\\theta^2 +\\partial_z^2           $"],
+["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( \\frac{1/r}\\partial_r^2(r  )+\\frac{1}{r^2 \\sin{\\theta}} \\partial_\\theta(\\sin(\\theta) \\partial_\\theta) +\\frac{1}{r^2 \\sin{\\theta}^2 \\partial_\\phi^2 }        ) $"],
 
 ["$\\nabla \\times \\; in\\; xyz \\;Coor $","$( ) $"],
 ["$\\nabla \\times \\; in\\; Cylinder \\;Coor $","$( ) $"],
@@ -224,8 +224,8 @@ let Table_data=[
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
-["$Fourier \\; Transform $","$\\mathcal{L}[f(t)]=\\phi(\\omega) = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty}f(t) e^{- i \\omega t} {\\rm d} t $"],
-["$Laplace \\; Transform $","$ \\mathcal{F}[f(t)]=F(s) =\\int_{0}^{\\infty}f(t)e^{-st} {\\rm d} t         $"],
+["$Fourier \\; Transform $","$\\mathcal{F}[f(t)]=\\phi(\\omega) = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty}f(t) e^{- i \\omega t} {\\rm d} t $"],
+["$Laplace \\; Transform $","$ \\mathcal{L}[f(t)]=F(s) =\\int_{0}^{\\infty}f(t)e^{-st} {\\rm d} t         $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
 ["$Synchrotron \\; Formula$","$P=\\frac{2e^2c\\beta^4}{3\\rho^2}(\\frac{E}{mc^2})^2  $"],
