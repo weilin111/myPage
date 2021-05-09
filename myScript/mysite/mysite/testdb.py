@@ -66,4 +66,21 @@ def get_paper_item(request):
         s=json.load(f)
 
     return JsonResponse(s[random.randint(0,len(s)-1)],safe=False,json_dumps_params={'ensure_ascii':False})
-    
+
+
+def get_cpu_memory_percent_data(request):
+
+    # 100条 时间
+    l=[]
+    with open("/home/ubuntu/pluto/myPage/myScript/mysite/server_status.txt","r") as f:
+        s=f.readline()
+        while(s):
+            l.append(s.replace("\n","").split(" "))
+            s=f.readline()
+        # l.reverse()
+    return JsonResponse(l,safe=False,json_dumps_params={'ensure_ascii':False})
+
+
+        
+
+

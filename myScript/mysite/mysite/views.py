@@ -9,6 +9,11 @@ def hello(request):
 def sirius(request):
     return render(request,"w1.html")
 
+def server_status(request):
+
+    return render(request,"server_status.html")
+
+
 
 def test_3js(request):
     return render(request,"w2.html")
@@ -20,7 +25,6 @@ def post_space(request):
 
 def post_space_data(request):
 
-    s='天青色等烟雨'
     def read():
         with open("/home/ubuntu/pluto/myPage/myScript/mysite/mysite/repo/post_space_data.txt","r",encoding="utf-8") as f:
             s=f.read()
@@ -34,3 +38,13 @@ def post_space_data(request):
         return JsonResponse({"text":read()},json_dumps_params={'ensure_ascii':False})
 
     return JsonResponse({"text":read()},json_dumps_params={'ensure_ascii':False})
+
+
+
+
+
+
+
+
+
+

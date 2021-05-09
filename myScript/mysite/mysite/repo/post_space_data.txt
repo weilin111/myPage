@@ -1,8 +1,39 @@
-🔴🟠🟡🟢🔵🟣🟤⚫🟤🟣🔵🟢🟡🟠🔴
+🔴🟠🟡🟢🔵🟣🟤⚫🟤🟣🔵🟢🟡🟠🔴⚫🟤🟣🔵🟢🟡🟠🔴⚫🟤🟣
 
-Brandan Eich, the father of Javascript. 1.moore-law make people stupid in some sense
+[1]launch new project------map of book store in here. [2]nuclear work [3]report [4] english [5]big work of RAD  [6]classify ACCE [7] collect What if Problems and thinks some [8]push Physics Engine [9]read and movie [10]see taichi
 
-father of JSON ---crockford
+maybe i can write something about wine here and then copy there. [1].
+[2].
+
+https://hub.fastgit.org/ is a good website. save me from the wall!  i have to finish the report. and then i can do something else
+
+\\\\read the book of L. Landau. fun and brilliant. classify physistist into different type. I cant learn it. He can recite many poetry. He like reading He has his own taste and know how to get into thw way and become a part of Front
+
+rgb( 60 37 113 ) and rgb(46,25,149) is beautiful in gradien
+
+<Coder in  Interview> [1]read the interview of Brad Fitzpartick. 1.software test is impotantce 2. demo is importance 3. the faster computer makes people become stupid in some sence compare to the past day [2]Brandan Eich, the father of Javascript. 1.moore-law make people stupid in some sense [3]father of JSON ---crockford  Searsh a good variable name in dictionary [4]Thinking of Perl Easy 1.things should be easy, and hard things should be possible. 2.There's More Than One Way To Do It. [5]joe armstrong Father of Erlang. functional and parallel  [6]
+
+play game. what scarface and read and finish work. dont like scarface maybe it is the reason make it a good movie
+
+gonna test the server 1.find some tool
+
+fail to handle the size of canvas. Maybe i should 1.try other chart 2.find reference other code  DONE!
+
+write a summary of stories EDGE OF GALAXY. [1].a man acted in count to get thing for a girl. and feel meaningless to his original ider  [2].a clone of hieler get revenged from an old jew  [3]. a friend ask to write a story for him for pleasure girls. and found the lonely of himself [4].a compress car and a failing father  [5]. a pure kid with his father see a man go to death and after and go on [6].
+
+find and play taichi again find a new simulation way of fluid
+
+i am gonna make an offer he cant refuse
+
+more task to do more thing to read if you read fast then they cant catch you
+
+1.write report and 2.project program and 3.Read
+
+stuck in physics engine ridgebody dynamic. 
+
+update blog is so tedious. dont repeat yourself. the problme is hard to edit once you make it.but i love work and pdf. if i want a auto tool. here is the chain [word --> pdf --> pic --> md]. 
+
+read the book landau written in bad style
 
 back from a walk around the building
 
@@ -12,11 +43,7 @@ finish my exp report and write something for english
 
 要搞非常之建設，先搞非常之破壞！
 
-Thinking of PerlEasy 1.things should be easy, and hard things should be possible. 2.There's More Than One Way To Do It.
-
 i have find a english grammer check website
-
-read the interview of Brad Fitzpartick. 1.software test is impotantce 2. demo is importance 3. the faster computer makes people become stupid in some sence compare to the past day
 
 wind wind strong strong
 

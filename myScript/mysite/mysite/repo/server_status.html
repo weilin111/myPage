@@ -1,0 +1,148 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+
+
+<head>
+
+
+    <center>
+        <a id="title" style="font-size: 100px;">
+            Server Status!
+
+        </a>
+    </center>
+
+    <script src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js">
+    
+    </script>
+
+    <script src="{% static '/utils.js' %}"></script>
+
+
+    <script>
+        $("#title").css("font-size", "100px")
+        change_title_color("title")
+        document.getElementById("title").onclick = () => {
+            fireKeyEvent(document.getElementById("draw3"), "keydown", "2")
+        }
+    </script>
+
+
+    <script src="{% static '/world3.js' %}"></script>
+
+
+</head>
+
+<body style="background-color: black;">
+<div height="20px"></div>
+    <!-- chart.js -->
+    <div style="  width: 600px  ;padding-left: 350px;">
+    <canvas id="myChart"  width="100" height="100" style="display: inline-block; box-shadow:0 0 10px #FFF"></canvas>
+    </div>
+
+<script>
+var get_cup_data=()=>{
+    const cpu=[]
+    const mem=[]
+    const time_label=[]
+    $.get("https://www.sirius1334.love/server_cpu",(data)=>{
+        for(let i=0;i<data.length;i++){
+            data_strip=data[i]
+            cpu.push(parseFloat(data_strip[3]))
+            mem.push(parseFloat(data_strip[2]))
+            time_label.push(data_strip[1])
+        }
+    })
+
+    return [cpu,mem,time_label]
+}
+
+var status_data=get_cup_data()
+const cpu=status_data[0]
+const mem=status_data[1]
+const time_label=status_data[2]
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, 
+{
+    type: 'line',
+    data: {
+        labels: time_label,
+        datasets: [
+            {
+            label: '# of cpu',
+            data: cpu,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+            pointRadius:0.2,
+        },
+        {
+            label: '# of Mem',
+            data: mem,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+            pointRadius:0.2,
+
+        },
+        
+    ]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: false
+                
+            }
+        },
+        
+
+}}
+);
+
+
+window.onload=()=>{myChart.update()}
+
+
+
+</script>
+    <div>fuck the canvas</div>
+
+
+
+</body>
+
+
+</html>
