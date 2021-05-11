@@ -199,7 +199,11 @@ let Table_data=[
 
 ["$\\nabla^2 \\; in\\; xyz \\;Coor $","$ \\partial^2_x+\\partial^2_y+\\partial^2_z  $"],
 ["$\\nabla^2 \\; in\\; Cylinder \\;Coor $","$  \\frac{1}{r} \\partial_r(r \\partial_r )+\\frac{1}{r^2}\\partial_\\theta^2 +\\partial_z^2           $"],
+<<<<<<< Updated upstream
 ["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( \\frac{1/r}\\partial_r^2(r  )+\\frac{1}{r^2 \\sin{\\theta}} \\partial_\\theta(\\sin(\\theta) \\partial_\\theta) +\\frac{1}{r^2 \\sin{\\theta}^2 \\partial_\\phi^2 }        ) $"],
+=======
+["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$ \\frac{1}{r}\\partial_r^2(r  )+\\frac{1}{r^2 \\sin{\\theta}} \\partial_\\theta(\\sin(\\theta) \\partial_\\theta) +\\frac{1}{r^2 \\sin{\\theta}^2 \\partial_\\phi^2 }         $"],
+>>>>>>> Stashed changes
 
 ["$\\nabla \\times \\; in\\; xyz \\;Coor $","$( ) $"],
 ["$\\nabla \\times \\; in\\; Cylinder \\;Coor $","$( ) $"],

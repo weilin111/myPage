@@ -81,6 +81,7 @@ def get_cpu_memory_percent_data(request):
     return JsonResponse(l,safe=False,json_dumps_params={'ensure_ascii':False})
 
 
+
         
 
 

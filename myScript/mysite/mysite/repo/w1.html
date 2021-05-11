@@ -49,11 +49,19 @@
     </script>
     <script src="{% static '/world3.js' %}"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+
 </head>
 
 <body style="background-color: black;">
     <div>
-    <div id="links" style="box-shadow:0 0 10px ;width: 500px; float:left;">
+    <div id="links" style="margin-left: 2%;box-shadow:0 0 10px ;width: 300px; float:left;">
         <div style="width:auto;font-size: 30px; text-decoration:underline;  font-weight: 1000; cursor: pointer;" onclick="window.open('https://www.sirius1334.love/1')">
             <p>fun fact</p>
         </div>
@@ -89,6 +97,9 @@
 
     <div id="paper_items"style="padding:20px;font-weight: 1000; color:#fff; float:left;box-shadow:0 0 10px #FFF;width: 400px; margin-left: 20px; ">
     </div>
+
+
+    <div id="map" style="padding:20px;font-weight: 1000; color:#fff; float:left;box-shadow:0 0 10px #FFF;width: 300px; height:300px; margin-left: 20px; "></div>
 </div>
 
     <script>
@@ -128,9 +139,21 @@
             )
             
         change_title_color("paper_items")
+        
 
+        // ---------------2021年5月9日 https://leafletjs.com/reference-1.7.1.html
+        var map = L.map('map', {
+                center: [83, -120],
+                zoom: 4
+            });
 
         }
+
+        L.tileLayer('http://www.sirius1334.love/static/tiles/{z}/{x}/{y}.png', {
+         maxZoom: 13
+         }).addTo(map);
+
+
 
 
     </script>
