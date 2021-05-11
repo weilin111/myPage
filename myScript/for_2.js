@@ -54,7 +54,7 @@ class Table extends React.Component{
                 <TableRow row_data={this.props.data[index]}  key={index}/>
             )
         }
-        return <table style={{ borderRadius:10}}  className="123">
+        return <table style={{ fontSize:24, borderRadius:10}}  className="123">
             <thead>
             <tr>
             <th>NAME  </th>
@@ -120,7 +120,7 @@ class TableWithSearch extends React.Component{
 
         return <div key="constant-table" >
         <Search_bar handleFilterChange={this.handleFilterChange}/>
-        <Table data={data} filter_text={this.state.filter_text}/>
+        <Table  data={data} filter_text={this.state.filter_text}/>
 
         </div>
 
@@ -199,11 +199,7 @@ let Table_data=[
 
 ["$\\nabla^2 \\; in\\; xyz \\;Coor $","$ \\partial^2_x+\\partial^2_y+\\partial^2_z  $"],
 ["$\\nabla^2 \\; in\\; Cylinder \\;Coor $","$  \\frac{1}{r} \\partial_r(r \\partial_r )+\\frac{1}{r^2}\\partial_\\theta^2 +\\partial_z^2           $"],
-<<<<<<< Updated upstream
 ["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( \\frac{1/r}\\partial_r^2(r  )+\\frac{1}{r^2 \\sin{\\theta}} \\partial_\\theta(\\sin(\\theta) \\partial_\\theta) +\\frac{1}{r^2 \\sin{\\theta}^2 \\partial_\\phi^2 }        ) $"],
-=======
-["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$ \\frac{1}{r}\\partial_r^2(r  )+\\frac{1}{r^2 \\sin{\\theta}} \\partial_\\theta(\\sin(\\theta) \\partial_\\theta) +\\frac{1}{r^2 \\sin{\\theta}^2 \\partial_\\phi^2 }         $"],
->>>>>>> Stashed changes
 
 ["$\\nabla \\times \\; in\\; xyz \\;Coor $","$( ) $"],
 ["$\\nabla \\times \\; in\\; Cylinder \\;Coor $","$( ) $"],
