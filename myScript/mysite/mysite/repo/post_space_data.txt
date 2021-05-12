@@ -1,6 +1,13 @@
 🔴🟠🟡🟢🔵🟣🟤⚫🟤🟣🔵🟢🟡🟠🔴⚫🟤🟣🔵🟢🟡🟠🔴⚫🟤🟣
 
-[1]launch new project------map of book store in here. [2]nuclear work [3]report [4] english [5]big work of RAD  [6]classify ACCE [7] collect What if Problems and thinks some [8]push Physics Engine and list famous phisics engine[9]read and movie [10]see taichi  [11]make Tap space a React App than we can built it anywhere [12]  Redesign the STAR draw.io
+data analysis and preview the lasee experiment!! do this two thing tonight!!
+
+discover [1]Cowboy bebop ---beautiful romantic space drama [2]Win api and g++/gcc [3]
+
+[1~]launch new project------map of book store in here. [2]nuclear work [3!]report [4!] english [5!]big work of RAD  [6]classify ACCE [7~] collect What if Problems and thinks some [8]push Physics Engine and list famous phisics engine[9]read and movie [10]see taichi and write interpretation for the examples  [11]make Tap space a React App than we can built it anywhere [12]  Redesign the STAR draw.io and start short-novel  
+
+<Coder in  Interview> [1]read the interview of Brad Fitzpartick. 1.software test is impotantce 2. demo is importance 3. the faster computer makes people become stupid in some sence compare to the past day [2]Brandan Eich, the father of Javascript. 1.moore-law make people stupid in some sense [3]father of JSON ---crockford  Searsh a good variable name in dictionary [4]Thinking of Perl Easy 1.things should be easy, and hard things should be possible. 2.There's More Than One Way To Do It. [5]joe armstrong Father of Erlang. functional and parallel  [6]father of Haskell S.P.Jones. scale problem of big program---one cant keep too mucn thing in his mind. System of type. lazy for evaluation--- keep purity. Stavation problem  The big program is rewrited as his death [7] peter Norvig ---------Hacker 
+
 
 https://hub.fastgit.org/ is a good website. save me from the wall!  i have to finish the report. and then i can do something else
 
@@ -8,7 +15,6 @@ https://hub.fastgit.org/ is a good website. save me from the wall!  i have to fi
 
 rgb( 60 37 113 ) and rgb(46,25,149) is beautiful in gradien
 
-<Coder in  Interview> [1]read the interview of Brad Fitzpartick. 1.software test is impotantce 2. demo is importance 3. the faster computer makes people become stupid in some sence compare to the past day [2]Brandan Eich, the father of Javascript. 1.moore-law make people stupid in some sense [3]father of JSON ---crockford  Searsh a good variable name in dictionary [4]Thinking of Perl Easy 1.things should be easy, and hard things should be possible. 2.There's More Than One Way To Do It. [5]joe armstrong Father of Erlang. functional and parallel  [6]
 
 play game. what scarface and read and finish work. dont like scarface maybe it is the reason make it a good movie
 

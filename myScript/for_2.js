@@ -54,7 +54,7 @@ class Table extends React.Component{
                 <TableRow row_data={this.props.data[index]}  key={index}/>
             )
         }
-        return <table style={{ fontSize:24, borderRadius:10}}  className="123">
+        return <table style={{ fontSize:20, borderRadius:10}}  className="123">
             <thead>
             <tr>
             <th>NAME  </th>
