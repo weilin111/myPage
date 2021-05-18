@@ -1,12 +1,21 @@
 🔴🟠🟡🟢🔵🟣🟤⚫🟤🟣🔵🟢🟡🟠🔴⚫🟤🟣🔵🟢🟡🟠🔴⚫🟤🟣
 
-data analysis and preview the lasee experiment!! do this two thing tonight!!
+samurai champloo. a nuw journey.
 
-discover [1]Cowboy bebop ---beautiful romantic space drama [2]Win api and g++/gcc [3]
+super cool cowbot bebop. what i can next step? 1.make a new space for code. [2]find some website to get data [3]more static file? [4]reading  [ppt] to  picpic
 
-[1~]launch new project------map of book store in here. [2]nuclear work [3!]report [4!] english [5!]big work of RAD  [6]classify ACCE [7~] collect What if Problems and thinks some [8]push Physics Engine and list famous phisics engine[9]read and movie [10]see taichi and write interpretation for the examples  [11]make Tap space a React App than we can built it anywhere [12]  Redesign the STAR draw.io and start short-novel  
+🛩✈<Cowboy Bebop>[1.Asteroid Blues ]亡命鸳鸯于太空谢幕 [2. Stray Dog Strut]神奇动物在哪里之Ein登场 [3.Honky Tonk Women]缘分妙不可言之Faye登场[4.]木星动物保护协会的强烈谴责 [5.]Spike往事与教堂的决斗 [6.]不老者的往事与了断 [7.] 炸药大王与重金属女王 [8.]金星的兄妹  [9.]被遗忘的卫星与ED [10.]Jet往事与破镜难圆 [11.]飞船上演异形入侵 [12.]以背叛伏笔的战友 [13. 12.-2]无法释怀与了断 [14.]老到什么都不记得的执着者 [15.]Faye冬眠往事与团伙诈骗组织  [16.]Jet往事与无间道 [17.]饿坏了与毒蘑菇 [18.]寻找古董与F
+aye的少女往事 [19.]剑鱼号手动驾驶与古老的航天飞机 [20.]胖子魔术师死于飞刀 [21.]Jet一个搞风水的朋友 [22.]骑马牛仔富二代离去 [23.]cyber教派与老欺骗家 [24.]Faye回到过去与Ed CowGril离去、继续流浪 [25.]Spike往事之Julia [26. 25-2]Spike的甜蜜死亡与新生
 
-<Coder in  Interview> [1]read the interview of Brad Fitzpartick. 1.software test is impotantce 2. demo is importance 3. the faster computer makes people become stupid in some sence compare to the past day [2]Brandan Eich, the father of Javascript. 1.moore-law make people stupid in some sense [3]father of JSON ---crockford  Searsh a good variable name in dictionary [4]Thinking of Perl Easy 1.things should be easy, and hard things should be possible. 2.There's More Than One Way To Do It. [5]joe armstrong Father of Erlang. functional and parallel  [6]father of Haskell S.P.Jones. scale problem of big program---one cant keep too mucn thing in his mind. System of type. lazy for evaluation--- keep purity. Stavation problem  The big program is rewrited as his death [7] peter Norvig ---------Hacker 
+[1~]launch new project------map of book store in here. [2]nuclear work [3!]report [4!] english [5!]big work of RAD  [6]classify ACCE [7~] collect What if Problems and thinks some [8]push Physics Engine and list famous phisics engine[9]read and movie [10~]see taichi and write interpretation for the examples  [11~]make Tap space a React App than we can built it anywhere [12~]Redesign the STAR draw.io and start short-novel  [13] read the source code of python and TeX[14~] win32 API and build something intresting and powershell cmd [15！]homework
+
+📕<Coder in  Interview> [1]read the interview of Brad Fitzpartick. 1.software test is impotantce 2. demo is importance 3. the faster computer makes people become stupid in some sence compare to the past day [2]Brandan Eich, the father of Javascript. 1.moore-law make people stupid in some sense [3]father of JSON ---crockford  Searsh a good variable name in dictionary [4]Thinking of Perl Easy 1.things should be easy, and hard things should be possible. 2.There's More Than One Way To Do It. [5]joe armstrong Father of Erlang. functional and parallel  [6]father of Haskell S.P.Jones. scale problem of big program---one cant keep too mucn thing in his mind. System of type. lazy for evaluation--- keep purity. Stavation problem  The big program is rewrited as his death [7] peter Norvig ---------Hacker  <Ⅱ> [8]Dan Ingalls ---father of smalltalk.  [9]L Peter Deutsch. --- a programer and Langusge master and music software developer [10]Ken Thompson ---father of Unix and UTF-8   they wont a file system firstly. but they found they have to build a real operating sysytem  [11.] F.E Allen female  IBM expert on Compiler,  [12.] Knuth. TeX Metafont and KMT algo. TAOCP 
+
+
+data analysis and preview the laser experiment!! do this two thing tonight!! 
+analysis again and fix my word!!
+
+discover [1]Cowboy bebop ---beautiful romantic space drama [2]Win api and g++/gcc [3]Mircosoft game Stack  
 
 
 https://hub.fastgit.org/ is a good website. save me from the wall!  i have to finish the report. and then i can do something else

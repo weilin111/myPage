@@ -8,6 +8,12 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import tqdm
+import re
+
+
+
+headers={
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4471.0 Safari/537.36 Edg/91.0.864.1"}
 
 
 def write_to_file_cpu_and_memory_percent():
@@ -122,6 +128,7 @@ def clean_uwsgi_log():
 
 def get_newest_prl():
     get_newest_prl_issue_to_json()
+    print("get newest PRL")
 
 # todo---------------------------------
 
@@ -203,10 +210,11 @@ def get_paperDic_from_issue(url):
     resolv=BeautifulSoup(a.text,features="html.parser")
     return get_paperDic_from_issueBS4(resolv)
 
+
 def write_to_json(json_name,paperDiclist):
 
-    with open(json_name,"w+") as f:
-        json.dump(paperDiclist,f)
+    with open(json_name,"w+",encoding='utf-8') as f:
+        json.dump(paperDiclist,f,ensure_ascii=False)
 
 def get_url_of_a_volome(volome_number):
     base_url=r"https://journals.aps.org/prl/issues/"
@@ -229,6 +237,62 @@ def get_volome_to_json(volome_number):
 
 # -----------------------prl--------------------
 
+# new_book_THU---------------------------
+# 2021年5月16日
+
+def get_back_newest_date(page_url):
+    a=requests.get(page_url,headers=headers)
+    back_str= re.findall(r'.*idate = "(.*)";',a.text)[0]
+    return back_str
+
+def get_newest_150_book(url):
+    d=get_back_newest_date(page_url)
+    print(d)
+    url=url+d
+    print(url)
+    a=requests.get(url,headers=headers)
+    b=a.json()
+    print("status:{}".format(b['msg']))
+    return b['data']
+
+
+
+def simlify_data(d):
+    data={}
+    data['title']=d['title']
+    data['author']=d['author']
+    data['publish']=d['publish']
+    data['callno']=d['callno']
+    data['id']=d['id']
+    return data
+def simlify_datas(ds):
+    l=[]
+    for i in ds:
+        l.append(simlify_data(i))
+    return l
+
+
+
+def get_newest_120_book_json(type_id,json_name):
+    page_url=r'http://tsinghua.featurelib.libsou.com/show/nbook/detail?id='
+    page_url=page_url+str(type_id)
+    url=r"http://tsinghua.featurelib.libsou.com/show/book/bookListByChannelId?id="+str(type_id)
+    url+=r"&order=-2&type=4&page=1&pageSize=120&idate="
+    d=get_back_newest_date(page_url)
+    print(d)
+    url=url+d
+    print(url)
+    a=requests.get(url,headers=headers)
+    b=a.json()
+    print("status:{}".format(b['msg']))
+    b=simlify_datas(b['data'])
+    print(json_name)
+    write_to_json(json_name+d+'.json',b)
+
+
+
+
+# new_book_THU---------------------------
 
 
 
@@ -242,6 +306,18 @@ def update_weekly():
     get_newest_prl()
     update_sql_fun_fact()
     update_pic_json()
+
+
+    get_newest_120_book_json(57,'/home/ubuntu/weilin/1_Playground/THUlib_new_book/文学')
+    get_newest_120_book_json(55,'/home/ubuntu/weilin/1_Playground/THUlib_new_book/社会科学')
+    get_newest_120_book_json(58,'/home/ubuntu/weilin/1_Playground/THUlib_new_book/自然科学')
+    get_newest_120_book_json(60,'/home/ubuntu/weilin/1_Playground/THUlib_new_book/电子计算机')
+    get_newest_120_book_json(61,'/home/ubuntu/weilin/1_Playground/THUlib_new_book/工业技术')
+    get_newest_120_book_json(59,'/home/ubuntu/weilin/1_Playground/THUlib_new_book/生物农业')
+    get_newest_120_book_json(56,'/home/ubuntu/weilin/1_Playground/THUlib_new_book/经济金融')
+
+
+
     print("undate_weekly: {}".format(time.ctime()))
 
 # 定义你要周期运行的函数
@@ -254,7 +330,9 @@ schedule.every(10).minutes.do(job)               # 每隔 10 分钟运行一次 
 # schedule.every().hour.do(job)                    # 每隔 1 小时运行一次 job 函数
 # schedule.every().day.at("10:30").do(job)         # 每天在 10:30 时间点运行 job 函数
 # schedule.every().monday.do(job)                  # 每周一 运行一次 job 函数
-schedule.every().sunday.at("13:15").do(update_weekly)   # 每周三 13：15 时间点运行 job 函数
+schedule.every().sunday.at("06:15").do(update_weekly)   # 每周三 13：15 时间点运行 job 函数
+schedule.every().thursday.at("06:15").do(update_weekly)   
+
 # schedule.every().minute.at(":13").do(update_weekly)        # 每分钟的 17 秒时间点运行 job 函数
 
 # schedule------------------------------------------------
