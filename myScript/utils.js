@@ -92,6 +92,22 @@ var change_title_color = function(title_id) {
 }
 
 
+var change_pic_opacity = function(pic_id) {
+    // pic or div id  anything with opacity
+    var change_count = 0
+
+    var fps = 60
+    var change_title = function(fps) {
+        $("#" + pic_id).css("opacity", Math.sin(Math.PI*2*change_count/fps))
+        change_count = (change_count + 1) % fps
+    }
+    setInterval(function() {
+        change_title(fps)
+    }, 10000 / fps)
+
+}
+
+
 function create_phy_Object(xyz, v) {
     var phy_Object = {
         name: "wenmd",
