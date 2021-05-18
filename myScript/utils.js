@@ -96,7 +96,7 @@ var change_pic_opacity = function(pic_id) {
     // pic or div id  anything with opacity
     var change_count = 0
 
-    var fps = 60
+    var fps = 600
     var change_title = function(fps) {
         $("#" + pic_id).css("opacity", Math.sin(Math.PI*2*change_count/fps))
         change_count = (change_count + 1) % fps
