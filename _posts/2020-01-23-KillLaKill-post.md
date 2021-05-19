@@ -3,11 +3,22 @@ layout: post
 title: 👍👍👍
 date:   2020-11-11 00:00:00 +0800
 category: 又是一部绝世好番
-thumbnail: style/image/CowboyBebop/1-10.png
+thumbnail: style/image/CowboyBebop/1-10.jpg
 icon: web
 ---
 
 
+
+* content
+{:toc}
+
+
+<script>
+ window.onload=()=>{
+         $(".post-content").css("color", "#ffffff")
+    $(".post-content").css("background", "#000000")
+ }
+</script>
 
 
 # Cowboy bebop
