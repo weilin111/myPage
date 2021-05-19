@@ -3,7 +3,7 @@ layout: post
 title: 👍👍👍
 date:   2020-11-11 00:00:00 +0800
 category: 又是一部绝世好番
-thumbnail: style/image/KILL_LA_KILL/1-8.png
+thumbnail: style/image/CowboyBebop/1-10.png
 icon: web
 ---
 
@@ -13,6 +13,23 @@ icon: web
 # Cowboy bebop
 
 
+![png](/myPage/style/image/CowboyBebop/1-1.jpg)
+![png](/myPage/style/image/CowboyBebop/1-10.jpg)
+![png](/myPage/style/image/CowboyBebop/1-11.jpg)
+![png](/myPage/style/image/CowboyBebop/1-12.jpg)
+![png](/myPage/style/image/CowboyBebop/1-13.jpg)
+![png](/myPage/style/image/CowboyBebop/1-14.jpg)
+![png](/myPage/style/image/CowboyBebop/1-15.jpg)
+![png](/myPage/style/image/CowboyBebop/1-16.jpg)
+![png](/myPage/style/image/CowboyBebop/1-17.jpg)
+![png](/myPage/style/image/CowboyBebop/1-2.jpg)
+![png](/myPage/style/image/CowboyBebop/1-3.jpg)
+![png](/myPage/style/image/CowboyBebop/1-4.jpg)
+![png](/myPage/style/image/CowboyBebop/1-5.jpg)
+![png](/myPage/style/image/CowboyBebop/1-6.jpg)
+![png](/myPage/style/image/CowboyBebop/1-7.jpg)
+![png](/myPage/style/image/CowboyBebop/1-8.jpg)
+![png](/myPage/style/image/CowboyBebop/1-9.jpg)
 
 
 
@@ -29,6 +46,13 @@ icon: web
 
 
 
+![png](/myPage/style/image/EVA/1-1.jpg)
+![png](/myPage/style/image/EVA/1-2.jpg)
+![png](/myPage/style/image/EVA/1-3.jpg)
+![png](/myPage/style/image/EVA/1-4.jpg)
+![png](/myPage/style/image/EVA/1-5.jpg)
+![png](/myPage/style/image/EVA/1-6.jpg)
+![png](/myPage/style/image/EVA/1-7.jpg)
 
 
 
