@@ -7,6 +7,34 @@ thumbnail: style/image/KILL_LA_KILL/1-8.png
 icon: web
 ---
 
+
+
+
+# Cowboy bebop
+
+
+
+
+
+
+
+
+
+
+
+# NEON GENESIS EVANGELION
+
+
+
+
+
+
+
+
+
+
+
+
 # KILL LA KILL 
 
 
@@ -74,8 +102,6 @@ icon: web
  ![png](\myPage\style\image\luluco/下载.jpg)
 
 
-
-# EVA 新世纪福音战士
 
 
 
