@@ -32,9 +32,9 @@ icon: book
 
 2021年5月20日
 
-![png]({{'/style/image/what_if/bessel_3.png' | prepend : site.baseurl }})
-![png]({{'/style/image/what_if/bessel_1.png' | prepend : site.baseurl }})
-![png]({{'/style/image/what_if/bessel_2.png' | prepend : site.baseurl }})
+![png]({{'/style/image/what_if/bessel-3.png' | prepend : site.baseurl }})
+![png]({{'/style/image/what_if/bessel-1.png' | prepend : site.baseurl }})
+![png]({{'/style/image/what_if/bessel-2.png' | prepend : site.baseurl }})
 
 
 
