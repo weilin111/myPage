@@ -10,6 +10,7 @@ icon: book
 * content
 {:toc}
 
+![png]({{'/style/image/what_if/what_if.png' | prepend : site.baseurl }})
 
 
 # 关于特殊函数
@@ -29,11 +30,15 @@ icon: book
 
 ### 柱
 
-!
+2021年5月20日
+
+![png]({{'/style/image/what_if/bessel_3.png' | prepend : site.baseurl }})
+![png]({{'/style/image/what_if/bessel_1.png' | prepend : site.baseurl }})
+![png]({{'/style/image/what_if/bessel_2.png' | prepend : site.baseurl }})
 
 
 
-# FOR FUN
+# 最短路
 
 
 <a href="{{'/myScript/for_fun.html' | prepend : site.baseurl }} " style="color:#ff0000" target="_blank">FOR FUN</a>
