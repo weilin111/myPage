@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import render
+import json
  
 def hello(request):
     return HttpResponse("Hello world ! ")
@@ -34,7 +35,19 @@ def post_space_data(request):
             s=f.write(s)
 
     if request.method=="POST":
-        write(request.POST["text"])
+        # print(dir(request.POST)  )
+        # print("======================")
+        # print(request.POST  )
+        # print(request.body  )
+
+        # print("======================")
+        if request.POST:
+            write(request.POST["text"])
+        else:
+            json_str=request.body
+            json_dict=json.loads(json_str)
+            text=json_dict.get("text",None)
+            write(text)
         return JsonResponse({"text":read()},json_dumps_params={'ensure_ascii':False})
 
     return JsonResponse({"text":read()},json_dumps_params={'ensure_ascii':False})

@@ -31,7 +31,7 @@ urlpatterns = [
     path(r"4/",views.post_space),
     path(r"server_status/",views.server_status),
 
-    path(r"post_data/",views.post_space_data),
+    path(r"post_data",views.post_space_data),
     path(r"paper_item",testdb.get_paper_item),
     path(r"server_cpu",testdb.get_cpu_memory_percent_data),
 ] 

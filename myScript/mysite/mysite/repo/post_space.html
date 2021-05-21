@@ -70,14 +70,14 @@
 var  update_space=function(){
 set_color_linear_gradient("send_bnt")
 
-$.post("https://www.sirius1334.love/post_data/",{"text":$("#space").val()},(data)=>{
+$.post("https://81.70.240.252/post_data",{"text":$("#space").val()},(data)=>{
    
 $("#space").val($.parseJSON(data).text)
 },"text")}
 
 $("#send_bnt")[0].onclick=update_space
 
-$.get("https://www.sirius1334.love/post_data/",(data)=>{
+$.get("https://81.70.240.252/post_data",(data)=>{
    $("#space").val(data.text)
    })
 

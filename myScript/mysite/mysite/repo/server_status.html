@@ -48,7 +48,7 @@ var get_cup_data=()=>{
     const cpu=[]
     const mem=[]
     const time_label=[]
-    $.get("https://www.sirius1334.love/server_cpu",(data)=>{
+    $.get("https://81.70.240.252/server_cpu",(data)=>{
         for(let i=0;i<data.length;i++){
             data_strip=data[i]
             cpu.push(parseFloat(data_strip[3]))

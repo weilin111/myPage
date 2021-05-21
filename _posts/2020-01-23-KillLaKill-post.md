@@ -25,7 +25,6 @@ icon: web
 
 
 ![png](/myPage/style/image/CowboyBebop/1-1.jpg)
-![png](/myPage/style/image/CowboyBebop/1-1.lnk)
 ![png](/myPage/style/image/CowboyBebop/1-1.png)
 ![png](/myPage/style/image/CowboyBebop/1-10.jpg)
 ![png](/myPage/style/image/CowboyBebop/1-11.jpg)
