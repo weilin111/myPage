@@ -30,13 +30,19 @@ function get_UI() {
 
         world.dt = 1 / world.fps
         var canvas = document.getElementById(canvas_id)
+
+        var E_bnt = document.getElementById("send_E")
+        var B_bnt = document.getElementById("send_B")
+
+
+
         var pen = canvas.getContext("2d")
         let tem_xyz = [canvas.width * Math.random(), canvas.height * Math.random(), Math.random()]
         console.log(tem_xyz)
         var E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
-        var is_field_move_with_cursor=false
+        var is_field_move_with_cursor = false
 
-        function E(xyz) {
+        var E = function(xyz) {
             let center = [E_tem_xyz[0], E_tem_xyz[1], E_tem_xyz[2]]
             let dx = center[0] - xyz[0]
             let dy = center[1] - xyz[1]
@@ -45,7 +51,7 @@ function get_UI() {
 
         var r_0 = Math.sqrt(canvas.width * canvas.width + canvas.height * canvas.height)
 
-        function B(xyz) {
+        var B = function(xyz) {
 
 
             if (tem_xyz[2] > 0.5) {
@@ -87,8 +93,8 @@ function get_UI() {
 
                 // center[0] + r * Math.cos(Math.PI * 2 * i / n)
                 // center[1] + r * Math.sin(Math.PI * 2 * i / n)
-                    // console.log(x, y)
-                add_phy_Object(create_phy_Object([center[0] + r * Math.cos(Math.PI * 2 * i / n), center[1] + r * Math.sin(Math.PI * 2 * i / n), 0], [v[0],v[1],v[2]]))
+                // console.log(x, y)
+                add_phy_Object(create_phy_Object([center[0] + r * Math.cos(Math.PI * 2 * i / n), center[1] + r * Math.sin(Math.PI * 2 * i / n), 0], [v[0], v[1], v[2]]))
 
             }
         }
@@ -119,9 +125,6 @@ function get_UI() {
 
 
 
-        var collider = function() {
-            return
-        }
 
         var gravity_module = function(i) {
             world.phy_Object_list[i].velocity[1] += world.gravity * 1 / world.fps
@@ -260,6 +263,28 @@ function get_UI() {
 
 
 
+        // ----------------------------------2021年5月26日
+
+
+
+
+
+
+        B_bnt.onclick = () => {
+            let s = $("#input_function").val()
+            B = eval(s)
+        }
+
+
+        E_bnt.onclick = () => {
+            let s = $("#input_function").val()
+            E = eval(s)
+        }
+
+
+        //--------------------------------------------------
+
+
 
 
 
@@ -272,6 +297,8 @@ function get_UI() {
 
             )
         })
+
+
 
         var now_mousedown_position = [0, 0]
 
@@ -342,17 +369,17 @@ function get_UI() {
                     emitter()
                     break
                 case "m":
-                    is_field_move_with_cursor=!is_field_move_with_cursor
-                    
+                    is_field_move_with_cursor = !is_field_move_with_cursor
+
 
             }
 
-            canvas.addEventListener("mousemove",(event)=>{
-                
-                
+            canvas.addEventListener("mousemove", (event) => {
+
+
                 tem_xyz = [event.offsetX, event.offsetY, tem_xyz[2]]
-                if(is_field_move_with_cursor){
-                E_tem_xyz = [event.offsetX, event.offsetY, 0]
+                if (is_field_move_with_cursor) {
+                    E_tem_xyz = [event.offsetX, event.offsetY, 0]
 
                 }
                 // console.log(tem_xyz)
