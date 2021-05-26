@@ -201,9 +201,9 @@ let Table_data=[
 ["$\\nabla^2 \\; in\\; Cylinder \\;Coor $","$  \\frac{1}{r} \\partial_r(r \\partial_r )+\\frac{1}{r^2}\\partial_\\theta^2 +\\partial_z^2           $"],
 ["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( \\frac{1/r}\\partial_r^2(r  )+\\frac{1}{r^2 \\sin{\\theta}} \\partial_\\theta(\\sin(\\theta) \\partial_\\theta) +\\frac{1}{r^2 \\sin{\\theta}^2 \\partial_\\phi^2 }        ) $"],
 
-["$\\nabla \\times \\; in\\; xyz \\;Coor $","$( ) $"],
-["$\\nabla \\times \\; in\\; Cylinder \\;Coor $","$( ) $"],
-["$\\nabla \\times \\; in\\; Spherical \\;Coor $","$( ) $"],
+["$\\nabla \\times \\; in\\; xyz \\;Coor $","$( ,,) $"],
+["$\\nabla \\times \\; in\\; Cylinder \\;Coor $","$(,, ) $"],
+["$\\nabla \\times \\; in\\; Spherical \\;Coor $","$( ,,) $"],
 
 ["$\\nabla \\cdot A\\; in\\; xyz \\;Coor $","$\\partial_xA_x+\\partial_yA_y+\\partial_zA_z $"],
 ["$\\nabla \\cdot A\\; in\\; Cylinder \\;Coor $","$\\frac{1}{r} \\partial_r(rA_r) +\\frac{1}{r}\\partial_{\\theta}A_\\theta +\\partial_zA_z$"],
@@ -222,8 +222,25 @@ let Table_data=[
 ["$ $","$ $"],
 // 矢量分析---------------
 ["$ $","$ $"],
+["$Circular Accelerator$","$ B\\rho=3.3356 E  \quad [T,m,GeV] $"],
+["$FODO Matrix $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+// 加速器物理---------------------
+["$Bessel Equation Ⅰ $","$ $"],
+["$Bessel Equation Ⅱ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+["$ $","$ $"],
+// 特殊函数与方程------------------------------
+
 ["$Fourier \\; Transform $","$\\mathcal{F}[f(t)]=\\phi(\\omega) = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty}f(t) e^{- i \\omega t} {\\rm d} t $"],
 ["$Laplace \\; Transform $","$ \\mathcal{L}[f(t)]=F(s) =\\int_{0}^{\\infty}f(t)e^{-st} {\\rm d} t         $"],
 ["$ $","$ $"],
