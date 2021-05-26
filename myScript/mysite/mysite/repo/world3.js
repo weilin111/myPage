@@ -270,15 +270,39 @@ function get_UI() {
 
 
 
+
+
+
         B_bnt.onclick = () => {
             let s = $("#input_function").val()
-            B = eval(s)
+            console.log(canvas.width)
+            s = eval(s)
+            B = (xyz) => {
+                new_B = s([(xyz[0] - canvas.width / 2) / canvas.width,
+                    (xyz[1] - canvas.height / 2) / canvas.height,
+                    (xyz[2] - canvas.height / 2) / canvas.height
+
+                ])
+
+                return new_B
+            }
         }
 
 
         E_bnt.onclick = () => {
             let s = $("#input_function").val()
-            E = eval(s)
+            s = eval(s)
+            E = (xyz) => {
+                new_E = s([-100 * (xyz[0] - canvas.width / 2) / canvas.width, -100 * (xyz[1] - canvas.height / 2) / canvas.height,
+                    (xyz[2] - canvas.height / 2) / canvas.height
+                ])
+
+                return new_E
+
+
+            }
+
+
         }
 
 
