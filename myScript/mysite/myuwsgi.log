@@ -724,3 +724,78 @@ fun_fact: GET from 59.66.172.34  Wed May 26 23:05:38 2021
 Not Found: /favicon.ico
 fun_fact: GET from 59.66.172.34  Wed May 26 23:06:00 2021
 Not Found: /favicon.ico
+fun_fact: GET from 59.66.172.34  Wed May 26 23:48:37 2021
+Not Found: /favicon.ico
+fun_fact: GET from 59.66.172.34  Wed May 26 23:48:45 2021
+Not Found: /favicon.ico
+fun_fact: GET from 59.66.172.34  Wed May 26 23:48:47 2021
+fun_fact: GET from 59.66.172.34  Wed May 26 23:48:47 2021
+fun_fact: GET from 59.66.172.34  Wed May 26 23:48:48 2021
+fun_fact: GET from 59.66.172.34  Wed May 26 23:48:48 2021
+fun_fact: GET from 59.66.172.34  Wed May 26 23:48:51 2021
+fun_fact: GET from 59.66.172.34  Wed May 26 23:48:52 2021
+Internal Server Error: /paper_item
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./mysite/testdb.py", line 68, in get_paper_item
+    return JsonResponse(s[random.randint(0,len(s)-1)],safe=False,json_dumps_params={'ensure_ascii':False})
+  File "/usr/lib/python3.6/random.py", line 221, in randint
+    return self.randrange(a, b+1)
+  File "/usr/lib/python3.6/random.py", line 199, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
+Internal Server Error: /paper_item
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./mysite/testdb.py", line 68, in get_paper_item
+    return JsonResponse(s[random.randint(0,len(s)-1)],safe=False,json_dumps_params={'ensure_ascii':False})
+  File "/usr/lib/python3.6/random.py", line 221, in randint
+    return self.randrange(a, b+1)
+  File "/usr/lib/python3.6/random.py", line 199, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
+pic: GET from 183.172.192.184  Wed May 26 23:50:39 2021
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /api/jsonws/invoke
+Not Found: /index.php
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /wp-content/plugins/wp-file-manager/readme.txt
+Not Found: /console/
+Not Found: /mifs/.;/services/LogService
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /user/deposit/simplii
+Not Found: /api/v1
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /.well-known/security.txt
+Not Found: /favicon.ico
+Not Found: /manager/html
+Not Found: /owa/
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /1bda8c3674244fadb07520fb3da797c0
+Not Found: /cgi-bin/kerbynet
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /solr/admin/info/system
+Not Found: /api/jsonws/invoke
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /wp-content/plugins/wp-file-manager/readme.txt
+Not Found: /console/
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /_ignition/execute-solution
+Not Found: /favicon.ico
+Not Found: /nice ports,/Trinity.txt.bak
+Not Found: /boaform/admin/formLogin
+Not Found: /imgs/ms_check_license
+Not Found: /clientaccesspolicy.xml
+pic: GET from 59.66.172.34  Thu May 27 11:53:49 2021
+pic: GET from 59.66.172.34  Thu May 27 11:53:52 2021
+pic: GET from 59.66.172.34  Thu May 27 11:53:54 2021
+pic: GET from 59.66.172.34  Thu May 27 11:53:56 2021
