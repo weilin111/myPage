@@ -10,10 +10,10 @@ icon: book
 * content
 {:toc}
 
-
+<!-- 
 # 天体物理讲座
 
-![png](\myPage\style\image\class3_长图0.jpg)
+![png](\myPage\style\image\class3_长图0.jpg) -->
 
 
 # PPT
