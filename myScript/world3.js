@@ -176,7 +176,7 @@ function get_UI() {
 
 
         var draw_little_dot = function(l) {
-            pen.fillText("🐟", l.xyz[0], l.xyz[1])
+            // pen.fillText("🐟", l.xyz[0], l.xyz[1])
             pen.fillText("✨", E_tem_xyz[0], E_tem_xyz[1])
 
         }
