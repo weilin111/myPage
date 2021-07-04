@@ -810,9 +810,9 @@ div#paticlees-js {
 
 .post-list-item {
     float: left;
-    width: 33.3333%;
+    width: 24%;
     height: auto;
-    padding: 15px;
+    padding: 33px;
     align-items: center
 }
 
@@ -893,7 +893,7 @@ div#paticlees-js {
     -webkit-transform: rotate(7deg) translate(-10px, 0);
     -ms-transform: rotate(7deg) translate(-10px, 0);
     transform: rotate(7deg) translate(-10px, 0);
-    background-color: #fff
+    background-color: rgb(0, 0, 0)
 }
 
 .post-list-item-container .item-slant.reverse-slant {
@@ -910,14 +910,15 @@ div#paticlees-js {
     position: relative;
     height: 130px;
     padding: 25px 20px 40px;
-    background-color: #fff
+    background-color: #000;
+    color: aqua;
 }
 
 .post-list-item-container .item-label .item-title a {
     font-size: 17px;
     line-height: 17px;
     word-break: break-all;
-    color: #313131
+    color: darkviolet
 }
 
 .post-list-item-container .item-label .item-meta {
@@ -926,7 +927,8 @@ div#paticlees-js {
     bottom: 0;
     width: 100%;
     padding: 0 15px 15px;
-    text-align: right
+    text-align: right;
+    -webkit-writing-mode: vertical-rl;
 }
 
 .post-list-item-container .item-label .item-meta .item-meta-cat a {
