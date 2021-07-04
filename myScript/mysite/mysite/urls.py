@@ -32,7 +32,13 @@ urlpatterns = [
     path(r"server_status/",views.server_status),
 
     path(r"post_data",views.post_space_data),
+    path(r"post_data_string",views.post_space_data_string),
+
     path(r"paper_item",testdb.get_paper_item),
     path(r"server_cpu",testdb.get_cpu_memory_percent_data),
+
+
+    path(r"json_file_brower",views.get_local_json_dir_and_file),
+
 ] 
 # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
