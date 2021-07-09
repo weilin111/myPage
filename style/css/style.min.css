@@ -801,7 +801,8 @@ div#paticlees-js {
 .post-lists {
     position: relative;
     display: block;
-    overflow: hidden
+    overflow: hidden;
+    min-height: 2000px;
 }
 
 .post-lists-body {
