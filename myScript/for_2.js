@@ -201,9 +201,9 @@ let Table_data=[
 ["$\\nabla^2 \\; in\\; Cylinder \\;Coor $","$  \\frac{1}{r} \\partial_r(r \\partial_r )+\\frac{1}{r^2}\\partial_\\theta^2 +\\partial_z^2           $"],
 ["$\\nabla^2 \\; in\\; Spherical \\;Coor $","$( \\frac{1/r}\\partial_r^2(r  )+\\frac{1}{r^2 \\sin{\\theta}} \\partial_\\theta(\\sin(\\theta) \\partial_\\theta) +\\frac{1}{r^2 \\sin{\\theta}^2 \\partial_\\phi^2 }        ) $"],
 
-["$\\nabla \\times \\; in\\; xyz \\;Coor $","$( ,,) $"],
-["$\\nabla \\times \\; in\\; Cylinder \\;Coor $","$(,, ) $"],
-["$\\nabla \\times \\; in\\; Spherical \\;Coor $","$( ,,) $"],
+["$\\nabla \\times \\vec{A}\\; in\\; xyz \\;Coor $","$(\\partial_zA_y-\\partial_yA_z ,\\partial_xA_z-\\partial_zA_x,\\partial_yA_x-\\partial_xA_y) $"],
+["$\\nabla \\times \\vec{A}\\; in\\; Cylinder \\;Coor $","$(\\frac{1}{\\rho}\\partial_\\phi A_z-\\partial_z A_\\phi  ,\\partial_zA_\\phi -\\partial_zA_\\rho,\\frac{1}{\\rho} (\\partial_\\rho (\\rho A_\\phi) - \\partial_\\phi A_\\rho  )   ) $"],
+["$\\nabla \\times \\vec{A}\\; in\\; Spherical \\;Coor $","$(  ,     , ) $"],
 
 ["$\\nabla \\cdot A\\; in\\; xyz \\;Coor $","$\\partial_xA_x+\\partial_yA_y+\\partial_zA_z $"],
 ["$\\nabla \\cdot A\\; in\\; Cylinder \\;Coor $","$\\frac{1}{r} \\partial_r(rA_r) +\\frac{1}{r}\\partial_{\\theta}A_\\theta +\\partial_zA_z$"],
@@ -222,7 +222,7 @@ let Table_data=[
 ["$ $","$ $"],
 // 矢量分析---------------
 ["$ $","$ $"],
-["$Circular Accelerator$","$ B\\rho=3.3356 E  \quad [T,m,GeV] $"],
+["$Circular Accelerator$","$ B\\rho=3.3356 E  \\quad [T,m,GeV] $"],
 ["$FODO Matrix $","$ $"],
 ["$ $","$ $"],
 ["$ $","$ $"],
