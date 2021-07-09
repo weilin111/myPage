@@ -3,7 +3,7 @@ layout: post
 title: ✨
 date: 2021-3-30 00:00:00 +0800
 category: random write
-thumbnail: style/image/AST_GIF/1-(2).gif
+thumbnail: style/image/AST_GIF/1-2.gif
 icon: book
 ---
 * content

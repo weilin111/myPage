@@ -3,7 +3,7 @@ layout: post
 title: ALGORITHM
 date: 2021-7-9 00:00:00 +0800
 category: random write
-thumbnail: style/image/AST_GIF/1-(3).gif
+thumbnail: style/image/AST_GIF/1-3.gif
 icon: book
 ---
 

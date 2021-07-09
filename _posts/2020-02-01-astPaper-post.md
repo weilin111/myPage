@@ -3,7 +3,7 @@ layout: post
 title: Multi
 date: 2020-12-23 00:00:00 +0800
 category: (#`O′)
-thumbnail: style/image/AST_GIF/1-(10).gif
+thumbnail: style/image/AST_GIF/1-10.gif
 icon: book
 ---
 
