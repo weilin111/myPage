@@ -3,7 +3,7 @@ layout: post
 title: 常数表
 date: 2021-12-31 00:00:00 +0800
 category: query
-thumbnail: style/image/AST_GIF/2-5.gif
+thumbnail: style/image/AST_GIF/3-1.gif
 icon: book
 ---
 
