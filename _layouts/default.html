@@ -7,6 +7,17 @@
 
     {% include header.html %}
 
+    <style>
+      .fireworks {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      }
+  </style>
+  <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+
     {{ content }}
     
     {% include footer.html %}
