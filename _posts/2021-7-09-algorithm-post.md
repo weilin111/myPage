@@ -83,23 +83,29 @@ print(allPermutation([1,2,3,4,5],2)   )
 递归
 
 ```python
-def allCombination(array, k):
-    res = []
-    temp = []
-    length = len(array)
-    def recusive(start, n):
-        for i in range(start, length-n+1):
-            temp.append(array[i])
-            if len(temp) == k:
-                res.append(temp.copy())
+def quickSort(array):
+    def recusive(left,right):
+        if right<=left:
+            return
+        a,i=left,left
+        b=right
+        pivot=array[left]
+        while b>=i:
+            if array[i]<pivot:
+                array[i],array[a]=array[a],array[i]
+                i+=1
+                a+=1
+            elif array[i]>pivot:
+                array[i],array[b]=array[b],array[i]
+                b+=-1            
             else:
-                recusive(i+1, n-1)
-            temp.pop(-1)
-    recusive(0, k)
-    return res
+                i+=1
+        recusive(left,a-1)
+        recusive(b+1,right)
+    recusive(0,len(array)-1)
+    return array
+print( quickSort([5,8,462,543,2,5,8,9])   )
 
-
-print(allCombination([5, 2, 4, 52, 3, 3], 2))
 ```
 
 
