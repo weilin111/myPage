@@ -78,7 +78,29 @@ print(allPermutation([1,2,3,4,5],2)   )
 
 
 
+# QuickSort
 
+递归
+
+```python
+def allCombination(array, k):
+    res = []
+    temp = []
+    length = len(array)
+    def recusive(start, n):
+        for i in range(start, length-n+1):
+            temp.append(array[i])
+            if len(temp) == k:
+                res.append(temp.copy())
+            else:
+                recusive(i+1, n-1)
+            temp.pop(-1)
+    recusive(0, k)
+    return res
+
+
+print(allCombination([5, 2, 4, 52, 3, 3], 2))
+```
 
 
 
