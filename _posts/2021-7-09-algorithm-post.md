@@ -78,7 +78,9 @@ print(allPermutation([1,2,3,4,5],2)   )
 
 
 
-# QuickSort
+# Sort
+
+## quickSort
 
 递归
 
@@ -109,4 +111,43 @@ print( quickSort([5,8,462,543,2,5,8,9])   )
 ```
 
 
+
+## heapSort
+
+
+
+```python
+# heapSort
+# 注意下标
+
+def heapSort(array):
+    # build heap
+    now_index = len(array)
+    for i in range(len(array), 1, -1):
+        if array[i//2-1] < array[i-1]:
+            array[i//2-1], array[i-1] = array[i-1], array[i//2-1]
+    def reHeap():
+        index = 1
+        next_index = 1
+        while index*2 <= now_index:
+            if index*2+1 > now_index:
+                next_index = index*2
+            else:
+                next_index = index * \
+                    2 if array[index*2-1] > array[index*2+1-1] else index*2+1
+            if array[index-1] < array[next_index-1]:
+                array[index-1], array[next_index -
+                                      1] = array[next_index-1], array[index-1]
+            index = next_index
+    # sort
+    while now_index > 1:
+        array[0], array[now_index-1] = array[now_index-1], array[0]
+        now_index -= 1
+        reHeap()
+    return array
+print(heapSort([9, 8, 7, 6, 5, 4, 3, 2, 1]))
+print(heapSort([456, 1, 5, 4, 8, 96, 3, 2, 1]))
+print(heapSort([]))
+
+```
 
