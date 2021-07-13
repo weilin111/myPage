@@ -23,6 +23,10 @@ icon: book
 ![png](\myPage\style\image\miRule_长图0.png)
 
 
+
+
+
+
 # 电动
 
 <!-- ![png](\myPage\style\image\力学复习提纲_长图0.png) -->
@@ -34,6 +38,16 @@ icon: book
 <!-- # 中微子 -->
 
 <!-- ![png](\myPage\style\image\neutrino.png) -->
+
+
+# 问题集
+
+## 1.穿越地心
+
+![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224430.png' | prepend : site.baseurl }})
+
+![png]({{'/style/image/what_if/屏幕截图 2021-05-06 224447.png' | prepend : site.baseurl }})
+
 
 
 
