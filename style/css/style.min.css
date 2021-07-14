@@ -2079,9 +2079,14 @@ div#paticlees-js {
 }
 
 
-.footer-meta .meta-item .meta-copyright {
+.footer-meta .meta-copyright {
     width: 50%;
 }
+
+.footer-meta .meta-posts {
+    width: 25%;
+}
+
 
 .footer-meta .meta-copyright .info-logo img {
     height: 110px;
