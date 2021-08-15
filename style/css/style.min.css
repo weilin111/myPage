@@ -1245,7 +1245,8 @@ div#paticlees-js {
 }
 
 .post-title {
-    font-size: 21px
+    font-size: 21px;
+    border-bottom: hidden;
 }
 
 .post-data,
