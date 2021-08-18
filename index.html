@@ -131,6 +131,8 @@ layout: default
     <script>
         $("#cate-physics-bnt").css('background', get_random_Color())
         $("#cate-CS-bnt").css('background', get_random_Color())
+        change_title_color('cate-CS-bnt')
+        change_title_color('cate-physics-bnt')
 
         $("#cate-physics-bnt").click(() => {
             if ($("#cate-physics-post-lists-body").css("visibility") != "collapse") {
