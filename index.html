@@ -28,7 +28,7 @@ layout: default
             border-radius: 10px;
             font-size: 20px;"> PHYSICS </button> </div>
 
-        <div class="post-lists-body">
+        <div class="post-lists-body" id="cate-physics-post-lists-body" >
             {% for post in paginator.posts %}
             <div class="post-list-item">
                 <div class="post-list-item-container">
@@ -61,9 +61,44 @@ layout: default
         </div>
     </div>
 
-    <div class="post-lists">
+    <div class="post-lists" id="cate-CS-post-lists">
+        <!-- <script src="particles.js"></script> -->
+        <!-- <script src="app.js"></script> -->
+        <div class="cate-physics"> <button id="cate-CS-bnt" style="width: 100px; height: 50px;background: blue;
+            border-radius: 10px;
+            font-size: 20px;"> CS </button> </div>
 
-
+        <div class="post-lists-body"  id="cate-CS-post-lists-body"   >
+            {% for post in paginator.posts %}
+            <div class="post-list-item">
+                <div class="post-list-item-container">
+                    <div class="item-thumb bg-deepgrey"
+                        style="background-image:url({% if post.thumbnail %}{{ post.thumbnail }}{% else %}{{ '/style/image/thumbnail.png' | prepend: site.baseurl }}{% endif %});">
+                    </div>
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <div class="item-desc">
+                            <p>{{ post.content | strip_html | strip_newlines | truncate: 128 }} </p>
+                        </div>
+                    </a>
+                    <div class="item-slant reverse-slant bg-deepgrey"></div>
+                    <div class="item-slant"></div>
+                    <div class="item-label">
+                        <div class="item-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            <br /> {{ post.date | date: "%b %d, %Y" }}
+                        </div>
+                        <div class="item-meta clearfix">
+                            <div class="item-meta-ico {% if post.icon %}bg-ico-{{ post.icon }}{% endif %}"
+                                style="background: url({{ '/style/image/bg-ico.png' | prepend: site.baseurl }}) no-repeat;background-size: 40px auto;">
+                            </div>
+                            <div class="item-meta-cat">
+                                <a href="javascript:void(0);">{{ post.category }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 
 
@@ -91,17 +126,31 @@ layout: default
 
     <script>
         $("#cate-physics-bnt").click(() => {
-            if ($(".post-lists-body").css("visibility") != "collapse") {
-                $(".post-lists-body").css("visibility", "collapse");
-                $(".cate-physics-post-lists").css("height", "50px");
+            if ($("#cate-physics-post-lists-body").css("visibility") != "collapse") {
+                $("#cate-physics-post-lists-body").css("visibility", "collapse");
+                $("#cate-physics-post-lists").css("height", "50px");
                 console.log("collapse");
             }
             else {
-                $(".cate-physics-post-lists").css("height", "auto");
-                $(".post-lists-body").css("visibility", "visible");
+                $("#cate-physics-post-lists").css("height", "auto");
+                $("#cate-physics-post-lists-body").css("visibility", "visible");
                 console.log("hit");
             }
         })
+
+        $("#cate-CS-bnt").click(() => {
+            if ($("#cate-CS-post-lists-body").css("visibility") != "collapse") {
+                $("#cate-CS-post-lists-body").css("visibility", "collapse");
+                $("#cate-CS-post-lists").css("height", "50px");
+                console.log("collapse");
+            }
+            else {
+                $("#cate-CS-post-lists").css("height", "auto");
+                $("#cate-CS-post-lists-body").css("visibility", "visible");
+                console.log("hit");
+            }
+        })
+
     </script>
 
 
