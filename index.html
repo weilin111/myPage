@@ -30,6 +30,7 @@ layout: default
 
         <div class="post-lists-body" id="cate-physics-post-lists-body" >
             {% for post in paginator.posts %}
+            {% if post.cate == "phy" %}
             <div class="post-list-item">
                 <div class="post-list-item-container">
                     <div class="item-thumb bg-deepgrey"
@@ -57,6 +58,7 @@ layout: default
                     </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
@@ -70,6 +72,7 @@ layout: default
 
         <div class="post-lists-body"  id="cate-CS-post-lists-body"   >
             {% for post in paginator.posts %}
+            {% if post.cate == "CS" %}
             <div class="post-list-item">
                 <div class="post-list-item-container">
                     <div class="item-thumb bg-deepgrey"
@@ -97,6 +100,7 @@ layout: default
                     </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
@@ -128,7 +132,7 @@ layout: default
         $("#cate-physics-bnt").click(() => {
             if ($("#cate-physics-post-lists-body").css("visibility") != "collapse") {
                 $("#cate-physics-post-lists-body").css("visibility", "collapse");
-                $("#cate-physics-post-lists").css("height", "50px");
+                $("#cate-physics-post-lists").css("height", "25px");
                 console.log("collapse");
             }
             else {
@@ -141,7 +145,7 @@ layout: default
         $("#cate-CS-bnt").click(() => {
             if ($("#cate-CS-post-lists-body").css("visibility") != "collapse") {
                 $("#cate-CS-post-lists-body").css("visibility", "collapse");
-                $("#cate-CS-post-lists").css("height", "50px");
+                $("#cate-CS-post-lists").css("height", "25px");
                 console.log("collapse");
             }
             else {

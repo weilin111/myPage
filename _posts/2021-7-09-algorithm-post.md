@@ -5,6 +5,7 @@ date: 2021-7-9 00:00:00 +0800
 category: random write
 thumbnail: style/image/AT_GIF/AT9.gif
 icon: book
+cate: cs
 ---
 
 * content
