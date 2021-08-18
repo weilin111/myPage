@@ -56,6 +56,8 @@ cate: CS
 
    ![1629288937609](/myPage/style/image/2021-08-17-edgeAddon-post_assets/1629288937609.png)
 
+   在`edge`中，可以实时得到代码的运行结果，`F12`可以调出`DevTool`
+
    值得注意的是，入口`html`不支持内联的`js`代码，需要做额外的处理。
 
 4. 在edge安装插件处，选择此文件夹，将其打包成为插件
@@ -66,8 +68,7 @@ cate: CS
 
 [MicrosoftEdge/MicrosoftEdge-Extensions-Demos (github.com)](https://github.com/MicrosoftEdge/MicrosoftEdge-Extensions-Demos)
 
-[Microsoft Edge (Chromium) Extensions concepts and architecture - Microsoft Edge Development | Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/)
+[Microsoft Edge (Chromium) Extensions concepts and architecture - Microsoft Edge Development Microsoft Docs](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/)
 
 
 
-## 
