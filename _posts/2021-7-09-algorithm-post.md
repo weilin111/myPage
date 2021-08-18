@@ -3,7 +3,7 @@ layout: post
 title: ALGORITHM
 date: 2021-7-9 00:00:00 +0800
 category: random write
-thumbnail: style/image/AT_GIF/AT9.gif
+thumbnail: style/image/postLogo/图片4.png
 icon: book
 cate: CS
 ---
