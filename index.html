@@ -26,9 +26,9 @@ layout: default
         <!-- <script src="app.js"></script> -->
         <div class="cate-physics"> <button id="cate-physics-bnt" style="width: 100px; height: 50px;background: blue;
             border-radius: 10px;
-            font-size: 20px;"> PHYSICS </button> </div>
+            font-size: 20px;cursor: pointer;"> PHYSICS </button> </div>
 
-        <div class="post-lists-body" id="cate-physics-post-lists-body" >
+        <div class="post-lists-body" id="cate-physics-post-lists-body">
             {% for post in paginator.posts %}
             {% if post.cate == "phy" %}
             <div class="post-list-item">
@@ -68,9 +68,9 @@ layout: default
         <!-- <script src="app.js"></script> -->
         <div class="cate-physics"> <button id="cate-CS-bnt" style="width: 100px; height: 50px;background: blue;
             border-radius: 10px;
-            font-size: 20px;"> CS </button> </div>
+            font-size: 20px; cursor: pointer;"> CS </button> </div>
 
-        <div class="post-lists-body"  id="cate-CS-post-lists-body"   >
+        <div class="post-lists-body" id="cate-CS-post-lists-body">
             {% for post in paginator.posts %}
             {% if post.cate == "CS" %}
             <div class="post-list-item">
@@ -131,13 +131,13 @@ layout: default
     <script>
         $("#cate-physics-bnt").click(() => {
             if ($("#cate-physics-post-lists-body").css("visibility") != "collapse") {
-                $("#cate-physics-bnt").css('color',get_random_Color()  )
+                $("#cate-physics-bnt").css('color', get_random_Color())
                 $("#cate-physics-post-lists-body").css("visibility", "collapse");
                 $("#cate-physics-post-lists").css("height", "75px");
                 // console.log("collapse");
             }
             else {
-                $("#cate-physics-bnt").css('color',get_random_Color()  )
+                $("#cate-physics-bnt").css('color', get_random_Color())
                 $("#cate-physics-post-lists").css("height", "auto");
                 $("#cate-physics-post-lists-body").css("visibility", "visible");
                 // console.log("hit");
@@ -146,13 +146,13 @@ layout: default
 
         $("#cate-CS-bnt").click(() => {
             if ($("#cate-CS-post-lists-body").css("visibility") != "collapse") {
-                $("#cate-CS-bnt").css('color',get_random_Color()  )
+                $("#cate-CS-bnt").css('color', get_random_Color())
                 $("#cate-CS-post-lists-body").css("visibility", "collapse");
                 $("#cate-CS-post-lists").css("height", "75px");
                 // console.log("collapse");
             }
             else {
-                $("#cate-CS-bnt").css('color',get_random_Color()  )
+                $("#cate-CS-bnt").css('color', get_random_Color())
                 $("#cate-CS-post-lists").css("height", "auto");
                 $("#cate-CS-post-lists-body").css("visibility", "visible");
                 // console.log("hit");
