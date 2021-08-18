@@ -1,6 +1,6 @@
 ---
 layout: post
-title: some MATH
+title: Some Math
 date: 2021-3-30 00:00:00 +0800
 category: random write
 thumbnail: style/image/AT_GIF/AT8.gif
