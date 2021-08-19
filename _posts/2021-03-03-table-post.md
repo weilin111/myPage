@@ -25,6 +25,8 @@ cate: phy
 
 </div>
 
+# 表2
+
 <table class="wikitable">
 <tbody><tr><td width="183" height="30"><b>量</b></td>
 <td width="105" height="30"><b>符号</b></td>
