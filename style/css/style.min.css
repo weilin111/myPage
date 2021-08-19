@@ -10,6 +10,16 @@
     -moz-osx-font-smoothing: grayscale
 }
 
+
+@font-face {
+    font-family: AGENCY;
+    src: url("../font/AGENCYR.TTF");
+}
+
+
+
+
+
 *,
 :after,
 :before {
@@ -319,6 +329,10 @@ textarea:-ms-input-placeholder {
 .left {
     float: left
 }
+
+
+
+
 
 .right {
     float: right
