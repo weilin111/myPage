@@ -15,16 +15,31 @@ cate: CS
 {:toc}
 
 
-##  先买个服务器
+##  先买个云服务器
+
+
 
 ##  django
 
-## ngnix + uwigu
 
-## nodejs
+页面路由
+
+后端相应
+
+数据库连接
+
+
+## 部署法1：ngnix + uwigu
+
+反向代理负载均衡
+
+## 部署法二：nodejs
 
 ## 定期爬虫
 
+PRL
+
+图书馆新书
 
 
 

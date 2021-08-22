@@ -29,7 +29,6 @@ cate: CS
 
 ```python
 # 2021年7月10日
-
 def allCombination(array,k):
     res=[]
     temp=[]
@@ -50,10 +49,7 @@ print( allCombination([5,2,4,52,3,3] ,2)  )
 
 ```
 
-
-
 ```python
-
 def allPermutation(array,k):
     res=[]
     temp=[1]*k
@@ -111,11 +107,42 @@ print( quickSort([5,8,462,543,2,5,8,9])   )
 
 ```
 
+稍微改一改可得到On的第k个最大数
+
+### kthMax
+
+```python
+def kthMax(l,k):
+    def recursive(left,right):
+        if right<=left:
+            return
+        a,i=left,left
+        b=right
+        pivot=l[left]
+        while i<=b:
+            if l[i]<pivot:
+                l[i],l[a]=l[a],l[i]
+                a+=1
+                i+=1
+            elif l[i]>pivot:
+                l[i],l[b]=l[b],l[i]
+                b-=1
+            else:
+                i+=1
+        if(b+1<=len(l)-k):
+            recursive(b+1,right)
+        else:
+            recursive(left,a-1)
+        return
+    recursive(0,len(l)-1)
+    print(l)
+    return l[-k]
+print(kthMax([1,5,6,2],2))
+```
+
 
 
 ## heapSort
-
-
 
 ```python
 # heapSort
