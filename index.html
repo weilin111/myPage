@@ -178,16 +178,9 @@ $("#cate-physics-bnt").click(() => {
     var end_max_height=1200;
     div_id="cate-physics-post-lists"
     var change_div_max_height = function(fps) {
-        if(end_max_height-start_max_height>0){
-            $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(  1.5/fps*change_count)-1)  )
-        }
-        else{
-            $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(  1.5/fps*(fps-change_count) )-1)  )
-        }
+        $("#" + div_id).css("max-height",start_max_height+(end_max_height-start_max_height)*Math.sin(0.5*Math.PI /fps*change_count)  )
         change_count = (change_count + 1) 
-
     }
-
 
     if (is_phy_open==true) {
         $("#cate-physics-bnt").css('background', get_random_Color())
@@ -196,10 +189,9 @@ $("#cate-physics-bnt").click(() => {
         end_max_height=100;
         let worker=setInterval(function() {
             change_div_max_height(fps)
-            if (change_count==fps){
+            if (change_count==fps-1){
                 clearInterval(worker)
                 is_phy_open=false
-                
             }
         }, 600 / fps)
     }
@@ -210,7 +202,7 @@ $("#cate-physics-bnt").click(() => {
         end_max_height=1200;
         let worker=setInterval(function() {
             change_div_max_height(fps)
-            if (change_count==fps){
+            if (change_count==fps-1){
                 clearInterval(worker)
                 is_phy_open=true
                 $("#" + div_id).css("max-height","auto" )
@@ -228,15 +220,10 @@ $("#cate-CS-bnt").click(() => {
     var end_max_height=1200;
     div_id="cate-CS-post-lists"
     var change_div_max_height = function(fps) {
-        if(end_max_height-start_max_height>0){
-            $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(  1.5/fps*change_count)-1)  )
-        }
-        else{
-            $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(  1.5/fps*(fps-change_count) )-1)  )
-        }
+        $("#" + div_id).css("max-height",start_max_height+(end_max_height-start_max_height)*Math.sin(0.5*Math.PI /fps*change_count)  )
         change_count = (change_count + 1) 
-
     }
+
     if (is_CS_open==true) {
         $("#cate-CS-bnt").css('background', get_random_Color())
         change_count = 0
@@ -244,7 +231,7 @@ $("#cate-CS-bnt").click(() => {
         end_max_height=100;
         let worker=setInterval(function() {
             change_div_max_height(fps)
-            if (change_count==fps){
+            if (change_count==fps-1){
                 clearInterval(worker)
                 is_CS_open=false
             }
@@ -257,7 +244,7 @@ $("#cate-CS-bnt").click(() => {
         end_max_height=1200;
         let worker=setInterval(function() {
             change_div_max_height(fps)
-            if (change_count==fps){
+            if (change_count==fps-1){
                 clearInterval(worker)
                 is_CS_open=true
                 $("#" + div_id).css("max-height","auto" )
