@@ -178,7 +178,7 @@ $("#cate-physics-bnt").click(() => {
     var end_max_height=1200;
     div_id="cate-physics-post-lists"
     var change_div_max_height = function(fps) {
-        $("#" + div_id).css("max-height",start_max_height+(end_max_height-start_max_height)* (Math.exp(1/fps*change_count)-1)  )
+        $("#" + div_id).css("max-height",130+ start_max_height+(end_max_height-start_max_height)* (Math.exp(1/fps*change_count)-1)  )
         change_count = (change_count + 1) 
     }
 
@@ -192,6 +192,7 @@ $("#cate-physics-bnt").click(() => {
             if (change_count==fps-1){
                 clearInterval(worker)
                 is_phy_open=false
+                
             }
         }, 600 / fps)
     }
@@ -220,7 +221,7 @@ $("#cate-CS-bnt").click(() => {
     var end_max_height=1200;
     div_id="cate-CS-post-lists"
     var change_div_max_height = function(fps) {
-        $("#" + div_id).css("max-height",start_max_height+(end_max_height-start_max_height)* (Math.exp(1/fps*change_count)-1)  )
+        $("#" + div_id).css("max-height",130+ start_max_height+(end_max_height-start_max_height)* (Math.exp(1/fps*change_count)-1)  )
         change_count = (change_count + 1) 
     }
 
