@@ -199,7 +199,7 @@ $("#cate-physics-bnt").click(() => {
         $("#cate-physics-bnt").css('background', get_random_Color())
         change_count = 0
         start_max_height=100;
-        end_max_height=1000;
+        end_max_height=1200;
         let worker=setInterval(function() {
             change_div_max_height(fps)
             if (change_count==fps-1){
@@ -231,7 +231,7 @@ $("#cate-CS-bnt").click(() => {
             change_div_max_height(fps)
             if (change_count==fps-1){
                 clearInterval(worker)
-                is_phy_open=false
+                is_CS_open=false
             }
         }, 600 / fps)
     }
@@ -239,12 +239,12 @@ $("#cate-CS-bnt").click(() => {
         $("#cate-CS-bnt").css('background', get_random_Color())
         change_count = 0
         start_max_height=100;
-        end_max_height=1000;
+        end_max_height=1200;
         let worker=setInterval(function() {
             change_div_max_height(fps)
             if (change_count==fps-1){
                 clearInterval(worker)
-                is_phy_open=true
+                is_CS_open=true
             }
         }, 600 / fps)
 
