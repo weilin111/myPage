@@ -92,6 +92,108 @@ var change_title_color = function(title_id) {
 }
 
 
+
+// `````````````````````2021年8月25日
+
+// var is_phy_open=true
+// var is_CS_open=true
+
+// $("#cate-physics-bnt").click(() => {
+//     var change_count = 0
+//     var fps = 60
+//     var start_max_height=100;
+//     var end_max_height=1200;
+//     div_id="cate-physics-post-lists"
+//     var change_div_max_height = function(fps) {
+//         $("#" + div_id).css("max-height",start_max_height+(end_max_height-start_max_height)*Math.sin(0.5*Math.PI /fps*change_count)  )
+//         change_count = (change_count + 1) 
+//     }
+
+//     if (is_phy_open==true) {
+//         $("#cate-physics-bnt").css('background', get_random_Color())
+//         change_count = 0
+//         start_max_height=1200;
+//         end_max_height=100;
+//         let worker=setInterval(function() {
+//             change_div_max_height(fps)
+//             if (change_count==fps-1){
+//                 clearInterval(worker)
+//                 is_phy_open=false
+//             }
+//         }, 1000 / fps)
+//     }
+//     else {
+//         $("#cate-physics-bnt").css('background', get_random_Color())
+//         change_count = 0
+//         start_max_height=100;
+//         end_max_height=1000;
+//         let worker=setInterval(function() {
+//             change_div_max_height(fps)
+//             if (change_count==fps-1){
+//                 clearInterval(worker)
+//                 is_phy_open=true
+//             }
+//         }, 1000 / fps)
+
+//     }
+// })
+
+// $("#cate-CS-bnt").click(() => {
+//     var change_count = 0
+//     var fps = 45
+//     var start_max_height=100;
+//     var end_max_height=1200;
+//     div_id="cate-physics-post-lists"
+//     var change_div_max_height = function(fps) {
+//         $("#" + div_id).css("max-height",start_max_height+(end_max_height-start_max_height)*Math.sin(0.5*Math.PI /fps*change_count)  )
+//         change_count = (change_count + 1) 
+//     }
+
+//     if (is_phy_open==true) {
+//         $("#cate-CS-bnt").css('background', get_random_Color())
+//         change_count = 0
+//         start_max_height=1200;
+//         end_max_height=100;
+//         let worker=setInterval(function() {
+//             change_div_max_height(fps)
+//             if (change_count==fps-1){
+//                 clearInterval(worker)
+//                 is_phy_open=false
+//             }
+//         }, 1000 / fps)
+//     }
+//     else {
+//         $("#cate-CS-bnt").css('background', get_random_Color())
+//         change_count = 0
+//         start_max_height=100;
+//         end_max_height=1000;
+//         let worker=setInterval(function() {
+//             change_div_max_height(fps)
+//             if (change_count==fps-1){
+//                 clearInterval(worker)
+//                 is_phy_open=true
+//             }
+//         }, 1000 / fps)
+
+//     }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var change_pic_opacity = function(pic_id) {
     // pic or div id  anything with opacity
     var change_count = 0
