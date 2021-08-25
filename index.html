@@ -178,7 +178,7 @@ $("#cate-physics-bnt").click(() => {
     var end_max_height=1200;
     div_id="cate-physics-post-lists"
     var change_div_max_height = function(fps) {
-        $("#" + div_id).css("max-height",130+ start_max_height+(end_max_height-start_max_height)* (Math.exp(1/fps*change_count)-1)  )
+        $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(1/fps*change_count)-1)  )
         change_count = (change_count + 1) 
     }
 
@@ -189,7 +189,7 @@ $("#cate-physics-bnt").click(() => {
         end_max_height=100;
         let worker=setInterval(function() {
             change_div_max_height(fps)
-            if (change_count==fps-1){
+            if (change_count==fps){
                 clearInterval(worker)
                 is_phy_open=false
                 
@@ -203,7 +203,7 @@ $("#cate-physics-bnt").click(() => {
         end_max_height=1200;
         let worker=setInterval(function() {
             change_div_max_height(fps)
-            if (change_count==fps-1){
+            if (change_count==fps){
                 clearInterval(worker)
                 is_phy_open=true
                 $("#" + div_id).css("max-height","auto" )
@@ -221,7 +221,7 @@ $("#cate-CS-bnt").click(() => {
     var end_max_height=1200;
     div_id="cate-CS-post-lists"
     var change_div_max_height = function(fps) {
-        $("#" + div_id).css("max-height",130+ start_max_height+(end_max_height-start_max_height)* (Math.exp(1/fps*change_count)-1)  )
+        $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(1/fps*change_count)-1)  )
         change_count = (change_count + 1) 
     }
 
@@ -232,7 +232,7 @@ $("#cate-CS-bnt").click(() => {
         end_max_height=100;
         let worker=setInterval(function() {
             change_div_max_height(fps)
-            if (change_count==fps-1){
+            if (change_count==fps){
                 clearInterval(worker)
                 is_CS_open=false
             }
@@ -245,7 +245,7 @@ $("#cate-CS-bnt").click(() => {
         end_max_height=1200;
         let worker=setInterval(function() {
             change_div_max_height(fps)
-            if (change_count==fps-1){
+            if (change_count==fps){
                 clearInterval(worker)
                 is_CS_open=true
                 $("#" + div_id).css("max-height","auto" )
