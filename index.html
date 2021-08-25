@@ -178,9 +178,16 @@ $("#cate-physics-bnt").click(() => {
     var end_max_height=1200;
     div_id="cate-physics-post-lists"
     var change_div_max_height = function(fps) {
-        $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(1.5/fps*change_count)-1)  )
+        if(end_max_height-start_max_height>0){
+            $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(  1.5/fps*change_count)-1)  )
+        }
+        else{
+            $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(  1.5/fps*(fps-change_count) )-1)  )
+        }
         change_count = (change_count + 1) 
+
     }
+
 
     if (is_phy_open==true) {
         $("#cate-physics-bnt").css('background', get_random_Color())
@@ -221,10 +228,15 @@ $("#cate-CS-bnt").click(() => {
     var end_max_height=1200;
     div_id="cate-CS-post-lists"
     var change_div_max_height = function(fps) {
-        $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(1.5/fps*change_count)-1)  )
+        if(end_max_height-start_max_height>0){
+            $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(  1.5/fps*change_count)-1)  )
+        }
+        else{
+            $("#" + div_id).css("max-height",30+ start_max_height+(end_max_height-start_max_height)* (Math.exp(  1.5/fps*(fps-change_count) )-1)  )
+        }
         change_count = (change_count + 1) 
-    }
 
+    }
     if (is_CS_open==true) {
         $("#cate-CS-bnt").css('background', get_random_Color())
         change_count = 0
