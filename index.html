@@ -205,7 +205,7 @@ $("#cate-physics-bnt").click(() => {
             if (change_count==fps-1){
                 clearInterval(worker)
                 is_phy_open=true
-                $("#" + div_id).css("max-height","auto" )
+                $("#" + div_id+'-body').css("max-height","auto" )
 
             }
         }, 600 / fps)
@@ -247,8 +247,7 @@ $("#cate-CS-bnt").click(() => {
             if (change_count==fps-1){
                 clearInterval(worker)
                 is_CS_open=true
-                $("#" + div_id).css("max-height","auto" )
-
+                $("#" + div_id+'-body').css("max-height","auto" )
             }
         }, 600 / fps)
 
