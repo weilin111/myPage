@@ -903,7 +903,7 @@ div#paticlees-js {
     bottom: 50px;
     left: 0;
     width: 110%;
-    min-height: 100px;
+    min-height: 60px;
     -webkit-transform: rotate(7deg) translate(-10px, 0);
     -ms-transform: rotate(7deg) translate(-10px, 0);
     transform: rotate(7deg) translate(-10px, 0);
@@ -922,7 +922,7 @@ div#paticlees-js {
 
 .post-list-item-container .item-label {
     position: relative;
-    height: 130px;
+    height: 90px;
     padding: 25px 20px 40px;
     background-color: #000;
     color: aqua;
