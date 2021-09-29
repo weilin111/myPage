@@ -130,52 +130,18 @@ layout: default
         style="background-image: url(&quot;wallhaven-4x81jo_2.jpg&quot;);z-index: -1;position: absolute;inset: 0px;opacity: 0;background-size: auto;background-repeat: no-repeat;">
     </div>
 
-    <!-- <script>
-        $("#cate-physics-bnt").css('background', get_random_Color())
-        $("#cate-CS-bnt").css('background', get_random_Color())
-        change_title_color('cate-CS-bnt')
-        change_title_color('cate-physics-bnt')
-
-        $("#cate-physics-bnt").click(() => {
-            if ($("#cate-physics-post-lists-body").css("visibility") != "collapse") {
-                $("#cate-physics-bnt").css('background', get_random_Color())
-                $("#cate-physics-post-lists-body").css("visibility", "collapse");
-                $("#cate-physics-post-lists").css("height", "75px");
-                // console.log("collapse");
-            }
-            else {
-                $("#cate-physics-bnt").css('background', get_random_Color())
-                $("#cate-physics-post-lists").css("height", "auto");
-                $("#cate-physics-post-lists-body").css("visibility", "visible");
-                // console.log("hit");
-            }
-        })
-
-        $("#cate-CS-bnt").click(() => {
-            if ($("#cate-CS-post-lists-body").css("visibility") != "collapse") {
-                $("#cate-CS-bnt").css('background', get_random_Color())
-                $("#cate-CS-post-lists-body").css("visibility", "collapse");
-                $("#cate-CS-post-lists").css("height", "75px");
-                // console.log("collapse");
-            }
-            else {
-                $("#cate-CS-bnt").css('background', get_random_Color())
-                $("#cate-CS-post-lists").css("height", "auto");
-                $("#cate-CS-post-lists-body").css("visibility", "visible");
-                // console.log("hit");
-            }
-        })
-
-    </script> -->
 
 <script>
 
-var is_phy_open=true
-var is_CS_open=true
+var is_phy_open=false
+var is_CS_open =false
+$("#" + div_id).css("max-height",  100)
+$("#" + div_id).css("max-height",100  )
+
+var fps = 60
 
 $("#cate-physics-bnt").click(() => {
     var change_count = 0
-    var fps = 60
     var start_max_height=100;
     var end_max_height=1200;
     div_id="cate-physics-post-lists"
@@ -217,7 +183,6 @@ $("#cate-physics-bnt").click(() => {
 
 $("#cate-CS-bnt").click(() => {
     var change_count = 0
-    var fps = 45
     var start_max_height=100;
     var end_max_height=1200;
     div_id="cate-CS-post-lists"
