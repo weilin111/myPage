@@ -960,7 +960,4195 @@ cate: phy
 <td width="99">准确（定義）</td></tr>
 </tbody></table>
 
-# 表3 無量綱量列表
+# 表3 向量恒等式
+<div>
+            <details open="" data-level="2">
+              <summary class="section-heading">
+                <h2 id="三重積">三重積</h2>
+              </summary>
+
+              <div class="hatnote navigation-not-searchable" role="note">主条目：<a title="三重積" class="mw-redirect"
+                  href="file:///C:/Users/STAR/Downloads/Kiwix.KiwixJS_mc3511b08yc0e!App/%E4%B8%89%E9%87%8D%E7%A9%8D">三重積</a>
+              </div>
+              <ul>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \mathbf {A} \times (\mathbf {B} \times \mathbf {C} )=(\mathbf {C} \times \mathbf {B} )\times \mathbf {A} =\mathbf {B} (\mathbf {A} \cdot \mathbf {C} )-\mathbf {C} (\mathbf {A} \cdot \mathbf {B} )}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">C</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">C</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>=</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">C</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>−</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">C</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \mathbf {A} \times (\mathbf {B} \times
+                            \mathbf {C} )=(\mathbf {C} \times \mathbf {B} )\times \mathbf {A} =\mathbf {B} (\mathbf {A}
+                            \cdot \mathbf {C} )-\mathbf {C} (\mathbf {A} \cdot \mathbf {B} )}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">C</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">C</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>=</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">C</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>−</mo>
+                                  <mi mathvariant="bold">C</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {A} \times (\mathbf {B}
+                                \times \mathbf {C} )=(\mathbf {C} \times \mathbf {B} )\times \mathbf {A} =\mathbf {B}
+                                (\mathbf {A} \cdot \mathbf {C} )-\mathbf {C} (\mathbf {A} \cdot \mathbf {B} )}
+                              </annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">C</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mopen">(</span><span class="mord mathbf">C</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mord mathbf">B</span><span
+                                class="mopen">(</span><span class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">C</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">−</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">C</span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \mathbf {A} \cdot (\mathbf {B} \times \mathbf {C} )=\mathbf {B} \cdot (\mathbf {C} \times \mathbf {A} )=\mathbf {C} \cdot (\mathbf {A} \times \mathbf {B} )}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">C</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">C</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">C</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \mathbf {A} \cdot (\mathbf {B} \times
+                            \mathbf {C} )=\mathbf {B} \cdot (\mathbf {C} \times \mathbf {A} )=\mathbf {C} \cdot (\mathbf
+                            {A} \times \mathbf {B} )}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">C</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">C</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi mathvariant="bold">C</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {A} \cdot (\mathbf {B}
+                                \times \mathbf {C} )=\mathbf {B} \cdot (\mathbf {C} \times \mathbf {A} )=\mathbf {C}
+                                \cdot (\mathbf {A} \times \mathbf {B} )}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">C</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">C</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord mathbf">C</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+              </ul>
+
+
+
+            </details>
+            <details open="" data-level="2">
+              <summary class="section-heading">
+                <h2 id="其他乘積">其他乘積</h2>
+              </summary>
+
+              <ul>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle (\mathbf {A} \times \mathbf {B} )\cdot (\mathbf {A} \times \mathbf {B} )=A^{2}B^{2}-(\mathbf {A} \cdot \mathbf {B} )^{2}=\mathbf {B} \cdot (\mathbf {A} \times (\mathbf {B} \times \mathbf {A} ))}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <msup>
+                                <mi>A</mi>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2</mn>
+                                </mrow>
+                              </msup>
+                              <msup>
+                                <mi>B</mi>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2</mn>
+                                </mrow>
+                              </msup>
+                              <mo>−</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <msup>
+                                <mo stretchy="false">)</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2</mn>
+                                </mrow>
+                              </msup>
+                              <mo>=</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle (\mathbf {A} \times \mathbf {B} )\cdot
+                            (\mathbf {A} \times \mathbf {B} )=A^{2}B^{2}-(\mathbf {A} \cdot \mathbf {B} )^{2}=\mathbf
+                            {B} \cdot (\mathbf {A} \times (\mathbf {B} \times \mathbf {A} ))}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <msup>
+                                    <mi>A</mi>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <msup>
+                                    <mi>B</mi>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mo>−</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <msup>
+                                    <mo stretchy="false">)</mo>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mo>=</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle (\mathbf {A} \times \mathbf {B}
+                                )\cdot (\mathbf {A} \times \mathbf {B} )=A^{2}B^{2}-(\mathbf {A} \cdot \mathbf {B}
+                                )^{2}=\mathbf {B} \cdot (\mathbf {A} \times (\mathbf {B} \times \mathbf {A} ))}
+                              </annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1.11em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mopen">(</span><span class="mord mathbf">A</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">×</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">B</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span
+                                    class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.86em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                class="mord"><span class="mord mathnormal" style="margin-right: 0.05em;">B</span><span
+                                  class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.86em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">−</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose"><span class="mclose">)</span><span class="msupsub"><span
+                                    class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.86em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.27em;"></span><span class="mrel">=</span><span
+                                class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mclose">))</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \mathbf {\left(A\times B\right)\times } \left(\mathbf {C} \times \mathbf {D} \right)=\left(\mathbf {A} \cdot \mathbf {B\times D} \right)\mathbf {C} -\left(\mathbf {A} \cdot \mathbf {B\times C} \right)\mathbf {D} }"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mrow>
+                                  <mo>(</mo>
+                                  <mrow>
+                                    <mi mathvariant="bold">A</mi>
+                                    <mo>×</mo>
+                                    <mi mathvariant="bold">B</mi>
+                                  </mrow>
+                                  <mo>)</mo>
+                                </mrow>
+                                <mo>×</mo>
+                              </mrow>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">C</mi>
+                                  </mrow>
+                                  <mo>×</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">D</mi>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo>=</mo>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">A</mi>
+                                  </mrow>
+                                  <mo>⋅</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">B</mi>
+                                    <mo>×</mo>
+                                    <mi mathvariant="bold">D</mi>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">C</mi>
+                              </mrow>
+                              <mo>−</mo>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">A</mi>
+                                  </mrow>
+                                  <mo>⋅</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">B</mi>
+                                    <mo>×</mo>
+                                    <mi mathvariant="bold">C</mi>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">D</mi>
+                              </mrow>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \mathbf {\left(A\times B\right)\times
+                            } \left(\mathbf {C} \times \mathbf {D} \right)=\left(\mathbf {A} \cdot \mathbf {B\times D}
+                            \right)\mathbf {C} -\left(\mathbf {A} \cdot \mathbf {B\times C} \right)\mathbf {D} }
+                          </annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mrow>
+                                    <mrow>
+                                      <mo fence="true">(</mo>
+                                      <mi mathvariant="bold">A</mi>
+                                      <mo>×</mo>
+                                      <mi mathvariant="bold">B</mi>
+                                      <mo fence="true">)</mo>
+                                    </mrow>
+                                    <mo>×</mo>
+                                  </mrow>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mi mathvariant="bold">C</mi>
+                                    <mo>×</mo>
+                                    <mi mathvariant="bold">D</mi>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mi mathvariant="bold">A</mi>
+                                    <mo>⋅</mo>
+                                    <mrow>
+                                      <mi mathvariant="bold">B</mi>
+                                      <mo>×</mo>
+                                      <mi mathvariant="bold">D</mi>
+                                    </mrow>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mi mathvariant="bold">C</mi>
+                                  <mo>−</mo>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mi mathvariant="bold">A</mi>
+                                    <mo>⋅</mo>
+                                    <mrow>
+                                      <mi mathvariant="bold">B</mi>
+                                      <mo>×</mo>
+                                      <mi mathvariant="bold">C</mi>
+                                    </mrow>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mi mathvariant="bold">D</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {\left(A\times
+                                B\right)\times } \left(\mathbf {C} \times \mathbf {D} \right)=\left(\mathbf {A} \cdot
+                                \mathbf {B\times D} \right)\mathbf {C} -\left(\mathbf {A} \cdot \mathbf {B\times C}
+                                \right)\mathbf {D} }</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord"><span class="minner"><span class="mopen delimcenter"
+                                    style="top: 0em;">(</span><span class="mord mathbf">A</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                    class="mclose delimcenter" style="top: 0em;">)</span></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mord">×</span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;">(</span><span
+                                  class="mord mathbf">C</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mord mathbf">D</span><span
+                                  class="mclose delimcenter" style="top: 0em;">)</span></span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;">(</span><span
+                                  class="mord mathbf">A</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mord"><span
+                                    class="mord mathbf">B</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mord mathbf">D</span></span><span
+                                  class="mclose delimcenter" style="top: 0em;">)</span></span><span class="mspace"
+                                style="margin-right: 0.16em;"></span><span class="mord mathbf">C</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">−</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;">(</span><span
+                                  class="mord mathbf">A</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mord"><span
+                                    class="mord mathbf">B</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mord mathbf">C</span></span><span
+                                  class="mclose delimcenter" style="top: 0em;">)</span></span><span class="mspace"
+                                style="margin-right: 0.16em;"></span><span
+                                class="mord mathbf">D</span></span></span></span></span></span></span></li>
+              </ul>
+
+
+
+            </details>
+            <details open="" data-level="2">
+              <summary class="section-heading">
+                <h2 id="乘積定則">乘積定則</h2>
+              </summary>
+
+              <ul>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \mathbf {\nabla } (fg)=f(\mathbf {\nabla } g)+g(\mathbf {\nabla } f)}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mi>f</mi>
+                              <mi>g</mi>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mi>f</mi>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mi>g</mi>
+                              <mo stretchy="false">)</mo>
+                              <mo>+</mo>
+                              <mi>g</mi>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mi>f</mi>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } (fg)=f(\mathbf
+                            {\nabla } g)+g(\mathbf {\nabla } f)}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>f</mi>
+                                  <mi>g</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mi>g</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>+</mo>
+                                  <mi>g</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } (fg)=f(\mathbf
+                                {\nabla } g)+g(\mathbf {\nabla } f)}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord mathbf">∇</span><span class="mopen">(</span><span
+                                class="mord mathnormal" style="margin-right: 0.1em;">f</span><span
+                                class="mord mathnormal" style="margin-right: 0.03em;">g</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord mathnormal" style="margin-right: 0.1em;">f</span><span
+                                class="mopen">(</span><span class="mord mathbf">∇</span><span class="mord mathnormal"
+                                style="margin-right: 0.03em;">g</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">+</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathnormal"
+                                style="margin-right: 0.03em;">g</span><span class="mopen">(</span><span
+                                class="mord mathbf">∇</span><span class="mord mathnormal"
+                                style="margin-right: 0.1em;">f</span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \mathbf {\nabla } (\mathbf {A} \cdot \mathbf {B} )=\mathbf {A} \times (\mathbf {\nabla } \times \mathbf {B} )+\mathbf {B} \times (\mathbf {\nabla } \times \mathbf {A} )+(\mathbf {A} \cdot \mathbf {\nabla } )\mathbf {B} +(\mathbf {B} \cdot \mathbf {\nabla } )\mathbf {A} }"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>+</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>+</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } (\mathbf {A} \cdot
+                            \mathbf {B} )=\mathbf {A} \times (\mathbf {\nabla } \times \mathbf {B} )+\mathbf {B} \times
+                            (\mathbf {\nabla } \times \mathbf {A} )+(\mathbf {A} \cdot \mathbf {\nabla } )\mathbf {B}
+                            +(\mathbf {B} \cdot \mathbf {\nabla } )\mathbf {A} }</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>+</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>+</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>+</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } (\mathbf {A}
+                                \cdot \mathbf {B} )=\mathbf {A} \times (\mathbf {\nabla } \times \mathbf {B} )+\mathbf
+                                {B} \times (\mathbf {\nabla } \times \mathbf {A} )+(\mathbf {A} \cdot \mathbf {\nabla }
+                                )\mathbf {B} +(\mathbf {B} \cdot \mathbf {\nabla } )\mathbf {A} }</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord mathbf">∇</span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">+</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">+</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mopen">(</span><span class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">∇</span><span
+                                class="mclose">)</span><span class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">+</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">∇</span><span
+                                class="mclose">)</span><span
+                                class="mord mathbf">A</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \mathbf {\nabla } (\mathbf {A} \cdot \mathbf {B} )=(\mathbf {A} \times \mathbf {\nabla } )\times \mathbf {B} +(\mathbf {B} \times \mathbf {\nabla } )\times \mathbf {A} +\mathbf {A} (\mathbf {\nabla } \cdot \mathbf {B} )+\mathbf {B} (\mathbf {\nabla } \cdot \mathbf {A} )}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>+</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } (\mathbf {A} \cdot
+                            \mathbf {B} )=(\mathbf {A} \times \mathbf {\nabla } )\times \mathbf {B} +(\mathbf {B} \times
+                            \mathbf {\nabla } )\times \mathbf {A} +\mathbf {A} (\mathbf {\nabla } \cdot \mathbf {B}
+                            )+\mathbf {B} (\mathbf {\nabla } \cdot \mathbf {A} )}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>+</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>+</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>+</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } (\mathbf {A}
+                                \cdot \mathbf {B} )=(\mathbf {A} \times \mathbf {\nabla } )\times \mathbf {B} +(\mathbf
+                                {B} \times \mathbf {\nabla } )\times \mathbf {A} +\mathbf {A} (\mathbf {\nabla } \cdot
+                                \mathbf {B} )+\mathbf {B} (\mathbf {\nabla } \cdot \mathbf {A} )}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord mathbf">∇</span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mopen">(</span><span class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">∇</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">+</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">∇</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">+</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mopen">(</span><span class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">+</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">B</span><span class="mopen">(</span><span
+                                class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \mathbf {\nabla } \cdot (f\mathbf {A} )=f(\mathbf {\nabla } \cdot \mathbf {A} )+\mathbf {A} \cdot (\mathbf {\nabla } f)}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi>f</mi>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mi>f</mi>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>+</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mi>f</mi>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } \cdot (f\mathbf {A}
+                            )=f(\mathbf {\nabla } \cdot \mathbf {A} )+\mathbf {A} \cdot (\mathbf {\nabla } f)}
+                          </annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>f</mi>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>+</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } \cdot (f\mathbf
+                                {A} )=f(\mathbf {\nabla } \cdot \mathbf {A} )+\mathbf {A} \cdot (\mathbf {\nabla } f)}
+                              </annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathnormal" style="margin-right: 0.1em;">f</span><span
+                                class="mord mathbf">A</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mord mathnormal"
+                                style="margin-right: 0.1em;">f</span><span class="mopen">(</span><span
+                                class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">+</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">∇</span><span class="mord mathnormal"
+                                style="margin-right: 0.1em;">f</span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \mathbf {\nabla } \cdot (\mathbf {A} \times \mathbf {B} )=\mathbf {B} \cdot (\mathbf {\nabla } \times \mathbf {A} )-\mathbf {A} \cdot (\mathbf {\nabla } \times \mathbf {B} )}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>−</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">∇</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } \cdot (\mathbf {A}
+                            \times \mathbf {B} )=\mathbf {B} \cdot (\mathbf {\nabla } \times \mathbf {A} )-\mathbf {A}
+                            \cdot (\mathbf {\nabla } \times \mathbf {B} )}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>−</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {\nabla } \cdot (\mathbf
+                                {A} \times \mathbf {B} )=\mathbf {B} \cdot (\mathbf {\nabla } \times \mathbf {A}
+                                )-\mathbf {A} \cdot (\mathbf {\nabla } \times \mathbf {B} )}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">−</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \nabla \times (f\mathbf {A} )=f(\nabla \times \mathbf {A} )+(\nabla f)\times \mathbf {A} }"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi>f</mi>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mi>f</mi>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>+</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mi>f</mi>
+                              <mo stretchy="false">)</mo>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla \times (f\mathbf {A} )=f(\nabla
+                            \times \mathbf {A} )+(\nabla f)\times \mathbf {A} }</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>f</mi>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>+</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla \times (f\mathbf {A}
+                                )=f(\nabla \times \mathbf {A} )+(\nabla f)\times \mathbf {A} }</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathnormal" style="margin-right: 0.1em;">f</span><span
+                                class="mord mathbf">A</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mord mathnormal"
+                                style="margin-right: 0.1em;">f</span><span class="mopen">(</span><span
+                                class="mord">∇</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">+</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord">∇</span><span class="mord mathnormal"
+                                style="margin-right: 0.1em;">f</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \nabla \times (\mathbf {A} \times \mathbf {B} )=(\mathbf {B} \cdot \nabla )\mathbf {A} -(\mathbf {A} \cdot \nabla )\mathbf {B} +\mathbf {A} (\nabla \cdot \mathbf {B} )-\mathbf {B} (\nabla \cdot \mathbf {A} )}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo stretchy="false">)</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>−</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo stretchy="false">)</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>−</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla \times (\mathbf {A} \times
+                            \mathbf {B} )=(\mathbf {B} \cdot \nabla )\mathbf {A} -(\mathbf {A} \cdot \nabla )\mathbf {B}
+                            +\mathbf {A} (\nabla \cdot \mathbf {B} )-\mathbf {B} (\nabla \cdot \mathbf {A} )}
+                          </annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>−</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>+</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>−</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla \times (\mathbf {A} \times
+                                \mathbf {B} )=(\mathbf {B} \cdot \nabla )\mathbf {A} -(\mathbf {A} \cdot \nabla )\mathbf
+                                {B} +\mathbf {A} (\nabla \cdot \mathbf {B} )-\mathbf {B} (\nabla \cdot \mathbf {A} )}
+                              </annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mopen">(</span><span class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord">∇</span><span
+                                class="mclose">)</span><span class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">−</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord">∇</span><span
+                                class="mclose">)</span><span class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">+</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mopen">(</span><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">−</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">B</span><span class="mopen">(</span><span class="mord">∇</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \nabla \times (\mathbf {A} \times \mathbf {B} )=\mathbf {A} \times (\nabla \times \mathbf {B} )-\mathbf {B} \times (\nabla \times \mathbf {A} )-(\mathbf {A} \times \nabla )\times \mathbf {B} +(\mathbf {B} \times \nabla )\times \mathbf {A} }"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>−</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>−</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo stretchy="false">)</mo>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>+</mo>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">B</mi>
+                              </mrow>
+                              <mo>×</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo stretchy="false">)</mo>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla \times (\mathbf {A} \times
+                            \mathbf {B} )=\mathbf {A} \times (\nabla \times \mathbf {B} )-\mathbf {B} \times (\nabla
+                            \times \mathbf {A} )-(\mathbf {A} \times \nabla )\times \mathbf {B} +(\mathbf {B} \times
+                            \nabla )\times \mathbf {A} }</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>−</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>−</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>+</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">B</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla \times (\mathbf {A} \times
+                                \mathbf {B} )=\mathbf {A} \times (\nabla \times \mathbf {B} )-\mathbf {B} \times (\nabla
+                                \times \mathbf {A} )-(\mathbf {A} \times \nabla )\times \mathbf {B} +(\mathbf {B} \times
+                                \nabla )\times \mathbf {A} }</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord">∇</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">B</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">−</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">B</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">×</span><span
+                                class="mspace" style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord">∇</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">−</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord">∇</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">+</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord mathbf">B</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord">∇</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \nabla \left({\frac {1}{|\mathbf {r} -\mathbf {r} &#39;|}}\right)=-\nabla &#39;\left({\frac {1}{|\mathbf {r} -\mathbf {r} &#39;|}}\right)=-\ {\frac {\mathbf {r} -\mathbf {r} &#39;}{|\mathbf {r} -\mathbf {r} &#39;|^{3}}}\,\!}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mi mathvariant="normal">∇</mi>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mfrac>
+                                    <mn>1</mn>
+                                    <mrow>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mo stretchy="false">|</mo>
+                                      </mrow>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">r</mi>
+                                      </mrow>
+                                      <mo>−</mo>
+                                      <msup>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mi mathvariant="bold">r</mi>
+                                        </mrow>
+                                        <mo>′</mo>
+                                      </msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mo stretchy="false">|</mo>
+                                      </mrow>
+                                    </mrow>
+                                  </mfrac>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo>=</mo>
+                              <mo>−</mo>
+                              <msup>
+                                <mi mathvariant="normal">∇</mi>
+                                <mo>′</mo>
+                              </msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mfrac>
+                                    <mn>1</mn>
+                                    <mrow>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mo stretchy="false">|</mo>
+                                      </mrow>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">r</mi>
+                                      </mrow>
+                                      <mo>−</mo>
+                                      <msup>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mi mathvariant="bold">r</mi>
+                                        </mrow>
+                                        <mo>′</mo>
+                                      </msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mo stretchy="false">|</mo>
+                                      </mrow>
+                                    </mrow>
+                                  </mfrac>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo>=</mo>
+                              <mo>−</mo>
+                              <mtext>&nbsp;</mtext>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mfrac>
+                                  <mrow>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="bold">r</mi>
+                                    </mrow>
+                                    <mo>−</mo>
+                                    <msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">r</mi>
+                                      </mrow>
+                                      <mo>′</mo>
+                                    </msup>
+                                  </mrow>
+                                  <mrow>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mo stretchy="false">|</mo>
+                                    </mrow>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="bold">r</mi>
+                                    </mrow>
+                                    <mo>−</mo>
+                                    <msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">r</mi>
+                                      </mrow>
+                                      <mo>′</mo>
+                                    </msup>
+                                    <msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mo stretchy="false">|</mo>
+                                      </mrow>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mn>3</mn>
+                                      </mrow>
+                                    </msup>
+                                  </mrow>
+                                </mfrac>
+                              </mrow>
+                              <mspace width="thinmathspace"></mspace>
+                              <mspace width="negativethinmathspace"></mspace>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla \left({\frac {1}{|\mathbf {r}
+                            -\mathbf {r} '|}}\right)=-\nabla '\left({\frac {1}{|\mathbf {r} -\mathbf {r} '|}}\right)=-\
+                            {\frac {\mathbf {r} -\mathbf {r} '}{|\mathbf {r} -\mathbf {r} '|^{3}}}\,\!}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mfrac>
+                                      <mn>1</mn>
+                                      <mrow>
+                                        <mi mathvariant="normal">∣</mi>
+                                        <mi mathvariant="bold">r</mi>
+                                        <mo>−</mo>
+                                        <msup>
+                                          <mi mathvariant="bold">r</mi>
+                                          <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                        </msup>
+                                        <mi mathvariant="normal">∣</mi>
+                                      </mrow>
+                                    </mfrac>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mo>−</mo>
+                                  <msup>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                  </msup>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mfrac>
+                                      <mn>1</mn>
+                                      <mrow>
+                                        <mi mathvariant="normal">∣</mi>
+                                        <mi mathvariant="bold">r</mi>
+                                        <mo>−</mo>
+                                        <msup>
+                                          <mi mathvariant="bold">r</mi>
+                                          <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                        </msup>
+                                        <mi mathvariant="normal">∣</mi>
+                                      </mrow>
+                                    </mfrac>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mo>−</mo>
+                                  <mtext>&nbsp;</mtext>
+                                  <mfrac>
+                                    <mrow>
+                                      <mi mathvariant="bold">r</mi>
+                                      <mo>−</mo>
+                                      <msup>
+                                        <mi mathvariant="bold">r</mi>
+                                        <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                      </msup>
+                                    </mrow>
+                                    <mrow>
+                                      <mi mathvariant="normal">∣</mi>
+                                      <mi mathvariant="bold">r</mi>
+                                      <mo>−</mo>
+                                      <msup>
+                                        <mi mathvariant="bold">r</mi>
+                                        <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                      </msup>
+                                      <msup>
+                                        <mi mathvariant="normal">∣</mi>
+                                        <mn>3</mn>
+                                      </msup>
+                                    </mrow>
+                                  </mfrac>  ⁣
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla \left({\frac {1}{|\mathbf
+                                {r} -\mathbf {r} '|}}\right)=-\nabla '\left({\frac {1}{|\mathbf {r} -\mathbf {r}
+                                '|}}\right)=-\ {\frac {\mathbf {r} -\mathbf {r} '}{|\mathbf {r} -\mathbf {r}
+                                '|^{3}}}\,\!}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 2.4em; vertical-align: -0.95em;"></span><span
+                              class="mord"><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;"><span
+                                    class="delimsizing size3">(</span></span><span class="mord"><span class="mord"><span
+                                      class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                        class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                            style="height: 1.32em;"><span style="top: -2.31em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="mord"><span
+                                                  class="mord">∣</span><span class="mord mathbf">r</span><span
+                                                  class="mspace" style="margin-right: 0.22em;"></span><span
+                                                  class="mbin">−</span><span class="mspace"
+                                                  style="margin-right: 0.22em;"></span><span class="mord"><span
+                                                    class="mord mathbf">r</span><span class="msupsub"><span
+                                                      class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                          style="height: 0.67em;"><span
+                                                            style="top: -2.98em; margin-right: 0.05em;"><span
+                                                              class="pstrut" style="height: 2.7em;"></span><span
+                                                              class="sizing reset-size6 size3 mtight"><span
+                                                                class="mord mtight"><span
+                                                                  class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                                  class="mord">∣</span></span></span><span style="top: -3.23em;"><span
+                                                class="pstrut" style="height: 3em;"></span><span class="frac-line"
+                                                style="border-bottom-width: 0.04em;"></span></span><span
+                                              style="top: -3.67em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="mord"><span
+                                                  class="mord">1</span></span></span></span><span
+                                            class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.93em;"><span></span></span></span></span></span><span
+                                      class="mclose nulldelimiter"></span></span></span><span class="mclose delimcenter"
+                                  style="top: 0em;"><span class="delimsizing size3">)</span></span></span><span
+                                class="mspace" style="margin-right: 0.27em;"></span><span class="mrel">=</span><span
+                                class="mspace" style="margin-right: 0.27em;"></span><span class="mord">−</span><span
+                                class="mord"><span class="mord">∇</span><span class="msupsub"><span
+                                    class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.8em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;"><span
+                                    class="delimsizing size3">(</span></span><span class="mord"><span class="mord"><span
+                                      class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                        class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                            style="height: 1.32em;"><span style="top: -2.31em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="mord"><span
+                                                  class="mord">∣</span><span class="mord mathbf">r</span><span
+                                                  class="mspace" style="margin-right: 0.22em;"></span><span
+                                                  class="mbin">−</span><span class="mspace"
+                                                  style="margin-right: 0.22em;"></span><span class="mord"><span
+                                                    class="mord mathbf">r</span><span class="msupsub"><span
+                                                      class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                          style="height: 0.67em;"><span
+                                                            style="top: -2.98em; margin-right: 0.05em;"><span
+                                                              class="pstrut" style="height: 2.7em;"></span><span
+                                                              class="sizing reset-size6 size3 mtight"><span
+                                                                class="mord mtight"><span
+                                                                  class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                                  class="mord">∣</span></span></span><span style="top: -3.23em;"><span
+                                                class="pstrut" style="height: 3em;"></span><span class="frac-line"
+                                                style="border-bottom-width: 0.04em;"></span></span><span
+                                              style="top: -3.67em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="mord"><span
+                                                  class="mord">1</span></span></span></span><span
+                                            class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.93em;"><span></span></span></span></span></span><span
+                                      class="mclose nulldelimiter"></span></span></span><span class="mclose delimcenter"
+                                  style="top: 0em;"><span class="delimsizing size3">)</span></span></span><span
+                                class="mspace" style="margin-right: 0.27em;"></span><span class="mrel">=</span><span
+                                class="mspace" style="margin-right: 0.27em;"></span><span class="mord">−</span><span
+                                class="mspace">&nbsp;</span><span class="mord"><span class="mord"><span
+                                    class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                      class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                          style="height: 1.42em;"><span style="top: -2.31em;"><span class="pstrut"
+                                              style="height: 3em;"></span><span class="mord"><span
+                                                class="mord">∣</span><span class="mord mathbf">r</span><span
+                                                class="mspace" style="margin-right: 0.22em;"></span><span
+                                                class="mbin">−</span><span class="mspace"
+                                                style="margin-right: 0.22em;"></span><span class="mord"><span
+                                                  class="mord mathbf">r</span><span class="msupsub"><span
+                                                    class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                        style="height: 0.67em;"><span
+                                                          style="top: -2.98em; margin-right: 0.05em;"><span
+                                                            class="pstrut" style="height: 2.7em;"></span><span
+                                                            class="sizing reset-size6 size3 mtight"><span
+                                                              class="mord mtight"><span
+                                                                class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                                class="mord"><span class="mord">∣</span><span class="msupsub"><span
+                                                    class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                        style="height: 0.74em;"><span
+                                                          style="top: -2.98em; margin-right: 0.05em;"><span
+                                                            class="pstrut" style="height: 2.7em;"></span><span
+                                                            class="sizing reset-size6 size3 mtight"><span
+                                                              class="mord mtight"><span
+                                                                class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span><span
+                                            style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span
+                                              class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span
+                                            style="top: -3.67em;"><span class="pstrut" style="height: 3em;"></span><span
+                                              class="mord"><span class="mord mathbf">r</span><span class="mspace"
+                                                style="margin-right: 0.22em;"></span><span class="mbin">−</span><span
+                                                class="mspace" style="margin-right: 0.22em;"></span><span
+                                                class="mord"><span class="mord mathbf">r</span><span
+                                                  class="msupsub"><span class="vlist-t"><span class="vlist-r"><span
+                                                        class="vlist" style="height: 0.75em;"><span
+                                                          style="top: -3.06em; margin-right: 0.05em;"><span
+                                                            class="pstrut" style="height: 2.7em;"></span><span
+                                                            class="sizing reset-size6 size3 mtight"><span
+                                                              class="mord mtight"><span
+                                                                class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span><span
+                                          class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.93em;"><span></span></span></span></span></span><span
+                                    class="mclose nulldelimiter"></span></span></span><span class="mspace"
+                                style="margin-right: 0.16em;"></span><span class="mspace"
+                                style="margin-right: -0.16em;"></span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \nabla ^{2}\left({\frac {1}{|\mathbf {r} -\mathbf {r} &#39;|}}\right)=-4\pi \delta (\mathbf {r} -\mathbf {r} &#39;)}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <msup>
+                                <mi mathvariant="normal">∇</mi>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2</mn>
+                                </mrow>
+                              </msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mfrac>
+                                    <mn>1</mn>
+                                    <mrow>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mo stretchy="false">|</mo>
+                                      </mrow>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">r</mi>
+                                      </mrow>
+                                      <mo>−</mo>
+                                      <msup>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mi mathvariant="bold">r</mi>
+                                        </mrow>
+                                        <mo>′</mo>
+                                      </msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mo stretchy="false">|</mo>
+                                      </mrow>
+                                    </mrow>
+                                  </mfrac>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo>=</mo>
+                              <mo>−</mo>
+                              <mn>4</mn>
+                              <mi>π</mi>
+                              <mi>δ</mi>
+                              <mo stretchy="false">(</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">r</mi>
+                              </mrow>
+                              <mo>−</mo>
+                              <msup>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="bold">r</mi>
+                                </mrow>
+                                <mo>′</mo>
+                              </msup>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla ^{2}\left({\frac {1}{|\mathbf
+                            {r} -\mathbf {r} '|}}\right)=-4\pi \delta (\mathbf {r} -\mathbf {r} ')}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <msup>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mfrac>
+                                      <mn>1</mn>
+                                      <mrow>
+                                        <mi mathvariant="normal">∣</mi>
+                                        <mi mathvariant="bold">r</mi>
+                                        <mo>−</mo>
+                                        <msup>
+                                          <mi mathvariant="bold">r</mi>
+                                          <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                        </msup>
+                                        <mi mathvariant="normal">∣</mi>
+                                      </mrow>
+                                    </mfrac>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mo>=</mo>
+                                  <mo>−</mo>
+                                  <mn>4</mn>
+                                  <mi>π</mi>
+                                  <mi>δ</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="bold">r</mi>
+                                  <mo>−</mo>
+                                  <msup>
+                                    <mi mathvariant="bold">r</mi>
+                                    <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                  </msup>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla ^{2}\left({\frac
+                                {1}{|\mathbf {r} -\mathbf {r} '|}}\right)=-4\pi \delta (\mathbf {r} -\mathbf {r} ')}
+                              </annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 2.4em; vertical-align: -0.95em;"></span><span
+                              class="mord"><span class="mord"><span class="mord">∇</span><span class="msupsub"><span
+                                    class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.86em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;"><span
+                                    class="delimsizing size3">(</span></span><span class="mord"><span class="mord"><span
+                                      class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                        class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                            style="height: 1.32em;"><span style="top: -2.31em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="mord"><span
+                                                  class="mord">∣</span><span class="mord mathbf">r</span><span
+                                                  class="mspace" style="margin-right: 0.22em;"></span><span
+                                                  class="mbin">−</span><span class="mspace"
+                                                  style="margin-right: 0.22em;"></span><span class="mord"><span
+                                                    class="mord mathbf">r</span><span class="msupsub"><span
+                                                      class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                          style="height: 0.67em;"><span
+                                                            style="top: -2.98em; margin-right: 0.05em;"><span
+                                                              class="pstrut" style="height: 2.7em;"></span><span
+                                                              class="sizing reset-size6 size3 mtight"><span
+                                                                class="mord mtight"><span
+                                                                  class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                                  class="mord">∣</span></span></span><span style="top: -3.23em;"><span
+                                                class="pstrut" style="height: 3em;"></span><span class="frac-line"
+                                                style="border-bottom-width: 0.04em;"></span></span><span
+                                              style="top: -3.67em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="mord"><span
+                                                  class="mord">1</span></span></span></span><span
+                                            class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.93em;"><span></span></span></span></span></span><span
+                                      class="mclose nulldelimiter"></span></span></span><span class="mclose delimcenter"
+                                  style="top: 0em;"><span class="delimsizing size3">)</span></span></span><span
+                                class="mspace" style="margin-right: 0.27em;"></span><span class="mrel">=</span><span
+                                class="mspace" style="margin-right: 0.27em;"></span><span class="mord">−</span><span
+                                class="mord">4</span><span class="mord mathnormal"
+                                style="margin-right: 0.03em;">π</span><span class="mord mathnormal"
+                                style="margin-right: 0.03em;">δ</span><span class="mopen">(</span><span
+                                class="mord mathbf">r</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">−</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord"><span
+                                  class="mord mathbf">r</span><span class="msupsub"><span class="vlist-t"><span
+                                      class="vlist-r"><span class="vlist" style="height: 0.8em;"><span
+                                          style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                            style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+              </ul>
+
+
+
+            </details>
+            <details open="" data-level="2">
+              <summary class="section-heading">
+                <h2 id="二次微分">二次微分</h2>
+              </summary>
+
+              <ul>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math alttext="{\displaystyle \nabla \cdot (\nabla \times \mathbf {A} )=0}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla \cdot (\nabla \times \mathbf
+                            {A} )=0}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mn>0</mn>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla \cdot (\nabla \times
+                                \mathbf {A} )=0}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord">∇</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span
+                                class="mord">0</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math alttext="{\displaystyle \nabla \times (\nabla f)=\mathbf {0} }"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mi>f</mi>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mn mathvariant="bold">0</mn>
+                              </mrow>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla \times (\nabla f)=\mathbf {0} }
+                          </annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mn mathvariant="bold">0</mn>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla \times (\nabla f)=\mathbf
+                                {0} }</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord">∇</span><span class="mord mathnormal"
+                                style="margin-right: 0.1em;">f</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span
+                                class="mord mathbf">0</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \nabla ^{2}(\nabla \cdot \mathbf {A} )=\nabla \cdot (\nabla ^{2}\mathbf {A} )}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <msup>
+                                <mi mathvariant="normal">∇</mi>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2</mn>
+                                </mrow>
+                              </msup>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>⋅</mo>
+                              <mo stretchy="false">(</mo>
+                              <msup>
+                                <mi mathvariant="normal">∇</mi>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2</mn>
+                                </mrow>
+                              </msup>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla ^{2}(\nabla \cdot \mathbf {A}
+                            )=\nabla \cdot (\nabla ^{2}\mathbf {A} )}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <msup>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <msup>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla ^{2}(\nabla \cdot \mathbf
+                                {A} )=\nabla \cdot (\nabla ^{2}\mathbf {A} )}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1.11em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord"><span class="mord">∇</span><span class="msupsub"><span
+                                    class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.86em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                class="mopen">(</span><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mrel">=</span><span class="mspace" style="margin-right: 0.27em;"></span><span
+                                class="mord">∇</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">⋅</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mopen">(</span><span class="mord"><span class="mord">∇</span><span
+                                  class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.86em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                class="mord mathbf">A</span><span
+                                class="mclose">)</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \nabla \times (\nabla \times \mathbf {A} )=\nabla (\nabla \cdot \mathbf {A} )-\nabla ^{2}\mathbf {A} }"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>×</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>=</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo stretchy="false">(</mo>
+                              <mi mathvariant="normal">∇</mi>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo stretchy="false">)</mo>
+                              <mo>−</mo>
+                              <msup>
+                                <mi mathvariant="normal">∇</mi>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mn>2</mn>
+                                </mrow>
+                              </msup>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \nabla \times (\nabla \times \mathbf
+                            {A} )=\nabla (\nabla \cdot \mathbf {A} )-\nabla ^{2}\mathbf {A} }</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>−</mo>
+                                  <msup>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mi mathvariant="bold">A</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla \times (\nabla \times
+                                \mathbf {A} )=\nabla (\nabla \cdot \mathbf {A} )-\nabla ^{2}\mathbf {A} }</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 1.11em; vertical-align: -0.25em;"></span><span
+                              class="mord"><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">×</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mopen">(</span><span
+                                class="mord">∇</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">×</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord mathbf">A</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mord">∇</span><span
+                                class="mopen">(</span><span class="mord">∇</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathbf">A</span><span
+                                class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mbin">−</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                class="mord"><span class="mord">∇</span><span class="msupsub"><span
+                                    class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.86em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                class="mord mathbf">A</span></span></span></span></span></span></span></li>
+              </ul>
+              <dl>
+                <dd>
+                  <dl>
+                    <dd>這裏，<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                          style="display: none;"><math alttext="{\displaystyle \nabla ^{2}\mathbf {A} }"
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <msup>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mn>2</mn>
+                                    </mrow>
+                                  </msup>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">A</mi>
+                                  </mrow>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \nabla ^{2}\mathbf {A} }
+                              </annotation>
+                            </semantics>
+                          </math></span><span class="inline-equation"><span class="katex"><span
+                              class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                  <mrow>
+                                    <mstyle scriptlevel="0" displaystyle="true">
+                                      <msup>
+                                        <mi mathvariant="normal">∇</mi>
+                                        <mn>2</mn>
+                                      </msup>
+                                      <mi mathvariant="bold">A</mi>
+                                    </mstyle>
+                                  </mrow>
+                                  <annotation encoding="application/x-tex">{\displaystyle \nabla ^{2}\mathbf {A} }
+                                  </annotation>
+                                </semantics>
+                              </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                                  class="strut" style="height: 0.86em; vertical-align: 0em;"></span><span
+                                  class="mord"><span class="mord"><span class="mord">∇</span><span class="msupsub"><span
+                                        class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.86em;"><span
+                                              style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                                style="height: 2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                    class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                    class="mord mathbf">A</span></span></span></span></span></span></span> 應被理解爲對 <span
+                        class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                          style="display: none;"><math alttext="{\displaystyle \mathbf {A} }"
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">A</mi>
+                                  </mrow>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \mathbf {A} }</annotation>
+                            </semantics>
+                          </math></span><span class="inline-equation"><span class="katex"><span
+                              class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                  <mrow>
+                                    <mstyle scriptlevel="0" displaystyle="true">
+                                      <mi mathvariant="bold">A</mi>
+                                    </mstyle>
+                                  </mrow>
+                                  <annotation encoding="application/x-tex">{\displaystyle \mathbf {A} }</annotation>
+                                </semantics>
+                              </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                                  class="strut" style="height: 0.68em; vertical-align: 0em;"></span><span
+                                  class="mord"><span
+                                    class="mord mathbf">A</span></span></span></span></span></span></span> 的每個分量取<a
+                        title="拉普拉斯算子"
+                        href="file:///C:/Users/STAR/Downloads/Kiwix.KiwixJS_mc3511b08yc0e!App/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90">拉普拉斯算子</a>，卽<a
+                        title="拉普拉斯算子"
+                        href="file:///C:/Users/STAR/Downloads/Kiwix.KiwixJS_mc3511b08yc0e!App/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90#%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90">向量值函数的拉普拉斯算子</a>。
+                    </dd>
+                  </dl>
+                </dd>
+              </dl>
+
+
+
+            </details>
+            <details open="" data-level="2">
+              <summary class="section-heading">
+                <h2 id="積分">積分</h2>
+              </summary>
+
+              <ul>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \oint _{\mathbb {S} }\mathbf {A} \cdot \mathrm {d} \mathbf {S} =\int _{\mathbb {V} }\left(\nabla \cdot \mathbf {A} \right)\mathrm {d} V}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <msub>
+                                <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+                                  <mrow class="MJX-TeXAtom-VCENTER">
+                                    <mstyle mathsize="2.07em">
+                                      <mtext>∮</mtext>
+                                      <mspace width="thinmathspace"></mspace>
+                                    </mstyle>
+                                  </mrow>
+                                  <mspace width="thinmathspace"></mspace>
+                                </mrow>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mo>⁡</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">d</mi>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">S</mi>
+                              </mrow>
+                              <mo>=</mo>
+                              <msub>
+                                <mo>∫</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">V</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>⋅</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">A</mi>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">d</mi>
+                              </mrow>
+                              <mi>V</mi>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {S} }\mathbf {A} \cdot
+                            \mathrm {d} \mathbf {S} =\int _{\mathbb {V} }\left(\nabla \cdot \mathbf {A} \right)\mathrm
+                            {d} V}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <msub>
+                                    <mo>∮</mo>
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </msub>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="normal">d</mi>
+                                  <mi mathvariant="bold">S</mi>
+                                  <mo>=</mo>
+                                  <msub>
+                                    <mo>∫</mo>
+                                    <mi mathvariant="double-struck">V</mi>
+                                  </msub>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mo>⋅</mo>
+                                    <mi mathvariant="bold">A</mi>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mi mathvariant="normal">d</mi>
+                                  <mi>V</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {S} }\mathbf {A}
+                                \cdot \mathrm {d} \mathbf {S} =\int _{\mathbb {V} }\left(\nabla \cdot \mathbf {A}
+                                \right)\mathrm {d} V}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 2.27em; vertical-align: -0.91em;"></span><span
+                              class="mord"><span class="mop"><span class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∮</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">S</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathrm">d</span><span
+                                class="mord mathbf">S</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mop"><span
+                                  class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∫</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">V</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;">(</span><span class="mord">∇</span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span
+                                  class="mord mathbf">A</span><span class="mclose delimcenter"
+                                  style="top: 0em;">)</span></span><span class="mspace"
+                                style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                class="mord mathnormal"
+                                style="margin-right: 0.22em;">V</span></span></span></span></span></span></span> （<a
+                    title="散度定理" class="mw-redirect"
+                    href="file:///C:/Users/STAR/Downloads/Kiwix.KiwixJS_mc3511b08yc0e!App/%E6%95%A3%E5%BA%A6%E5%AE%9A%E7%90%86">散度定理</a>）
+                </li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \oint _{\mathbb {S} }\psi \mathrm {d} \mathbf {S} =\int _{\mathbb {V} }\nabla \psi \,\mathrm {d} V}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <msub>
+                                <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+                                  <mrow class="MJX-TeXAtom-VCENTER">
+                                    <mstyle mathsize="2.07em">
+                                      <mtext>∮</mtext>
+                                      <mspace width="thinmathspace"></mspace>
+                                    </mstyle>
+                                  </mrow>
+                                  <mspace width="thinmathspace"></mspace>
+                                </mrow>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mo>⁡</mo>
+                              <mi>ψ</mi>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">d</mi>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">S</mi>
+                              </mrow>
+                              <mo>=</mo>
+                              <msub>
+                                <mo>∫</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">V</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mi mathvariant="normal">∇</mi>
+                              <mi>ψ</mi>
+                              <mspace width="thinmathspace"></mspace>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">d</mi>
+                              </mrow>
+                              <mi>V</mi>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {S} }\psi \mathrm {d}
+                            \mathbf {S} =\int _{\mathbb {V} }\nabla \psi \,\mathrm {d} V}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <msub>
+                                    <mo>∮</mo>
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </msub>
+                                  <mi>ψ</mi>
+                                  <mi mathvariant="normal">d</mi>
+                                  <mi mathvariant="bold">S</mi>
+                                  <mo>=</mo>
+                                  <msub>
+                                    <mo>∫</mo>
+                                    <mi mathvariant="double-struck">V</mi>
+                                  </msub>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mi>ψ</mi> <mi mathvariant="normal">d</mi>
+                                  <mi>V</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {S} }\psi \mathrm
+                                {d} \mathbf {S} =\int _{\mathbb {V} }\nabla \psi \,\mathrm {d} V}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 2.27em; vertical-align: -0.91em;"></span><span
+                              class="mord"><span class="mop"><span class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∮</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">S</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="mord mathnormal"
+                                style="margin-right: 0.03em;">ψ</span><span class="mord mathrm">d</span><span
+                                class="mord mathbf">S</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mop"><span
+                                  class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∫</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">V</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="mord">∇</span><span
+                                class="mord mathnormal" style="margin-right: 0.03em;">ψ</span><span class="mspace"
+                                style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                class="mord mathnormal"
+                                style="margin-right: 0.22em;">V</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \oint _{\mathbb {S} }\left({\hat {\mathbf {n} }}\times \mathbf {A} \right)\cdot \mathrm {d} S=\int _{\mathbb {V} }\left(\nabla \times \mathbf {A} \right)\mathrm {d} V}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <msub>
+                                <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+                                  <mrow class="MJX-TeXAtom-VCENTER">
+                                    <mstyle mathsize="2.07em">
+                                      <mtext>∮</mtext>
+                                      <mspace width="thinmathspace"></mspace>
+                                    </mstyle>
+                                  </mrow>
+                                  <mspace width="thinmathspace"></mspace>
+                                </mrow>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mo>⁡</mo>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mover>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mi mathvariant="bold">n</mi>
+                                        </mrow>
+                                        <mo stretchy="false">^</mo>
+                                      </mover>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>×</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">A</mi>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">d</mi>
+                              </mrow>
+                              <mi>S</mi>
+                              <mo>=</mo>
+                              <msub>
+                                <mo>∫</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">V</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">A</mi>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">d</mi>
+                              </mrow>
+                              <mi>V</mi>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {S} }\left({\hat
+                            {\mathbf {n} }}\times \mathbf {A} \right)\cdot \mathrm {d} S=\int _{\mathbb {V}
+                            }\left(\nabla \times \mathbf {A} \right)\mathrm {d} V}</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <msub>
+                                    <mo>∮</mo>
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </msub>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mover accent="true">
+                                      <mi mathvariant="bold">n</mi>
+                                      <mo>^</mo>
+                                    </mover>
+                                    <mo>×</mo>
+                                    <mi mathvariant="bold">A</mi>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="normal">d</mi>
+                                  <mi>S</mi>
+                                  <mo>=</mo>
+                                  <msub>
+                                    <mo>∫</mo>
+                                    <mi mathvariant="double-struck">V</mi>
+                                  </msub>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mo>×</mo>
+                                    <mi mathvariant="bold">A</mi>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mi mathvariant="normal">d</mi>
+                                  <mi>V</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {S} }\left({\hat
+                                {\mathbf {n} }}\times \mathbf {A} \right)\cdot \mathrm {d} S=\int _{\mathbb {V}
+                                }\left(\nabla \times \mathbf {A} \right)\mathrm {d} V}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 2.27em; vertical-align: -0.91em;"></span><span
+                              class="mord"><span class="mop"><span class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∮</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">S</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;">(</span><span class="mord"><span
+                                    class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.7em;"><span style="top: -3em;"><span class="pstrut"
+                                              style="height: 3em;"></span><span class="mord mathbf">n</span></span><span
+                                            style="top: -3.01em;"><span class="pstrut" style="height: 3em;"></span><span
+                                              class="accent-body" style="left: -0.25em;"><span
+                                                class="mord">^</span></span></span></span></span></span></span></span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">×</span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span
+                                  class="mord mathbf">A</span><span class="mclose delimcenter"
+                                  style="top: 0em;">)</span></span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathrm">d</span><span
+                                class="mord mathnormal" style="margin-right: 0.05em;">S</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mop"><span
+                                  class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∫</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">V</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;">(</span><span class="mord">∇</span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">×</span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span
+                                  class="mord mathbf">A</span><span class="mclose delimcenter"
+                                  style="top: 0em;">)</span></span><span class="mspace"
+                                style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                class="mord mathnormal"
+                                style="margin-right: 0.22em;">V</span></span></span></span></span></span></span></li>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \oint _{\mathbb {C} }\mathbf {A} \cdot d\mathbf {l} =\int _{\mathbb {S} }\left(\nabla \times \mathbf {A} \right)\cdot \mathrm {d} \mathbf {S} }"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <msub>
+                                <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+                                  <mrow class="MJX-TeXAtom-VCENTER">
+                                    <mstyle mathsize="2.07em">
+                                      <mtext>∮</mtext>
+                                      <mspace width="thinmathspace"></mspace>
+                                    </mstyle>
+                                  </mrow>
+                                  <mspace width="thinmathspace"></mspace>
+                                </mrow>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">C</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mo>⁡</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">A</mi>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mi>d</mi>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">l</mi>
+                              </mrow>
+                              <mo>=</mo>
+                              <msub>
+                                <mo>∫</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mo>×</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="bold">A</mi>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo>⋅</mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">d</mi>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">S</mi>
+                              </mrow>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {C} }\mathbf {A} \cdot
+                            d\mathbf {l} =\int _{\mathbb {S} }\left(\nabla \times \mathbf {A} \right)\cdot \mathrm {d}
+                            \mathbf {S} }</annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <msub>
+                                    <mo>∮</mo>
+                                    <mi mathvariant="double-struck">C</mi>
+                                  </msub>
+                                  <mi mathvariant="bold">A</mi>
+                                  <mo>⋅</mo>
+                                  <mi>d</mi>
+                                  <mi mathvariant="bold">l</mi>
+                                  <mo>=</mo>
+                                  <msub>
+                                    <mo>∫</mo>
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </msub>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mo>×</mo>
+                                    <mi mathvariant="bold">A</mi>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mo>⋅</mo>
+                                  <mi mathvariant="normal">d</mi>
+                                  <mi mathvariant="bold">S</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {C} }\mathbf {A}
+                                \cdot d\mathbf {l} =\int _{\mathbb {S} }\left(\nabla \times \mathbf {A} \right)\cdot
+                                \mathrm {d} \mathbf {S} }</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 2.27em; vertical-align: -0.91em;"></span><span
+                              class="mord"><span class="mop"><span class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∮</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">C</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span
+                                class="mord mathbf">A</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathnormal">d</span><span
+                                class="mord mathbf">l</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mop"><span
+                                  class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∫</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">S</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;">(</span><span class="mord">∇</span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">×</span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span
+                                  class="mord mathbf">A</span><span class="mclose delimcenter"
+                                  style="top: 0em;">)</span></span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                style="margin-right: 0.22em;"></span><span class="mord mathrm">d</span><span
+                                class="mord mathbf">S</span></span></span></span></span></span></span> （<a
+                    title="斯托克斯定理"
+                    href="file:///C:/Users/STAR/Downloads/Kiwix.KiwixJS_mc3511b08yc0e!App/%E6%96%AF%E6%89%98%E5%85%8B%E6%96%AF%E5%AE%9A%E7%90%86">斯托克斯定理</a>）
+                </li>
+              </ul>
+
+              <ul>
+                <li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                      style="display: none;"><math
+                        alttext="{\displaystyle \oint _{\mathbb {C} }\psi d\mathbf {l} =\int _{\mathbb {S} }\left({\hat {\mathbf {n} }}\times \nabla \psi \right)\mathrm {d} S}"
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mstyle scriptlevel="0" displaystyle="true">
+                              <msub>
+                                <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+                                  <mrow class="MJX-TeXAtom-VCENTER">
+                                    <mstyle mathsize="2.07em">
+                                      <mtext>∮</mtext>
+                                      <mspace width="thinmathspace"></mspace>
+                                    </mstyle>
+                                  </mrow>
+                                  <mspace width="thinmathspace"></mspace>
+                                </mrow>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">C</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mo>⁡</mo>
+                              <mi>ψ</mi>
+                              <mi>d</mi>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="bold">l</mi>
+                              </mrow>
+                              <mo>=</mo>
+                              <msub>
+                                <mo>∫</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </mrow>
+                                </mrow>
+                              </msub>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mover>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mi mathvariant="bold">n</mi>
+                                        </mrow>
+                                        <mo stretchy="false">^</mo>
+                                      </mover>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>×</mo>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mi>ψ</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="normal">d</mi>
+                              </mrow>
+                              <mi>S</mi>
+                            </mstyle>
+                          </mrow>
+                          <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {C} }\psi d\mathbf {l}
+                            =\int _{\mathbb {S} }\left({\hat {\mathbf {n} }}\times \nabla \psi \right)\mathrm {d} S}
+                          </annotation>
+                        </semantics>
+                      </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                              <mrow>
+                                <mstyle scriptlevel="0" displaystyle="true">
+                                  <msub>
+                                    <mo>∮</mo>
+                                    <mi mathvariant="double-struck">C</mi>
+                                  </msub>
+                                  <mi>ψ</mi>
+                                  <mi>d</mi>
+                                  <mi mathvariant="bold">l</mi>
+                                  <mo>=</mo>
+                                  <msub>
+                                    <mo>∫</mo>
+                                    <mi mathvariant="double-struck">S</mi>
+                                  </msub>
+                                  <mrow>
+                                    <mo fence="true">(</mo>
+                                    <mover accent="true">
+                                      <mi mathvariant="bold">n</mi>
+                                      <mo>^</mo>
+                                    </mover>
+                                    <mo>×</mo>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mi>ψ</mi>
+                                    <mo fence="true">)</mo>
+                                  </mrow>
+                                  <mi mathvariant="normal">d</mi>
+                                  <mi>S</mi>
+                                </mstyle>
+                              </mrow>
+                              <annotation encoding="application/x-tex">{\displaystyle \oint _{\mathbb {C} }\psi d\mathbf
+                                {l} =\int _{\mathbb {S} }\left({\hat {\mathbf {n} }}\times \nabla \psi \right)\mathrm
+                                {d} S}</annotation>
+                            </semantics>
+                          </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                              class="strut" style="height: 2.27em; vertical-align: -0.91em;"></span><span
+                              class="mord"><span class="mop"><span class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∮</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">C</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="mord mathnormal"
+                                style="margin-right: 0.03em;">ψ</span><span class="mord mathnormal">d</span><span
+                                class="mord mathbf">l</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right: 0.27em;"></span><span class="mop"><span
+                                  class="mop op-symbol large-op"
+                                  style="top: 0em; margin-right: 0.44em; position: relative;">∫</span><span
+                                  class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                        class="vlist"><span
+                                          style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                            class="pstrut" style="height: 2.7em;"></span><span
+                                            class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                class="mord mathbb mtight">S</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                  class="mopen delimcenter" style="top: 0em;">(</span><span class="mord"><span
+                                    class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.7em;"><span style="top: -3em;"><span class="pstrut"
+                                              style="height: 3em;"></span><span class="mord mathbf">n</span></span><span
+                                            style="top: -3.01em;"><span class="pstrut" style="height: 3em;"></span><span
+                                              class="accent-body" style="left: -0.25em;"><span
+                                                class="mord">^</span></span></span></span></span></span></span></span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span class="mbin">×</span><span
+                                  class="mspace" style="margin-right: 0.22em;"></span><span class="mord">∇</span><span
+                                  class="mord mathnormal" style="margin-right: 0.03em;">ψ</span><span
+                                  class="mclose delimcenter" style="top: 0em;">)</span></span><span class="mspace"
+                                style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                class="mord mathnormal"
+                                style="margin-right: 0.05em;">S</span></span></span></span></span></span></span></li>
+              </ul>
+
+
+              <details open="" data-level="3">
+                <summary class="section-heading">
+                  <h3 id="格林恆等式">格林恆等式</h3>
+                </summary>
+
+                <ul>
+                  <li>格林第一恆等式： <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                        style="display: none;"><math
+                          alttext="{\displaystyle \int _{\mathbb {U} }(\psi \nabla ^{2}\phi +\nabla \phi \cdot \nabla \psi )\,\mathrm {d} V=\oint _{\partial \mathbb {U} }\psi {\partial \phi  \over \partial n}\,\mathrm {d} S}"
+                          xmlns="http://www.w3.org/1998/Math/MathML">
+                          <semantics>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mstyle scriptlevel="0" displaystyle="true">
+                                <msub>
+                                  <mo>∫</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </mrow>
+                                  </mrow>
+                                </msub>
+                                <mo stretchy="false">(</mo>
+                                <mi>ψ</mi>
+                                <msup>
+                                  <mi mathvariant="normal">∇</mi>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mn>2</mn>
+                                  </mrow>
+                                </msup>
+                                <mi>ϕ</mi>
+                                <mo>+</mo>
+                                <mi mathvariant="normal">∇</mi>
+                                <mi>ϕ</mi>
+                                <mo>⋅</mo>
+                                <mi mathvariant="normal">∇</mi>
+                                <mi>ψ</mi>
+                                <mo stretchy="false">)</mo>
+                                <mspace width="thinmathspace"></mspace>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="normal">d</mi>
+                                </mrow>
+                                <mi>V</mi>
+                                <mo>=</mo>
+                                <msub>
+                                  <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+                                    <mrow class="MJX-TeXAtom-VCENTER">
+                                      <mstyle mathsize="2.07em">
+                                        <mtext>∮</mtext>
+                                        <mspace width="thinmathspace"></mspace>
+                                      </mstyle>
+                                    </mrow>
+                                    <mspace width="thinmathspace"></mspace>
+                                  </mrow>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="normal">∂</mi>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </mrow>
+                                  </mrow>
+                                </msub>
+                                <mo>⁡</mo>
+                                <mi>ψ</mi>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mfrac>
+                                    <mrow>
+                                      <mi mathvariant="normal">∂</mi>
+                                      <mi>ϕ</mi>
+                                    </mrow>
+                                    <mrow>
+                                      <mi mathvariant="normal">∂</mi>
+                                      <mi>n</mi>
+                                    </mrow>
+                                  </mfrac>
+                                </mrow>
+                                <mspace width="thinmathspace"></mspace>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="normal">d</mi>
+                                </mrow>
+                                <mi>S</mi>
+                              </mstyle>
+                            </mrow>
+                            <annotation encoding="application/x-tex">{\displaystyle \int _{\mathbb {U} }(\psi \nabla
+                              ^{2}\phi +\nabla \phi \cdot \nabla \psi )\,\mathrm {d} V=\oint _{\partial \mathbb {U}
+                              }\psi {\partial \phi \over \partial n}\,\mathrm {d} S}</annotation>
+                          </semantics>
+                        </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                              xmlns="http://www.w3.org/1998/Math/MathML">
+                              <semantics>
+                                <mrow>
+                                  <mstyle scriptlevel="0" displaystyle="true">
+                                    <msub>
+                                      <mo>∫</mo>
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </msub>
+                                    <mo stretchy="false">(</mo>
+                                    <mi>ψ</mi>
+                                    <msup>
+                                      <mi mathvariant="normal">∇</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                    <mi>ϕ</mi>
+                                    <mo>+</mo>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mi>ϕ</mi>
+                                    <mo>⋅</mo>
+                                    <mi mathvariant="normal">∇</mi>
+                                    <mi>ψ</mi>
+                                    <mo stretchy="false">)</mo> <mi mathvariant="normal">d</mi>
+                                    <mi>V</mi>
+                                    <mo>=</mo>
+                                    <msub>
+                                      <mo>∮</mo>
+                                      <mrow>
+                                        <mi mathvariant="normal">∂</mi>
+                                        <mi mathvariant="double-struck">U</mi>
+                                      </mrow>
+                                    </msub>
+                                    <mi>ψ</mi>
+                                    <mfrac>
+                                      <mrow>
+                                        <mi mathvariant="normal">∂</mi>
+                                        <mi>ϕ</mi>
+                                      </mrow>
+                                      <mrow>
+                                        <mi mathvariant="normal">∂</mi>
+                                        <mi>n</mi>
+                                      </mrow>
+                                    </mfrac> <mi mathvariant="normal">d</mi>
+                                    <mi>S</mi>
+                                  </mstyle>
+                                </mrow>
+                                <annotation encoding="application/x-tex">{\displaystyle \int _{\mathbb {U} }(\psi \nabla
+                                  ^{2}\phi +\nabla \phi \cdot \nabla \psi )\,\mathrm {d} V=\oint _{\partial \mathbb {U}
+                                  }\psi {\partial \phi \over \partial n}\,\mathrm {d} S}</annotation>
+                              </semantics>
+                            </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                                class="strut" style="height: 2.28em; vertical-align: -0.91em;"></span><span
+                                class="mord"><span class="mop"><span class="mop op-symbol large-op"
+                                    style="top: 0em; margin-right: 0.44em; position: relative;">∫</span><span
+                                    class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                          class="vlist"><span
+                                            style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                              class="pstrut" style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mathbb mtight">U</span></span></span></span></span><span
+                                          class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                  class="mopen">(</span><span class="mord mathnormal"
+                                  style="margin-right: 0.03em;">ψ</span><span class="mord"><span
+                                    class="mord">∇</span><span class="msupsub"><span class="vlist-t"><span
+                                        class="vlist-r"><span class="vlist" style="height: 0.86em;"><span
+                                            style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                              style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                  class="mord mathnormal">ϕ</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mbin">+</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mord">∇</span><span
+                                  class="mord mathnormal">ϕ</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mbin">⋅</span><span class="mspace"
+                                  style="margin-right: 0.22em;"></span><span class="mord">∇</span><span
+                                  class="mord mathnormal" style="margin-right: 0.03em;">ψ</span><span
+                                  class="mclose">)</span><span class="mspace" style="margin-right: 0.16em;"></span><span
+                                  class="mord mathrm">d</span><span class="mord mathnormal"
+                                  style="margin-right: 0.22em;">V</span><span class="mspace"
+                                  style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                  style="margin-right: 0.27em;"></span><span class="mop"><span
+                                    class="mop op-symbol large-op"
+                                    style="top: 0em; margin-right: 0.44em; position: relative;">∮</span><span
+                                    class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                          class="vlist"><span
+                                            style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                              class="pstrut" style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mtight" style="margin-right: 0.05em;">∂</span><span
+                                                  class="mord mathbb mtight">U</span></span></span></span></span><span
+                                          class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                  class="mspace" style="margin-right: 0.16em;"></span><span class="mord mathnormal"
+                                  style="margin-right: 0.03em;">ψ</span><span class="mord"><span class="mord"><span
+                                      class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                        class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                            style="height: 1.37em;"><span style="top: -2.31em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                  style="margin-right: 0.05em;">∂</span><span
+                                                  class="mord mathnormal">n</span></span></span><span
+                                              style="top: -3.23em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="frac-line"
+                                                style="border-bottom-width: 0.04em;"></span></span><span
+                                              style="top: -3.67em;"><span class="pstrut"
+                                                style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                  style="margin-right: 0.05em;">∂</span><span
+                                                  class="mord mathnormal">ϕ</span></span></span></span><span
+                                            class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.68em;"><span></span></span></span></span></span><span
+                                      class="mclose nulldelimiter"></span></span></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                  class="mord mathnormal"
+                                  style="margin-right: 0.05em;">S</span></span></span></span></span></span></span></li>
+                  <li>格林第二恆等式：<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                        style="display: none;"><math
+                          alttext="{\displaystyle \int _{\mathbb {U} }\left(\psi \nabla ^{2}\phi -\phi \nabla ^{2}\psi \right)\,\mathrm {d} V=\oint _{\partial \mathbb {U} }\left(\psi {\partial \phi  \over \partial n}-\phi {\partial \psi  \over \partial n}\right)\,\mathrm {d} S}"
+                          xmlns="http://www.w3.org/1998/Math/MathML">
+                          <semantics>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mstyle scriptlevel="0" displaystyle="true">
+                                <msub>
+                                  <mo>∫</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </mrow>
+                                  </mrow>
+                                </msub>
+                                <mrow>
+                                  <mo>(</mo>
+                                  <mrow>
+                                    <mi>ψ</mi>
+                                    <msup>
+                                      <mi mathvariant="normal">∇</mi>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mn>2</mn>
+                                      </mrow>
+                                    </msup>
+                                    <mi>ϕ</mi>
+                                    <mo>−</mo>
+                                    <mi>ϕ</mi>
+                                    <msup>
+                                      <mi mathvariant="normal">∇</mi>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mn>2</mn>
+                                      </mrow>
+                                    </msup>
+                                    <mi>ψ</mi>
+                                  </mrow>
+                                  <mo>)</mo>
+                                </mrow>
+                                <mspace width="thinmathspace"></mspace>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="normal">d</mi>
+                                </mrow>
+                                <mi>V</mi>
+                                <mo>=</mo>
+                                <msub>
+                                  <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+                                    <mrow class="MJX-TeXAtom-VCENTER">
+                                      <mstyle mathsize="2.07em">
+                                        <mtext>∮</mtext>
+                                        <mspace width="thinmathspace"></mspace>
+                                      </mstyle>
+                                    </mrow>
+                                    <mspace width="thinmathspace"></mspace>
+                                  </mrow>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="normal">∂</mi>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </mrow>
+                                  </mrow>
+                                </msub>
+                                <mo>⁡</mo>
+                                <mrow>
+                                  <mo>(</mo>
+                                  <mrow>
+                                    <mi>ψ</mi>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mfrac>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>ϕ</mi>
+                                        </mrow>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>n</mi>
+                                        </mrow>
+                                      </mfrac>
+                                    </mrow>
+                                    <mo>−</mo>
+                                    <mi>ϕ</mi>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mfrac>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>ψ</mi>
+                                        </mrow>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>n</mi>
+                                        </mrow>
+                                      </mfrac>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>)</mo>
+                                </mrow>
+                                <mspace width="thinmathspace"></mspace>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="normal">d</mi>
+                                </mrow>
+                                <mi>S</mi>
+                              </mstyle>
+                            </mrow>
+                            <annotation encoding="application/x-tex">{\displaystyle \int _{\mathbb {U} }\left(\psi
+                              \nabla ^{2}\phi -\phi \nabla ^{2}\psi \right)\,\mathrm {d} V=\oint _{\partial \mathbb {U}
+                              }\left(\psi {\partial \phi \over \partial n}-\phi {\partial \psi \over \partial
+                              n}\right)\,\mathrm {d} S}</annotation>
+                          </semantics>
+                        </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                              xmlns="http://www.w3.org/1998/Math/MathML">
+                              <semantics>
+                                <mrow>
+                                  <mstyle scriptlevel="0" displaystyle="true">
+                                    <msub>
+                                      <mo>∫</mo>
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </msub>
+                                    <mrow>
+                                      <mo fence="true">(</mo>
+                                      <mi>ψ</mi>
+                                      <msup>
+                                        <mi mathvariant="normal">∇</mi>
+                                        <mn>2</mn>
+                                      </msup>
+                                      <mi>ϕ</mi>
+                                      <mo>−</mo>
+                                      <mi>ϕ</mi>
+                                      <msup>
+                                        <mi mathvariant="normal">∇</mi>
+                                        <mn>2</mn>
+                                      </msup>
+                                      <mi>ψ</mi>
+                                      <mo fence="true">)</mo>
+                                    </mrow> <mi mathvariant="normal">d</mi>
+                                    <mi>V</mi>
+                                    <mo>=</mo>
+                                    <msub>
+                                      <mo>∮</mo>
+                                      <mrow>
+                                        <mi mathvariant="normal">∂</mi>
+                                        <mi mathvariant="double-struck">U</mi>
+                                      </mrow>
+                                    </msub>
+                                    <mrow>
+                                      <mo fence="true">(</mo>
+                                      <mi>ψ</mi>
+                                      <mfrac>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>ϕ</mi>
+                                        </mrow>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>n</mi>
+                                        </mrow>
+                                      </mfrac>
+                                      <mo>−</mo>
+                                      <mi>ϕ</mi>
+                                      <mfrac>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>ψ</mi>
+                                        </mrow>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>n</mi>
+                                        </mrow>
+                                      </mfrac>
+                                      <mo fence="true">)</mo>
+                                    </mrow> <mi mathvariant="normal">d</mi>
+                                    <mi>S</mi>
+                                  </mstyle>
+                                </mrow>
+                                <annotation encoding="application/x-tex">{\displaystyle \int _{\mathbb {U} }\left(\psi
+                                  \nabla ^{2}\phi -\phi \nabla ^{2}\psi \right)\,\mathrm {d} V=\oint _{\partial \mathbb
+                                  {U} }\left(\psi {\partial \phi \over \partial n}-\phi {\partial \psi \over \partial
+                                  n}\right)\,\mathrm {d} S}</annotation>
+                              </semantics>
+                            </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                                class="strut" style="height: 2.4em; vertical-align: -0.95em;"></span><span
+                                class="mord"><span class="mop"><span class="mop op-symbol large-op"
+                                    style="top: 0em; margin-right: 0.44em; position: relative;">∫</span><span
+                                    class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                          class="vlist"><span
+                                            style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                              class="pstrut" style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mathbb mtight">U</span></span></span></span></span><span
+                                          class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                  class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                    class="mopen delimcenter" style="top: 0em;"><span
+                                      class="delimsizing size1">(</span></span><span class="mord mathnormal"
+                                    style="margin-right: 0.03em;">ψ</span><span class="mord"><span
+                                      class="mord">∇</span><span class="msupsub"><span class="vlist-t"><span
+                                          class="vlist-r"><span class="vlist" style="height: 0.86em;"><span
+                                              style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                                style="height: 2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                    class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                    class="mord mathnormal">ϕ</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mbin">−</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mord mathnormal">ϕ</span><span
+                                    class="mord"><span class="mord">∇</span><span class="msupsub"><span
+                                        class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.86em;"><span
+                                              style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                                style="height: 2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                    class="mord mtight">2</span></span></span></span></span></span></span></span></span><span
+                                    class="mord mathnormal" style="margin-right: 0.03em;">ψ</span><span
+                                    class="mclose delimcenter" style="top: 0em;"><span
+                                      class="delimsizing size1">)</span></span></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                  class="mord mathnormal" style="margin-right: 0.22em;">V</span><span class="mspace"
+                                  style="margin-right: 0.27em;"></span><span class="mrel">=</span><span class="mspace"
+                                  style="margin-right: 0.27em;"></span><span class="mop"><span
+                                    class="mop op-symbol large-op"
+                                    style="top: 0em; margin-right: 0.44em; position: relative;">∮</span><span
+                                    class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                          class="vlist"><span
+                                            style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                              class="pstrut" style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mtight" style="margin-right: 0.05em;">∂</span><span
+                                                  class="mord mathbb mtight">U</span></span></span></span></span><span
+                                          class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                  class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                    class="mopen delimcenter" style="top: 0em;"><span
+                                      class="delimsizing size3">(</span></span><span class="mord mathnormal"
+                                    style="margin-right: 0.03em;">ψ</span><span class="mord"><span class="mord"><span
+                                        class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                          class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                              style="height: 1.37em;"><span style="top: -2.31em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                    style="margin-right: 0.05em;">∂</span><span
+                                                    class="mord mathnormal">n</span></span></span><span
+                                                style="top: -3.23em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="frac-line"
+                                                  style="border-bottom-width: 0.04em;"></span></span><span
+                                                style="top: -3.67em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                    style="margin-right: 0.05em;">∂</span><span
+                                                    class="mord mathnormal">ϕ</span></span></span></span><span
+                                              class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                              style="height: 0.68em;"><span></span></span></span></span></span><span
+                                        class="mclose nulldelimiter"></span></span></span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mbin">−</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mord mathnormal">ϕ</span><span
+                                    class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span
+                                        class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                              class="vlist" style="height: 1.37em;"><span style="top: -2.31em;"><span
+                                                  class="pstrut" style="height: 3em;"></span><span class="mord"><span
+                                                    class="mord" style="margin-right: 0.05em;">∂</span><span
+                                                    class="mord mathnormal">n</span></span></span><span
+                                                style="top: -3.23em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="frac-line"
+                                                  style="border-bottom-width: 0.04em;"></span></span><span
+                                                style="top: -3.67em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                    style="margin-right: 0.05em;">∂</span><span class="mord mathnormal"
+                                                    style="margin-right: 0.03em;">ψ</span></span></span></span><span
+                                              class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                              style="height: 0.68em;"><span></span></span></span></span></span><span
+                                        class="mclose nulldelimiter"></span></span></span><span
+                                    class="mclose delimcenter" style="top: 0em;"><span
+                                      class="delimsizing size3">)</span></span></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                  class="mord mathnormal"
+                                  style="margin-right: 0.05em;">S</span></span></span></span></span></span></span></li>
+                  <li>格林第三恆等式：<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y"
+                        style="display: none;"><math
+                          alttext="{\displaystyle \psi (\mathbf {x} )-\int _{\mathbb {U} }\left[G(\mathbf {x} ,\mathbf {x} &#39;)\nabla &#39;^{\,2}\psi (\mathbf {x} &#39;)\right]\,\mathrm {d} V&#39;=\oint _{\partial \mathbb {U} }\left[\psi (\mathbf {x} &#39;){\partial G(\mathbf {x} ,\mathbf {x} &#39;) \over \partial n&#39;}-G(\mathbf {x} ,\mathbf {x} &#39;){\partial \psi (\mathbf {x} &#39;) \over \partial n&#39;}\right]\,\mathrm {d} S&#39;}"
+                          xmlns="http://www.w3.org/1998/Math/MathML">
+                          <semantics>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mstyle scriptlevel="0" displaystyle="true">
+                                <mi>ψ</mi>
+                                <mo stretchy="false">(</mo>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="bold">x</mi>
+                                </mrow>
+                                <mo stretchy="false">)</mo>
+                                <mo>−</mo>
+                                <msub>
+                                  <mo>∫</mo>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </mrow>
+                                  </mrow>
+                                </msub>
+                                <mrow>
+                                  <mo>[</mo>
+                                  <mrow>
+                                    <mi>G</mi>
+                                    <mo stretchy="false">(</mo>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="bold">x</mi>
+                                    </mrow>
+                                    <mo>,</mo>
+                                    <msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">x</mi>
+                                      </mrow>
+                                      <mo>′</mo>
+                                    </msup>
+                                    <mo stretchy="false">)</mo>
+                                    <msup>
+                                      <mi mathvariant="normal">∇</mi>
+                                      <mrow>
+                                        <mo class="MJX-variant">′</mo>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                          <mspace width="thinmathspace"></mspace>
+                                          <mn>2</mn>
+                                        </mrow>
+                                      </mrow>
+                                    </msup>
+                                    <mi>ψ</mi>
+                                    <mo stretchy="false">(</mo>
+                                    <msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">x</mi>
+                                      </mrow>
+                                      <mo>′</mo>
+                                    </msup>
+                                    <mo stretchy="false">)</mo>
+                                  </mrow>
+                                  <mo>]</mo>
+                                </mrow>
+                                <mspace width="thinmathspace"></mspace>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="normal">d</mi>
+                                </mrow>
+                                <msup>
+                                  <mi>V</mi>
+                                  <mo>′</mo>
+                                </msup>
+                                <mo>=</mo>
+                                <msub>
+                                  <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+                                    <mrow class="MJX-TeXAtom-VCENTER">
+                                      <mstyle mathsize="2.07em">
+                                        <mtext>∮</mtext>
+                                        <mspace width="thinmathspace"></mspace>
+                                      </mstyle>
+                                    </mrow>
+                                    <mspace width="thinmathspace"></mspace>
+                                  </mrow>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mi mathvariant="normal">∂</mi>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </mrow>
+                                  </mrow>
+                                </msub>
+                                <mo>⁡</mo>
+                                <mrow>
+                                  <mo>[</mo>
+                                  <mrow>
+                                    <mi>ψ</mi>
+                                    <mo stretchy="false">(</mo>
+                                    <msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">x</mi>
+                                      </mrow>
+                                      <mo>′</mo>
+                                    </msup>
+                                    <mo stretchy="false">)</mo>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mfrac>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>G</mi>
+                                          <mo stretchy="false">(</mo>
+                                          <mrow class="MJX-TeXAtom-ORD">
+                                            <mi mathvariant="bold">x</mi>
+                                          </mrow>
+                                          <mo>,</mo>
+                                          <msup>
+                                            <mrow class="MJX-TeXAtom-ORD">
+                                              <mi mathvariant="bold">x</mi>
+                                            </mrow>
+                                            <mo>′</mo>
+                                          </msup>
+                                          <mo stretchy="false">)</mo>
+                                        </mrow>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <msup>
+                                            <mi>n</mi>
+                                            <mo>′</mo>
+                                          </msup>
+                                        </mrow>
+                                      </mfrac>
+                                    </mrow>
+                                    <mo>−</mo>
+                                    <mi>G</mi>
+                                    <mo stretchy="false">(</mo>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mi mathvariant="bold">x</mi>
+                                    </mrow>
+                                    <mo>,</mo>
+                                    <msup>
+                                      <mrow class="MJX-TeXAtom-ORD">
+                                        <mi mathvariant="bold">x</mi>
+                                      </mrow>
+                                      <mo>′</mo>
+                                    </msup>
+                                    <mo stretchy="false">)</mo>
+                                    <mrow class="MJX-TeXAtom-ORD">
+                                      <mfrac>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>ψ</mi>
+                                          <mo stretchy="false">(</mo>
+                                          <msup>
+                                            <mrow class="MJX-TeXAtom-ORD">
+                                              <mi mathvariant="bold">x</mi>
+                                            </mrow>
+                                            <mo>′</mo>
+                                          </msup>
+                                          <mo stretchy="false">)</mo>
+                                        </mrow>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <msup>
+                                            <mi>n</mi>
+                                            <mo>′</mo>
+                                          </msup>
+                                        </mrow>
+                                      </mfrac>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>]</mo>
+                                </mrow>
+                                <mspace width="thinmathspace"></mspace>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi mathvariant="normal">d</mi>
+                                </mrow>
+                                <msup>
+                                  <mi>S</mi>
+                                  <mo>′</mo>
+                                </msup>
+                              </mstyle>
+                            </mrow>
+                            <annotation encoding="application/x-tex">{\displaystyle \psi (\mathbf {x} )-\int _{\mathbb
+                              {U} }\left[G(\mathbf {x} ,\mathbf {x} ')\nabla '^{\,2}\psi (\mathbf {x} ')\right]\,\mathrm
+                              {d} V'=\oint _{\partial \mathbb {U} }\left[\psi (\mathbf {x} '){\partial G(\mathbf {x}
+                              ,\mathbf {x} ') \over \partial n'}-G(\mathbf {x} ,\mathbf {x} '){\partial \psi (\mathbf
+                              {x} ') \over \partial n'}\right]\,\mathrm {d} S'}</annotation>
+                          </semantics>
+                        </math></span><span class="inline-equation"><span class="katex"><span class="katex-mathml"><math
+                              xmlns="http://www.w3.org/1998/Math/MathML">
+                              <semantics>
+                                <mrow>
+                                  <mstyle scriptlevel="0" displaystyle="true">
+                                    <mi>ψ</mi>
+                                    <mo stretchy="false">(</mo>
+                                    <mi mathvariant="bold">x</mi>
+                                    <mo stretchy="false">)</mo>
+                                    <mo>−</mo>
+                                    <msub>
+                                      <mo>∫</mo>
+                                      <mi mathvariant="double-struck">U</mi>
+                                    </msub>
+                                    <mrow>
+                                      <mo fence="true">[</mo>
+                                      <mi>G</mi>
+                                      <mo stretchy="false">(</mo>
+                                      <mi mathvariant="bold">x</mi>
+                                      <mo separator="true">,</mo>
+                                      <msup>
+                                        <mi mathvariant="bold">x</mi>
+                                        <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                      </msup>
+                                      <mo stretchy="false">)</mo>
+                                      <msup>
+                                        <mi mathvariant="normal">∇</mi>
+                                        <mrow>
+                                          <mo mathvariant="normal">′</mo>
+                                          <mrow> <mn>2</mn>
+                                          </mrow>
+                                        </mrow>
+                                      </msup>
+                                      <mi>ψ</mi>
+                                      <mo stretchy="false">(</mo>
+                                      <msup>
+                                        <mi mathvariant="bold">x</mi>
+                                        <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                      </msup>
+                                      <mo stretchy="false">)</mo>
+                                      <mo fence="true">]</mo>
+                                    </mrow> <mi mathvariant="normal">d</mi>
+                                    <msup>
+                                      <mi>V</mi>
+                                      <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                    </msup>
+                                    <mo>=</mo>
+                                    <msub>
+                                      <mo>∮</mo>
+                                      <mrow>
+                                        <mi mathvariant="normal">∂</mi>
+                                        <mi mathvariant="double-struck">U</mi>
+                                      </mrow>
+                                    </msub>
+                                    <mrow>
+                                      <mo fence="true">[</mo>
+                                      <mi>ψ</mi>
+                                      <mo stretchy="false">(</mo>
+                                      <msup>
+                                        <mi mathvariant="bold">x</mi>
+                                        <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                      </msup>
+                                      <mo stretchy="false">)</mo>
+                                      <mfrac>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>G</mi>
+                                          <mo stretchy="false">(</mo>
+                                          <mi mathvariant="bold">x</mi>
+                                          <mo separator="true">,</mo>
+                                          <msup>
+                                            <mi mathvariant="bold">x</mi>
+                                            <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                          </msup>
+                                          <mo stretchy="false">)</mo>
+                                        </mrow>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <msup>
+                                            <mi>n</mi>
+                                            <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                          </msup>
+                                        </mrow>
+                                      </mfrac>
+                                      <mo>−</mo>
+                                      <mi>G</mi>
+                                      <mo stretchy="false">(</mo>
+                                      <mi mathvariant="bold">x</mi>
+                                      <mo separator="true">,</mo>
+                                      <msup>
+                                        <mi mathvariant="bold">x</mi>
+                                        <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                      </msup>
+                                      <mo stretchy="false">)</mo>
+                                      <mfrac>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <mi>ψ</mi>
+                                          <mo stretchy="false">(</mo>
+                                          <msup>
+                                            <mi mathvariant="bold">x</mi>
+                                            <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                          </msup>
+                                          <mo stretchy="false">)</mo>
+                                        </mrow>
+                                        <mrow>
+                                          <mi mathvariant="normal">∂</mi>
+                                          <msup>
+                                            <mi>n</mi>
+                                            <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                          </msup>
+                                        </mrow>
+                                      </mfrac>
+                                      <mo fence="true">]</mo>
+                                    </mrow> <mi mathvariant="normal">d</mi>
+                                    <msup>
+                                      <mi>S</mi>
+                                      <mo mathvariant="normal" lspace="0em" rspace="0em">′</mo>
+                                    </msup>
+                                  </mstyle>
+                                </mrow>
+                                <annotation encoding="application/x-tex">{\displaystyle \psi (\mathbf {x} )-\int
+                                  _{\mathbb {U} }\left[G(\mathbf {x} ,\mathbf {x} ')\nabla '^{\,2}\psi (\mathbf {x}
+                                  ')\right]\,\mathrm {d} V'=\oint _{\partial \mathbb {U} }\left[\psi (\mathbf {x}
+                                  '){\partial G(\mathbf {x} ,\mathbf {x} ') \over \partial n'}-G(\mathbf {x} ,\mathbf
+                                  {x} '){\partial \psi (\mathbf {x} ') \over \partial n'}\right]\,\mathrm {d} S'}
+                                </annotation>
+                              </semantics>
+                            </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span
+                                class="strut" style="height: 2.4em; vertical-align: -0.95em;"></span><span
+                                class="mord"><span class="mord mathnormal" style="margin-right: 0.03em;">ψ</span><span
+                                  class="mopen">(</span><span class="mord mathbf">x</span><span
+                                  class="mclose">)</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                  class="mbin">−</span><span class="mspace" style="margin-right: 0.22em;"></span><span
+                                  class="mop"><span class="mop op-symbol large-op"
+                                    style="top: 0em; margin-right: 0.44em; position: relative;">∫</span><span
+                                    class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                          class="vlist"><span
+                                            style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                              class="pstrut" style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mathbb mtight">U</span></span></span></span></span><span
+                                          class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                  class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                    class="mopen delimcenter" style="top: 0em;"><span
+                                      class="delimsizing size1">[</span></span><span
+                                    class="mord mathnormal">G</span><span class="mopen">(</span><span
+                                    class="mord mathbf">x</span><span class="mpunct">,</span><span class="mspace"
+                                    style="margin-right: 0.16em;"></span><span class="mord"><span
+                                      class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t"><span
+                                          class="vlist-r"><span class="vlist" style="height: 0.8em;"><span
+                                              style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                                style="height: 2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                    class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                    class="mclose">)</span><span class="mord"><span class="mord">∇</span><span
+                                      class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.86em;"><span
+                                              style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                                style="height: 2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                    class="mord mtight">′</span><span class="mord mtight"><span
+                                                      class="mspace mtight" style="margin-right: 0.19em;"></span><span
+                                                      class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span
+                                    class="mord mathnormal" style="margin-right: 0.03em;">ψ</span><span
+                                    class="mopen">(</span><span class="mord"><span class="mord mathbf">x</span><span
+                                      class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.8em;"><span
+                                              style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                                style="height: 2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                    class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                    class="mclose">)</span><span class="mclose delimcenter" style="top: 0em;"><span
+                                      class="delimsizing size1">]</span></span></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                  class="mord"><span class="mord mathnormal" style="margin-right: 0.22em;">V</span><span
+                                    class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.8em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                              class="pstrut" style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                  class="mspace" style="margin-right: 0.27em;"></span><span class="mrel">=</span><span
+                                  class="mspace" style="margin-right: 0.27em;"></span><span class="mop"><span
+                                    class="mop op-symbol large-op"
+                                    style="top: 0em; margin-right: 0.44em; position: relative;">∮</span><span
+                                    class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                          class="vlist"><span
+                                            style="top: -1.78em; margin-right: 0.05em; margin-left: -0.44em;"><span
+                                              class="pstrut" style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mtight" style="margin-right: 0.05em;">∂</span><span
+                                                  class="mord mathbb mtight">U</span></span></span></span></span><span
+                                          class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.91em;"><span></span></span></span></span></span></span><span
+                                  class="mspace" style="margin-right: 0.16em;"></span><span class="minner"><span
+                                    class="mopen delimcenter" style="top: 0em;"><span
+                                      class="delimsizing size3">[</span></span><span class="mord mathnormal"
+                                    style="margin-right: 0.03em;">ψ</span><span class="mopen">(</span><span
+                                    class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span
+                                        class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                            style="height: 0.8em;"><span
+                                              style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                                style="height: 2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                    class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                    class="mclose">)</span><span class="mord"><span class="mord"><span
+                                        class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                          class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                              style="height: 1.42em;"><span style="top: -2.31em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                    style="margin-right: 0.05em;">∂</span><span class="mord"><span
+                                                      class="mord mathnormal">n</span><span class="msupsub"><span
+                                                        class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                            style="height: 0.67em;"><span
+                                                              style="top: -2.98em; margin-right: 0.05em;"><span
+                                                                class="pstrut" style="height: 2.7em;"></span><span
+                                                                class="sizing reset-size6 size3 mtight"><span
+                                                                  class="mord mtight"><span
+                                                                    class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span><span
+                                                style="top: -3.23em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="frac-line"
+                                                  style="border-bottom-width: 0.04em;"></span></span><span
+                                                style="top: -3.67em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                    style="margin-right: 0.05em;">∂</span><span
+                                                    class="mord mathnormal">G</span><span class="mopen">(</span><span
+                                                    class="mord mathbf">x</span><span class="mpunct">,</span><span
+                                                    class="mspace" style="margin-right: 0.16em;"></span><span
+                                                    class="mord"><span class="mord mathbf">x</span><span
+                                                      class="msupsub"><span class="vlist-t"><span class="vlist-r"><span
+                                                            class="vlist" style="height: 0.75em;"><span
+                                                              style="top: -3.06em; margin-right: 0.05em;"><span
+                                                                class="pstrut" style="height: 2.7em;"></span><span
+                                                                class="sizing reset-size6 size3 mtight"><span
+                                                                  class="mord mtight"><span
+                                                                    class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                                    class="mclose">)</span></span></span></span><span
+                                              class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                              style="height: 0.68em;"><span></span></span></span></span></span><span
+                                        class="mclose nulldelimiter"></span></span></span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mbin">−</span><span class="mspace"
+                                    style="margin-right: 0.22em;"></span><span class="mord mathnormal">G</span><span
+                                    class="mopen">(</span><span class="mord mathbf">x</span><span
+                                    class="mpunct">,</span><span class="mspace"
+                                    style="margin-right: 0.16em;"></span><span class="mord"><span
+                                      class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t"><span
+                                          class="vlist-r"><span class="vlist" style="height: 0.8em;"><span
+                                              style="top: -3.11em; margin-right: 0.05em;"><span class="pstrut"
+                                                style="height: 2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                    class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                    class="mclose">)</span><span class="mord"><span class="mord"><span
+                                        class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                          class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                              style="height: 1.42em;"><span style="top: -2.31em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                    style="margin-right: 0.05em;">∂</span><span class="mord"><span
+                                                      class="mord mathnormal">n</span><span class="msupsub"><span
+                                                        class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                            style="height: 0.67em;"><span
+                                                              style="top: -2.98em; margin-right: 0.05em;"><span
+                                                                class="pstrut" style="height: 2.7em;"></span><span
+                                                                class="sizing reset-size6 size3 mtight"><span
+                                                                  class="mord mtight"><span
+                                                                    class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span><span
+                                                style="top: -3.23em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="frac-line"
+                                                  style="border-bottom-width: 0.04em;"></span></span><span
+                                                style="top: -3.67em;"><span class="pstrut"
+                                                  style="height: 3em;"></span><span class="mord"><span class="mord"
+                                                    style="margin-right: 0.05em;">∂</span><span class="mord mathnormal"
+                                                    style="margin-right: 0.03em;">ψ</span><span
+                                                    class="mopen">(</span><span class="mord"><span
+                                                      class="mord mathbf">x</span><span class="msupsub"><span
+                                                        class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                            style="height: 0.75em;"><span
+                                                              style="top: -3.06em; margin-right: 0.05em;"><span
+                                                                class="pstrut" style="height: 2.7em;"></span><span
+                                                                class="sizing reset-size6 size3 mtight"><span
+                                                                  class="mord mtight"><span
+                                                                    class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                                                    class="mclose">)</span></span></span></span><span
+                                              class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                              style="height: 0.68em;"><span></span></span></span></span></span><span
+                                        class="mclose nulldelimiter"></span></span></span><span
+                                    class="mclose delimcenter" style="top: 0em;"><span
+                                      class="delimsizing size3">]</span></span></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mspace"
+                                  style="margin-right: 0.16em;"></span><span class="mord mathrm">d</span><span
+                                  class="mord"><span class="mord mathnormal" style="margin-right: 0.05em;">S</span><span
+                                    class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                          style="height: 0.8em;"><span style="top: -3.11em; margin-right: 0.05em;"><span
+                                              class="pstrut" style="height: 2.7em;"></span><span
+                                              class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                  class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+                  </li>
+                </ul>
+
+
+              </details>
+
+            </details>
+            <details open="" data-level="2">
+              <summary class="section-heading">
+                <h2 id="參閱">參閱</h2>
+              </summary>
+
+              <ul>
+                <li><a title="格林恆等式"
+                    href="file:///C:/Users/STAR/Downloads/Kiwix.KiwixJS_mc3511b08yc0e!App/%E6%A0%BC%E6%9E%97%E6%81%86%E7%AD%89%E5%BC%8F">格林恆等式</a>
+                </li>
+                <li><span class="new">數學恆等式列表</span> ()</li>
+                <li><span class="new">向量微積分恆等式</span> ()</li>
+              </ul>
+
+
+
+
+
+
+            </details>
+  </div>
+
+# 表4 無量綱量列表
 
 <table class="wikitable">
 <tbody><tr>
