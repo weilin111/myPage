@@ -44,3 +44,27 @@ cate: phy
 # Green funtion
 
 ![png](style\image\green.png)
+
+
+
+# Delta函数
+
+
+
+![1634650376023](style\image\ALL_MD_PIC\1634650376023.png)
+
+
+
+# 多极展开
+
+![1634650439570](style\image\ALL_MD_PIC\1634650439570.png)
+
+
+
+# 积分变换&微分方程
+
+![1634650570991](style\image\ALL_MD_PIC\1634650570991.png)
+
+![1634650647571](style\image\ALL_MD_PIC\1634650647571.png)
+
+![1634650661478](style\image\ALL_MD_PIC\1634650661478.png)
