@@ -2,8 +2,7 @@
 layout: default
 ---
 
-<div class="main-content index-page clearfix"
-    style="min-height: 600px;  background-image: url(wallhaven-0joerm.jpg);z-index:1; background-size: contain; background-repeat: no-repeat;">
+<div class="main-content index-page clearfix" style="min-height: 600px;  background-image: url(wallhaven-0joerm.jpg);z-index:1; background-size: unset; background-repeat: no-repeat;">
 
     <div style="height : 300">
         <div>
@@ -12,7 +11,7 @@ layout: default
         <!-- id="particles-js"  -->
         <center>
             <a style="max-width:50%" href="{{ '/myScript/1.html' | prepend: site.baseurl }}">
-                <img src="图片2.png">
+                <img alt="123" src="图片2.png">
 
             </a>
         </center>
@@ -24,25 +23,22 @@ layout: default
     <div class="post-lists" id="cate-physics-post-lists">
         <!-- <script src="particles.js"></script> -->
         <!-- <script src="app.js"></script> -->
-        <div class="cate-physics"> <button id="cate-physics-bnt" style=" font-size: 30px; color:white; font-family: AGENCY;width: 100px; height: 50px;background: blue;
-            border-radius: 10px;
-            font-size: 20px;cursor: pointer;"> PHYSICS </button> </div>
+        <div class="cate-physics"> <button id="cate-physics-bnt" class="cate-bnt"> PHYSICS </button> </div>
 
         <div class="post-lists-body" id="cate-physics-post-lists-body">
-            {% for post in paginator.posts %}
-            {% if post.cate == "phy" %}
+            {% for post in paginator.posts %} {% if post.cate == "phy" %}
             <div class="post-list-item">
                 <div class="post-list-item-container">
-                    <div class="item-thumb bg-deepgrey"
+                    <!-- <div class="item-thumb bg-deepgrey"
                         style="background-image:url({% if post.thumbnail %}{{ post.thumbnail }}{% else %}{{ '/style/image/thumbnail.png' | prepend: site.baseurl }}{% endif %});">
-                    </div>
+                    </div> -->
                     <a href="{{ post.url | prepend: site.baseurl }}">
                         <div class="item-desc">
                             <p>{{ post.content | strip_html | strip_newlines | truncate: 128 }} </p>
                         </div>
                     </a>
-                    <div class="item-slant reverse-slant bg-deepgrey"></div>
-                    <div class="item-slant"></div>
+                    <!-- <div class="item-slant reverse-slant bg-deepgrey"></div> -->
+                    <!-- <div class="item-slant"></div> -->
                     <div class="item-label">
                         <div class="item-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                             <br /> {{ post.date | date: "%b %d, %Y" }}
@@ -58,38 +54,33 @@ layout: default
                     </div>
                 </div>
             </div>
-            {% endif %}
-            {% endfor %}
+            {% endif %} {% endfor %}
         </div>
     </div>
 
     <div class="post-lists" id="cate-CS-post-lists">
         <!-- <script src="particles.js"></script> -->
         <!-- <script src="app.js"></script> -->
-        <div class="cate-physics"> <button id="cate-CS-bnt" style="font-size: 30px; color:rgb(0, 0, 0);  font-family: AGENCY; width: 100px; height: 50px;background: blue;
-            border-radius: 10px;
-            font-size: 20px; cursor: pointer;"> CS </button> </div>
+        <div class="cate-physics"> <button id="cate-CS-bnt" class="cate-bnt"> CS </button> </div>
 
         <div class="post-lists-body" id="cate-CS-post-lists-body">
-            {% for post in paginator.posts %}
-            {% if post.cate == "CS" %}
+            {% for post in paginator.posts %} {% if post.cate == "CS" %}
             <div class="post-list-item">
                 <div class="post-list-item-container">
-                    <div class="item-thumb bg-deepgrey"
-                        style="background-image:url({% if post.thumbnail %}{{ post.thumbnail }}{% else %}{{ '/style/image/thumbnail.png' | prepend: site.baseurl }}{% endif %});">
-                    </div>
+                    <!-- <div class="item-thumb bg-deepgrey" style="background-image:url({% if post.thumbnail %}{{ post.thumbnail }}{% else %}{{ '/style/image/thumbnail.png' | prepend: site.baseurl }}{% endif %});">
+                    </div> -->
                     <a href="{{ post.url | prepend: site.baseurl }}">
                         <div class="item-desc">
                             <p>{{ post.content | strip_html | strip_newlines | truncate: 128 }} </p>
                         </div>
                     </a>
-                    <div class="item-slant reverse-slant bg-deepgrey"></div>
-                    <div class="item-slant"></div>
+                    <!-- <div class="item-slant reverse-slant bg-deepgrey"></div> -->
+                    <!-- <div class="item-slant"></div> -->
                     <div class="item-label">
                         <div class="item-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                             <br /> {{ post.date | date: "%b %d, %Y" }}
                         </div>
-                        
+
                         <!-- <div class="item-meta clearfix">
                             <div class="item-meta-ico {% if post.icon %}bg-ico-{{ post.icon }}{% endif %}"
                                 style="background: url({{ '/style/image/bg-ico.png' | prepend: site.baseurl }}) no-repeat;background-size: 40px auto;">
@@ -102,8 +93,7 @@ layout: default
                     </div>
                 </div>
             </div>
-            {% endif %}
-            {% endfor %}
+            {% endif %} {% endfor %}
         </div>
     </div>
 
@@ -115,8 +105,7 @@ layout: default
             <li class="prev"><a href="{{ paginator.previous_page_path | relative_url }}">←</a></li>
             {% endif %} {% for page in (1..paginator.total_pages) %}
             <li {% if page==paginator.page %} class="current" {% endif %}>
-                <a
-                    href="{% if page == 1 %}{{  '/' | prepend: site.baseurl }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">{{
+                <a href="{% if page == 1 %}{{  '/' | prepend: site.baseurl }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">{{
                     page }}</a>
             </li>
             {% endfor %} {% if paginator.next_page %}
@@ -126,12 +115,11 @@ layout: default
     </div>
     {% endif %}
 
-    <div id="body_div_2"
-        style="background-image: url(&quot;wallhaven-4x81jo_2.jpg&quot;);z-index: -1;position: absolute;inset: 0px;opacity: 0;background-size: auto;background-repeat: no-repeat;">
+    <div id="body_div_2" style="background-image: url(&quot;wallhaven-4x81jo_2.jpg&quot;);z-index: -1;position: absolute;inset: 0px;opacity: 0;background-size: auto;background-repeat: no-repeat;">
     </div>
 
 
-<script>
+    <!-- <script>
 
 var is_phy_open=false
 var is_CS_open =false
@@ -224,6 +212,6 @@ $("#cate-CS-bnt").click(() => {
 
 
 
-</script>
+</script> -->
 
 </div>

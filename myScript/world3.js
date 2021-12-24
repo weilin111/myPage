@@ -19,7 +19,7 @@ function get_UI() {
 
             draw_track: true,
 
-            track_steppoint_maxNumber: 100,
+            track_steppoint_maxNumber: 60,
 
 
 
@@ -79,7 +79,7 @@ function get_UI() {
         var particle_ring = function() {
             // center = [event.offsetX, event.offsetY]
 
-            let n = 10
+            let n = 6
             let center = [canvas.width * Math.random(), canvas.height * Math.random()]
             let r = Math.random() * 250
             let v = [Math.random() * 50, Math.random() * 50, 0]
@@ -295,7 +295,7 @@ function get_UI() {
 
 
         function emitter() {
-            let count = 20
+            let count = 10
 
             function add() {
                 add_phy_Object(create_phy_Object([tem_xyz[0], tem_xyz[1], 0], [0, 0, 0]))
