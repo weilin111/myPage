@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Some Math
+title: Math
 date: 2021-3-30 00:00:00 +0800
 category: random write
 thumbnail: style/image/AT_GIF/AT8.gif
@@ -68,3 +68,16 @@ cate: phy
 ![1634650647571](style\image\ALL_MD_PIC\1634650647571.png)
 
 ![1634650661478](style\image\ALL_MD_PIC\1634650661478.png)
+
+
+
+
+
+# 变分 
+
+![1640530085877](/style/image/ALL_MD_PIC/1640530085877.png)
+
+
+
+# 李代数
+

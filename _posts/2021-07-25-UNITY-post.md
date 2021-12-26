@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在UNITY玩耍
+title: Blender & UNITY
 date: 2021-6-25 00:00:00 +0800
 category: ~~~~~~
 thumbnail: style/image/postLogo/图片2.png
@@ -15,12 +15,24 @@ cate: CS
 
 # Blender
 
-## Grease pencel
+几何节点
 
-需要学习的还是很多啊！
+材质
+
+Grease pencel
+
+渲染
+
 
 
 # Unity
+
+## 脚本
+
+
+
+c# 与 unity engine
+
 
 ## demo_01
 
@@ -36,6 +48,6 @@ cate: CS
 
 
 
-
+# Unreal engine
 
 

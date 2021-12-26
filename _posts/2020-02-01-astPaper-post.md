@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multi
+title: MultiMessenger
 date: 2020-12-23 00:00:00 +0800
 category: (#`O′)
 thumbnail: style/image/AT_GIF/AT11.gif
@@ -26,14 +26,14 @@ cate: phy
 # 报告
 
 
-# 引力波、中微子与多信使时代 {#引力波中微子与多信使时代 .mirror}
+# 引力波、中微子与多信使时代
 
 日期：2020年11月28日
 
 
 ### Overview
 
--   #### 引力波 {#引力波 .s10}
+-   #### 引力波
 
 A.
 Einstein在1915年完成了广义相对论，对水星近日点进动的精确预言，以及对太阳引力场下光线偏折角的精确预言，使其声名鹊起。引力波由广义相对论预言，它是时空的涟漪。

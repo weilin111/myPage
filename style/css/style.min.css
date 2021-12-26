@@ -99,7 +99,8 @@ h6 tt {
 }
 
 h1 {
-    font-size: 1.4em;
+    font-size: 1.8em;
+    color:red;
 }
 
 h2 {
@@ -202,7 +203,7 @@ code {
 }
 
 pre code {
-    font-size: 14px;
+    font-size: 18px;
     display: block;
     overflow: auto;
     padding: 1.3em;
