@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ALGORITHM
-date: 2021-7-9 00:00:00 +0800
+date: 2020-7-9 00:00:00 +0800
 category: random write
 thumbnail: style/image/postLogo/图片4.png
 icon: book

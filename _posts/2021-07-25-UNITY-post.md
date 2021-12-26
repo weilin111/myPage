@@ -12,6 +12,7 @@ cate: CS
 * content
 {:toc}
 
+关于游戏、动画
 
 # Blender
 
@@ -45,6 +46,15 @@ c# 与 unity engine
 ## 打包
 
 ![1629359317488](/myPage/style/image/ALL_MD_PIC/1629359317488.png)
+
+# Manim
+
+曾经做过几个视频，但现在已经全忘光啦。
+
+
+[【Manim】波函数--解氢原子之后(下）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV147411C7uD?spm_id_from=333.999.0.0)
+
+[【Manim】最速降线--变分法_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1YC4y147Fr?spm_id_from=333.999.0.0)
 
 
 

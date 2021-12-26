@@ -5,22 +5,41 @@ date: 2021-3-30 00:00:00 +0800
 category: $$$$$$$$$$$$
 thumbnail: style/image/AT_GIF/AT8.gif
 icon: book
-cate: phy
+cate: CS
 ---
 * content
 {:toc}
 
-# base
+## base
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(9,7),dpi=120)
+ax.plot(!!,!!)  #!!!!  here
+font = {'family' : 'serif',
+        'color'  : 'darkred',
+        'weight' : 'normal',
+        'size'   : 12,
+        }
+plt.title("!!!!!!!",fontdict=font)
+plt.xlable("!!!!!!",fontdict=font)
+plt.ylable("!!!!!!",fontdict=font)
+fig.tight_layout()
+# plt.show()
+plt.savefig("name.png",dpi=120)
+```
 
 
 
 
-# 曲线
+## 曲线
 
 
 
 
-# 热度图
+## 热度图
 
 
 

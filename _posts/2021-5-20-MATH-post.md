@@ -47,6 +47,11 @@ cate: phy
 
 
 
+# 李代数
+
+
+
+
 # Delta函数
 
 
@@ -78,6 +83,4 @@ cate: phy
 ![1640530085877](/style/image/ALL_MD_PIC/1640530085877.png)
 
 
-
-# 李代数
 
