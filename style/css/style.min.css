@@ -842,11 +842,12 @@ div#paticlees-js {
 .post-list-item {
     float: none;
     width: auto;
-    max-width: 50%;
+    max-width: 53%;
     height: auto;
     padding: 0;
     align-items: center;
-    padding-left: 15%;
+    padding-left: 18%;
+    min-width: 290px;
 }
 
 .post-list-item-container {
