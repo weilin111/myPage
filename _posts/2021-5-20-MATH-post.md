@@ -80,7 +80,7 @@ cate: phy
 
 # 变分 
 
-![1640530085877](/style/image/ALL_MD_PIC/1640530085877.png)
+![1640530085877](style/image/ALL_MD_PIC/1640530085877.png)
 
 
 

@@ -1282,8 +1282,11 @@ element {
 }
 
 .post-title {
-    font-size: 21px;
+    font-size: 35px;
     border-bottom: hidden;
+    font-family:'AGENCY';
+    text-decoration: underline;
+    text-shadow: #000000;
 }
 
 .post-data,
