@@ -37,7 +37,7 @@ html {
 
 ::selection {
     color: #fff;
-    background-color: #eb5055
+    background-color: #ff0008
 }
 
 body {
@@ -45,7 +45,7 @@ body {
     font-size: 14px;
     line-height: 1.8;
     margin: 0 auto;
-    color: #313131;
+    color: #ffffff;
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -195,11 +195,11 @@ pre {
 
 code {
     font-family: Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace;
-    font-size: 13px;
+    font-size: 20px;
     margin: 0 3px;
     padding: 2px 6px;
     border-radius: 3px;
-    background-color: #f7f7f7
+    background-color: #007fff;
 }
 
 pre code {
@@ -1211,11 +1211,11 @@ element {
     margin: 0;
     padding: 1.3em;
     color: #ff0000;
-    background-color: #000000
+    background-color: #ffffff
 }
 
 .post-content a {
-    color: #313131;
+    color: #ff0000;
     border-bottom: 1px solid #ccc;
 }
 
@@ -2540,7 +2540,7 @@ a.navbar-logo span {
     display: inline-block;
     width: 819px;
     text-align: left;
-    background: #fff;
+    background: rgb(0, 0, 0);
     box-shadow: 0 50px 100px rgb(113, 6, 252);
     padding-left: 40px;
     padding-right: 24px;
