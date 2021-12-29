@@ -7,9 +7,9 @@ function get_UI() {
 
             gravity: 0,
 
-            fps: 25,
+            fps: 14,
 
-            dt: 1 / 60,
+            dt: 1 / 30,
 
             stop: false,
 
@@ -19,7 +19,7 @@ function get_UI() {
 
             draw_track: true,
 
-            track_steppoint_maxNumber: 60,
+            track_steppoint_maxNumber: 20,
 
 
 
@@ -224,8 +224,8 @@ function get_UI() {
 
                 //00000000000000-------------------------DRAW---------------------------00000000000000000000000
                 pen.fillStyle = "#000000"
-
-                pen.fillText("🌸", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], )
+                // "🌸"
+                pen.fillText(" ", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], )
 
                 if (world.draw_track) {
 

@@ -80,7 +80,7 @@ var change_title_color = function(title_id) {
     var change_count = 0
     var start_color = get_random_Color()
     var end_color = get_random_Color()
-    var fps = 45
+    var fps = 15
     var change_title = function(fps) {
         $("#" + title_id).css("color", color_gradient_point(start_color, end_color, change_count, fps))
         change_count = (change_count + 1) % fps
@@ -198,14 +198,14 @@ var change_pic_opacity = function(pic_id) {
     // pic or div id  anything with opacity
     var change_count = 0
 
-    var fps = 1200
+    var fps = 120
     var change_title = function(fps) {
         $("#" + pic_id).css("opacity", Math.sin(Math.PI*2*change_count/fps))
         change_count = (change_count + 1) % fps
     }
     setInterval(function() {
         change_title(fps)
-    }, 20000 / fps)
+    }, 10000 / fps)
 
 }
 
