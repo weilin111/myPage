@@ -99,20 +99,25 @@ h6 tt {
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: 2.0em;
     color:red;
+    
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.8em;
+    color:rgba(255, 0, 0, 0.812);
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.6em;
+    color:rgba(255, 0, 0, 0.652);
 }
 
 h4 {
     font-size: 1.1em;
+    color:rgb(0, 255, 234);
+
 }
 
 h5 {
@@ -1183,6 +1188,9 @@ element {
     position: relative;
     margin: 20px 0
 }
+
+
+
 
 .post-content h1::before,
 .post-content h2::before,
