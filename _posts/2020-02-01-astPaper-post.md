@@ -17,13 +17,8 @@ cate: phy
 ![png](\myPage\style\image\class3_长图0.jpg) -->
 
 
-# PPT
 
 
-![png](\myPage\style\image\ast_长图0.jpg)
-
-
-# 报告
 
 
 # 引力波、中微子与多信使时代
@@ -234,7 +229,10 @@ radio quasar, FSRQ)PKS 1502+106在天空中的方位一致。
     880:103, 1901.10806.
 
 
+# PPT
 
+
+![png](\myPage\style\image\ast_长图0.jpg)
 
 
 
