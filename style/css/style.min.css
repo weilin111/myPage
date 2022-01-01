@@ -93,8 +93,8 @@ h6 {
 }
 ::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
     border-radius: 10px;
-     -webkit-box-shadow: inset 0 0 5px rgb(255, 0, 0);
-    background: #535353;
+     -webkit-box-shadow: inset 0 0 5px rgba(255, 0, 0, 0.444);
+    background: #ff0000;
 }
 ::-webkit-scrollbar-track {/*滚动条里面轨道*/
     -webkit-box-shadow: inset 0 0 5px rgb(0, 0, 0);
@@ -2568,7 +2568,9 @@ a.navbar-logo span {
     width: 210px;
     text-align: left;
     position: fixed;
-    margin-left: -226px
+    margin-left: -226px;
+    overflow-y: scroll;
+    height: 400px;
 }
 
 .post-container .post-content {
