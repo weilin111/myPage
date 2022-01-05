@@ -19,9 +19,13 @@ cate: CS
 
 ##  miracast
 
-让另外一台`win`笔记本成为拓展屏幕。日常将我的`surface`当成第二拓展屏。
+让另外一台`win`笔记本成为拓展屏幕。日常将`surface`当成第二拓展屏。
+
+但是挂梯子有时会让miracast崩掉。
 
 ![1629646244107](/myPage/style/image/ALL_MD_PIC/1629646244107.png)
+
+## spacedesk
 
 
 ## kiwix
