@@ -2579,7 +2579,7 @@ a.navbar-logo span {
     width: 819px;
     text-align: left;
     background: rgb(0, 0, 0);
-    box-shadow: 0 50px 100px rgb(113, 6, 252);
+    box-shadow: 0 50px 100px 60px rgba(113, 6, 252, 0.68);
     padding-left: 40px;
     padding-right: 24px;
     font-size: 20px;
