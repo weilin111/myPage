@@ -7,7 +7,7 @@ layout: default
         <h1 class="post-title" itemprop="name headline">
             {{ page.title }}
         </h1>
-        <div class="post-data">
+        <div class="post-data" id="pagenum_below_title">
             <time itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>
         </div>
     </div>
@@ -26,3 +26,18 @@ layout: default
         </div> -->
     </div>
 </div>
+
+
+
+<script>
+
+    $().ready(
+        ()=>{
+        page_num=Math.round($( document).height()/$(window).height() )
+
+        $('#pagenum_below_title').append('<div>'+'Page:  '+ page_num +'</div>')
+        }
+    )
+
+
+    </script>
