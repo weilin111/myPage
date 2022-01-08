@@ -902,6 +902,19 @@ div#paticlees-js {
     min-width: 290px;
 }
 
+.archives-post-list-item {
+    float: left;
+    width: auto;
+    max-width: 53%;
+    height: auto;
+    padding: 5px;
+    align-items: center;
+    /* padding-left: 5%; */
+    min-width: 290px;
+}
+
+
+
 .post-list-item-container {
     position: relative;
     overflow: hidden;
@@ -913,6 +926,25 @@ div#paticlees-js {
     box-shadow: 0 1px 10px rgba(0, 0, 0, .9);
     backdrop-filter:blur(14px)  saturate(10);
 }
+
+.achives-post-list-item-container{
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: blue;
+    font-size: 18px;
+
+
+}
+
+
+.achives-item-title{
+    color:red;
+    font-size: 22px;
+
+}
+
 
 element {
     --main-bg-color: brown;
@@ -1277,7 +1309,12 @@ element {
 
 
 
+.achives-post-lists-body {
+    /* color: red; */
+    float: left;
+    font-family:'AGENCY';
 
+}
 
 
 .post-content pre {
@@ -1505,11 +1542,11 @@ element {
 }
 
 .archive-page .categorys-title {
-    font-size: 14px;
+    font-size: 22px;
     position: relative;
     margin: 0px auto;
     padding: 0px 30px;
-    color: #5f5f5f;
+    color:aqua;
     clear: both;
 }
 
@@ -1523,7 +1560,7 @@ element {
     left: -15px;
     padding: 0 30px;
     content: '#';
-    color: #eb5055
+    color: #ff0000;
 }
 
 .archive-page .post-list-item-container {
@@ -2290,10 +2327,14 @@ element {
     .post-onelist-item-container {
         padding: 50px 20px 55px
     }
+
+
     .post-list-item {
         width: 50%;
         padding: 10px
     }
+
+
     .post-list-item:nth-child(odd) {
         padding-left: 20px
     }

@@ -5,7 +5,8 @@ layout: default
 <div class="main-content archive-page clearfix">
     <div class="categorys-item">
         <div class="post-lists">
-            <div class="post-lists-body">
+            <div class="achives-post-lists-body">
+                <div class="categorys-title" style="font-size: 30px; " >Total post number : {{site.posts.size  }} </div>
                 {% for post in site.posts %}
                 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
                 {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -16,15 +17,16 @@ layout: default
                 <div class="categorys-title">{{ this_month }} {{ this_year }}</div>
                 {% endif %}
 
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
+                <div class="archives-post-list-item">
+                    <div class="achives-post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="{{ post.url |prepend: site.baseurl}}">{{ post.title }}</a></div>
+                            <div ><a  class="achives-item-title" href="{{ post.url |prepend: site.baseurl}}">{{ post.title }}</a></div>
                             <div class="item-meta clearfix">
                                 <div class="item-meta-date"> {{ post.date | date: "%b %d, %Y" }} </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 {% endfor %}
