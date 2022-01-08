@@ -4,19 +4,19 @@ layout: default
 
 <div class="main-content index-page clearfix" style="min-height: 600px;  background-image: url(bg01.jpg);z-index:1; background-size: unset; background-repeat: no-repeat;">
 
-    <div style="height : 300">
+    <div style="height:100px">
         <div>
             <!--  <iframe src="{{ 'myScript/background.html' |prepend : site.baseurl    }}"  style="width:100%;height:100%;z-index:-1000; max-width:100%;" align="center"></iframe>  -->
         </div>
         <!-- id="particles-js"  -->
         <center>
             <a style="max-width:50%" href="{{ '/myScript/1.html' | prepend: site.baseurl }}">
-                <img   style="max-width:60%" alt="123" src="{{ '/logo2.png' | prepend: site.baseurl }}">
+                <img   style="max-width:60%; height:150px" alt="sirius!" src="{{ '/logo2.png' | prepend: site.baseurl }}">
 
             </a>
         </center>
-        <div style="height:100px"> </div>
     </div>
+
 
 
 
@@ -61,6 +61,47 @@ layout: default
     <div class="post-lists" id="cate-CS-post-lists">
         <!-- <script src="particles.js"></script> -->
         <!-- <script src="app.js"></script> -->
+        <div class="cate-physics"> <button id="cate-Fun-bnt" class="cate-bnt"> Fun </button> </div>
+
+        <div class="post-lists-body" id="cate-CS-post-lists-body">
+            {% for post in paginator.posts %} {% if post.cate == "Fun" %}
+            <div class="post-list-item">
+                <div class="post-list-item-container">
+                    <!-- <div class="item-thumb bg-deepgrey" style="background-image:url({% if post.thumbnail %}{{ post.thumbnail }}{% else %}{{ '/style/image/thumbnail.png' | prepend: site.baseurl }}{% endif %});">
+                    </div> -->
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <div class="item-desc">
+                            <p>{{ post.content | strip_html | strip_newlines | truncate: 128 }} </p>
+                        </div>
+                    </a>
+                    <!-- <div class="item-slant reverse-slant bg-deepgrey"></div> -->
+                    <!-- <div class="item-slant"></div> -->
+                    <div class="item-label">
+                        <div class="item-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            <br /> {{ post.date | date: "%b %d, %Y" }}
+                        </div>
+
+                        <!-- <div class="item-meta clearfix">
+                            <div class="item-meta-ico {% if post.icon %}bg-ico-{{ post.icon }}{% endif %}"
+                                style="background: url({{ '/style/image/bg-ico.png' | prepend: site.baseurl }}) no-repeat;background-size: 40px auto;">
+                            </div>
+                            <div class="item-meta-cat">
+                                <a href="javascript:void(0);">{{ post.category }}</a>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+    </div>
+
+
+
+    <div class="post-lists" id="cate-CS-post-lists">
+        <!-- <script src="particles.js"></script> -->
+        <!-- <script src="app.js"></script> -->
         <div class="cate-physics"> <button id="cate-CS-bnt" class="cate-bnt"> ELSE </button> </div>
 
         <div class="post-lists-body" id="cate-CS-post-lists-body">
@@ -96,6 +137,9 @@ layout: default
             {% endif %} {% endfor %}
         </div>
     </div>
+
+
+
 
 
     {% if paginator.total_pages > 1 %}
