@@ -7,9 +7,9 @@ function get_UI() {
 
             gravity: 0,
 
-            fps: 14,
+            fps: 12,
 
-            dt: 1 / 30,
+            dt: 1 / 35,
 
             stop: false,
 
@@ -19,7 +19,7 @@ function get_UI() {
 
             draw_track: true,
 
-            track_steppoint_maxNumber: 20,
+            track_steppoint_maxNumber: 18,
 
 
 
