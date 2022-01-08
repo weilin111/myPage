@@ -13,7 +13,8 @@
 }
 
 .highlight .k {
-    font-weight: 600
+    font-weight: 600;
+    color: blue;
 }
 
 .highlight .o {
@@ -127,7 +128,7 @@
 }
 
 .highlight .nb {
-    color: #0086B3
+    color: #00bfff
 }
 
 .highlight .nc {
@@ -149,7 +150,7 @@
 }
 
 .highlight .nf {
-    color: #900;
+    color: rgb(170, 0, 255);
     font-weight: 600
 }
 
@@ -166,7 +167,8 @@
 }
 
 .highlight .ow {
-    font-weight: 600
+    font-weight: 600;
+    color:red;
 }
 
 .highlight .w {
