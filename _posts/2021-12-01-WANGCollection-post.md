@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 王建国的收集目录
-date: 2021-12-01 00:00:00 +0800
+date: 2021-12-30 00:00:00 +0800
 category: random write
 thumbnail: style/image/AT_GIF/AT1.gif
 icon: book
@@ -13,8 +13,6 @@ cate: Fun
 
 
 # 闲了可以逛的BLOG
-
- 
 
 | ///////////////                                              |      |      |
 | ------------------------------------------------------------ | ---- | ---- |
@@ -31,24 +29,38 @@ cate: Fun
 | [GAbbitt   Media - Get the latest Blender 3d graphics info](https://www.gabbitt.co.uk/) |      |      |
 |                                                              |      |      |
 |                                                              |      |      |
+|                                                              |      |      |
+| [String Theory Wiki   (stringwiki.org)](https://www.stringwiki.org/wiki/String_Theory_Wiki) |      |      |
+| [Strings 2020 (2020年6月29日   - 2020年7月3日)   ·   Indico (cern.ch)](https://indico.cern.ch/event/929434/timetable/) |      |      |
+| [科研动态   Events - web (itp.ac.cn)](http://gc.itp.ac.cn/events) |      |      |
+| [News –   Hyperspace@gu (uni-frankfurt.de)](https://hyperspace.uni-frankfurt.de/category/News/) |      |      |
+| [The   International Society on General Relativity & Gravitation (isgrg.org)](http://www.isgrg.org/index.php) |      |      |
+|                                                              |      |      |
+|                                                              |      |      |
+|                                                              |      |      |
 | [Shing-Tung   Yau (archive.org)](https://web.archive.org/web/20180511050808/http:/www.doctoryau.com/bio.html) |      |      |
 |                                                              |      |      |
 |                                                              |      |      |
-| [性感学子，在线退学   (tuixue.online)](https://tuixue.online/) |      |      |
-| [EMC2 Fusion   Development Corporation](http://emc2fusion.org/) |      |      |
-| [光魚   Blog (lightfish.cn)](https://lightfish.cn/page/3/)   |      |      |
-| [Blog - iBug](https://ibug.io/blog/)                         |      |      |
-|                                                              |      |      |
-|                                                              |      |      |
-|                                                              |      |      |
-|                                                              |      |      |
-|                                                              |      |      |
-| [Top   10 WEBSITES you must visit if you are a developer👨‍💻⚡😎 (hashnode.dev)](https://yashw.hashnode.dev/top-10-websites-you-must-visit-if-you-are-a-developer) |      |      |
-|                                                              |      |      |
-|                                                              |      |      |
-| [2021寒假讨论班-广义相对论 - 超理论坛 (chaoli.club)](https://chaoli.club/index.php/6128) |      |      |
-|                                                              |      |      |
-|                                                              |      |      |
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 脚本自动更新书目
 

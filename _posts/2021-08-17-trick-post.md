@@ -23,7 +23,7 @@ cate: Fun
 
 但是挂梯子有时会让miracast崩掉。
 
-![1629646244107](/myPage/style/image/ALL_MD_PIC/1629646244107.png)
+![1629646244107](style/image/ALL_MD_PIC/1629646244107.png)
 
 ## spacedesk
 
@@ -32,7 +32,7 @@ cate: Fun
 
 离线`维基百科`，桌面端、移动端均有。
 
-![1629646209243](/myPage/style/image/ALL_MD_PIC/1629646209243.png)
+![1629646209243](style/image/ALL_MD_PIC/1629646209243.png)
 
 ## SMB协议 + VLC
 

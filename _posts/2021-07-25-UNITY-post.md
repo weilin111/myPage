@@ -42,13 +42,13 @@ c# 与 unity engine
 
 大风车`prefab`
 
-![屏幕截图 2021-08-19 153713](/myPage/style/image/ALL_MD_PIC/屏幕截图 2021-08-19 153713.png)
+![屏幕截图 2021-08-19 153713](style/image/ALL_MD_PIC/屏幕截图 2021-08-19 153713.png)
 
-![unityDemo](/myPage/style/image/ALL_MD_PIC/unityDemo.gif)
+![unityDemo](style/image/ALL_MD_PIC/unityDemo.gif)
 
 ## 打包
 
-![1629359317488](/myPage/style/image/ALL_MD_PIC/1629359317488.png)
+![1629359317488](style/image/ALL_MD_PIC/1629359317488.png)
 
 # Manim
 
