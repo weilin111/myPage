@@ -844,8 +844,8 @@ div#paticlees-js {
 }
 
 .index-page {
-    padding: 120px 20px 0;
-    box-shadow: 0 20px 100px rgb(113, 6, 252);
+    padding: 70px 20px 0;
+    box-shadow: 0 20px 100px 30px rgb(113, 6, 252);
 }
 
 .index-page .post-list-item-container .item-label {
