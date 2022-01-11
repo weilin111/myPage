@@ -200,7 +200,7 @@ var change_pic_opacity = function(pic_id) {
 
     var fps = 120
     var change_title = function(fps) {
-        $("#" + pic_id).css("opacity", Math.sin(Math.PI*2*change_count/fps))
+        $("#" + pic_id).css("opacity", 0.1+Math.sin(Math.PI*2*change_count/fps))
         change_count = (change_count + 1) % fps
     }
     setInterval(function() {
