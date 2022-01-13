@@ -5,7 +5,7 @@
 // const s = ( sketch ) => {
 //     let canvas;
 //     sketch.setup = () => {
-//       canvas=sketch.createCanvas(200, 200);
+//       canvas=sketch.createCanvas(400, 400);
 //       canvas.parent('p5js-lists');
 //       sketch.pixelDensity(1)
 //     };
@@ -57,8 +57,6 @@ const s = ( sketch ) => {
   };
   
   let myp5 = new p5(s);
-
-
 
 const s2 = ( sketch ) => {
     let canvas;
@@ -159,7 +157,36 @@ function createCols(_url)
 
 
 
+const s3 = ( sketch ) => {
+    let canvas;
+    let width
+    let height
+    sketch.setup = () => {
+      canvas=sketch.createCanvas(400, 400);
+      canvas.parent('p5js-lists');
+      sketch.pixelDensity(1)
+      width=canvas.width
+      height=canvas.height
+    };
+  
+    sketch.draw = () => {
+      sketch.background(0);
+      sketch.stroke(255,0,0)
+      sketch.fill(0)
+      for(i=0;i<width;i++){
+        F=sketch.frameCount
+        N=sketch.noise(i)
+        x=Math.sqrt(i*200)+200*Math.sin(i)+F % width
+        y=Math.sqrt(i*100)+200*Math.cos(i)+F % width
+        size=N*20
+        sketch.ellipse(x,y,size,size)
+      }
 
+
+    };
+  };
+  
+  let myp5_3 = new p5(s3);
 
 
 
