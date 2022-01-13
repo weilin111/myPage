@@ -13,7 +13,21 @@ cate: phy
 
 W将在这里写下STAR的短篇集
 
-#### 
+#### 物理学家的故事
+Feymann 文科  妻子  
+Einstein 胃病  红色玫瑰
+Planck 审判
+Wheeler 
+Chandra 
+Landau
+
+####
+  
+
+
+
+
+
 
 
 
