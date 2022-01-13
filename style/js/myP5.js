@@ -103,7 +103,6 @@ const s2 = ( sketch ) => {
             sketch.rotateY(- angle);
             sketch.ellipse(0, 0, r, r, 45);
             sketch.pop();
-            sketch.pixelDensity(1)
         }
         sketch.pop();
     };
