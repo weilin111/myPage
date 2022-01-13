@@ -7,6 +7,7 @@
 //     sketch.setup = () => {
 //       canvas=sketch.createCanvas(200, 200);
 //       canvas.parent('p5js-lists');
+//       sketch.pixelDensity(1)
 //     };
   
 //     sketch.draw = () => {
@@ -72,7 +73,7 @@ const s2 = ( sketch ) => {
       height=canvas.height    
       let dep = Math.max(width,height);
       sketch.ortho(-width / 2, width / 2, -height / 2, height / 2,-dep*3 , dep*3);
-
+      sketch.pixelDensity(1)
     };
   
     sketch.draw = () => {
@@ -102,6 +103,7 @@ const s2 = ( sketch ) => {
             sketch.rotateY(- angle);
             sketch.ellipse(0, 0, r, r, 45);
             sketch.pop();
+            sketch.pixelDensity(1)
         }
         sketch.pop();
     };
