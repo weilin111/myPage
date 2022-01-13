@@ -29,6 +29,7 @@ const s = ( sketch ) => {
     canvas=sketch.createCanvas(400,400);
     canvas.parent('p5js-lists');
     sketch.frameRate(30)
+    sketch.pixelDensity(1)
     };
   
     sketch.draw = () => {
