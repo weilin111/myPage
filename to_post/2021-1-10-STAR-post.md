@@ -13,6 +13,16 @@ cate: phy
 
 W将在这里写下STAR的短篇集
 
+
+#### random
+流派之争
+老师的传闻
+三枪手
+耀眼的双子星
+大战的素材啊！
+
+
+
 #### 物理学家的故事
 Feymann 文科  妻子  
 Einstein 胃病  红色玫瑰
@@ -21,7 +31,17 @@ Wheeler
 Chandra 
 Landau
 
-####
+#### 
+
+# inout project
+
+
+
+
+
+
+
+
   
 
 
