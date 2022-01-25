@@ -866,6 +866,9 @@ div#paticlees-js {
 }
 
 
+
+
+
 .post-lists-body:hover {
     background:rgba(63, 188,63, 0.458);
     transition: all 0.5s ease 0s;
@@ -1046,7 +1049,10 @@ element {
     font-size: 26px;
     line-height: 17px;
     word-break: break-all;
-    color: darkviolet
+    color: darkviolet;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .post-list-item-container .item-label .item-meta {
@@ -2315,9 +2321,22 @@ element {
     .post-header-thumb-container {
         top: 70px
     }
+    .post-lists-item {
+        margin: 0px 0px 0px auto;
+        }
+    .sirius_logo{
+        height: 150px;
+    }
+    .sirius_logo_div{
+        height: 100px;
+    }
+
 }
 
 @media(max-width:880px) {
+    .sirius_logo{
+        height: 110px;
+    }
     .index-page {
         padding: 80px 0 0
     }
@@ -2334,7 +2353,8 @@ element {
 
     .post-list-item {
         width: 50%;
-        padding: 10px
+        padding: 10px;
+        margin: 0px 0px 0px auto;
     }
 
 
@@ -2363,11 +2383,16 @@ element {
         padding: 0
     }
     .main-content {
-        margin: 0 auto
+        margin: 0 auto;
+        background-position-x: -85px;
+        background-position-y: 24px;
     }
     .footer-meta .meta-item {
         padding: 0 20px
     }
+
+
+
 }
 
 @media(max-width:700px) {
@@ -2440,7 +2465,7 @@ element {
     }
     .common-page .post-list-item {
         width: 100%;
-        padding: 10px 20px
+        padding: 10px 20px;
     }
     .footer-social {
         display: none
@@ -2488,7 +2513,14 @@ element {
     }
     .post-list-item {
         width: 100%;
-        padding: 10px 20px
+        padding: 0px 20px;
+        min-width: 62%;
+    }
+    .sirius_logo{
+        height: 120px;
+    }
+    .post-list-item-container .item-label .item-title a{
+        font-size: 20px;
     }
     .post-list-item:first-child {
         padding-top: 20px
@@ -2520,6 +2552,9 @@ element {
     .post-onelist-item-container .onelist-item-thumb {
         min-height: 180px
     }
+    .sirius_logo_div{
+        height: 80px;
+    }
 }
 
 @media(max-width:410px) {
@@ -2527,6 +2562,9 @@ element {
         display: none
     }
 }
+
+
+
 
 @-webkit-keyframes unpinned {
     0% {
@@ -2733,3 +2771,5 @@ a.navbar-logo span {
         width: 100%
     }
 }
+
+
