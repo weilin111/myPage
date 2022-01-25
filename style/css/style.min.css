@@ -39,7 +39,7 @@ html {
 
 ::selection {
     color: #fff;
-    background-color: #ff0008
+    background-color: #ff0000
 }
 
 body {
@@ -627,7 +627,7 @@ div#paticlees-js {
     max-width: 50%;
     height: 32px;
     margin-top: -30px;
-    margin-left: 25px;
+    margin-left: 0px;
     text-decoration: none
 }
 
@@ -957,11 +957,12 @@ element {
 }
 
 .post-list-item-container:hover {
-    background: slateblue;
+    background: rgb(0, 0, 255);
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
     transform: scale(1.7);
     transition: all 0.5s ease 0s;
+    /* backdrop-filter:blur(14px)  saturate(10); */
 }
 
 .post-list-item-container .item-thumb {
@@ -2358,12 +2359,12 @@ element {
     }
 
 
-    .post-list-item:nth-child(odd) {
+    /* .post-list-item:nth-child(odd) {
         padding-left: 20px
     }
     .post-list-item:nth-child(even) {
         padding-right: 20px
-    }
+    } */
     .lists-navigator {
         margin: 25px 0 30px
     }
