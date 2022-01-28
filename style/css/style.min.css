@@ -15,6 +15,11 @@
     src: url("../font/AGENCYR.TTF");
 }
 
+@font-face {
+    font-family: "WEBDINGS";
+    src: url("../font/webdings.ttf");
+}
+
 *,
 :after,
 :before {
@@ -382,10 +387,6 @@ textarea:-ms-input-placeholder {
 
 .right {
     float: right
-}
-
-div#paticlees-js {
-    height：300px；
 }
 
 .browsehappy {
@@ -1286,16 +1287,18 @@ element {
     position: relative;
     top: 0;
     left: 0px;
-    content: '✨';
-    font-size: 16px;
+    content: 'Z';
+    font-family: 'WEBDINGS';
+    font-size: 30px;
 }
 .post-content h2::before{
     font-weight: 600;
     position: relative;
     top: 0;
     left: 0px;
-    content: '✨✨';
-    font-size: 16px;
+    content: 'ZZ';
+    font-family: 'WEBDINGS';
+    font-size: 28px;
 
 }
 
@@ -1304,8 +1307,9 @@ element {
     position: relative;
     top: 0;
     left: 0px;
-    content: '✨✨✨';
-    font-size: 16px;
+    content: 'ZZZ';
+    font-family: 'WEBDINGS';
+    font-size: 26px;
 }
 
 .post-content h4::before{
@@ -1313,8 +1317,9 @@ element {
     position: relative;
     top: 0;
     left: 0px;
-    content: '✨✨✨✨';
-    font-size: 16px;
+    content: 'ZZZZ';
+    font-family: 'WEBDINGS';
+    font-size: 24px;
 }
 
 
@@ -2714,7 +2719,7 @@ a.navbar-logo span {
     box-shadow: 0 50px 100px 60px rgba(113, 6, 252, 0.68);
     padding-left: 40px;
     padding-right: 24px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 22px;
     border-radius: 10px;
     font-family:'AGENCY';
