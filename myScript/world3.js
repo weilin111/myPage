@@ -21,7 +21,7 @@ function get_UI() {
 
             track_steppoint_maxNumber: 18,
 
-
+            E_xyz_list_max_number: 3,
 
         }
 
@@ -32,15 +32,45 @@ function get_UI() {
         var canvas = document.getElementById(canvas_id)
         var pen = canvas.getContext("2d")
         let tem_xyz = [canvas.width * Math.random(), canvas.height * Math.random(), Math.random()]
-        console.log(tem_xyz)
+        // console.log(tem_xyz)
+        var track_steppoint_size=2
+        if (canvas.height<300){
+            track_steppoint_size=2
+        }
+
+
         var E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
+        var get_E_random_xyz=()=>{ return  [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]   }
+        var E_xyz_list_max_number=world.E_xyz_list_max_number
+        var E_xyz_list=[]
+        for(let i=0;i<E_xyz_list_max_number;i++){
+            E_xyz_list.push( get_E_random_xyz() )
+        } 
+        
         var is_field_move_with_cursor=false
 
         function E(xyz) {
-            let center = [E_tem_xyz[0], E_tem_xyz[1], E_tem_xyz[2]]
-            let dx = center[0] - xyz[0]
-            let dy = center[1] - xyz[1]
-            return [100 * dx / 500, 100 * dy / 500, 0]
+            let res=[0,0,0]
+            let center=[]
+            let dx=0
+            let dy=0
+            let normal=2000
+            // for(let i=0;i<E_xyz_list_max_number;i++){
+            //     center = [ E_xyz_list[i][0], E_xyz_list[i][1], E_xyz_list[i][i]]
+            //     dx = center[0] - xyz[0]
+            //     dy = center[1] - xyz[1]
+            //     res[0]+=100 * dx / normal  
+            //     res[1]+=100 * dy / normal  
+            // }  //ocillator
+            for(let i=0;i<E_xyz_list_max_number;i++){
+                center = [ E_xyz_list[i][0], E_xyz_list[i][1], E_xyz_list[i][i]]
+                dx = center[0] - xyz[0]
+                dy = center[1] - xyz[1]
+                normal= dx*dx+dy*dy 
+                res[0]+=canvas.width * dx / normal  
+                res[1]+=canvas.width * dy / normal  
+            }
+            return res  
         }
 
         var r_0 = Math.sqrt(canvas.width * canvas.width + canvas.height * canvas.height)
@@ -177,12 +207,22 @@ function get_UI() {
 
         var draw_little_dot = function(l) {
             // pen.fillText("🐟", l.xyz[0], l.xyz[1])
-            pen.fillText("✨", E_tem_xyz[0], E_tem_xyz[1])
+
+            // pen.fillText("✨", E_tem_xyz[0], E_tem_xyz[1])
+            if (tem_xyz[2]>0.5){  
+                return   //dont draw while feild B 
+            }
+ 
+            for(let i=0;i<E_xyz_list_max_number;i++){
+                pen.fillText("✨", E_xyz_list[i][0], E_xyz_list[i][1])
+            }
+
+
 
         }
 
-        let start_color = get_random_Color()
-        let end_color = get_random_Color()
+        var start_color = get_random_Color()
+        var end_color = get_random_Color()
 
 
         var update = function() {
@@ -232,10 +272,10 @@ function get_UI() {
 
                     color_box = color_gradient(start_color, end_color, world.phy_Object_list[i].track_steppoint_list.length)
 
-
                     for (j in world.phy_Object_list[i].track_steppoint_list) {
                         pen.fillStyle = color_box[j]
-                        pen.fillRect(world.phy_Object_list[i].track_steppoint_list[j][0], world.phy_Object_list[i].track_steppoint_list[j][1], 2, 2)
+        
+                        pen.fillRect(world.phy_Object_list[i].track_steppoint_list[j][0], world.phy_Object_list[i].track_steppoint_list[j][1], track_steppoint_size,track_steppoint_size)
                             //需要优化
 
                     }
@@ -265,8 +305,14 @@ function get_UI() {
 
         canvas.addEventListener("click", function(event) {
 
-            tem_xyz = [event.offsetX, event.offsetY, Math.random()]
-            E_tem_xyz = [event.offsetX, event.offsetY, 0]
+            tem_xyz = [event.offsetX, event.offsetY, Math.random()]  // tem_xyz[3] decide B 
+            E_xyz_list.push( [event.offsetX, event.offsetY, 0]   )
+            E_xyz_list.shift()
+            
+            start_color = get_random_Color()
+            end_color = get_random_Color()
+
+
 
             add_phy_Object(create_phy_Object([Math.random() * canvas.width, Math.random() * canvas.height, Math.random()], [Math.random() * 100, Math.random() * 100, Math.random()]),
 
@@ -277,7 +323,7 @@ function get_UI() {
 
         canvas.addEventListener("mousedown", function(event) {
 
-            console.log(event.offsetX, event.offsetY)
+            // console.log(event.offsetX, event.offsetY)
             now_mousedown_position[0] = event.offsetX
             now_mousedown_position[1] = event.offsetY
 
@@ -338,45 +384,45 @@ function get_UI() {
 
                     particle_ring()
                     break;
-                case "2":
+                case "e":
                     emitter()
-                    break
+                    break;
                 case "m":
-                    is_field_move_with_cursor=!is_field_move_with_cursor
+                    is_field_move_with_cursor=!is_field_move_with_cursor;
                     
 
             }
 
-            canvas.addEventListener("mousemove",(event)=>{
+            // canvas.addEventListener("mousemove",(event)=>{
                 
                 
-                tem_xyz = [event.offsetX, event.offsetY, tem_xyz[2]]
-                if(is_field_move_with_cursor){
-                E_tem_xyz = [event.offsetX, event.offsetY, 0]
+            //     tem_xyz = [event.offsetX, event.offsetY, tem_xyz[2]]
+            //     if(is_field_move_with_cursor){
+            //     E_tem_xyz = [event.offsetX, event.offsetY, 0]
 
-                }
-                // console.log(tem_xyz)
-            })
+            //     }
+            //     // console.log(tem_xyz)
+            // })
 
 
-            canvas.addEventListener("keypress", (event) => {
-                // console.log(event.key)
-                switch (event.key) {
-                    case "w":
-                        litle_dot.xyz[1] -= 1
-                        break
-                    case "s":
-                        litle_dot.xyz[1] += 1
-                        break
-                    case "a":
-                        litle_dot.xyz[0] -= 1
-                        break
-                    case "d":
-                        litle_dot.xyz[0] += 1
-                        break
-                }
+            // canvas.addEventListener("keypress", (event) => {
+            //     // console.log(event.key)
+            //     switch (event.key) {
+            //         case "w":
+            //             litle_dot.xyz[1] -= 1
+            //             break
+            //         case "s":
+            //             litle_dot.xyz[1] += 1
+            //             break
+            //         case "a":
+            //             litle_dot.xyz[0] -= 1
+            //             break
+            //         case "d":
+            //             litle_dot.xyz[0] += 1
+            //             break
+            //     }
 
-            })
+            // })
 
 
         })
