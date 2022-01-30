@@ -21,7 +21,7 @@ function get_UI() {
 
             track_steppoint_maxNumber: 18,
 
-            E_xyz_list_max_number: 3,
+            E_xyz_list_max_number: [3,4,5],
 
         }
 
@@ -41,7 +41,7 @@ function get_UI() {
 
         var E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
         var get_E_random_xyz=()=>{ return  [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]   }
-        var E_xyz_list_max_number=world.E_xyz_list_max_number
+        var E_xyz_list_max_number=world.E_xyz_list_max_number[Math.floor( Math.random()*world.E_xyz_list_max_number.length )]
         var E_xyz_list=[]
         for(let i=0;i<E_xyz_list_max_number;i++){
             E_xyz_list.push( get_E_random_xyz() )

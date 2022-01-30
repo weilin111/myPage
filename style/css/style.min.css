@@ -2750,8 +2750,8 @@ a.navbar-logo span {
 
 
 .meta-item.meta-posts.logo-img :hover {
-    transform: scale(1.5);
-    transition: all 0.5s ease 0s;
+    transform: scale(1.9);
+    transition: all 0.3s cubic-bezier(.65,-0.67,.73,1.89) 0s;
 }
 
 
