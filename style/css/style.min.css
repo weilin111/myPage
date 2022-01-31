@@ -2755,6 +2755,18 @@ a.navbar-logo span {
 }
 
 
+.background_anima{
+    position: absolute;
+    width: 345px;
+    height: 540px;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position-x: -35px;
+    z-index: -1;
+    margin-top: 90px;
+}
+
 
 
 @media (max-width: 1080px) {

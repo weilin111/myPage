@@ -2,7 +2,12 @@
 layout: default
 ---
 
-<div class="main-content index-page clearfix" style="min-height: 600px;  background-image: url(bg_new.png);z-index:1; background-size: unset; background-repeat: no-repeat;">
+
+
+<!-- background-image: url(bg_new.png); -->
+<div class="main-content index-page clearfix" style="min-height: 600px;  background-color: black;z-index:1; background-size: unset; background-repeat: no-repeat;">
+    
+    <div  id="background_anima_div" class="background_anima" style="background-image: url(final_animate.png)"  ></div>
 
     <div  style="height:100px">
         <div>
@@ -15,7 +20,6 @@ layout: default
             </a>
         </center>
     </div>
-
 
 
 
@@ -137,6 +141,15 @@ layout: default
         </div>
     </div>
 
+
+    <script>
+        handle_background_anima('background_anima_div')
+        var anima_timer=0
+        $($('.post-lists-body')[0]).hover( function(){ anima_timer= handle_background_anima('background_anima_div')  } , 
+        ()=>{  clearInterval(anima_timer) 
+            $("#background_anima_div").css("background-position-x")=-30  }  )
+
+    </script>
 
 
 

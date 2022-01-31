@@ -210,6 +210,36 @@ var change_pic_opacity = function(pic_id) {
 }
 
 
+var handle_background_anima=function(div_id){
+
+    var change_count = 0
+    var start_background_position_x=parseInt(   $("#" + div_id).css("background-position-x")  )
+    var fps = 29
+    var div_width= $("#" + div_id).width()
+    var change_title = function(fps) {
+        $("#" + div_id).css("background-position-x",start_background_position_x+ -1*change_count*div_width)
+        change_count = (change_count + 1) % fps
+        // if (change_count%2==1){
+        //     div_width=344
+        // }
+        // else{
+        //     div_width=345
+        // }
+    }
+    timer=setInterval(function() {
+        change_title(fps)
+        if (change_count==0){
+            clearInterval(timer)
+        }
+    }, 1000 / fps)
+
+
+    return timer
+
+} 
+
+
+
 function create_phy_Object(xyz, v) {
     var phy_Object = {
         name: "wenmd",
