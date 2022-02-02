@@ -160,17 +160,17 @@ h1 {
 
 h2 {
     font-size: 26px;
-    color:rgba(255, 0, 0, 0.812);
+    color:rgb(253, 33, 33);
 }
 
 h3 {
     font-size: 22px;
-    color:rgba(255, 0, 0, 0.652);
+    color:#80ff80;
 }
 
 h4 {
     font-size: 20px;
-    color:rgb(0, 255, 234);
+    color:#62c0ff;
 
 }
 
