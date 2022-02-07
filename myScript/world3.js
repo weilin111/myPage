@@ -23,6 +23,8 @@ function get_UI() {
 
             E_xyz_list_max_number: [3,4,5],
 
+            is_show_color_parameter:true,
+
         }
 
 
@@ -205,7 +207,7 @@ function get_UI() {
         }
 
 
-        var draw_little_dot = function(l) {
+        var draw_little_dot = function() {
             // pen.fillText("🐟", l.xyz[0], l.xyz[1])
 
             // pen.fillText("✨", E_tem_xyz[0], E_tem_xyz[1])
@@ -221,8 +223,20 @@ function get_UI() {
 
         }
 
+
         var start_color = get_random_Color()
         var end_color = get_random_Color()
+
+        var draw_color_parameter=function(){
+            pen.fillStyle=start_color
+            pen.fillText( start_color  ,  0 , canvas.height*0.95,80 )
+            pen.fillStyle=end_color
+            pen.fillText( end_color  ,  0 , canvas.height*0.9,80 )
+            return
+        }
+
+
+
 
 
         var update = function() {
@@ -266,6 +280,11 @@ function get_UI() {
                 pen.fillStyle = "#000000"
                 // "🌸"
                 pen.fillText(" ", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], )
+
+
+                if (world.is_show_color_parameter){
+                    draw_color_parameter()
+                }
 
                 if (world.draw_track) {
 
@@ -348,14 +367,32 @@ function get_UI() {
                 count -= 1
                 if (count == 0) {
                     clearInterval(t)
-                    fireKeyEvent(document.getElementById(canvas_id), "keydown", "r")
-                    E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
+                    if(Math.random()>0.5){
+                        fireKeyEvent(document.getElementById(canvas_id), "keydown", "r")
+                    }
+                    // E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
                 }
             }
 
-            var t = setInterval(() => {
+            let t = setInterval(() => {
                 add()
             }, 1000 / 4);
+        }
+
+        function emitter_by_mouse() {
+            let count = 10
+            let random_xyz=get_E_random_xyz()
+            function add() {
+                add_phy_Object(create_phy_Object(random_xyz, [0, 0, 0]))
+                count -= 1
+                if (count == 0) {
+                    clearInterval(t)
+                    // fireKeyEvent(document.getElementById(canvas_id), "keydown", "r")
+                    // E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
+                }
+            }
+            let t = setInterval(
+                add, 1000 / 4);
         }
 
         canvas.addEventListener("keydown", function(event) {
@@ -381,11 +418,11 @@ function get_UI() {
                     world.phy_Object_list = []
                     break;
                 case "1":
-
                     particle_ring()
                     break;
-                case "e":
-                    emitter()
+                case "a":
+                    console.log("a")
+                    emitter_by_mouse()
                     break;
                 case "m":
                     is_field_move_with_cursor=!is_field_move_with_cursor;
