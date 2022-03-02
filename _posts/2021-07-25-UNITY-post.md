@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blender & UNITY
-date: 2021-6-25 00:00:00 +0800
+date: 2022-2-25 00:00:00 +0800
 category: ~~~~~~
 thumbnail: style/image/postLogo/图片2.png
 icon: book
@@ -16,17 +16,49 @@ cate: CS
 
 # Blender
 
-几何节点
+## demo01
+
+![2](style/image/ALL_MD_PIC/2.gif)
+
+![1](style/image/ALL_MD_PIC/1.gif)
+
+<img src="style/image/ALL_MD_PIC/1645961445651.png" alt="1645961445651" style="zoom:67%;" />
+
+飞机云  水面的动画
+
+![3](style/image/ALL_MD_PIC/3.gif)
+
+#### 2022年3月2日
+
+跟随镜头
+
+![5](style/image/ALL_MD_PIC/5.gif)
+
+里海海怪
+
+![4](style/image/ALL_MD_PIC/4.gif)
+
+
+
+
+
+## demo02
+
+
+
+
+
+<!-- 几何节点
 
 材质
 
 Grease pencel
 
-渲染
+渲染 -->
 
 ## trick与快捷键
 
-## demo01
+
 
 
 # Unity
