@@ -26,7 +26,7 @@ cate: CS
 
 飞机云  水面的动画
 
-buran over an-255 
+buran over an-225 
 
 ![3](style/image/ALL_MD_PIC/3.gif)
 
@@ -88,7 +88,17 @@ an-72
 
 ![1646560663627](style/image/ALL_MD_PIC/1646560663627.png)
 
+tu-160
 
+![1646579806239](style/image/ALL_MD_PIC/1646579806239.png)
+
+![1646641297060](style/image/ALL_MD_PIC/1646641297060.png)
+
+![10](style/image/ALL_MD_PIC/10.gif)
+
+trun off indirect lighting
+
+![11](style/image/ALL_MD_PIC/11.gif)
 
 ## demo02
 
