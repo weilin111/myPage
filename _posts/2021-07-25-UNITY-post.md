@@ -30,8 +30,6 @@ buran over an-225
 
 ![3](style/image/ALL_MD_PIC/3.gif)
 
-#### 2022年3月2日
-
 跟随镜头
 
 ![5](style/image/ALL_MD_PIC/5.gif)
@@ -101,6 +99,22 @@ trun off indirect lighting
 ![11](style/image/ALL_MD_PIC/11.gif)
 
 ## demo02
+
+![1646914604489](style/image/ALL_MD_PIC/1646914604489.png)
+
+![1646982073304](style/image/ALL_MD_PIC/1646982073304.png)
+
+![1647029572520](style/image/ALL_MD_PIC/1647029572520.png)
+
+![1647029520075](style/image/ALL_MD_PIC/1647029520075.png)
+
+![1647029464694](style/image/ALL_MD_PIC/1647029464694.png)
+
+![1647103063025](style/image/ALL_MD_PIC/1647103063025.png)
+
+
+
+![10](style/image/ALL_MD_PIC/10-1647114646030.gif)
 
 
 

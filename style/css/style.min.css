@@ -1257,7 +1257,7 @@ element {
     max-width: 1051px;
     padding: 100px 60px 20px;
     background: rgba(255, 255, 255, 0);
-    box-shadow: 0 2px 4px rgb(255, 0, 0);
+    box-shadow: 0 4px 20px #00fee9;
     margin-bottom: 16px;
     border-radius: 10px;
     font-weight: 500;
