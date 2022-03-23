@@ -2690,7 +2690,8 @@ a.navbar-logo span {
 }
 
 .main-container {
-    text-align: center
+    text-align: center;
+    margin-top: 17px;
 }
 
 .post-container {
