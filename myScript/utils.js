@@ -235,7 +235,7 @@ var handle_background_anima=function(div_id){
         if (change_count==0){
             clearInterval(timer)
         }
-    }, 1200 / fps)
+    }, 1000 / fps)
 
 
     return timer
