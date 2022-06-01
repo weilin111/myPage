@@ -871,7 +871,7 @@ textarea:-ms-input-placeholder {
 
 
 .post-lists-body:hover {
-    background:rgba(63, 188,63, 0.458);
+    background:rgb(46 0 255 / 18%);
     transition: all 0.5s ease 0s;
     max-height: 1000px;
 }
@@ -928,7 +928,7 @@ textarea:-ms-input-placeholder {
     width: 100%;
     padding: 0;
     border-radius: 20px;
-    background-color: #ffffff42;
+    background-color: #0002ff40;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
     box-shadow: 0 1px 10px rgba(0, 0, 0, .9);
     backdrop-filter:blur(14px)  saturate(10);
@@ -958,11 +958,12 @@ element {
 }
 
 .post-list-item-container:hover {
-    background: rgb(0, 0, 255);
+    background: rgba(0, 0, 255, 0);
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
     transform: scale(1.7);
     transition: all 0.5s ease 0s;
+    z-index:100;
     /* backdrop-filter:blur(14px)  saturate(10); */
 }
 
@@ -1051,7 +1052,7 @@ element {
     font-size: 26px;
     line-height: 17px;
     word-break: break-all;
-    color: darkviolet;
+    color: rgb(255, 0, 0);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
