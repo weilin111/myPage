@@ -214,7 +214,7 @@ var handle_background_anima=function(div_id){
 
     var change_count = 0
     var start_background_position_x=parseInt(   $("#" + div_id).css("background-position-x")  )
-    var fps = 30
+    var fps = 29
     // var div_width= $("#" + div_id).width()
     var div_width= 345
     var change_title = function(fps) {
