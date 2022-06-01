@@ -215,14 +215,14 @@ var handle_background_anima=function(div_id){
     var change_count = 0
     var start_background_position_x=parseInt(   $("#" + div_id).css("background-position-x")  )
     var fps = 29
-    // var div_width= $("#" + div_id).width()
-    var div_width= 345
+    var div_width= $("#" + div_id).width()
+    // var div_width= 345
     var change_title = function(fps) {
         // let temp_pos=-35+ -1*(change_count)*div_width
-        let temp_pos=start_background_position_x+ -1*(change_count)*div_width
+        // let temp_pos=start_background_position_x+ -1*(change_count)*div_width
         // temp_pos=start_background_position_x+ -1*(change_count)*div_width
         // temp_pos=temp_pos % (-35-30*div_width)
-        $("#" + div_id).css("background-position-x",temp_pos)
+        $("#" + div_id).css("background-position-x", start_background_position_x+ -1*(change_count)*div_width       )
         change_count = (change_count + 1) % fps
         // if (change_count%2==1){
         //     div_width=344
@@ -235,6 +235,7 @@ var handle_background_anima=function(div_id){
         change_title(fps)
         if (change_count==0){
             clearInterval(timer)
+            $("#" + div_id).css("background-position-x", -35 )
         }
     }, 1000 / fps)
 
