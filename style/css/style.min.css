@@ -214,8 +214,11 @@ a {
 a:active,
 a:focus,
 a:hover {
-    color: #eb5055;
-    outline: 0
+    color: #ff0000;
+    outline: 0;
+    font-size: 20px;
+    transition: all .1s ease-in-out;
+    
 }
 
 ol,
@@ -927,11 +930,11 @@ textarea:-ms-input-placeholder {
     overflow: hidden;
     width: 100%;
     padding: 0;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #0002ff40;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
     box-shadow: 0 1px 10px rgba(0, 0, 0, .9);
-    backdrop-filter:blur(14px)  saturate(10);
+    backdrop-filter:blur(25px)  saturate(20);
 }
 
 .achives-post-list-item-container{
@@ -939,7 +942,7 @@ textarea:-ms-input-placeholder {
     position: relative;
     overflow: hidden;
     width: 100%;
-    background: blue;
+    background: #0000ff2e;
     font-size: 18px;
 
 

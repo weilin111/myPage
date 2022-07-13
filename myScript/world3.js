@@ -34,6 +34,8 @@ function get_UI() {
         var canvas = document.getElementById(canvas_id)
         var pen = canvas.getContext("2d")
         let tem_xyz = [canvas.width * Math.random(), canvas.height * Math.random(), Math.random()]
+        pen.canvas.width=window.devicePixelRatio*canvas.width
+        pen.canvas.height=window.devicePixelRatio*canvas.height
         // console.log(tem_xyz)
         var track_steppoint_size=2
         if (canvas.height<300){
