@@ -37,7 +37,7 @@ function get_UI() {
         pen.canvas.width=window.devicePixelRatio*canvas.width
         pen.canvas.height=window.devicePixelRatio*canvas.height
         // console.log(tem_xyz)
-        var track_steppoint_size=2
+        var track_steppoint_size=2*window.devicePixelRatio
         if (canvas.height<300){
             track_steppoint_size=2
         }
@@ -231,9 +231,9 @@ function get_UI() {
 
         var draw_color_parameter=function(){
             pen.fillStyle=start_color
-            pen.fillText( start_color  ,  0 , canvas.height*0.95,80 )
+            pen.fillText( start_color  ,  0 , canvas.height*0.95,80*window.devicePixelRatio )
             pen.fillStyle=end_color
-            pen.fillText( end_color  ,  0 , canvas.height*0.9,80 )
+            pen.fillText( end_color  ,  0 , canvas.height*0.9,80*window.devicePixelRatio )
             return
         }
 
