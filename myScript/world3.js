@@ -38,9 +38,9 @@ function get_UI() {
         pen.canvas.height=window.devicePixelRatio*canvas.height
         // console.log(tem_xyz)
         var track_steppoint_size=2*window.devicePixelRatio
-        if (canvas.height<300){
-            track_steppoint_size=2
-        }
+        // if (canvas.height<300){
+        //     track_steppoint_size=2
+        // }
 
 
         var E_tem_xyz = [canvas.width / 2 * (1 + Math.random() * 0.6), canvas.height / 2 * (1 + Math.random() * 0.6), Math.random()]
