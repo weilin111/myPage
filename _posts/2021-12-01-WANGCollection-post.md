@@ -17,6 +17,7 @@ cate: Fun
 | ///////////////                                              |
 | ------------------------------------------------------------ |
 | [Physics Today   (scitation.org)](https://physicstoday.scitation.org/journal/pto) |
+| [Fandom](https://www.fandom.com/)                            |
 | [Nature](https://www.nature.com/)                            |
 | [Living   Reviews in Relativity \| Home (springer.com)](https://www.springer.com/journal/41114) |
 | [Quanta   Magazine \| Science and Math News](https://www.quantamagazine.org/) |
