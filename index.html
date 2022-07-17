@@ -107,7 +107,7 @@ layout: default
         <!-- <script src="app.js"></script> -->
         <div class="cate-physics"> <button id="cate-CS-bnt" class="cate-bnt"> ELSE </button> </div>
 
-        <div class="post-lists-body" id="cate-CS-post-lists-body">
+        <div class="post-lists-body " id="cate-CS-post-lists-body">
             {% for post in paginator.posts %} {% if post.cate == "CS" %}
             <div class="post-list-item">
                 <div class="post-list-item-container">
@@ -145,8 +145,20 @@ layout: default
     <script>
         handle_background_anima('background_anima_div')
         var anima_timer=0
+        var anima_timer_1=0
+        var anima_timer_2=0
         $($('.post-lists-body')[0]).hover( function(){ anima_timer= handle_background_anima('background_anima_div')  } , 
         ()=>{  clearInterval(anima_timer) 
+            // $("#background_anima_div").css("background-position-x")=-35 
+         }  )
+
+        $($('.post-lists-body')[1]).hover( function(){ anima_timer_1= handle_background_anima('background_anima_div')  } , 
+        ()=>{  clearInterval(anima_timer_1) 
+            // $("#background_anima_div").css("background-position-x")=-35 
+         }  )
+
+        $($('.post-lists-body')[2]).hover( function(){ anima_timer_2= handle_background_anima('background_anima_div')  } , 
+        ()=>{  clearInterval(anima_timer_2) 
             // $("#background_anima_div").css("background-position-x")=-35 
          }  )
 

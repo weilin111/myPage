@@ -849,7 +849,7 @@ textarea:-ms-input-placeholder {
 
 .index-page {
     padding: 70px 20px 0;
-    box-shadow: 0 20px 100px 30px rgb(113, 6, 252);
+    box-shadow: 0 20px 100px 30px rgb(102, 6, 252);
 }
 
 .index-page .post-list-item-container .item-label {
@@ -866,6 +866,7 @@ textarea:-ms-input-placeholder {
 .post-lists-body {
     display: block;
     max-height: 119px;
+    border-radius: 36px;
     /* width: 40%; */
 }
 
@@ -875,8 +876,9 @@ textarea:-ms-input-placeholder {
 
 .post-lists-body:hover {
     background:rgb(46 0 255 / 18%);
-    transition: all 0.5s ease 0s;
-    max-height: 1000px;
+    transition: all 0.5s cubic-bezier(0.42, 0, 0.26, 1.02) 0s;
+    max-height: 2000px;
+    
 }
 
 
@@ -2236,13 +2238,15 @@ element {
 .footer-social .social-list a {
     font-size: 13px;
     padding: 0 25px;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .footer-meta {
     padding: 50px 0 0;
     list-style: none;
     font-family: 'AGENCY';
+    user-select: none;
+
 }
 
 .footer-meta .footer-container {
@@ -2798,4 +2802,8 @@ a.navbar-logo span {
     }
 }
 
+/* 2022年7月17日*/
 
+/* #siriusPic_canvas:hover{
+    box-shadow: 0 0px 6px #9400fe;
+} */
