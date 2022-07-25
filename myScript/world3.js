@@ -19,11 +19,11 @@ function get_UI() {
 
             draw_track: true,
 
-            track_steppoint_maxNumber: 18,
+            track_steppoint_maxNumber: 10,
 
             E_xyz_list_max_number: [3,4,5],
 
-            is_show_color_parameter:true,
+            is_show_color_parameter:false,
 
         }
 
@@ -281,7 +281,7 @@ function get_UI() {
                 //00000000000000-------------------------DRAW---------------------------00000000000000000000000
                 pen.fillStyle = "#000000"
                 // "🌸"
-                pen.fillText(" ", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], )
+                // pen.fillText(" ", world.phy_Object_list[i].xyz[0], world.phy_Object_list[i].xyz[1], )
 
 
                 if (world.is_show_color_parameter){
@@ -310,7 +310,7 @@ function get_UI() {
 
         // var timer = setInterval(function() {
         //     update()
-        // }, 1000 / world.fps)
+        // }, 1000 / 15)
 
 
         function draw_by_request_frame() {
