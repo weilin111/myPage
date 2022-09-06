@@ -16,9 +16,14 @@ cate: Fun
 
 | ///////////////                                              |
 | ------------------------------------------------------------ |
+| [Physical Review Letters (aps.org)](https://journals.aps.org/prl/) |
 | [Physics Today   (scitation.org)](https://physicstoday.scitation.org/journal/pto) |
-| [Fandom](https://www.fandom.com/)                            |
+| [science](https://www.science.org)                           |
 | [Nature](https://www.nature.com/)                            |
+|                                                              |
+| [30 seconds of code](https://www.30secondsofcode.org/)       |
+| [Fandom](https://www.fandom.com/)                            |
+|                                                              |
 | [Living   Reviews in Relativity \| Home (springer.com)](https://www.springer.com/journal/41114) |
 | [Quanta   Magazine \| Science and Math News](https://www.quantamagazine.org/) |
 | [Not Even Wrong   (columbia.edu)](http://www.math.columbia.edu/~woit/wordpress/) |
