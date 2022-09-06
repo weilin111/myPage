@@ -317,7 +317,7 @@ function get_UI() {
             requestAnimationFrame(draw_by_request_frame)
             update()
         }
-        draw_by_request_frame()
+        draw_by_request_frame() 
 
 
 
