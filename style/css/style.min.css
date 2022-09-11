@@ -19,6 +19,10 @@
     font-family: "WEBDINGS";
     src: url("../font/webdings.ttf");
 }
+@font-face {
+    font-family: "LXGW";
+    src: url("../font/LXGWBright-Regular.ttf");
+}
 
 *,
 :after,
@@ -48,7 +52,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    font-family: "AGENCY","LXGW";
     font-size: 14px;
     line-height: 1.8;
     margin: 0 auto;
@@ -854,7 +858,7 @@ textarea:-ms-input-placeholder {
 
 .index-page .post-list-item-container .item-label {
     padding: 10px 20px 40px;
-    font-family: "AGENCY";
+    /* font-family: "AGENCY"; */
 }
 
 .post-lists {
@@ -1273,7 +1277,7 @@ element {
     word-wrap: break-word;
     word-break: break-word;
     text-indent: 2em;
-    font-family: 'AGENCY';
+    font-family: 'AGENCY',"LXGW";
 }
 
 .post-content h1,
@@ -2244,7 +2248,7 @@ element {
 .footer-meta {
     padding: 50px 0 0;
     list-style: none;
-    font-family: 'AGENCY';
+    /* font-family: 'AGENCY'; */
     user-select: none;
 
 }
@@ -2279,7 +2283,7 @@ element {
 }
 
 .footer-meta .meta-copyright .info-text p {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 20px;
     margin: 0;
     color: #767676
