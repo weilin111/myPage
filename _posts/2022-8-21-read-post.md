@@ -25,10 +25,6 @@ from my mac
 
 ![1664883405133](style/image/ALL_MY_MD_2/1664883405133.png)
 
-
-
-
-
 ![1664885337605](style/image/ALL_MY_MD_2/1664885337605.png)
 
 ![1664885451503](style/image/ALL_MY_MD_2/1664885451503.png)

@@ -320,7 +320,7 @@ table td,
 table th {
     padding: 6px 13px;
     white-space: pre-wrap;
-    border: 1px solid rgb(53, 12, 240)
+    border: 1px solid rgb(0, 0, 0)
 }
 
 table tr {
@@ -333,8 +333,8 @@ table tr:hover {
 }
 
 table thead tr {
-    color: #4caf50;
-    background-color: #f80505
+    color: #000000;
+    background-color: #ff0000
 }
 
 button,
@@ -1362,7 +1362,7 @@ element {
 
 .post-content a {
     color: #ff0000;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(255, 0, 0);
 }
 
 .post-content p a:hover {
@@ -2737,7 +2737,7 @@ a.navbar-logo span {
     font-size: 18px;
     margin-bottom: 22px;
     border-radius: 10px;
-    font-family:'AGENCY';
+    font-family:'AGENCY',"LXGW";
     text-align: justify;
 }
 

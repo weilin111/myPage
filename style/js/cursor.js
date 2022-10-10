@@ -99,7 +99,7 @@ if (canvasEl) {
       , numberOfParticules = 30
       , pointerX = 0
       , pointerY = 0
-      , tap = "mousedown"-
+      , tap = "mousedown"
     //   , colors = ["#FF1461", "#18FF92", "#5A87FF", "#FBF38C"]
       , colors = ["#FF0000", "#AA0000", "#CC0000", "#E00000"]
       , setCanvasSize = debounce(function() {

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+        <div id="div" >
+            <img src="./Moscow.png"/>
+        </div>
+
+    </body>
+    <script >
+    document.getElementById("div").addEventListener("click", function (event) {
+            console.log(" " + event.offsetX + ":" + event.offsetY)
+        })
+    </script>
+</html>

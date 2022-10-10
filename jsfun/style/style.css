@@ -1,0 +1,122 @@
+
+
+
+
+
+
+
+@font-face {
+    font-family: "AGENCY";
+    src: url("./AGENCYR.TTF");
+}
+
+@font-face {
+    font-family: "WEBDINGS";
+    src: url("./webdings.ttf");
+}
+
+body{
+    background-color: black;
+    color:white;
+    font-family: "AGENCY";
+
+}
+
+.div1{
+    width: 800px;
+    display: contents;
+    
+}
+
+.title{
+    color: red;
+    font-size: 100px;
+    text-align: center;
+    width: 800px;
+    margin:0 auto;
+
+}
+
+
+
+.div_mid{
+    width: 600px;
+    height: auto;
+    margin:0 auto;
+    /* display: contents; */
+    border:1px solid red;
+    /* display: block; */
+
+}
+
+
+
+.div_canvas{
+    width: auto;
+    height: auto;
+    margin:0 auto;
+    /* display: contents; */
+    /* border:1px solid red */
+    float: left;
+}
+
+.bnt{
+    width: auto;
+    height: 60px;
+    margin: 5px;
+    font-size: 35px;
+    float: left;
+    background-color: red;
+    color: gold;
+    border-radius: 10px;
+    font-family: "AGENCY";
+}
+.bnt:hover {
+    transform: scale(1.5);
+    transition: all 0.5s ease 0s;
+}
+.div_mid2{
+    width: 3000px;
+    height: auto;
+    margin:0 auto;
+    /* display: contents; */
+    /* border:1px solid red; */
+    /* display: block; */
+}
+
+#canvas1{
+    /* background-color: red; */
+    border: 1px solid red;
+    border-radius: 20px ;
+    
+    /* display: block; */
+    /* margin: 0 auto; */
+    
+}
+
+#canvas2{
+    /* background-color: red; */
+    border: 1px solid red;
+    border-radius: 20px ;
+    width: 500px;
+    height: 1800px;
+}
+
+#canvas3{
+    /* background-color: red; */
+    border: 1px solid red;
+    border-radius: 20px ;
+    width: 500px;
+    height: 1800px;
+}
+
+
+input[type=range]::-webkit-slider-runnable-track{
+    border-radius: 10px;
+    background-color: red;
+}
+input[type=range]::-webkit-slider-thumb{
+    background: yellow;
+    border-radius: 10px;
+}
+
