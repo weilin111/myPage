@@ -17,7 +17,7 @@ cate: CS
 
 <!-- <iframe src="/jsgame_project/metro/index.html" width="1000px"></iframe> -->
 <script>
-    location="/jsfun/time/time.html"
+    location="/myPage/jsfun/time/time.html"
 </script>
 
 
