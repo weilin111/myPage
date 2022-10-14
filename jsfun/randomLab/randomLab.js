@@ -39,53 +39,19 @@ var is_gameStop = false
 
 class Game {
 
-    rokect = null
+
     display = null
-    solarSystem = null
 
-    physics_para = {
-        g: [0, 1],
-
-    }
-    draw_para = {
-        up: [0, -1],
-        pixel_per_km: 100,
-    }
 
     constructor() {
-        this.rokect = new Rokect(this)
         this.display = new Display(this, ctx_sideBar)
-        this.solarSystem = new SolarSystem(this)
-        this.controlSystem = new ControlSystem()
-        this.roundPanel = new RoundPanel(this)
-        this.besselCurve = new BesselCurve()
-
-        this.earthSystem=new EarthSystem()
+        this.randomLab=new randomLab(this)
     }
 
 
     update_and_draw(deltaTime) {
 
-
-        this.earthSystem.update(deltaTime)
-        this.earthSystem.draw()
-
-        this.besselCurve.update(deltaTime)
-        this.besselCurve.draw()
-
-        this.roundPanel.update()
-        this.roundPanel.angle = this.controlSystem.y_output[0]
-        this.roundPanel.draw()
-
-
-        this.controlSystem.update(deltaTime)
-
-        this.rokect.update(deltaTime)
-        this.rokect.draw()
-
-        this.solarSystem.update(deltaTime)
-        this.solarSystem.draw()
-
+        this.randomLab.update_and_draw()
 
         this.display.draw()
         this.display.update()
@@ -97,47 +63,381 @@ class Game {
 
 
 
+class randomLab{
+
+    constructor(game){
+        this.game=game
+        this.randomWalk1d=new randomWalk1d()
+        this.randomWalk2d=new randomWalk2d()
+    }
+
+    update_and_draw(){
+        // this.randomWalk1d.update()
+        // this.randomWalk1d.draw()
+
+        [...[this.randomWalk1d],this.randomWalk2d].forEach(
+            e=>{
+                e.update()
+                e.draw()
+            }
+        )
+        
+    }
+
+
+}
+class randomWalk1d{
+
+    update_freq=30 
+    timer=0
+
+    episode_number=0
+    
+
+
+    reset_position=[canvas.width/2,canvas.height/2-800]
+    position=[this.reset_position[0],this.reset_position[1]]
+
+    position_history=[]
+    position_index=0
+    
+    // end=false
+    
+    step_length=100
+    boundary=this.step_length*2
+    walk_range=[canvas.width/2-this.boundary,canvas.width/2+this.boundary]
+    
+    now_step_number=0
+    
+    right_prob=0.5
+    color=get_random_Color()
+    boundary_color=get_random_Color()
+
+    constructor(randomLab){
+        this.randomLab=randomLab
+        this.position_history.push([this.position[0],this.position[1]])
+
+    }
+
+    update(){
+        this.timer=(this.timer+1)%this.update_freq
+        if(this.timer!=0){
+            return
+        } 
+        
+        if (Math.random()<this.right_prob){
+            this.position[0]+=this.step_length
+            this.position_index+=1
+        }
+        else{
+            this.position[0]-=this.step_length
+            this.position_index-=1
+        }
+        this.now_step_number+=1
+        this.position_history.push([this.position[0],this.position[1]])
+
+        if(this.position[0]>this.walk_range[0] &&  this.position[0]<this.walk_range[1]){
+            
+        }
+        else{
+            this.reset()
+        }
+
+
+
+
+    }
+    draw(){
+        ctx.fillStyle=this.color
+        let size=20
+        ctx.font=font_mid
+        ctx.fillRect(this.position[0]-size/2,this.position[1]-size/2,size,size)
+        ctx.fillText(""+this.position_index,this.position[0],this.position[1])
+        this.draw_boundary()
+
+        ctx.strokeStyle=this.color
+        ctx.lineWidth=5
+        // ctx.beginPath()
+        this.position_history.forEach(
+            (e,i)=>{
+                if(i+1<this.position_history.length){
+                    ctx.moveTo(e[0],e[1])
+                    // console.log(e[0])
+                    ctx.lineTo(this.position_history[i+1][0],this.position_history[i+1][1])
+                }
+            }
+            )
+            ctx.stroke()
+
+
+
+        }
+
+    draw_boundary(){
+        let size=30
+        ctx.fillStyle=this.boundary_color
+        ctx.fillRect(this.walk_range[0]-size/2,this.position[1]-size/2,size,size)
+        ctx.fillRect(this.walk_range[1]-size/2,this.position[1]-size/2,size,size)
+
+    }
+
+
+    reset(){
+        this.position=[this.reset_position[0],this.reset_position[1]]
+        this.position_history=[]
+        this.now_step_number=0
+        this.position_index=0
+        this.position_history.push([this.position[0],this.position[1]])
+
+    }
+
+}
+class randomWalk2d{
+
+    update_freq=3
+    timer=0
+    episode_number=0
+
+    
+    step_length=80
+
+
+    reset_position=[canvas.width/2,canvas.height/2]
+
+
+    start_position_index=[0,0]
+    start_position=[
+        canvas.width/2+this.start_position_index[0]*this.step_length,
+        canvas.height/2+this.start_position_index[1]*this.step_length
+    ]
+
+    position=[this.start_position[0],this.start_position[1]]
+    position_history=[]
+    position_index=[0,0]
+    
+    // end=false
+    
+    boundary={
+        x:9,
+        y:4,
+    }
+    walk_range=[
+        [this.reset_position[0]-this.step_length*this.boundary.x,this.reset_position[0]+this.step_length*this.boundary.x],
+        [this.reset_position[1]-this.step_length*this.boundary.y,this.reset_position[1]+this.step_length*this.boundary.y],
+    ]
+    
+    now_step_number=0
+    
+
+
+    color=get_random_Color()
+    boundary_color=get_random_Color()
+    // arrive_log_color=get_random_Color()
+    arrive_log_color="hsl(0,100%,50%)"
+    total_step=0
+
+
+    position_arrive_history={
+        // "":{position:[0,0],count:0}
+    }
+    position_arrive_max_count=0
+    avg_life=0
+    max_life=0
+
+    constructor(randomLab){
+        this.randomLab=randomLab
+
+        this.position_history.push([this.position[0],this.position[1]])
+
+    }
+
+    update(){
+        this.timer=(this.timer+1)%this.update_freq
+        if(this.timer!=0){
+            return
+        } 
+        
+        let action=this.get_action()
+
+        this.position_index[0]+=action[0]
+        this.position_index[1]+=action[1]
+
+        this.arrive_log()
+
+        this.position[0]+=this.step_length*action[0]
+        this.position[1]+=this.step_length*action[1]
+
+        this.now_step_number+=1
+        this.total_step+=1
+        this.position_history.push([this.position[0],this.position[1]])
+
+        if (this.check_is_out()==true){
+            this.reset()
+        }
+
+
+
+    }
+
+
+
+    arrive_log(){
+        if(!this.position_arrive_history[""+this.position]){
+            this.position_arrive_history[""+this.position]={
+                position:[this.position[0],this.position[1]],
+                count:0
+            }
+        }
+
+        this.position_arrive_history[""+this.position].count+=1
+        this.position_arrive_max_count=Math.max(this.position_arrive_max_count,this.position_arrive_history[""+this.position].count)
+
+    }
+
+
+    draw_arrive_log(){
+
+        let a=0
+        let a_max=250
+        
+        ctx.fillStyle=this.arrive_log_color
+        Object.values(this.position_arrive_history).forEach(
+            e=>{
+                a=(this.position_arrive_max_count-e.count)/this.position_arrive_max_count *a_max
+                let color=`hsl(${a},100%,50%)`
+                ctx.fillStyle=color
+                ctx.fillText(""+e.count,e.position[0],e.position[1])
+            }
+        )
+
+    }
+
+
+    draw_text(){
+        // ctx.fillStyle=this.color
+        let y_padding=50
+        let texts=[
+            `episode:${this.episode_number}`,
+            `total step:${this.total_step}`,
+            `average life:${this.avg_life}`,
+            `size:[${this.boundary.x*2},${this.boundary.y*2}]`,
+            `start position:[ ${this.start_position_index[0]}, ${this.start_position_index[1]} ]`,
+        ]
+
+        texts.forEach(
+            (e,i)=>{
+                ctx.fillText(e,this.walk_range[0][0],this.walk_range[1][1]+y_padding*(i+1) )
+            }
+        )
+
+    }
+
+
+    draw(){
+        ctx.fillStyle=this.color
+        let size=20
+        ctx.font=font_mid
+        ctx.fillRect(this.position[0]-size/2,this.position[1]-size/2,size,size)
+        ctx.fillText(""+this.position_index,this.position[0],this.position[1])
+        
+        ctx.strokeStyle=this.color
+        ctx.lineWidth=5
+        // ctx.beginPath()
+        this.position_history.forEach(
+            (e,i)=>{
+                if(i+1<this.position_history.length){
+                    ctx.moveTo(e[0],e[1])
+                    // console.log(e[0])
+                    ctx.lineTo(this.position_history[i+1][0],this.position_history[i+1][1])
+                }
+            }
+            )
+            ctx.stroke()
+            
+            
+        this.draw_boundary()
+        this.draw_arrive_log()
+        this.draw_text()
+            
+        }
+
+    draw_boundary(){
+        // ctx.strokeStyle=
+        let width= this.walk_range[0][1]-this.walk_range[0][0]
+        let height=this.walk_range[1][1]-this.walk_range[1][0]
+        ctx.beginPath()
+        ctx.strokeRect(this.walk_range[0][0],this.walk_range[1][0],width,height)
+        ctx.closePath()
+        ctx.stroke()
+    }
+
+
+    reset(){
+        this.position=[this.start_position[0],this.start_position[1]]
+        this.position_history=[]
+        this.position_index=[0,0]
+        this.position_history.push([this.position[0],this.position[1]])
+        this.episode_number+=1
+        this.max_life=Math.max(this.max_life,this.now_step_number)
+        this.avg_life=(this.avg_life*(this.episode_number-1) +this.now_step_number)/this.episode_number
+        this.now_step_number=0
+    }
+
+    get_action(){
+        let actions=[
+            [0,1],
+            [1,0],
+            [0,-1],
+            [-1,0],
+        ]
+
+        let index=Math.floor(Math.random()*actions.length)
+        return actions[index]
+    }
+
+    check_is_out(){
+        if( this.position[0]<this.walk_range[0][0] ||this.position[0]>this.walk_range[0][1]  ){
+            return true
+        }
+        if( this.position[1]<this.walk_range[1][0] ||this.position[1]>this.walk_range[1][1]  ){
+            return true
+        }
+
+        return false
+    }
+
+}
+
+class ExpMaker{}
+
+
+
+class Hist{}
+
+
 class Display {
 
 
     game = null
     data = {
-        altitude: 0,
+        now_step_number: 0,
         speed: 0,
-        a: 0,
-        totalMass: 0,
-        fuelMass: 0,
-        velocity: 0,
-        position: 0,
-        control_output: 0,
-        control_input: 0,
-        control_y: 0,
-        control_x: 0,
-        control_v: 0,
-        control_a: 0,
+        avg_life:0,
+        episode:0,
+        max_life:0,
     }
-    sideBar_data_name = ["a",
-        "altitude",
-        "position",
-        "totalMass",
-        "fuelMass",
-        "velocity",
-        "control_y",
-        "control_x",
+    sideBar_data_name = [
+        "now_step_number",
     ]
 
     color = get_random_Color()
 
-    sideBar_data = {
-
-    }
     dataManager_data_name = [
-        "totalMass",
-        "altitude",
-        "control_output",
-        "control_input",
-        "control_v",
-        "control_a",
+        "now_step_number",
+        "avg_life",
+        "max_life",
+        "episode",
+
     ]
 
     max_timer = 30
@@ -159,37 +459,18 @@ class Display {
         this.ctx.clearRect(0, 0, 600, 1800)
         this.draw_sideBar()
 
-        if (this.timer == 0) { this.draw_dataManager() }
+        this.timer-=1
+        if (this.timer == 0) { this.draw_dataManager() 
+            this.timer=this.max_timer }
 
     }
 
     update() {
-        this.data.position = this.fix_digital(this.game.rokect.position, 1)
-        this.data.velocity = this.fix_digital(this.game.rokect.velocity, 1)
-        this.data.a = this.fix_digital(this.game.rokect.a, 2)
-
-        this.data.fuelMass = this.game.rokect.fuel_mass.toFixed(1)
-        this.data.totalMass = this.game.rokect.total_mass.toFixed(1)
-        this.data.altitude = (1700 - this.game.rokect.position[1]).toFixed(1)
-
-        // console.log(this.game.controlSystem.x_input)
-        this.data.control_input = this.game.controlSystem.x_input
-        this.data.control_output = this.game.controlSystem.y_output[0]
-        this.data.control_v = this.game.controlSystem.y_output[1]
-        this.data.control_a = this.game.controlSystem.y_output[2]
-        this.data.control_x = this.game.controlSystem.x_input
-        this.data.control_y = this.fix_digital(this.game.controlSystem.y_output, 1)
-        // console.log(this.game.controlSystem.y_output)
-
-        this.data_managers[3].y_value_max = this.data_managers[2].y_value_max
-
-        if (this.timer < this.max_timer) {
-            this.timer += 1
-        }
-        else {
-            this.timer = 0
-        }
-
+        this.data.now_step_number=this.game.randomLab.randomWalk1d.now_step_number
+        this.data.avg_life=this.game.randomLab.randomWalk2d.avg_life
+        this.data.max_life=this.game.randomLab.randomWalk2d.max_life
+        this.data.episode=this.game.randomLab.randomWalk2d.episode_number
+        
     }
 
     fix_digital(d, j) {
@@ -257,691 +538,8 @@ class Display {
 
 
 
-class BesselCurve {
 
-    // position=[0,0]
 
-    color = get_random_Color()
-    curve_color = get_random_Color()
-    control_points = [
-        { x: 100, y: 1500 },
-        { x: 200, y: 1600 },
-        { x: 300, y: 1500 },
-        // { x: 1300, y: 1500 },
-        { x: 400, y: 1600 },
-        // { x: 500, y: 1000 },
-    ]
-    curve_points = []
-    max_curve_points = 100
-
-    t = 0
-    t_direction = 1
-
-    constructor() {
-        this.make_bessel_curve()
-    }
-
-    update(deltaTime) {
-
-        this.t += deltaTime * this.t_direction
-        if (this.t > 1 || this.t < 0) {
-            this.t_direction *= -1
-        }
-    }
-
-    draw() {
-
-        let move_point = this.get_point_along_curve(this.t)
-
-        ctx.fillStyle = this.color
-        ctx.beginPath()
-        ctx.arc(move_point[0], move_point[1], 8, 0, Math.PI * 2)
-        ctx.fill()
-        ctx.closePath()
-
-        this.control_points.forEach(
-            e => {
-                ctx.fillStyle = this.color
-                ctx.beginPath()
-                ctx.arc(e.x, e.y, 10, 0, Math.PI * 2)
-                ctx.fill()
-                ctx.closePath()
-            }
-        )
-
-        this.curve_points.forEach(
-            (e, i) => {
-                // console.log(e)
-                if (i != this.curve_points.length - 1) {
-                    ctx.strokeStyle = this.curve_color
-                    ctx.beginPath()
-                    ctx.moveTo(e[0], e[1])
-                    ctx.lineTo(this.curve_points[i + 1][0], this.curve_points[i + 1][1])
-                    ctx.closePath()
-                    ctx.stroke()
-                }
-
-            }
-        )
-    }
-
-
-    get_point_along_curve(t) {
-        // t  in [0,1]
-        let n = this.control_points.length - 1
-        let position = [0, 0]
-        for (let i = 0; i < this.control_points.length; i++) {
-            position[0] += binomial(n, i) * this.control_points[i].x * Math.pow((1 - t), n - i) * Math.pow((t), i)
-            position[1] += binomial(n, i) * this.control_points[i].y * Math.pow((1 - t), n - i) * Math.pow((t), i)
-        }
-        return position
-    }
-
-    make_bessel_curve() {
-        let t = 0
-        for (let i = 0; i <= this.max_curve_points; i++) {
-            this.curve_points.push(this.get_point_along_curve(t))
-            t = i / this.max_curve_points
-        }
-    }
-
-
-}
-
-
-class SpaceShip {
-
-
-    position = [0, 0]
-    a = [0, 0]
-    v = [0, 0]
-
-    constructor() {
-
-
-    }
-
-    draw() {
-
-    }
-
-}
-
-
-
-
-
-
-
-
-class RoundPanel {
-
-    position = [1300, 1600]
-    radius = 100
-    ticks_number = 30
-    pointer_color = get_random_Color()
-    lineWidth = 3
-    title = "power"
-    start_end_angle = [45 * Math.PI / 180, 315 * Math.PI / 180]
-    color = get_random_Color()
-    angle = 0
-    game = null
-
-
-    constructor(game) {
-        this.game = game
-    }
-
-    update() {
-
-    }
-
-    draw() {
-
-
-        this.draw_shell()
-        this.draw_pointer(this.angle)
-    }
-
-    draw_pointer(angle) {
-
-        ctx.save()
-        ctx.lineWidth = 3
-        ctx.strokeStyle = this.pointer_color
-        ctx.translate(this.position[0], this.position[1])
-        ctx.rotate(angle * -1)
-        ctx.beginPath()
-        ctx.moveTo(0, 0)
-        ctx.lineTo(this.radius * 0.6, 0)
-        ctx.closePath()
-        ctx.stroke()
-        ctx.restore()
-
-
-    }
-
-
-    draw_shell() {
-
-        ctx.font = font_mid
-        ctx.fillText(this.title, this.position[0] - this.radius * 0.2, this.position[1] + this.radius * 0.3)
-
-        ctx.strokeStyle = this.pointer_color
-        ctx.beginPath()
-        ctx.arc(this.position[0], this.position[1], this.radius * 0.05, 0, Math.PI * 2)
-        ctx.fill()
-        ctx.closePath()
-
-        ctx.beginPath()
-        ctx.arc(this.position[0], this.position[1], this.radius * 0.1, 0, Math.PI * 2)
-        ctx.closePath()
-        ctx.stroke()
-
-        ctx.beginPath()
-        ctx.arc(this.position[0], this.position[1], this.radius * 0.5, Math.PI / 180 * -150, Math.PI / 180 * -30)
-        ctx.stroke()
-
-        ctx.beginPath()
-        ctx.arc(this.position[0], this.position[1], this.radius * 0.3, Math.PI / 180 * -150, Math.PI / 180 * -30)
-        ctx.stroke()
-
-        let s_point = {
-            x: 0,
-            y: 0
-        }
-        let e_point = {
-            x: 0,
-            y: 0
-        }
-        let angles = []
-
-        for (let index = 0; index <= this.ticks_number; index++) {
-            let d_angle = this.start_end_angle[1] - this.start_end_angle[0]
-            angles.push(this.start_end_angle[0] + d_angle / this.ticks_number * index)
-        }
-
-
-
-        angles.forEach(
-            angle => {
-                s_point.x = this.position[0] + this.radius * 0.9 * Math.cos(angle)
-                s_point.y = this.position[1] + this.radius * 0.9 * Math.sin(angle)
-                e_point.x = this.position[0] + this.radius * 1.1 * Math.cos(angle)
-                e_point.y = this.position[1] + this.radius * 1.1 * Math.sin(angle)
-
-                ctx.save()
-                ctx.strokeStyle = this.color
-                ctx.lineWidth = this.lineWidth
-                ctx.beginPath()
-                ctx.moveTo(s_point.x, s_point.y)
-                ctx.lineTo(e_point.x, e_point.y)
-                ctx.closePath()
-                ctx.stroke()
-                ctx.restore()
-            }
-        )
-    }
-
-    draw_indication() {
-
-    }
-
-
-
-}
-
-
-
-class SolarSystem {
-
-    position = [900, 1600]
-    sun_para = {
-        name: "sun",
-        radius: 0,      //au
-        mass: 100000,
-        size: 10,
-    }
-    mass = this.sun_para.mass
-    planet_para = [
-        {
-            name: "Mercury",
-            radius: 0.38,      //au
-            mass: 10,
-            size: 5,
-        },
-        {
-            name: "Vinus",
-            radius: 0.72,      //au
-            mass: 10,
-            size: 5,
-        },
-        {
-            name: "Earth",
-            radius: 1,      //au
-            mass: 10,
-            size: 5,
-        },
-        {
-            name: "Mar",
-            radius: 1.52,      //au
-            mass: 10,
-            size: 5,
-        },
-        {
-            name: "Mu",
-            radius: 5.2,      //au
-            mass: 10,
-            size: 15,
-        },
-        {
-            name: "Saturn",
-            radius: 9.5,      //au
-            mass: 10,
-            size: 8,
-        },
-        // {
-        //     name:"tianwang",
-        //     radius:19.2,      //au
-        //     mass:10,
-        //     size:8,
-        // },
-        // {
-        //     name:"haiwang",
-        //     radius:30.1,      //au
-        //     mass:10,
-        //     size:4,
-        // }
-    ]
-
-    au = 50  //px
-
-    planets = []
-
-    constructor(game) {
-        this.game = game
-        this.planet_para.forEach(
-            e => {
-                let p = new Planet(e)
-                e.radius = e.radius * this.au
-                p.position = [this.position[0] + e.radius, this.position[1]]
-                p.velocity = [0, -1 * Math.sqrt(this.sun_para.mass / e.radius)]
-                p.max_number_history_point = (e.radius).toFixed(0)
-                console.log(p.max_number_history_point)
-                this.planets.push(p)
-            }
-        )
-
-    }
-
-
-    update(deltaTime) {
-        this.planets.forEach(
-            e => {
-                let f = this.get_gravity_force(this, e)
-                e.update(f, deltaTime)
-            }
-        )
-
-    }
-
-    get_gravity_force(c1, c2) {
-        let dx = c1.position[0] - c2.position[0]
-        let dy = c1.position[1] - c2.position[1]
-        let r = Math.sqrt(dx * dx + dy * dy)
-        return [c1.mass * c2.mass / r / r * dx / r, c1.mass * c2.mass / r / r * dy / r]
-
-
-    }
-
-    draw() {
-        ctx.beginPath()
-        ctx.arc(this.position[0], this.position[1], this.sun_para.size, 0, 2 * Math.PI)
-        ctx.fill()
-        ctx.closePath()
-
-        this.planets.forEach(
-            e => {
-                e.draw()
-            }
-        )
-    }
-
-
-
-
-
-}
-
-class EarthSystem {
-
-    position = [900, 900]
-    sun_para = {
-        name: "earth",
-        radius: 0,      //au
-        mass: 3000,
-        size: 10,
-    }
-    mass = this.sun_para.mass
-    planet_para = [
-        {
-            name: "moon",
-            radius: 1,      //au
-            mass: this.mass/81,
-            size: 5,
-        },
-        {
-            name: "rocket",
-            radius: 0.2,      //au
-            mass: 1,
-            size: 5,
-        },
-      
-    ]
-
-    au = 150  //px
-
-    planets = []
-    rokects=[]
-
-    timer=0
-    rokect_window=[0,75*5]
-    force=[0,3]
-
-    constructor(game) {
-        this.game = game
-        this.planet_para.forEach(
-            e => {
-                let p = new Planet(e)
-                e.radius = e.radius * this.au
-                p.position = [this.position[0] + e.radius, this.position[1]]
-                if(e.name!=="rocket"){
-                    p.velocity = [0, -1 * Math.sqrt(this.mass / e.radius)]
-                    p.max_number_history_point = (e.radius).toFixed(0)
-                    this.planets.push(p)
-                }
-                else{
-                    p.velocity = [0, 0]
-                    p.max_number_history_point = 100
-                    this.rokects.push(p)
-                }
-            }
-        )
-
-    }
-
-
-    update(deltaTime) {
-        this.planets.forEach(
-            e => {
-                let f = this.get_gravity_force(this, e)
-                e.update(f, deltaTime)
-            }
-        )
-        this.rokects.forEach(
-            e => {
-                let f=[0,0]
-                let f2=[0,0]
-                this.planets.forEach(
-                    p=>{
-                        f2=this.get_gravity_force(p,e)
-                        f[0]+=f2[0]
-                        f[1]+=f2[1]
-                    }
-                )
-                f2=this.get_gravity_force(this,e)
-                // console.log(f2)
-                f[0]+=f2[0]
-                f[1]+=f2[1]
-
-                if(this.timer>=this.rokect_window[0] && this.timer<this.rokect_window[1]){
-                    f[0]+=this.force[0]
-                    f[1]+=this.force[1]
-                    this.timer+=1
-                    console.log(f)
-                }
-
-                e.update(f, deltaTime)
-
-            }
-        )
-
-    }
-
-    get_gravity_force(c1, c2) {
-        let dx = c1.position[0] - c2.position[0]
-        let dy = c1.position[1] - c2.position[1]
-        let r = Math.sqrt(dx * dx + dy * dy)
-        return [c1.mass * c2.mass / r / r * dx / r, c1.mass * c2.mass / r / r * dy / r]
-
-
-    }
-
-    draw() {
-        ctx.beginPath()
-        ctx.arc(this.position[0], this.position[1], this.sun_para.size, 0, 2 * Math.PI)
-        ctx.fill()
-        ctx.closePath()
-
-        this.planets.forEach(
-            e => {
-                e.draw()
-            }
-        )
-        this.rokects.forEach(
-            e => {
-                e.draw()
-            }
-        )
-    }
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-class Rokect {
-
-    size = 50
-    color = get_random_Color()
-
-    total_mass = 250
-
-
-    position = [100, 1700]
-    a = [0, 0]
-    velocity = [0, 0]
-    machine_mass = 200
-    fuel_mass = 100
-    burn_speed = 0.1       // frame
-    gas_speed = 5000
-    engine_direction = [0, -1]
-    is_engine_open = false
-
-    components = []
-
-    constructor(game) {
-        this.game = game
-
-        for (let i = 0; i < 3; i++) {
-            this.components.push(new RokectComponent(game))
-        }
-        this.components[0].is_engine_open = true
-        this.total_mass = this.get_total_mass()
-    }
-
-
-    update(deltatime) {
-        this.a = [0, 0]
-        let a_e = [0, 0]
-        this.total_mass = this.get_total_mass()
-        if (this.is_engine_open == true && this.fuel_mass > 0) {
-            this.fuel_mass -= this.burn_speed
-            a_e[0] += this.burn_speed * this.gas_speed * this.engine_direction[0] / this.total_mass
-            a_e[1] += this.burn_speed * this.gas_speed * this.engine_direction[1] / this.total_mass
-        }
-
-        this.components.forEach(
-            (e, i) => {
-                if (e.is_split == true) {
-                    e.update(deltatime)
-                    e.draw()
-                }
-                else if (e.is_engine_open == true && e.fuel_mass > 0) {
-                    e.fuel_mass -= e.burn_speed
-                    a_e[0] += e.burn_speed * e.gas_speed * e.engine_direction[0] / this.total_mass
-                    a_e[1] += e.burn_speed * e.gas_speed * e.engine_direction[1] / this.total_mass
-                }
-                else if (e.is_engine_open && e.fuel_mass <= 0) {
-                    e.is_engine_open = false
-                    e.is_split = true
-                    e.velocity = Array.from(this.velocity)
-                    e.position = Array.from(this.position)
-
-                    if (i + 1 < this.components.length) {
-                        this.components[i + 1].is_engine_open = true
-                    }
-                }
-
-            }
-
-        )
-
-        let is_main_engine_open = true
-        this.components.forEach(
-            e => {
-                if (e.is_engine_open) {
-                    is_main_engine_open = false
-                }
-            }
-        )
-
-
-        if (is_main_engine_open) {
-            this.is_engine_open = true
-            this.color = get_random_Color()
-        }
-
-
-        this.a[0] += a_e[0]
-        this.a[1] += a_e[1]
-        this.a[0] += this.game.physics_para.g[0]
-        this.a[1] += this.game.physics_para.g[1]
-        this.apply_a(deltatime)
-
-
-
-
-    }
-
-    apply_a(deltatime) {
-
-        this.velocity[0] += this.a[0] * deltatime
-        this.velocity[1] += this.a[1] * deltatime
-
-        this.position[0] += this.velocity[0] * deltatime
-        this.position[1] += this.velocity[1] * deltatime
-    }
-
-    draw() {
-
-        ctx.fillStyle = this.color
-        ctx.fillRect(this.position[0] - this.size / 2, this.position[1] - this.size / 2, this.size, this.size)
-    }
-
-    get_total_mass() {
-        let res = 0
-        res = res + this.machine_mass + this.fuel_mass
-        this.components.forEach(
-            e => {
-                if (e.is_split == false) {
-                    res = res + e.machine_mass + e.fuel_mass
-
-                }
-
-            }
-        )
-
-        return res
-    }
-
-}
-
-
-class RokectComponent {
-
-    position = [100, 1700]
-    a = [0, 0]
-    velocity = [0, 0]
-
-    machine_mass = 150
-    fuel_mass = 200
-
-    burn_speed = 0.3       // frame
-    gas_speed = 5000
-    engine_direction = [0, -1]
-
-    is_engine_open = false
-
-    is_split = false
-
-    size = 50
-    color = get_random_Color()
-
-    constructor(game) {
-        this.game = game
-    }
-
-    update(deltatime) {
-
-        this.a = [0, 0]
-        let a_e = [0, 0]
-
-        if (this.fuel_mass > 0) {
-            this.fuel_mass -= this.burn_speed
-            this.total_mass -= this.burn_speed
-            a_e[0] += this.burn_speed * this.gas_speed * this.engine_direction[0] / this.total_mass
-            a_e[1] += this.burn_speed * this.gas_speed * this.engine_direction[1] / this.total_mass
-        }
-
-        this.a[0] += a_e[0]
-        this.a[1] += a_e[1]
-        this.a[0] += this.game.physics_para.g[0]
-        this.a[1] += this.game.physics_para.g[1]
-
-        this.apply_a(deltatime)
-    }
-
-    apply_a(deltatime) {
-
-        this.velocity[0] += this.a[0] * deltatime
-        this.velocity[1] += this.a[1] * deltatime
-
-        this.position[0] += this.velocity[0] * deltatime
-        this.position[1] += this.velocity[1] * deltatime
-    }
-
-    draw() {
-        ctx.fillStyle = this.color
-        ctx.fillRect(this.position[0] - this.size / 2, this.position[1] - this.size / 2, this.size, this.size)
-    }
-
-    total_mass() {
-        return this.fuel_mass + this.machine_mass
-    }
-
-
-
-}
 
 class DataManager {
 
@@ -991,7 +589,7 @@ class DataManager {
         this.ctx.strokeRect(this.x, this.y, this.width, this.height)
         this.ctx.fillText(this.title, this.x + this.width * 0.05, this.y + this.height * 0.95)
 
-        this.ctx.fillText("Max " + this.y_value_max.toFixed(1), this.x + this.width * 0.05, this.y + this.height * 0.3)
+        this.ctx.fillText("Max " + (this.y_value_max/1.4).toFixed(1), this.x + this.width * 0.05, this.y + this.height * 0.3)
 
         let new_y_max = 1
 
@@ -1031,176 +629,6 @@ class DataManager {
 
 
 
-class Planet {
-
-    position = [100, 1700]
-    a = [0, 0]
-    velocity = [0, 0]
-    mass = 1
-    name = ""
-    size = 1
-    radius = 1
-    color = get_random_Color()
-
-    history_positions = []
-    max_number_history_point = 100
-
-    max_tiemr = 20
-    timer = this.max_tiemr - 1
-
-    constructor(data) {
-        this.size = data.size
-        this.radius = data.radius
-        this.mass = data.mass
-
-    }
-
-    update(f, deltaTime) {
-        this.apply_f(f, deltaTime)
-
-
-        if (this.timer == this.max_tiemr) {
-            this.history_positions.push(Array.from(this.position))
-            if (this.history_positions.length > this.max_number_history_point) {
-                this.history_positions.shift()
-            }
-            this.timer = 0
-        }
-        else {
-            this.timer += 1
-        }
-
-    }
-
-
-    draw() {
-        ctx.fillStyle = this.color
-        ctx.beginPath()
-        ctx.arc(this.position[0], this.position[1], this.size, 0, 2 * Math.PI)
-        ctx.fill()
-        ctx.closePath()
-
-        ctx.strokeStyle = this.color
-        this.history_positions.forEach(
-            (e, i) => {
-                if (i + 1 < this.history_positions.length) {
-                    ctx.beginPath()
-                    ctx.moveTo(e[0], e[1])
-                    ctx.lineTo(this.history_positions[i + 1][0], this.history_positions[i + 1][1])
-                    ctx.closePath()
-                    ctx.stroke()
-
-                }
-            }
-        )
-
-
-
-
-    }
-
-
-    apply_f(f, deltaTime) {
-        this.a = [0, 0]
-        this.a[0] += f[0] / this.mass
-        this.a[1] += f[1] / this.mass
-        this.velocity[0] += this.a[0] * deltaTime
-        this.velocity[1] += this.a[1] * deltaTime
-        this.position[0] += this.velocity[0] * deltaTime
-        this.position[1] += this.velocity[1] * deltaTime
-    }
-
-
-}
-
-
-
-
-
-class ControlSystem {
-
-    time = 0
-
-    log_interval = 500 //  500/ms
-    log_timer = 0
-
-    k1 = 1
-    k2 = 1
-    k3 = 1
-
-    y_list = [[0, 0, 0]]  //[ [y,y',y'' ],... ]
-    x_list = [0, 0]  //[ x ,... ]
-
-    y_output = [0, 0, 0]
-    x_input = 5  // input
-
-    constructor() {
-
-    }
-
-    update(deltaTime) {
-
-        if (deltaTime !== deltaTime) {
-            console.log("here")
-            return
-        }
-
-        if (deltaTime == 0) {
-            return
-        }
-        this.time += deltaTime
-        // console.log(this.time)
-        // console.log(this.x_input)
-
-        // if (this.time > 0.5) {
-        //     this.x_input = 10
-        // }
-
-        let y_new = [0, 0, 0]
-        let y_now = this.y_list[this.y_list.length - 1]
-        let x_now = this.x_list[this.x_list.length - 1]
-
-
-        if (this.x_input !== this.x_input) {
-            console.log("here")
-            return
-        }
-        let dx = 0
-        dx = (this.x_input - x_now) / deltaTime
-        // console.log(dx,deltaTime,dx*deltaTime)
-        console.log(dx * this.k3)
-
-        y_new[0] = y_now[0] + deltaTime * y_now[1]
-        y_new[1] = y_now[1] + deltaTime * y_now[2]
-        y_new[2] = this.x_input - y_new[1] * this.k1 - y_new[0] * this.k2 + dx * this.k3
-        // y_new[2] = this.x_input  - y_new[1] * this.k1 - y_new[0] * this.k2
-
-        // console.log(this.x_input,y_new)
-
-        y_new.forEach(
-            (e, i) => {
-                if (y_new[i] !== y_new[i]) {
-                    console.log("here" + i)
-                    y_new[i] = 0
-                }
-            }
-        )
-
-        // console.log(y_new)
-        this.y_output = y_new
-        this.y_list.push(y_new)
-        this.x_list.push(this.x_input)
-
-
-    }
-
-    draw() { }
-
-}
-
-
-
-
 
 
 
@@ -1212,46 +640,35 @@ var game = new Game()
 
 
 
-function handle_control_input_bnt() {
-    let bar = document.getElementById("control_input").value
-    // document.getElementById("control_input").val( "control_input" + bar)
-    console.log(bar)
-    game.controlSystem.x_input = bar
+var requestAnimateId = null
+function handle_stop_bnt() {
+    is_gameStop = !is_gameStop
+    if (is_gameStop == false) {
+        animate(last_time)
+    }
+    else {
+        cancelAnimationFrame(requestAnimateId)
+        last_time = 0
+    }
 }
-
-function handle_control_k1_bnt() {
-    let bar = document.getElementById("control_k1").value
-    // document.getElementById("control_input").val( "control_input" + bar)
-    console.log(bar)
-    game.controlSystem.k1 = bar
-}
-function handle_control_k2_bnt() {
-    let bar = document.getElementById("control_k2").value
-    // document.getElementById("control_input").val( "control_input" + bar)
-    console.log(bar)
-    game.controlSystem.k2 = bar
-}
-function handle_control_k3_bnt() {
-    let bar = document.getElementById("control_k3").value
-    // document.getElementById("control_input").val( "control_input" + bar)
-    console.log(bar)
-    game.controlSystem.k3 = bar
-}
-
-
-
 
 
 
 function animate(timeStamp) {
 
+    requestAnimateId = requestAnimationFrame(animate)
     let deltaTime = timeStamp - last_time
     last_time = timeStamp
-    requestAnimationFrame(animate)
-    // console.log(deltaTime)
+    if (deltaTime > 300) {
+        return
+    }
+    gameTime += deltaTime
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    game.update_and_draw(deltaTime / 1000)
+    game.update_and_draw(deltaTime/1000)
 }
+
+
+
 
 animate(0)
 
