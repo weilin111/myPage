@@ -12,6 +12,13 @@ function add_game_canvas_to_container(container_id) {
 
     let scale = canvas_container.offsetWidth/1600
 
+
+    canvas.style.width = (1600 * scale) +'px'
+    canvas.style.height = (1000 * scale) +'px'
+
+    
+    scale=scale*window.devicePixelRatio
+    
     canvas.width = 1600 * scale
     canvas.height = 1000 * scale
 
@@ -167,7 +174,7 @@ function add_game_canvas_to_container(container_id) {
         angle_2_xy(angle, orbiter, angle_bia = 0 / 180 * Math.PI) {
             let L_divide_m_square = orbiter.orbit_info.L_divide_m_square
             let GM = this.orbit_info.GM
-            let c0 = orbiter.orbit_info.e / GM * L_divide_m_square
+            let c0 = orbiter.orbit_info.e * GM / L_divide_m_square
             angle_bia = orbiter.orbit_info.angle_bia
             let r = this.draw_scale * (L_divide_m_square / GM) / (1 + c0 * L_divide_m_square / GM * Math.cos(angle + angle_bia))
 

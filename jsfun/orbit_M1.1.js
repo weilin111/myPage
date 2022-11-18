@@ -10,7 +10,12 @@ function add_game_canvas_to_container(container_id) {
     canvas_container.appendChild(canvas)
 
     let scale = canvas_container.offsetWidth / 1600
+    
+    canvas.style.width = (1600 * scale) +'px'
+    canvas.style.height = (800 * scale) +'px'
 
+    
+    scale=scale*window.devicePixelRatio
     canvas.width = 1600 * scale
     canvas.height = 800 * scale
 
