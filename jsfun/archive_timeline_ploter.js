@@ -1,6 +1,9 @@
 
 var archive_dom_list = 0
 var data_list = []
+var month_map={
+    Mon:"1",
+}
 window.onload = () => {
 
 
@@ -8,10 +11,15 @@ window.onload = () => {
     // console.log(archive_dom_list)
 
 
-    var data2x = (data) => { }
+    var data2x = (date) => {
+
+        return date
+     }
+    
 
 
     let x = 0   //date2x
+    let date_0=new Date("Nov 11, 2012")
     let number_until_date = 0
 
 
@@ -24,9 +32,13 @@ window.onload = () => {
         }
         res.date = $(archive_dom).find(".item-meta-date")[0].innerText
         res.title = $(archive_dom).find(".achives-item-title")[0].innerText
+
+
+        // console.log(data2x(res.date))
         
-        x += 1
-        res.x = x
+        res.x = Math.abs(date_0-  ( new Date( res.date ) )  )/ (3600*1000*24)
+
+        console.log(res.x)
 
         number_until_date += 1
         res.y = number_until_date
@@ -275,7 +287,7 @@ function add_game_canvas_to_container(container_id) {
                 this.max_point_number = 1
             }
             // this.plot_fun_type_1()
-            this.anotation_text[0].text = `date=${this.point_list[Math.floor(this.max_point_number)].date}  #post=${this.max_point_number.toFixed(0)}`
+            this.anotation_text[0].text = `${this.point_list[Math.floor(this.max_point_number)].date}  #post=${this.max_point_number.toFixed(0)}`
             
 
         }
@@ -289,7 +301,6 @@ function add_game_canvas_to_container(container_id) {
             this.draw_anotation()
 
             let range = this.get_point_x_y_min_max()
-            // console.log(range)
             let last_draw_x = null
             let last_draw_y = null
 
@@ -299,7 +310,7 @@ function add_game_canvas_to_container(container_id) {
 
                     if(i>this.max_point_number){return}
 
-                    let draw_x = point.x / (range.x_max - range.x_min) * this.size.width + this.draw_position.x
+                    let draw_x = (point.x-range.x_min) / (range.x_max - range.x_min) * this.size.width + this.draw_position.x
                     let draw_y = -(point.y - range.y_min) / (range.y_max - range.y_min) * this.size.height + this.draw_position.y
                     ctx.fillRect(draw_x - this.size.dot_size / 2, draw_y - this.size.dot_size / 2, this.size.dot_size, this.size.dot_size)
                     
@@ -352,7 +363,7 @@ function add_game_canvas_to_container(container_id) {
         draw_anotation() {
             this.ctx.font = font_mid
             this.anotation_text.forEach(
-                e => {
+                e => { 
                     let draw_xy = this.scaled_xy_2_draw_xy({ x: e.scaled_x, y: e.scaled_y })
                     ctx.fillText(e.text, draw_xy.x, draw_xy.y)
                 }
