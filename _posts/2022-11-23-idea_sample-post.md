@@ -16,7 +16,7 @@ cate: Fun
 
 <div id="canva_container" style="width:100%;"></div>
 <!-- <script src="../jsfun/ploter.js"></script> -->
-<script src="{{ '/jsfun/ideaSample.js' | prepend: site.baseurl    }}   "></script>
+<script src="{{ '/jsfun/ideaSampler.js' | prepend: site.baseurl    }}   "></script>
 <script>
 // add_game_canvas_to_container("canva_container")
 get_element_table( "{{ '/jsfun/idea_element.md' | prepend: site.baseurl    }}   " )
