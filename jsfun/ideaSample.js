@@ -16,6 +16,9 @@ var get_element_table = (ma_path)=>{
             // console.log(data)
             text += data;
             text_list = text.split("\r\n")
+            if (text_list.length<2){
+                text_list = text.split("\n")
+            }
         }
     
     
