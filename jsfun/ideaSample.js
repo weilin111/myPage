@@ -5,7 +5,7 @@
 var text = ""
 var text_list = []
 
-
+console.log("here")
 
 
 var get_element_table = (ma_path)=>{
