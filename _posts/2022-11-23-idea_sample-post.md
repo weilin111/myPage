@@ -24,5 +24,5 @@ get_element_table( "{{ '/jsfun/idea_element.md' | prepend: site.baseurl    }}   
 
 
 
-## BUG 
+## test
 
