@@ -30,13 +30,13 @@ cate: Fun
 | [Strings 2020 (2020年6月29日 - 2020年7月3日) · Indico (cern.ch)](https://indico.cern.ch/event/929434/timetable/) |
 | [科研动态 Events - web (itp.ac.cn)](http://gc.itp.ac.cn/events) |
 | [News –   Hyperspace@gu (uni-frankfurt.de)](https://hyperspace.uni-frankfurt.de/category/News/) |
-| [The International Society on General   Relativity & Gravitation (isgrg.org)](http://www.isgrg.org/index.php) |
-| [第七届中国LHC物理研讨会The 7th   China LHC Physics Workshop (CLHCP2021) (25-November 28, 2021) (ihep.ac.cn)](https://indico.ihep.ac.cn/event/14560/speakers) |
+|                                                              |
+|                                                              |
 |                                                              |
 |                                                              |
 | [EMC2 Fusion Development Corporation](http://emc2fusion.org/) |
-|                                                              |
-|                                                              |
+| [The International Society on General   Relativity & Gravitation (isgrg.org)](http://www.isgrg.org/index.php) |
+| [第七届中国LHC物理研讨会The 7th   China LHC Physics Workshop (CLHCP2021) (25-November 28, 2021) (ihep.ac.cn)](https://indico.ihep.ac.cn/event/14560/speakers) |
 |                                                              |
 
 
@@ -44,7 +44,7 @@ cate: Fun
 ### BLOG
 
 | BLOG                                                         |
-| ------------------------------------------------------------ |
+| :----------------------------------------------------------- |
 | [Fandom](https://www.fandom.com/)                            |
 | [光魚 Blog (lightfish.cn)](https://lightfish.cn/page/3/)     |
 | [Blog - iBug](https://ibug.io/blog/)                         |
@@ -58,9 +58,16 @@ cate: Fun
 |                                                              |
 | [Polyfjord - YouTube](https://www.youtube.com/c/Polyfjord)   |
 | [Imphenzia - YouTube](https://www.youtube.com/c/Imphenzia)   |
+| [https://seblague.github.io](https://seblague.github.io/)    |
+|                                                              |
+| [ARTEP.RU](http://artep.ru/info/)                            |
 |                                                              |
 |                                                              |
 |                                                              |
+|                                                              |
+|                                                              |
+
+
 
 
 
@@ -76,6 +83,9 @@ cate: Fun
 | [Hacker News (ycombinator.com)](https://news.ycombinator.com/news) |
 | [Explore trending blogs (hashnode.com)](https://hashnode.com/explore) |
 | [Top 10 WEBSITES you must visit if you are a   developer👨‍💻⚡😎 (hashnode.dev)](https://yashw.hashnode.dev/top-10-websites-you-must-visit-if-you-are-a-developer) |
+|                                                              |
+| [fxhash — home](https://www.fxhash.xyz/)                     |
+|                                                              |
 |                                                              |
 |                                                              |
 |                                                              |
