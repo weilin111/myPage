@@ -61,9 +61,9 @@ cate: Fun
 | [https://seblague.github.io](https://seblague.github.io/)    |
 |                                                              |
 | [ARTEP.RU](http://artep.ru/info/)                            |
+| [RussianSpaceWeb.com](http://www.russianspaceweb.com/index.html) |
 |                                                              |
-|                                                              |
-|                                                              |
+| https://fermatslibrary.com/journal_club                      |
 |                                                              |
 |                                                              |
 
@@ -85,6 +85,12 @@ cate: Fun
 | [Top 10 WEBSITES you must visit if you are a   developer👨‍💻⚡😎 (hashnode.dev)](https://yashw.hashnode.dev/top-10-websites-you-must-visit-if-you-are-a-developer) |
 |                                                              |
 | [fxhash — home](https://www.fxhash.xyz/)                     |
+| [Neu(t)rons spacetime fabric — fxhash](https://www.fxhash.xyz/article/neu(t)rons-spacetime-fabric) |
+|                                                              |
+| [Milestones - OpenAI](https://openai.com/blog/tags/milestones/) |
+|                                                              |
+|                                                              |
+|                                                              |
 |                                                              |
 |                                                              |
 |                                                              |

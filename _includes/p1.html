@@ -1,0 +1,39 @@
+<script>
+
+
+
+
+
+    function lerp_color(x) {
+
+
+    }
+
+
+    
+    document.body.style.setProperty("--changeColor", `hsla(${0/ 1000 *0.1  * 360} ,60%,50%,0.6)`)
+
+    $(".main-content")[0].addEventListener("mousemove",
+
+        (e) => {
+
+            var speed=0.1
+            var width=e.target.getBoundingClientRect().right-e.target.getBoundingClientRect().left;
+
+            document.body.style.setProperty("--changeColor", `hsla(${(e.clientX+e.clientY) / 300 *speed  * 360} ,60%,50%,0.6)`)
+            console.log(e.clientX)
+        }
+    )
+
+
+
+
+
+
+
+
+
+    console.log("111")
+
+
+</script>
