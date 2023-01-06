@@ -76,7 +76,7 @@ body{
     transition: all 0.5s ease 0s;
 }
 .div_mid2{
-    width: 3000px;
+    width: auto;
     height: auto;
     margin:0 auto;
     /* display: contents; */
@@ -98,16 +98,12 @@ body{
     /* background-color: red; */
     border: 1px solid red;
     border-radius: 20px ;
-    width: 500px;
-    height: 1800px;
 }
 
 #canvas3{
     /* background-color: red; */
     border: 1px solid red;
     border-radius: 20px ;
-    width: 500px;
-    height: 1800px;
 }
 
 

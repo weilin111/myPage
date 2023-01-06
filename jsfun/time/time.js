@@ -5,14 +5,23 @@ var canvas_sideBar = document.getElementById("canvas2")
 
 var canvas_dataManager = document.getElementById("canvas3")
 var ctx_dataManager = canvas_dataManager.getContext("2d")
-canvas_dataManager.width = 600
-canvas_dataManager.height = 1800
 
-canvas.width = 1800
-canvas.height = 1800
 
-canvas_sideBar.width = 600
-canvas_sideBar.height = 1800
+scale=window.devicePixelRatio
+console.log(scale)
+unit=500*scale*0.8
+height=unit*1
+
+canvas_dataManager.width = unit*0.25
+canvas_dataManager.height = height
+
+canvas.width = unit*1.25
+canvas.height = height
+
+canvas_sideBar.width = unit*0.25
+canvas_sideBar.height = height
+
+
 
 
 var ctx = canvas.getContext("2d")
@@ -99,7 +108,11 @@ class Display {
         this.ctx = ctx
         this.dataManager_data_name.forEach(
             (e, i) => {
-                this.data_managers.push(new DataManager(ctx_dataManager, 0, 20 + i * 225, 500, 200))
+                let width = canvas_sideBar.width*1.0
+                let height = canvas_sideBar.height*0.15
+                let x = width*0.05
+                let y = height*0.05
+                this.data_managers.push(new DataManager(ctx_dataManager, 0, 20 + i * height*1.1, width, height))
             }
         )
     }
@@ -145,10 +158,10 @@ class Display {
     draw_sideBar() {
 
         let marginY = 20
-        let width = 500
-        let height = 100
-        let x = 600 - width
-        let y = 50
+        let width = canvas_sideBar.width*1.1
+        let height = canvas_sideBar.height*0.1
+        let x = width*0.05
+        let y = height*0.05
         let font_mid = height / 5 + "px AGENCY"
         let font_big = height / 1.8 + "px AGENCY"
         this.sideBar_data_name.forEach(
@@ -232,6 +245,10 @@ class DataManager {
 
     draw() {
 
+
+
+
+
         let marginX = this.width * 0.1
         let marginY = this.height * 0.1
         let begin_x = this.x + marginX
@@ -310,7 +327,7 @@ class TimeWorld {
 
         {
             mass: 1,
-            position: new CANNON.Vec3(100, 900, 0),
+            position: new CANNON.Vec3(unit*0.1, height*0.8, 0),
             velocity: new CANNON.Vec3(0, -10, 0),
             shape: new CANNON.Box(new CANNON.Vec3(100, 20, 1000))
         },
@@ -399,10 +416,10 @@ class Backgournd {
 class Player {
     color = get_random_Color()
     text_color = get_random_Color()
-    size = 100
+    size = 50
     body = new CANNON.Body({
         mass: 1,
-        position: new CANNON.Vec3(900, 900, 0),
+        position: new CANNON.Vec3(canvas.width/2, canvas.height/2, 0),
         velocity: new CANNON.Vec3(0, -10, 0),
         shape: new CANNON.Box(new CANNON.Vec3(this.size / 2, this.size / 2, 1000))
     })
@@ -483,7 +500,7 @@ class Bullet {
         mass: 0.1,
         position: new CANNON.Vec3(0, 0, 0),
         velocity: new CANNON.Vec3(0, 0, 0),
-        shape: new CANNON.Box(new CANNON.Vec3(20, 20, 1000))
+        shape: new CANNON.Box(new CANNON.Vec3(10, 10, 1000))
     }
 
     constructor(timeWorld, position, velocity) {
