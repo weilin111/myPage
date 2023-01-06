@@ -11,7 +11,9 @@
 
 
     
-    document.body.style.setProperty("--changeColor", `hsla(${0/ 1000 *0.1  * 360} ,60%,50%,0.6)`)
+    var ramdon_number=Math.floor(Math.random()*1000)
+    document.body.style.setProperty("--changeColor", `hsla(${ramdon_number+0/ 1000 *0.1  * 360} ,60%,50%,0.6)`)
+
 
     $(".main-content")[0].addEventListener("mousemove",
 
@@ -20,7 +22,7 @@
             var speed=0.1
             var width=e.target.getBoundingClientRect().right-e.target.getBoundingClientRect().left;
 
-            document.body.style.setProperty("--changeColor", `hsla(${(e.clientX+e.clientY) / 300 *speed  * 360} ,60%,50%,0.6)`)
+            document.body.style.setProperty("--changeColor", `hsla(${(ramdon_number+e.clientX+e.clientY) / 300 *speed  * 360} ,60%,50%,0.6)`)
             console.log(e.clientX)
         }
     )
