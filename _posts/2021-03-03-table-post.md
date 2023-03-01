@@ -12,9 +12,6 @@ cate: Fun
 * content
 {:toc}
 
-<!-- # 计算器
-
-<a href="{{ '/Desmos.html' | prepend: site.baseurl    }} ">入口</a> -->
 
 
 # 常数表

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: FunM1
-date: 2022-11-23 00:00:00 +0800
+date: 2022-1-23 00:00:00 +0800
 category: ~~~~~~
 thumbnail: style/image/postLogo/图片2.png
 icon: book
-cate: Fun
+cate: CS
 ---
 
 

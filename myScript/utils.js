@@ -212,7 +212,7 @@ var change_pic_opacity = function(pic_id) {
 
 var handle_background_anima=function(div_id){
 
-    var change_count = 0
+    let change_count = 0
     var start_background_position_x=parseInt(   $("#" + div_id).css("background-position-x")  )
     var fps = 29
     var div_width= $("#" + div_id).width()
@@ -234,6 +234,8 @@ var handle_background_anima=function(div_id){
     timer=setInterval(function() {
         change_title(fps)
         if (change_count==0){
+            // console.log("here")
+            console.log("timer",timer)
             clearInterval(timer)
             $("#" + div_id).css("background-position-x", -35 )
         }

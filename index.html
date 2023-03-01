@@ -9,7 +9,7 @@ layout: default
     
     <div  id="background_anima_div" class="background_anima" style="background-image: url(final_animate.png)"  ></div>
 
-    <div  style="height:100px">
+    <div  style="min-height:100px">
         <div>
             <!--  <iframe src="{{ 'myScript/background.html' |prepend : site.baseurl    }}"  style="width:100%;height:100%;z-index:-1000; max-width:100%;" align="center"></iframe>  -->
         </div>
@@ -142,8 +142,12 @@ layout: default
     </div>
 
 
+    <!-- --------------------------------------------- -->
     <script>
-        handle_background_anima('background_anima_div')
+
+        
+        $( ()=>{handle_background_anima('background_anima_div') })
+        
         var anima_timer=0
         var anima_timer_1=0
         var anima_timer_2=0
