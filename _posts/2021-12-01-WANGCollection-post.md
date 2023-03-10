@@ -12,6 +12,25 @@ cate: Fun
 {:toc}
 
 
+### FUN
+
+|      |      |
+| ---- | ---- |
+|      |      |
+
+| **FUN**                                                      |
+| ------------------------------------------------------------ |
+| [Everyday   Astronaut \| Upcoming Launches \| Prelaunch Previews](https://everydayastronaut.com/upcoming-launches/) |
+| [Blog (deepmind.com)](https://www.deepmind.com/blog)         |
+| [OpenAI Blog](https://openai.com/blog/)                      |
+| [Космический корабль Буран   (buran.ru)](http://www.buran.ru/) |
+|                                                              |
+|                                                              |
+|                                                              |
+|                                                              |
+|                                                              |
+|                                                              |
+
 ### PHY
 
 
@@ -158,7 +177,7 @@ cate: Fun
 | [Национальный исследовательский   центр Курчатовский институт (nrcki.ru)](http://nrcki.ru/) |
 | [Bartini.aero — the eVTOL for the world](https://www.bartini.aero/) |
 | https://evtol.news/                                          |
-|                                                              |
+| [RussianSpaceWeb.com](http://www.russianspaceweb.com/index.html) |
 | [中国科学院等离子体物理研究所 (cas.cn)](http://www.ipp.cas.cn/) |
 | [中国运载火箭技术研究院官网 (calt.com)](http://www.calt.com/index.html) |
 | [中国空间技术研究院 (cast.cn)](https://www.cast.cn/)         |
@@ -167,5 +186,15 @@ cate: Fun
 | [NASA](https://www.nasa.gov/)                                |
 | [Home \| Airbus \| Pioneering sustainable aerospace](https://www.airbus.com/en) |
 | [Boeing: The Boeing Company](https://www.boeing.com/)        |
+|                                                              |
+|                                                              |
+### RESOURCE
+
+| RESOURCE                                                     |
+| ------------------------------------------------------------ |
+| [无名图书 (book123.info)](https://www.book123.info/)         |
+| [Mox.moe [Kindle漫畫\|Kobo漫畫\|epub漫畫\]   [www.m.volmoe.com]](http://www.m.volmoe.com/) |
+|                                                              |
+|                                                              |
 |                                                              |
 |                                                              |
