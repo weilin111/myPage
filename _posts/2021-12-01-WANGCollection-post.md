@@ -41,6 +41,7 @@ cate: Fun
 | [Physics Today   (scitation.org)](https://physicstoday.scitation.org/journal/pto) |
 | [science](https://www.science.org)                           |
 | [Nature](https://www.nature.com/)                            |
+| [Nuclear   Fusion - IOPscience](https://iopscience.iop.org/journal/0029-5515) |
 | [Living   Reviews in Relativity \| Home (springer.com)](https://www.springer.com/journal/41114) |
 | [Quanta Magazine \| Science and Math News](https://www.quantamagazine.org/) |
 | [ComPADRE.org - Resources for Physics and   Astronomy Education](https://www.compadre.org/) |
