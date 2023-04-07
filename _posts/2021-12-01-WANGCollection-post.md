@@ -160,7 +160,7 @@ cate: Fun
 
 | AERO                                                         |
 | ------------------------------------------------------------ |
-| https://www.paperaircrafts.com/wpw/                          |
+| [paperaircrafts]https://www.paperaircrafts.com/wpw/                          |
 | [Tupolev](http://www.tupolev.ru/en/)                         |
 | [Главная \| ПАО «Ил» (ilyushin.org)](https://ilyushin.org/)  |
 | [IRKUT Corporation](https://eng.irkut.com/)                  |
@@ -177,7 +177,7 @@ cate: Fun
 | [www.roscosmos.ru](https://www.roscosmos.ru/)                |
 | [Национальный исследовательский   центр Курчатовский институт (nrcki.ru)](http://nrcki.ru/) |
 | [Bartini.aero — the eVTOL for the world](https://www.bartini.aero/) |
-| https://evtol.news/                                          |
+| [evtol]https://evtol.news/                                          |
 | [RussianSpaceWeb.com](http://www.russianspaceweb.com/index.html) |
 | [中国科学院等离子体物理研究所 (cas.cn)](http://www.ipp.cas.cn/) |
 | [中国运载火箭技术研究院官网 (calt.com)](http://www.calt.com/index.html) |
