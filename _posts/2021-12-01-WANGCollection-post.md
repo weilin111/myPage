@@ -17,15 +17,35 @@ cate: Fun
 | **FUN**                                                      |
 | ------------------------------------------------------------ |
 | [Everyday   Astronaut \| Upcoming Launches \| Prelaunch Previews](https://everydayastronaut.com/upcoming-launches/) |
+| [WantWords 反向词典](https://wantwords.net/)                 |
+| [Hello from THU Wiki](https://thu.wiki/docs/intro)           |
+|                                                              |
+| [thi.ng - Open source building blocks for computational design. Est. 2006 (TypeScript, Clojure, C, SideFX Houdini, Java)](https://thi.ng/) |
+| [清华大学建筑学院 (tsinghua.edu.cn)](http://arch.tsinghua.edu.cn/column/rw) |
+|                                                              |
 | [Blog (deepmind.com)](https://www.deepmind.com/blog)         |
 | [OpenAI Blog](https://openai.com/blog/)                      |
-| [Космический корабль Буран   (buran.ru)](http://www.buran.ru/) |
+| [SpaceX - Starship](https://www.spacex.com/vehicles/starship/) |
+| [fermatslibrary](https://fermatslibrary.com/journal_club)    |
+|                                                              |
+| [Documentation - Python Wiki](https://wiki.python.org/moin/Documentation) |
+|                                                              |
+| [Browse Fonts - Google Fonts](https://fonts.google.com/)     |
+| [A Survey of Free Math Fonts for TeX and LaTeX1 (kku.ac.th)](https://mirror.kku.ac.th/CTAN/info/Free_Math_Font_Survey/en/survey.html#fig:comicsans) |
+| [CTAN: OTF Font](https://www.ctan.org/topic/font-otf)        |
+| [Fira Math Specimen](https://firamath.github.io/specimen.html) |
+| [Lucida Fonts - PCTeXWeb](https://pctex.com/Lucida_Fonts.html) |
+| [TG Math downloads — GUST Web Presence](https://www.gust.org.pl/projects/e-foundry/tg-math/download) |
+| [Monoton - Google Fonts](https://fonts.google.com/specimen/Monoton) |
 |                                                              |
 |                                                              |
 |                                                              |
-|                                                              |
-|                                                              |
-|                                                              |
+
+
+
+
+
+
 
 ### PHY
 
@@ -46,13 +66,30 @@ cate: Fun
 | [Strings 2020 (2020年6月29日 - 2020年7月3日) · Indico (cern.ch)](https://indico.cern.ch/event/929434/timetable/) |
 | [科研动态 Events - web (itp.ac.cn)](http://gc.itp.ac.cn/events) |
 | [News –   Hyperspace@gu (uni-frankfurt.de)](https://hyperspace.uni-frankfurt.de/category/News/) |
-|                                                              |
+| [中国科学院等离子体物理研究所 (cas.cn)](http://www.ipp.cas.cn/) |
+| [The Feynman Lectures on Physics Website (caltech.edu)](https://www.feynmanlectures.caltech.edu/info/) |
 |                                                              |
 |                                                              |
 |                                                              |
 | [EMC2 Fusion Development Corporation](http://emc2fusion.org/) |
 | [The International Society on General   Relativity & Gravitation (isgrg.org)](http://www.isgrg.org/index.php) |
 | [第七届中国LHC物理研讨会The 7th   China LHC Physics Workshop (CLHCP2021) (25-November 28, 2021) (ihep.ac.cn)](https://indico.ihep.ac.cn/event/14560/speakers) |
+|                                                              |
+
+
+### TK
+
+
+| **TK**                                                       |
+| ------------------------------------------------------------ |
+| [Nuclear   Fusion - IOPscience](https://iopscience.iop.org/journal/0029-5515) |
+| [中国科学院等离子体物理研究所 (cas.cn)](http://www.ipp.cas.cn/) |
+| [JET - EUROfusion (euro-fusion.org)](https://euro-fusion.org/devices/jet/) |
+| [PPPL](https://www.pppl.gov/timeline)                        |
+| [ITER - the way to new energy](https://www.iter.org/)        |
+| [FENDL-3.0 (iaea.org)](https://www-nds.iaea.org/fendl30/)    |
+|                                                              |
+|                                                              |
 |                                                              |
 
 
@@ -79,7 +116,6 @@ cate: Fun
 | [ARTEP.RU](http://artep.ru/info/)                            |
 | [RussianSpaceWeb.com](http://www.russianspaceweb.com/index.html) |
 |                                                              |
-| https://fermatslibrary.com/journal_club                      |
 |                                                              |
 |                                                              |
 
@@ -149,14 +185,14 @@ cate: Fun
 | [Free — Rick Ellis   (rickdellis.com)](http://www.rickdellis.com/downloads-1) |
 | [Publications   \| Computer Graphics World (cgw.com)](https://www.cgw.com/Publications.aspx?pageid=1) |
 | [ANIMATIONWorld   Magazine \| Animation World Network (awn.com)](https://www.awn.com/animationworld) |
-| [mckadefasel](https://sketchfab.com/mckadefasel)  sketchfab  |
+| [mckadefasel](https://sketchfab.com/mckadefasel)    |
 |                                                              |
 
 ### AERO
 
 | AERO                                                         |
 | ------------------------------------------------------------ |
-| [paperaircrafts]https://www.paperaircrafts.com/wpw/                          |
+| [Космический корабль Буран   (buran.ru)](http://www.buran.ru/) |
 | [Tupolev](http://www.tupolev.ru/en/)                         |
 | [Главная \| ПАО «Ил» (ilyushin.org)](https://ilyushin.org/)  |
 | [IRKUT Corporation](https://eng.irkut.com/)                  |
@@ -175,7 +211,6 @@ cate: Fun
 | [Bartini.aero — the eVTOL for the world](https://www.bartini.aero/) |
 | [evtol](https://evtol.news/)                                          |
 | [RussianSpaceWeb.com](http://www.russianspaceweb.com/index.html) |
-| [中国科学院等离子体物理研究所 (cas.cn)](http://www.ipp.cas.cn/) |
 | [中国运载火箭技术研究院官网 (calt.com)](http://www.calt.com/index.html) |
 | [中国空间技术研究院 (cast.cn)](https://www.cast.cn/)         |
 | [中国航空工业集团有限公司 (avic.com.cn)](https://www.avic.com.cn/) |
@@ -183,6 +218,8 @@ cate: Fun
 | [NASA](https://www.nasa.gov/)                                |
 | [Home \| Airbus \| Pioneering sustainable aerospace](https://www.airbus.com/en) |
 | [Boeing: The Boeing Company](https://www.boeing.com/)        |
+|                                                              |
+| [paperaircrafts](https://www.paperaircrafts.com/wpw/)                          |
 
 
 
@@ -190,9 +227,10 @@ cate: Fun
 
 | RESOURCE                                                     |
 | ------------------------------------------------------------ |
+| [Sci-Hub: 对每个人的知识](https://sci-hub.st/)               |
 | [无名图书 (book123.info)](https://www.book123.info/)         |
-| [Mox.moe [Kindle漫畫\|Kobo漫畫\|epub漫畫\]   [www.m.volmoe.com]](http://www.m.volmoe.com/) |
-|                                                              |
+| [Kindle漫畫\|Kobo漫畫\|epub漫畫\]   [www.m.volmoe.com]](http://www.m.volmoe.com/) |
+| [LoreFree-去中心化免费电子书共享社区](https://ebook2.lorefree.com/) |
 |                                                              |
 |                                                              |
 |                                                              |

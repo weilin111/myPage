@@ -281,13 +281,14 @@ pre {
 }
 
 code {
-    font-family: 'AGENCY',Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace;
+    font-family: 'AGENCY',"SY-LIGHT",Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace;
     font-size: 20px;
     margin: 0 3px;
     padding: 2px 6px;
     border-radius: 3px;
-    background-color: #007fff;
+    background-color: #7b0000;
 }
+
 
 pre code {
     font-size: 18px;
@@ -2843,6 +2844,8 @@ div .meta-item.meta-posts.logo-img :hover {
     background-position-x: -35px;
     z-index: -1;
     margin-top: 80px;
+    -webkit-box-reflect: below 2px  linear-gradient(transparent,#0005);
+
 }
 
 
