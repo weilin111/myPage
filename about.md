@@ -8,12 +8,6 @@ title: About site
 
 
 
-WELCOME！
-
-WEILIN   
-
-2020年9月9日
-
 <br>
 <br>
 <br>
@@ -32,15 +26,16 @@ WEILIN
 <br>
 <br>
 <br>
-<br>
-<br>
 
-<br>
-<br>
-<br>
+---
 
+WELCOME！
 
-<br>
+WEILIN   
+
+2020年9月9日
+
+---
 <br>
 <br>
 <br>
@@ -49,7 +44,7 @@ WEILIN
 
   <script src="{{ '/myScript/utils.js' | prepend: site.baseurl    }}   ">
     </script>
-<script>
+<script>·
     window.onload = show_visited_data()
 </script>
 
