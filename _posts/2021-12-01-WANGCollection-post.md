@@ -19,14 +19,17 @@ cate: Fun
 | [Everyday   Astronaut \| Upcoming Launches \| Prelaunch Previews](https://everydayastronaut.com/upcoming-launches/) |
 | [WantWords 反向词典](https://wantwords.net/)                 |
 | [Hello from THU Wiki](https://thu.wiki/docs/intro)           |
+| [Typst Documentation](https://typst.app/docs/)               |
 |                                                              |
 | [thi.ng - Open source building blocks for computational design. Est. 2006 (TypeScript, Clojure, C, SideFX Houdini, Java)](https://thi.ng/) |
 | [清华大学建筑学院 (tsinghua.edu.cn)](http://arch.tsinghua.edu.cn/column/rw) |
+|                                                              |
 |                                                              |
 | [Blog (deepmind.com)](https://www.deepmind.com/blog)         |
 | [OpenAI Blog](https://openai.com/blog/)                      |
 | [SpaceX - Starship](https://www.spacex.com/vehicles/starship/) |
 | [fermatslibrary](https://fermatslibrary.com/journal_club)    |
+|                                                              |
 |                                                              |
 | [Documentation - Python Wiki](https://wiki.python.org/moin/Documentation) |
 |                                                              |
