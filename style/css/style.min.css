@@ -63,6 +63,7 @@ html{
 
 body {
     /* font-family: "AGENCY","LXGW"; */
+    /* font-family: "AGENCY","SY-LIGHT"; */
     font-family: "AGENCY","SY-LIGHT";
     font-size: 14px;
     line-height: 1.8;
@@ -1303,6 +1304,7 @@ element {
     text-indent: 2em;
     /* font-family: 'AGENCY',"LXGW"; */
     font-family: "AGENCY","SY-LIGHT";
+    /* font-family: "SY-LIGHT"; */
 
 }
 
@@ -1314,7 +1316,7 @@ element {
 .post-content h6 {
     font-weight: 500;
     position: relative;
-    margin: 20px 0
+    margin: 24px 0;
 }
 
 
@@ -2754,6 +2756,12 @@ a.navbar-logo span {
     height: 400px;
 }
 
+
+
+
+
+
+
 .post-container .post-content {
     display: inline-block;
     width: 86%;
@@ -2767,6 +2775,7 @@ a.navbar-logo span {
     border-radius: 10px;
     /* font-family:'AGENCY',"LXGW"; */
     font-family: "AGENCY","SY-LIGHT";
+    /* font-family: "SY-LIGHT"; */
 
     text-align: justify;
 }
@@ -2790,11 +2799,37 @@ a.navbar-logo span {
     margin-bottom: 22px
 }
 
+:root{
+    --km-line-size:10px;
+}
 
-
-.meta-item.meta-posts.logo-img :hover {
-    transform: scale(2.5);
+div .meta-item.meta-posts.logo-img :hover {
+    transform: scale(1.5);
     transition: all 0.3s cubic-bezier(.65,-0.67,.73,1.89) 0s;
+    /* background: rgb(165, 141, 141); */
+    background: linear-gradient(-45deg,red 10%,
+    transparent 10%,
+    transparent 50%,
+    red 50%,
+    red  60%,
+    transparent 60%,
+    transparent 100%
+    );
+    background-size: var(--km-line-size) var(--km-line-size);
+    animation: km-anmim 0.5s linear infinite;
+    -webkit-box-reflect: below 2px  linear-gradient(transparent,#0005);
+}
+/* .meta-item.meta-posts.logo-img  {
+ 
+} */
+
+@keyframes km-anmim{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -1*var(--km-line-size);
+    }
 }
 
 

@@ -48,7 +48,7 @@
             </div>
 
             <div class="meta-item meta-posts">
-                <h3 class="meta-title">RECENT POSTS 📕</h3>
+                <h3 class="meta-title">RECENT POSTS </h3>
                 {% for post in site.posts limit:7 %}
                 <li>
                     <a href="{{ post.url|prepend: site.baseurl }}">{{ post.title }}</a>
