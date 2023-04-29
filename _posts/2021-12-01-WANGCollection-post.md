@@ -14,10 +14,6 @@ cate: Fun
 
 ### FUN
 
-|      |      |
-| ---- | ---- |
-|      |      |
-
 | **FUN**                                                      |
 | ------------------------------------------------------------ |
 | [Everyday   Astronaut \| Upcoming Launches \| Prelaunch Previews](https://everydayastronaut.com/upcoming-launches/) |
@@ -177,7 +173,7 @@ cate: Fun
 | [www.roscosmos.ru](https://www.roscosmos.ru/)                |
 | [Национальный исследовательский   центр Курчатовский институт (nrcki.ru)](http://nrcki.ru/) |
 | [Bartini.aero — the eVTOL for the world](https://www.bartini.aero/) |
-| [evtol]https://evtol.news/                                          |
+| [evtol](https://evtol.news/)                                          |
 | [RussianSpaceWeb.com](http://www.russianspaceweb.com/index.html) |
 | [中国科学院等离子体物理研究所 (cas.cn)](http://www.ipp.cas.cn/) |
 | [中国运载火箭技术研究院官网 (calt.com)](http://www.calt.com/index.html) |
@@ -187,8 +183,9 @@ cate: Fun
 | [NASA](https://www.nasa.gov/)                                |
 | [Home \| Airbus \| Pioneering sustainable aerospace](https://www.airbus.com/en) |
 | [Boeing: The Boeing Company](https://www.boeing.com/)        |
-|                                                              |
-|                                                              |
+
+
+
 ### RESOURCE
 
 | RESOURCE                                                     |
