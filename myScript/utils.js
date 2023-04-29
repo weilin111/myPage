@@ -75,17 +75,17 @@ function get_random_Color() {
 }
 
 
-var change_title_color = function(title_id) {
+var change_title_color = function (title_id) {
 
     var change_count = 0
     var start_color = get_random_Color()
     var end_color = get_random_Color()
     var fps = 15
-    var change_title = function(fps) {
+    var change_title = function (fps) {
         $("#" + title_id).css("color", color_gradient_point(start_color, end_color, change_count, fps))
         change_count = (change_count + 1) % fps
     }
-    setInterval(function() {
+    setInterval(function () {
         change_title(fps)
     }, 1000 / fps)
 
@@ -194,35 +194,38 @@ var change_title_color = function(title_id) {
 
 
 
-var change_pic_opacity = function(pic_id) {
+var change_pic_opacity = function (pic_id) {
     // pic or div id  anything with opacity
     var change_count = 0
 
     var fps = 120
-    var change_title = function(fps) {
-        $("#" + pic_id).css("opacity", 0.1+Math.sin(Math.PI*2*change_count/fps))
+    var change_title = function (fps) {
+        $("#" + pic_id).css("opacity", 0.1 + Math.sin(Math.PI * 2 * change_count / fps))
         change_count = (change_count + 1) % fps
     }
-    setInterval(function() {
+    setInterval(function () {
         change_title(fps)
     }, 10000 / fps)
 
 }
 
 
-var handle_background_anima=function(div_id){
+var handle_background_anima = function (div_id, state) {
 
+    if (state.is_running != false)
+    { return
+     }
     let change_count = 0
-    var start_background_position_x=parseInt(   $("#" + div_id).css("background-position-x")  )
+    var start_background_position_x = parseInt($("#" + div_id).css("background-position-x"))
     var fps = 29
-    var div_width= $("#" + div_id).width()
+    var div_width = $("#" + div_id).width()
     // var div_width= 345
-    var change_title = function(fps) {
+    var change_title = function (fps) {
         // let temp_pos=-35+ -1*(change_count)*div_width
         // let temp_pos=start_background_position_x+ -1*(change_count)*div_width
         // temp_pos=start_background_position_x+ -1*(change_count)*div_width
         // temp_pos=temp_pos % (-35-30*div_width)
-        $("#" + div_id).css("background-position-x", start_background_position_x+ -1*(change_count)*div_width       )
+        $("#" + div_id).css("background-position-x", start_background_position_x + -1 * (change_count) * div_width)
         change_count = (change_count + 1) % fps
         // if (change_count%2==1){
         //     div_width=344
@@ -231,20 +234,24 @@ var handle_background_anima=function(div_id){
         //     div_width=345
         // }
     }
-    timer=setInterval(function() {
+    timer = setInterval(function () {
         change_title(fps)
-        if (change_count==0){
+        if(change_count==1){
+            state.is_running=true
+        }
+        if (change_count == 0) {
             // console.log("here")
-            console.log("timer",timer)
+            console.log("timer", timer)
             clearInterval(timer)
-            $("#" + div_id).css("background-position-x", -35 )
+            $("#" + div_id).css("background-position-x", -35)
+            state.is_running = false
         }
     }, 1000 / fps)
 
 
     return timer
 
-} 
+}
 
 
 
@@ -285,10 +292,10 @@ function get_cool_display(url) {
     var request = new XMLHttpRequest()
     request.open("get", url) /*设置请求方法与路径*/
     request.send(null) /*不发送数据到服务器*/
-    request.onload = function() { /*XHR对象获取到返回信息后执行*/
+    request.onload = function () { /*XHR对象获取到返回信息后执行*/
         if (request.status == 200) { /*返回状态为200，即为数据获取成功*/
             var json = JSON.parse(request.responseText)
-            json.sort(function() {
+            json.sort(function () {
                 return (0.5 - Math.random())
             })
         }

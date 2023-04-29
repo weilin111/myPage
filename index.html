@@ -5,11 +5,12 @@ layout: default
 
 
 <!-- background-image: url(bg_new.png); -->
-<div class="main-content index-page clearfix" style="min-height: 600px;  background-color: black;z-index:1; background-size: unset; background-repeat: no-repeat;">
-    
-    <div  id="background_anima_div" class="background_anima" style="background-image: url(final_animate.png)"  ></div>
+<div class="main-content index-page clearfix"
+    style="min-height: 600px;  background-color: black;z-index:1; background-size: unset; background-repeat: no-repeat;">
 
-    <div  style="min-height:100px">
+    <div id="background_anima_div" class="background_anima" style="background-image: url(final_animate.png)"></div>
+
+    <div style="min-height:100px">
         <div>
             <!--  <iframe src="{{ 'myScript/background.html' |prepend : site.baseurl    }}"  style="width:100%;height:100%;z-index:-1000; max-width:100%;" align="center"></iframe>  -->
         </div>
@@ -43,7 +44,8 @@ layout: default
                     <!-- <div class="item-slant reverse-slant bg-deepgrey"></div> -->
                     <!-- <div class="item-slant"></div> -->
                     <div class="item-label">
-                        <div class="item-title" href="{{ post.url | prepend: site.baseurl }}" ><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        <div class="item-title" href="{{ post.url | prepend: site.baseurl }}"><a
+                                href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                             <br /> {{ post.date | date: "%b %d, %Y" }}
                         </div>
                         <!-- <div class="item-meta clearfix">
@@ -145,26 +147,38 @@ layout: default
     <!-- --------------------------------------------- -->
     <script>
 
-        
-        $( ()=>{handle_background_anima('background_anima_div') })
-        
-        var anima_timer=0
-        var anima_timer_1=0
-        var anima_timer_2=0
-        $($('.post-lists-body')[0]).hover( function(){ anima_timer= handle_background_anima('background_anima_div')  } , 
-        ()=>{  clearInterval(anima_timer) 
-            // $("#background_anima_div").css("background-position-x")=-35 
-         }  )
 
-        $($('.post-lists-body')[1]).hover( function(){ anima_timer_1= handle_background_anima('background_anima_div')  } , 
-        ()=>{  clearInterval(anima_timer_1) 
-            // $("#background_anima_div").css("background-position-x")=-35 
-         }  )
 
-        $($('.post-lists-body')[2]).hover( function(){ anima_timer_2= handle_background_anima('background_anima_div')  } , 
-        ()=>{  clearInterval(anima_timer_2) 
-            // $("#background_anima_div").css("background-position-x")=-35 
-         }  )
+        var anima_timer = 0
+        var anima_timer_1 = 0
+        var anima_timer_2 = 0
+        var ed_anim_state = {
+            is_running: false,
+        }
+        $(
+            () => {
+                handle_background_anima('background_anima_div', ed_anim_state),
+                ed_anim_state.is_running = true
+            })
+        $($('.post-lists-body')[0]).hover(function () { anima_timer = handle_background_anima('background_anima_div', ed_anim_state) },
+            () => {
+                clearInterval(anima_timer)
+                ed_anim_state.is_running=false
+            })
+
+        $($('.post-lists-body')[1]).hover(function () { anima_timer_1 = handle_background_anima('background_anima_div', ed_anim_state) },
+            () => {
+                clearInterval(anima_timer_1)
+                ed_anim_state.is_running=false
+
+            })
+
+        $($('.post-lists-body')[2]).hover(function () { anima_timer_2 = handle_background_anima('background_anima_div', ed_anim_state) },
+            () => {
+                clearInterval(anima_timer_2)
+                ed_anim_state.is_running=false
+
+            })
 
     </script>
 
@@ -178,7 +192,8 @@ layout: default
             <li class="prev"><a href="{{ paginator.previous_page_path | relative_url }}">←</a></li>
             {% endif %} {% for page in (1..paginator.total_pages) %}
             <li {% if page==paginator.page %} class="current" {% endif %}>
-                <a href="{% if page == 1 %}{{  '/' | prepend: site.baseurl }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">{{
+                <a
+                    href="{% if page == 1 %}{{  '/' | prepend: site.baseurl }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">{{
                     page }}</a>
             </li>
             {% endfor %} {% if paginator.next_page %}
@@ -189,7 +204,7 @@ layout: default
     {% endif %}
 
     <!-- <div id="body_div_2" style="background-image: url(&quot;bg03.png&quot;);z-index: -1;position: absolute;inset: 0px;opacity: 0;background-size: auto;background-repeat: no-repeat;"> -->
-    </div>
+</div>
 
 
 </div>

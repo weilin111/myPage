@@ -3,8 +3,8 @@ function updateCoords(e) {
     pointerY = e.clientY || e.touches[0].clientY - canvasEl.getBoundingClientRect().top
 }
 function setParticuleDirection(e) {
-    var t = anime.random(0, 360) * Math.PI / 180
-      , a = anime.random(50, 180)
+    var t = anime.random(-10, 10) * Math.PI / 180
+      , a = anime.random(50, 180)*2
       , n = [-1, 1][anime.random(0, 1)] * a;
     return {
         x: e.x + n * Math.cos(t) * 0.5,
