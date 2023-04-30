@@ -181,12 +181,12 @@ h2 {
 
 h3 {
     font-size: 22px;
-    color:#80ff80;
+    color:#fb4646;
 }
 
 h4 {
     font-size: 20px;
-    color:#62c0ff;
+    color:#fe6906;
 
 }
 
@@ -883,12 +883,6 @@ textarea:-ms-input-placeholder {
     /* font-family: "AGENCY"; */
 }
 
-.post-lists {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    max-width: 90%;
-}
 
 .post-lists-body {
     display: block;
@@ -898,8 +892,24 @@ textarea:-ms-input-placeholder {
 }
 
 
+.post-lists {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-width: 80%;
+}
 
 
+.post-list-item {
+    float: none;
+    width: auto;
+    max-width: 53%;
+    height: auto;
+    padding: 0;
+    align-items: center;
+    padding-left: 22%;
+    min-width: 450px;
+}
 
 .post-lists-body:hover {
     background:rgb(46 0 255 / 18%);
@@ -930,16 +940,6 @@ textarea:-ms-input-placeholder {
     cursor: pointer;
 }
 
-.post-list-item {
-    float: none;
-    width: auto;
-    max-width: 53%;
-    height: auto;
-    padding: 0;
-    align-items: center;
-    padding-left: 18%;
-    min-width: 290px;
-}
 
 .archives-post-list-item {
     float: left;
@@ -2755,6 +2755,7 @@ a.navbar-logo span {
     margin-left: -226px;
     overflow-y: scroll;
     height: 400px;
+    font-family: "AGENCY","SY-LIGHT";
 }
 
 
