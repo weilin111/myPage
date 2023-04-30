@@ -319,7 +319,7 @@ hr {
     padding: 0;
     border: 0;
     border-bottom: 2px solid #ddd;
-    background: 0 0
+    background: 0 0;
 }
 
 table {
@@ -2802,6 +2802,8 @@ a.navbar-logo span {
 
 :root{
     --km-line-size:10px;
+    --kx-color-01:rgb(0, 195, 255);
+    --kx-line-size-01: 15px;
 }
 
 div .meta-item.meta-posts.logo-img :hover {
@@ -2820,9 +2822,22 @@ div .meta-item.meta-posts.logo-img :hover {
     animation: km-anmim 0.5s linear infinite;
     -webkit-box-reflect: below 2px  linear-gradient(transparent,#0005);
 }
-/* .meta-item.meta-posts.logo-img  {
- 
-} */
+
+
+div .kx_bg_01{
+    background: linear-gradient(45deg,var(--kx-color-01)  10%,
+    transparent 10%,
+    transparent 50%,
+    var(--kx-color-01) 50%,
+    var(--kx-color-01) 60%,
+    transparent 60%,
+    transparent 100%
+    );
+    background-size: var(--kx-line-size-01) var(--kx-line-size-01);
+    animation: km-anmim 1.0s linear infinite;
+    -webkit-box-reflect: below 2px  linear-gradient(transparent,#0005);
+}
+
 
 @keyframes km-anmim{
     0%{
