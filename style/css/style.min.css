@@ -2550,6 +2550,13 @@ element {
 }
 
 @media(max-width:580px) {
+
+    .post-lists{
+        /* float: right; */
+        padding-right: 5%;
+        max-width: 100%;
+    }
+
     .navbar-search form {
         width: 150px
     }
