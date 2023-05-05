@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PANEL AGENT@SUNIST2</title>
+    <link rel="stylesheet" href="./style/css/bulma.min.css">
+    <link rel="stylesheet" href="./style/css/mycss.css">
+    <script src=" ./style/js/jquery.min.js "></script>
+    <script src=" ./style/js/chart.js "></script>
+    <script src="./style/js/chartjs-plugin-datalabels.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container ">
+            <h1 class="title has-text-success">
+                [TOKAMAK MAP]
+            </h1>
+        </div>
+        <div class="container ">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="container ">
+            <table id="main_table" class="table  is-striped   is-hoverable   "
+                style="text-overflow: ellipsis;overflow: hidder; table-layout: fixed; word-break: break-all;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>DATA01</th>
+                    </tr>
+                </thead>
+
+                <!-- <tbody>
+              <tr>
+                <th>1</th>
+                <td>38</td>
+                <td>23</td>
+                <td>12</td>
+                <td>3</td>
+                <td>68</td>
+                <td>36</td>
+                <td>+32</td>
+                <td>81</td>
+              </tr>
+            </tbody> -->
+
+            </table>
+
+        </div>
+
+        <div class="mycss_container">
+            <div class="box">
+              <img src="./img/NSTX-U.jpg">
+              <span>NSTX-U</span>
+            </div>
+            <div class="box">
+              <img src="./img/MAST.jpeg">
+              <span>MAST</span>
+            </div>
+            <div class="box">
+              <img src="./img/ITER.jpg">
+              <span>ITER</span>
+            </div>
+            <div class="box">
+              <img src="./img/CFETR.png">
+              <span>CFETR</span>
+            </div>
+            <div class="box">
+              <img src="./img/JT-60SA_cutaway3B-1-1500x1055.jpg">
+              <span>JT-60SA</span>
+            </div>
+            <div class="box">
+              <img src="./img/JET.jpeg">
+              <span>JET</span>
+            </div>
+            <div class="box">
+              <img src="./img/TCV.jpeg">
+              <span>TCV</span>
+            </div>
+            <div class="box">
+              <img src="./img/ST40-GENERAL-ASSEMBLY-SECTION.jpg">
+              <span>ST40</span>
+            </div>
+            <div class="box">
+              <img src="./img/east_r.jpeg">
+              <span>EAST</span>
+            </div>
+            <div class="box">
+              <img src="./img/tftr.jpeg">
+              <span>TFTR</span>
+            </div>
+            <div class="box">
+              <img src="./img/KSTARTOOLS-1536x960.png">
+              <span>KSTAR</span>
+            </div>
+          </div>
+        
+
+
+        <div class="mycss_container">
+            <div class="box">
+              <img src="./img/profile/NSTX.png">
+              <span>NSTX-U</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/compass.png">
+              <span>COMPASS</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/iter.png">
+              <span>ITER</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/asdex-u.png">
+              <span>ASDEX-U</span>
+            </div>
+
+            <div class="box">
+              <img src="./img/profile/EAST.jpeg">
+              <span>EAST</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/TCV.png">
+              <span>TCV</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/st40.png">
+              <span>ST-40</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/SPARK-V2.png">
+              <span>SPARK-V2</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/cfetr.png">
+              <span>CFETR</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/d3d.png">
+              <span>D3-D</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/Alcator-c.png">
+              <span>ALCATOR-C MOD</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/west.png">
+              <span>WEST</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/tore_supra.png">
+              <span>TORE SUPRA</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/t-15.png">
+              <span>T-15</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/MAST.png">
+              <span>MAST</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/DIVA.png">
+              <span>DIVA</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/HL-2A.png">
+              <span>HL-2A</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/J-TEXT.png">
+              <span>J-TEXT</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/ORMAK.png">
+              <span>ORMAK</span>
+            </div>
+            <div class="box">
+              <img src="./img/profile/JFT-2M.png">
+              <span>JFT-2M</span>
+            </div>
+            
+          </div>
+        
+
+    </section>
+</body>
+
+
+
+</html>
+
+
+<script>
+
+
+
+    function random_color() {
+
+
+        return `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`
+    }
+
+    function shot_data_2_scatter_datasets(tokamak_shot_data) {
+        let datasets = []
+        let device_name_list = []
+
+        tokamak_shot_data.forEach(
+            e => {
+                device_name_list.push(e.device)
+            }
+        )
+        device_name_list = new Set(device_name_list)
+
+        device_name_list.forEach(
+
+            name => { 
+                let xy_list = []
+                let dataset = {
+                    label: name,
+                    data: xy_list,
+                    backgroundColor: random_color(),
+                }
+                tokamak_shot_data.forEach(
+                    shot_data => {
+                        if (shot_data.device == name) {
+                            xy_list.push({
+                                x: shot_data.ti,
+                                y: shot_data.nttau / 1e19,
+                                r: shot_data.ti,
+                                shot: `#${shot_data.shot_no}`
+                            })
+                        }
+                    }
+                )
+                datasets.push(dataset)
+            }
+        )
+
+        console.log(datasets)
+        return datasets
+    }
+
+
+
+
+    function addData(chart, label, data) {
+        chart.data.labels.push(label);
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.push(data);
+        });
+        chart.update();
+    }
+
+    function removeData(chart) {
+        chart.data.labels.pop();
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.pop();
+        });
+        chart.update();
+    }
+
+
+
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+
+    var tokamak_shot_datasets = []
+
+
+
+    font_family = 'Comic Sans MS'
+    font_family = 'AGENCY'
+    ticks_font = {
+        family: font_family,
+        size: 12,
+        weight: 'bold',
+        lineHeight: 1.2,
+    }
+
+
+    Chart.register(ChartDataLabels);
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        // type: 'scatter',
+        type: 'bubble',
+
+        data: {
+            datasets: tokamak_shot_datasets
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+
+
+            plugins: {
+                legend: {
+                    labels: {
+                        color: random_color(),
+                        // This more specific font property overrides the global property
+                        font: {
+                            size: 15,
+                            family: font_family,
+                        }
+                    }
+                },
+                datalabels: {
+                    font: ticks_font,
+                    color: '#36A2EB',
+                    formatter: function (value, context) {
+                        // console.log(value,context)
+                        return value.shot;
+                    }
+                }
+            },
+
+
+
+
+
+            scales: {
+
+                x: {
+                    display: true,
+                    // type: 'logarithmic',
+                    // type: 'log2',
+
+                    ticks: {
+                        color: "white",
+                        font: ticks_font
+                    },
+                    title: {
+                        display: true,
+                        text: 'T_i [keV]',
+                        color: '#911',
+                        font: {
+                            family: font_family,
+                            size: 20,
+                            weight: 'bold',
+                            lineHeight: 1.2,
+                        },
+                        padding: { top: 20, left: 0, right: 0, bottom: 0 }
+                    }
+                },
+                y: {
+                    display: true,
+                    type: 'logarithmic',
+                    ticks: {
+                        color: "white",
+                        font: ticks_font
+                    },
+                    title: {
+                        display: true,
+                        text: 'n T tau  [1e19 m^-3 keV s]',
+                        color: '#191',
+                        font: {
+                            family: font_family,
+                            size: 20,
+                            style: 'normal',
+                            lineHeight: 1.2
+                        },
+                        padding: { top: 30, left: 0, right: 0, bottom: 0 }
+                    },
+                }
+            }
+        }
+    }
+    )
+
+
+
+    var tokamak_shot_datas = [
+
+        // -------------- ST-40 -------------
+
+        {
+            shot_no: "10009",
+            device: "ST-40",
+            nttau: 6e18,
+            ti: 8.6,
+            te: "",
+            ni: "",
+            ne: "",
+            bt: "",
+            ip: "",
+            P_NBI: "",
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: "",
+            RECORD: "",
+            TYPE: "",
+            date: "",
+
+        },
+
+        // --------------JT60-------------
+
+        {
+            shot_no: "17110",
+            device: "JT-60",
+            date: "",
+            nttau: 1.1e21,
+            ti: 37,
+            te: 12,
+            ni: "",
+            ne: 5.5e19,
+            bt: 4.4,
+            ip: 2.0e6,
+            P_NBI: 28e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: "",
+        },
+
+
+
+        {
+            shot_no: "34292",
+            device: "JT-60",
+            date: "",
+            nttau: 3.64e19 * 12.9 * 0.89,
+            ti: 12.9,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "35037",
+            device: "JT-60",
+            date: "",
+            nttau: 1.95e19 * 7.4 * 0.51,
+            ti: 7.4,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "36715",
+            device: "JT-60",
+            date: "",
+            nttau: 3.0e19 * 17.5 * 0.39,
+            ti: 17.5,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "37413",
+            device: "JT-60",
+            date: "",
+            nttau: 3.61e19 * 10.0 * 0.16,
+            ti: 10.0,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "36916",
+            device: "JT-60",
+            date: "",
+            nttau: 2.5e19 * 9.3 * 0.15,
+            ti: 9.3,
+            te: "",
+            ne: "",
+        },
+
+        {
+            shot_no: "26939",
+            device: "JT-60",
+            date: "",
+            nttau: 1.53e21,
+            ti: 45,
+            te: "",
+            ne: "",
+            RECORD: "MAX NTTAU",
+        },
+        {
+            shot_no: "31872",
+            device: "JT-60",
+            date: "",
+            nttau: 0.86e21,
+            ti: 16.8,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "21140",
+            device: "JT-60",
+            date: "",
+            nttau: 0.51e21,
+            ti: 30,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "21143",
+            device: "JT-60",
+            date: "",
+            nttau: 0.4e21,
+            ti: 29,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "21282",
+            device: "JT-60",
+            date: "",
+            nttau: 0.44e21,
+            ti: 32,
+            te: "",
+            ne: "",
+        },
+
+        // --------------JET-------------
+
+
+        {
+            shot_no: "26087",
+            device: "JET",
+            date: "",
+            nttau: 9e20,
+            ti: 18.6,
+            te: 10.5,
+            ne: "",
+            bt: 2.8,
+            ip: 3.1e6,
+            P_NBI: 14.9e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: 0.05e6,
+
+        },
+        {
+            shot_no: "26148",
+            device: "JET",
+            date: "",
+            nttau: 3.8e20,
+            ti: 18.8,
+            te: 9.9,
+            ne: "",
+            bt: 2.8,
+            ip: 3.1e6,
+            P_NBI: 14.3e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: 1.7e6,
+
+        },
+
+        {
+            shot_no: "42976",
+            device: "JET",
+            date: "",
+            nttau: 0.87e21,
+            ti: 28,
+            te: "",
+            ne: "",
+            TYPE:"Record DT",
+        },
+        {
+            shot_no: "42847",
+            device: "JET",
+            date: "",
+            nttau: 0.6e21,
+            ti: 17.7,
+            te: "",
+            ne: "",
+            TYPE:"alpha heating",
+        },
+        {
+            shot_no: "42982",
+            device: "JET",
+            date: "",
+            nttau: 0.23e21,
+            ti: 8,
+            te: "",
+            ne: "",
+            TYPE:"DT H-mode",
+
+        },
+        {
+            shot_no: "62065",
+            device: "JET",
+            date: "",
+            nttau: 0.05e21,
+            ti: 8,
+            te: "",
+            ne: "",
+            TYPE:"20s H-mode",
+
+        },
+
+        {
+            shot_no: "56552",
+            device: "JET",
+            date: "",
+            nttau: 0.025e21,
+            ti: 5,
+            te: "",
+            ne: "",
+            TYPE:"60s H-mode",
+
+        },
+
+        // --------------EAST-------------
+
+        {
+            shot_no: "56933",
+            device: "EAST",
+            date: "",
+            nttau: 8.5e19,
+            ti: 2.1,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "41195",
+            device: "EAST",
+            date: "",
+            nttau: 3e19,
+            ti: 0.9,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "48068",
+            device: "EAST",
+            date: "",
+            nttau: 6.1e19,
+            ti: 1.2,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "71320",
+            device: "EAST",
+            date: "",
+            nttau: 5.5e19,
+            ti: 1.8,
+            te: "",
+            ne: "",
+        },
+        {
+            shot_no: "78723",
+            device: "EAST",
+            date: "",
+            nttau: 5.58e19,
+            ti: 1.94,
+            te: "",
+            ne: "",
+        },
+
+
+        // --------------TFTR-------------
+
+
+        {
+            shot_no: "68522",
+            device: "TFTR",
+            date: "",
+            nttau: 3.9e20,
+            ti: 29,
+            te: "",
+            ne: "",
+            bt: 5.0,
+            ip: 2.0e6,
+            P_NBI: 30.8e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: 0.065e6,
+
+        },
+        {
+            shot_no: "76778",
+            device: "TFTR",
+            date: "",
+            nttau: 7.1e20,
+            ti: 44,
+            te: "",
+            ne: "",
+            bt: 5.1,
+            ip: 1.6e6,
+            P_NBI: 33.7e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: 9.3e6,
+
+        },
+        {
+            shot_no: "80539",
+            device: "TFTR",
+            date: "",
+            nttau: 4.3e20,
+            ti: 36,
+            te: "",
+            ne: "",
+            bt: 5.6,
+            ip: 2.7e6,
+            P_NBI: 39.6e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: 10.7e6,
+
+        },
+        {
+            shot_no: "83546",
+            device: "TFTR",
+            date: "",
+            nttau: 9.6e20,
+            ti: 43,
+            te: "",
+            ne: "",
+            bt: 5.5,
+            ip: 2.3e6,
+            P_NBI: 17.4e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: 2.8e6,
+
+        },
+        {
+            shot_no: "95603",
+            device: "TFTR",
+            date: "",
+            nttau: 6.2e20,
+            ti: 45,
+            te: "",
+            ne: "",
+            bt: 4.8,
+            ip: 2e6,
+            P_NBI: 35.5e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: 8.7e6,
+
+        },
+        {
+            shot_no: "88170",
+            device: "TFTR",
+            date: "",
+            nttau: 2.6e20,
+            ti: 25,
+            te: "",
+            ne: "",
+            bt: 4.6,
+            ip: 1.6e6,
+            P_NBI: 28.1e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: "",
+        },
+
+
+
+        // --------------ASDEX-------------
+
+
+
+        // --------------D3D-------------
+
+        {
+            shot_no: "72220",
+            device: "D3-D",
+            date: "",
+            nttau: 0.89e20*6.35*0.24,
+            ti: 6.35,
+            te: 5.5,
+            ne: "",
+            bt: 2.1,
+            ip: 1.6e6,
+            P_NBI: 12.5e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: "",
+        },
+        {
+            shot_no: "72523",
+            device: "D3-D",
+            date: "",
+            nttau: 0.79e20*13.6*0.25,
+            ti: 13.6,
+            te: 5.6,
+            ne: "",
+            bt: "",
+            ip: "",
+            P_NBI: 15.3e6,
+            P_EC: "",
+            P_IC: "",
+            P_LH: "",
+            P_MAX_FUSION: "",
+        },
+
+
+        // --------------T10-------------
+
+
+
+
+    ]
+
+    chart.data.datasets = shot_data_2_scatter_datasets(tokamak_shot_datas)
+    chart.update()
+
+
+    key_filter = []
+    table_th = ""
+    toExponential_filter=[ "nttau","ne","ip","P_NBI","P_EC","P_IC","P_LH","P_MAX_FUSION"      ]
+    var add_row = (json, ref_key) => {
+        head = "<tbody OnClick=handle_click_row(this) <tr>"
+        end = "</tbody> </tr>"
+        table = $("#main_table")[0]
+
+        for (key in ref_key) {
+            // console.log(key,json[key])
+            // if (key == "r_grid" || key == "z_grid") { continue }
+            if (key_filter.indexOf(key) >= 0) { continue }
+            if (json[key] == undefined || json[key] == "" ) {
+                head += (`<td>${""}</td>`)
+                continue
+            }
+            if (toExponential_filter.indexOf(key)>=0) {
+                head += (`<td>${json[key].toExponential(2)}</td>`)
+                continue
+            }
+
+
+
+
+            head += (`<td>${json[key]}</td>`)
+        }
+
+        head += end
+        table.innerHTML += head
+    }
+
+
+    function add_data_2_table(tokamak_shot_datas) {
+
+        ref_key = tokamak_shot_datas[0]
+        // for (key in tokamak_shot_datas[0]) {
+        //     // console.log(key,json[key])
+        //     tokamak_shot_datas.forEach(
+        //         shot=>{
+        //             if(shot[key]=== undefined){
+        //                 shot[key]==""
+        //             }
+        //         }
+        //     )
+
+        // }
+
+        sort_key = "nttau"
+        if (table_th.length == 0) {
+
+            head = "<thead  <tr>"
+            end = "</thead> </tr>"
+            table = $("#main_table")[0]
+            table.innerHTML = ""
+            table.innerHTML += `<thead  <tr> 
+                <th> Tokamak Shot</th>
+                <th> number:${tokamak_shot_datas.length}</th>
+                </tr>   </thead> `
+            for (key in tokamak_shot_datas[0]) {
+                // console.log(key,json[key])
+                if (key_filter.indexOf(key) >= 0) { continue }
+                head += (`<th>${key}</th>`)
+            }
+            head += end
+            table.innerHTML += head
+
+        }
+
+        tokamak_shot_datas = tokamak_shot_datas.sort((a, b) => { return a[sort_key] - b[sort_key] })
+        tokamak_shot_datas = tokamak_shot_datas.reverse()
+        tokamak_shot_datas.forEach(
+
+            json_data => {
+                add_row(json_data, ref_key)
+            }
+
+        )
+
+    }
+
+
+    add_data_2_table(tokamak_shot_datas)
+
+
+
+
+
+
+</script>

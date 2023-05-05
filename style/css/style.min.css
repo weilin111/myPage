@@ -2539,6 +2539,7 @@ element {
         min-height: 220px
     }
     .post-header-thumb {
+        
         display: none
     }
     .post-page .post-header {
