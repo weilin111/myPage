@@ -2,21 +2,24 @@
     <div class="navbar-container">
         <a href="{{ '/' | prepend: site.baseurl }}" class="navbar-logo">
             <img src="{{ '/style/image/logo.png' | prepend: site.baseurl }}" alt="{{ site.name }}" />
-            <span style="font-family: AGENCY;"  id="header_title">{{ site.name }}</span>
+            <span style="font-family: AGENCY;" id="header_title">{{ site.name }}</span>
         </a>
         <div class="navbar-menu">
             <!-- <a style="font-family: AGENCY;" href="{{ '/p5js' | prepend: site.baseurl }}">p5js</a> -->
             <a style="font-family: AGENCY;" href="{{ '/archives' | prepend: site.baseurl }}">Archives</a>
+            <!-- <a style="font-family: AGENCY;" href="{{ '/ZLG/zlg.html' | prepend: site.baseurl }}">ZLG</a> -->
             <a style="font-family: AGENCY;" href="{{ '/about' | prepend: site.baseurl }}">About</a>
         </div>
 
         <div class="navbar-mobile-menu" onclick="">
             <span class="icon-menu cross"><span class="middle"></span></span>
             <ul>
-                
+
                 <!-- <li><a style="font-family: AGENCY;"  href="{{ '/p5js' | prepend: site.baseurl }}">p5js</a></li> -->
-                <li><a style="font-family: AGENCY;"  href="{{ '/archives' | prepend: site.baseurl }}">Archives</a></li>
-                <li><a style="font-family: AGENCY;"  href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+                <li><a style="font-family: AGENCY;" href="{{ '/archives' | prepend: site.baseurl }}">Archives</a></li>
+                <li> <a style="font-family: AGENCY;" href="{{ '/ZLG/zlg.html' | prepend: site.baseurl }}">ZLG</a> </li>
+
+                <li><a style="font-family: AGENCY;" href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
             </ul>
         </div>
     </div>
@@ -28,6 +31,6 @@
         change_title_color("header_title")
         change_pic_opacity("body_div_2")
     </script>
-    
+
 
 </header>
