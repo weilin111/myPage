@@ -1,0 +1,107 @@
+.pat-title{
+    font-size: 30px;
+    /* color:; */
+    text-transform: uppercase;
+    text-align: right;
+    border: 1px dashed #1bd702;
+
+}
+.pat_block {
+   
+    width: 60%;
+    margin: auto 20%;
+    border: 1px dashed #1bd702;
+    /* float: left; */
+    /* flex: content; */
+    margin-top: 2%;    
+
+}
+
+:root{
+    --box-bg-cl-1:#47028b;
+    --box-bg-cl-2:#8e0fcd;
+    --box-bg-ratio-1:20%;
+    --box-bg-ratio-2:22%;
+    --km-line-size:10px;
+    --kx-color-01:rgb(0, 195, 255);
+    --kx-color-02:rgb(205, 33, 214);
+    --kx-color-03:rgb(246, 64, 3);
+    --kx-line-size-01: 15px;
+}
+
+
+.bg_pat_a1 {
+    width: 100%;
+    height: 300px;
+    /* padding-bottom: 0%; */
+    background: linear-gradient(-45deg,red 10%,
+    transparent 10%,
+    transparent 50%,
+    red 50%,
+    red  60%,
+    transparent 60%,
+    transparent 100%
+    );
+    background-size: var(--km-line-size) var(--km-line-size);
+    /* -webkit-box-reflect: below 2px  linear-gradient(transparent,rgba(170, 0, 255, 0.451)); */
+
+
+
+}
+
+
+@keyframes km-anmim{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 50px;
+    }
+}
+
+
+.bg_pat_a2 {
+    width: 100%;
+    height: 300px;
+    /* padding-bottom: 0%; */
+    background: linear-gradient(45deg,var(--kx-color-01)  10%,
+    transparent 10%,
+    transparent 40%,
+    var(--kx-color-01) 40%,
+    var(--kx-color-01) 50%,
+    var(--kx-color-02) 50%,
+    var(--kx-color-02) 60%,
+    var(--kx-color-03) 60%,
+    var(--kx-color-03) 80%,
+    transparent 80%,
+    transparent 100%
+    );
+    /* background-size: var(--km-line-size) var(--km-line-size); */
+    background-size: 50px 100px;
+    animation: km-anmim 1.0s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+
+}
+
+.bg_pat_a3 {
+    width: 100%;
+    height: 300px;
+    /* padding-bottom: 0%; */
+    background: linear-gradient(53deg,var(--kx-color-01)  10%,
+    transparent 10%,
+    transparent 40%,
+    var(--kx-color-01) 40%,
+    var(--kx-color-01) 50%,
+    var(--kx-color-02) 50%,
+    var(--kx-color-02) 60%,
+    transparent 80%,
+    transparent 100%
+    );
+    /* background-size: var(--km-line-size) var(--km-line-size); */
+    background-size: 30px 40px;
+    animation: km-anmim 1.0s cubic-bezier(0.87, 0, 0.745, 0.715) infinite;
+
+}
+
+
+
+
