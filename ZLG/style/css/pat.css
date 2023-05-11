@@ -103,5 +103,294 @@
 }
 
 
+:root{
+    --bg_pat_a4_cl_1:hsl(0,50%,90%);
+    --bg_pat_a4_cl_2:hsl(0,60%,50%);
+}
+
+
+.bg_pat_a4 {
+    width: 100%;
+    height: 300px;
+    background-color: var(--bg_pat_a4_cl_1);
+    background-image:
+    linear-gradient( 
+        45deg,
+        transparent 75%,
+        var(--bg_pat_a4_cl_2) 75%
+        ),
+    linear-gradient( 
+        135deg,
+        transparent 75%,
+        var(--bg_pat_a4_cl_2) 75%
+        ),
+    linear-gradient( 
+        -45deg,
+        transparent 75%,
+        var(--bg_pat_a4_cl_2) 75%
+        ),
+    linear-gradient( 
+        -135deg,
+        transparent 75%,
+        var(--bg_pat_a4_cl_2) 75%
+        );
+
+    background-size: 3rem 3rem;
+}
+
+
+:root{
+    --bg_pat_a5_cl_1:hsl(0, 24%, 23%);
+    --bg_pat_a5_cl_2:hsl(0,60%,50%);
+}
+
+
+.bg_pat_a5 {
+    width: 100%;
+    height: 300px;
+    background-color: var(--bg_pat_a5_cl_1);
+    background-image:
+    linear-gradient( 
+        45deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        75deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        105deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        135deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        );
+    /* transform: rotate(180deg); */
+    background-size: 2rem 2rem;
+    background-position: 0;
+}
+
+
+.bg_pat_a6 {
+    width: 100%;
+    height: 300px;
+    background-color: var(--bg_pat_a5_cl_1);
+    background-image:
+    linear-gradient( 
+        45deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        -45deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        135deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        -135deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        );
+    background-size: 2rem 2rem;
+
+    background-position: 2rem 0, 3rem 3rem,0 0 ,0 0;
+    /* background-repeat: no-repeat; */
+}
+
+.bg_pat_a6 {
+    width: 100%;
+    height: 300px;
+    background-color: var(--bg_pat_a5_cl_1);
+    background-image:
+    linear-gradient( 
+        45deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        -45deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        135deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        ),
+    linear-gradient( 
+        -135deg,
+        transparent 75%,
+        var(--bg_pat_a5_cl_2) 75%
+        );
+    background-size: 2rem 2rem;
+
+    background-position: 2rem 0, 3rem 3rem,0 0 ,0 0;
+    /* background-repeat: no-repeat; */
+}
+
+
+
+
+:root{
+    /* --bg_pat_a7_cl_1:hsla(0, 0%, 100%, 0); */
+    --bg_pat_a7_cl_1:transparent;
+    --bg_pat_a7_cl_2:hsl(263, 60%, 50%);
+    --bg_pat_a7-size1:.2rem;
+    --bg_pat_a7-size2:2rem;
+    --bg_pat_a7-size3:1rem;
+
+}
+
+.bg_pat_a7 {
+    height: 300px;
+    background-color: var(--bg_pat_a7_cl_1);
+    background-image:
+    linear-gradient( 
+        0deg,
+        var(--bg_pat_a7_cl_2) var(--bg_pat_a7-size1),
+        transparent var(--bg_pat_a7-size1)
+        ),
+    linear-gradient( 
+        90deg,
+        var(--bg_pat_a7_cl_2) var(--bg_pat_a7-size1),
+        transparent var(--bg_pat_a7-size1)
+        );
+    background-size: var(--bg_pat_a7-size2) var(--bg_pat_a7-size2);
+    /* background-size: 1rem 1rem,1rem 1rem; */
+    background-position: var(--bg_pat_a7-size1) var(--bg_pat_a7-size1), 0 0,0 0;
+    /* background-repeat: no-repeat; */
+
+}
+
+
+.bg_pat_a8 {
+    height: 300px;
+    background-color: #fff;
+    background-image:
+    radial-gradient(
+    circle,
+    transparent 1rem,
+    #1012918b 1rem
+
+    ),
+    linear-gradient( 
+        0deg,
+        #c11212 .1rem,
+        transparent .1rem
+        ),
+    linear-gradient( 
+        90deg,
+        #f52525 .1rem,
+        transparent .1rem
+        );
+
+    background-size: 2rem 2rem;
+
+    /* background-position: 2rem 0, 3rem 3rem,0 0 ,0 0; */
+    /* background-repeat: no-repeat; */
+
+}
+
+
+
+.bg_pat_a9 {
+    height: 300px;
+    background-color: #fff;
+    background-image:
+    radial-gradient(
+    circle,
+    transparent 1rem,
+    #b90909 1rem
+
+    ),
+    linear-gradient( 
+        0deg,
+        #1295c1 .4rem,
+        transparent .4rem
+        ),
+    linear-gradient( 
+        90deg,
+        #f52525 .4rem,
+        transparent .4rem
+        );
+
+    background-size: 2rem 2rem;
+    /* background-position: 1.2rem 1.2rem,.2rem .2rem,.2rem .2rem; */
+    background-position: 1.35rem 1.05rem,0.2rem 0.2rem,0.2rem 0.2rem;
+    
+    /* background-repeat: no-repeat;  */
+
+}
+
+
+.bg_pat_a10 {
+    height: 300px;
+    background-color: #fff;
+    background-image:
+    radial-gradient(
+    circle,
+    transparent 1rem,
+    #ffffff 1rem
+
+    ),
+    linear-gradient( 
+        0deg,
+        #c11212 .4rem,
+        transparent .4rem
+        ),
+    linear-gradient( 
+        90deg,
+        #f52525 .4rem,
+        transparent .4rem
+        );
+
+    background-size: 4rem 4rem;
+    background-position:3.4rem 3.2rem,0.9rem 1.4rem,1.2rem 0.2rem;
+    /* background-position-x: 20px; */
+    /* background-position: 0.0rem 4.0rem,1.8rem 4.2rem,-0.2rem 1.8rem; */
+    /* background-repeat: no-repeat;  */
+
+}
+
+.bg_pat_a11 {
+    height: 300px;
+    background-color: #fff;
+    background-image:
+    radial-gradient(
+    circle,
+    transparent 0.4rem,
+    #ffffff 2rem
+
+    ),
+    linear-gradient( 
+        0deg,
+        #4c1392 .4rem,
+        transparent .4rem
+        ),
+    linear-gradient( 
+        90deg,
+        #25c8f5 .4rem,
+        transparent .4rem
+        );
+
+    background-size: 4rem 4rem,.5rem .5rem,.5rem .5rem;
+    background-position:3.4rem 3.2rem,0.9rem 1.4rem,1.2rem 0.2rem;
+    /* background-position-x: 20px; */
+    /* background-position: 0.0rem 4.0rem,1.8rem 4.2rem,-0.2rem 1.8rem; */
+    /* background-repeat: no-repeat;  */
+
+}
+
+
 
 
