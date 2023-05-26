@@ -18,6 +18,10 @@ defaults:
       path: "ZLG/SU/su"
     values:
       su: true
+  - scope:
+      path: "ZLG/AA/aa"
+    values:
+      aa: true
 comments :
   gitalk :
     clientID : xxx

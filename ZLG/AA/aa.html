@@ -3,14 +3,13 @@ layout: zlgsu
 ---
 
 
-<div id="zlg-body" class="zlg-body">
-  {% assign image_files = site.static_files | where: "su", true %}
-  <div class="categorys-title" style="font-size: 60px; ">Soviet Space </div>
+<div id="zlg-aa-body" class="zlg-body">
+  {% assign image_files = site.static_files | where: "aa", true %}
+  <div class="categorys-title" style="font-size: 60px; ">古代建筑大系 </div>
   <div class="categorys-title" style="font-size: 15px; ">Total poster number : {{image_files.size }} </div>
   <!-- <div  class="pat_block"> <div  class="pat-title"> a1 </div>   <div class="bg_pat_a1" >  </div>   </div> -->
-
   
-  <div class="su_50_grid" column-count="15">
+  <div class="aa_50_grid"  data-columns="5">
     
     {% for myimage in image_files %}
 
@@ -20,8 +19,6 @@ layout: zlgsu
     </div>
     {% endfor %}
   </div>
-
-
 
 
 
