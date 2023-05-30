@@ -11,9 +11,9 @@
 
 
 .aa_50_grid{
-    --column-count:5;
+    --column-count:8;
     display: grid;
-    gap:1rem;
+    gap:0.2rem;
     grid-template-columns: repeat(var(--column-count),1fr);
     width: auto;
     /* align-items: baseline; */
