@@ -871,11 +871,15 @@ textarea:-ms-input-placeholder {
 
 .main-content .page-page {
     box-shadow: 0 50px 100px rgb(113, 6, 252);
+
 }
 
 .index-page {
     padding: 70px 20px 0;
-    box-shadow: 0 20px 100px 30px rgb(102, 6, 252);
+    /* box-shadow: 0 20px 100px 30px rgb(102, 6, 252); */
+     /* box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+
+    box-shadow: rgba(102, 6, 252, 0.4) 5px 5px, rgba(102, 6, 252, 0.3) 10px 10px, rgba(102, 6, 252, 0.2) 15px 15px, rgba(102, 6, 252, 0.1) 20px 20px, rgba(102, 6, 252, 0.05) 25px 25px; */
 }
 
 .index-page .post-list-item-container .item-label {
