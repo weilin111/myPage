@@ -23,15 +23,23 @@ cate: Fun
 |                                                              |
 | [thi.ng - Open source building blocks for computational design. Est. 2006 (TypeScript, Clojure, C, SideFX Houdini, Java)](https://thi.ng/) |
 | [清华大学建筑学院 (tsinghua.edu.cn)](http://arch.tsinghua.edu.cn/column/rw) |
+| [技术美学杂志 — Retro Archive (retro-archive.ru)](https://retro-archive.ru/Журнал_«Техническая_эстетика») |
+| [馆藏撷英 (tsinghua.edu.cn)](http://www.artmuseum.tsinghua.edu.cn/cpsj/gndc/gcxy/) |
 |                                                              |
 |                                                              |
 | [Blog (deepmind.com)](https://www.deepmind.com/blog)         |
 | [OpenAI Blog](https://openai.com/blog/)                      |
 | [SpaceX - Starship](https://www.spacex.com/vehicles/starship/) |
 | [fermatslibrary](https://fermatslibrary.com/journal_club)    |
+| [IAEA PUBLICATION](https://www.iaea.org/publications)        |
+| j[scipy.optimize.newton_krylov — SciPy v1.11.3 Manual](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.newton_krylov.html) |
 |                                                              |
 |                                                              |
 | [Documentation - Python Wiki](https://wiki.python.org/moin/Documentation) |
+| [CSS Shadow Palette Generator (joshwcomeau.com)](https://www.joshwcomeau.com/shadow-palette/) |
+|                                                              |
+| [BLEND SWAP](https://www.blendswap.com/)                     |
+|                                                              |
 |                                                              |
 | [Browse Fonts - Google Fonts](https://fonts.google.com/)     |
 | [A Survey of Free Math Fonts for TeX and LaTeX1 (kku.ac.th)](https://mirror.kku.ac.th/CTAN/info/Free_Math_Font_Survey/en/survey.html#fig:comicsans) |
