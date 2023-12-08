@@ -212,6 +212,7 @@ function add_game_canvas_to_container(container_id) {
         }
 
         max_point_number = 10
+        max_point_number_counter = 10
         point_list = [
             {
                 date: "",
@@ -281,11 +282,19 @@ function add_game_canvas_to_container(container_id) {
 
         update(deltaTime) {
 
+            let dt=500
+            this.max_point_number_counter = this.max_point_number_counter + deltaTime / dt  
+            
+            let wait_gap_num=20  //10*dt
 
-            this.max_point_number = this.max_point_number + deltaTime / 500
+            if (this.max_point_number_counter > data_list.length+wait_gap_num) {
+                this.max_point_number_counter = 1
+                }
+            
+            this.max_point_number=this.max_point_number_counter
             if (this.max_point_number > data_list.length) {
-                this.max_point_number = 1
-            }
+                this.max_point_number = data_list.length-1
+                }        
             // this.plot_fun_type_1()
             this.anotation_text[0].text = `${this.point_list[Math.floor(this.max_point_number)].date}  #post=${this.max_point_number.toFixed(0)}`
             

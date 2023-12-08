@@ -893,6 +893,7 @@ textarea:-ms-input-placeholder {
     max-height: 119px;
     border-radius: 36px;
     /* width: 40%; */
+    margin:auto;
 }
 
 
