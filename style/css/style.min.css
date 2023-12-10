@@ -2258,7 +2258,7 @@ element {
     position: relative;
     z-index: 1;
     margin-top: 0;
-    padding-bottom: 20px;
+    padding-bottom: 200px;
     background-color: #fff
 }
 
@@ -2744,7 +2744,8 @@ a.navbar-logo span {
     top: -21px;
     color: #5555e2;
     font-family: "AGENCY";
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem)
 }
 
 .main-container {
@@ -2784,7 +2785,8 @@ a.navbar-logo span {
     width: 86%;
     text-align: left;
     background: rgb(0, 0, 0);
-    box-shadow: 0 50px 100px 60px rgba(113, 6, 252, 0.68);
+    /* box-shadow: 0 50px 100px 60px rgba(113, 6, 252, 0.68); */
+    box-shadow: rgb(102 6 252 / 40%) 15px 0px, rgb(102 6 252 / 30%) 25px 0px, rgb(102 6 252 / 20%) 30px 0px, rgb(102 6 252 / 10%) 35px 0px, rgb(102 6 252 / 5%) 45px 0px;
     padding-left: 40px;
     padding-right: 24px;
     font-size: 18px;
