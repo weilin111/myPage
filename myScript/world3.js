@@ -59,7 +59,7 @@ function get_UI() {
             let y=canvas.height / 2* rand_factor
             let E_x=0
             let E_y=0
-            let E_prob_01=0.5
+            let E_prob_01=1.5  ///！！！
             let E_prob_01_factor=0.1
             for (let i = 0; i < E_xyz_list_max_number; i++) {
                 E_x=x+r*Math.cos( 2*3.1415 * i/E_xyz_list_max_number )
@@ -137,10 +137,10 @@ function get_UI() {
 
         function B(xyz) {
 
-            // if (tem_xyz[2] > 0.5) {
-            if (tem_xyz[2] > 1.5) {  // close B
-                let dx = canvas.width - xyz[0]
-                let dy = canvas.height - xyz[1]
+            if (tem_xyz[2] > 0.5) {
+            // if (tem_xyz[2] > 1.5) {  // close B
+                let dx = canvas.width/2 - xyz[0]
+                let dy = canvas.height/2 - xyz[1]
                 let r = Math.sqrt(dx * dx + dy * dy)
                 if (r > r_0) {
                     return [0, 0, 0]
@@ -154,7 +154,8 @@ function get_UI() {
         var EM_module = function (i) {
             p = world.phy_Object_list[i]
             fb = vector_cross(p.velocity, B(p.xyz))
-            fe = E_01(p.xyz)
+            // fe = E_01(p.xyz)
+            fe = E(p.xyz)
             // console.log(fb)
             // console.log(fe)
 

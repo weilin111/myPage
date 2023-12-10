@@ -12,7 +12,8 @@
 
 @font-face {
     font-family: "AGENCY";
-    src: url("../font/AGENCYR.TTF");
+    /* src: url("../font/AGENCYR.TTF"); */
+    src: url("../font/Bauhaus-Normal-2.ttf");
 }
 
 @font-face {
@@ -22,11 +23,13 @@
 
 @font-face {
     font-family: "SY-LIGHT";
-    src: url("../font/Noto_Serif_SC/NotoSerifSC-Light.otf");
+    src: url("../font/SmileySans-Oblique.ttf");
+    /* src: url("../font/Noto_Serif_SC/NotoSerifSC-Light.otf"); */
 }
 @font-face {
     font-family: "LXGW";
     src: url("../font/LXGWBright-Regular.ttf");
+    /* src: url("../font/SmileySans-Oblique.ttf"); */
 }
 
 *,
@@ -2872,7 +2875,7 @@ div .kx_bg_01{
     background-position-x: -35px;
     z-index: -1;
     margin-top: 80px;
-    -webkit-box-reflect: below 2px  linear-gradient(transparent,#0005);
+    -webkit-box-reflect: below 52px  linear-gradient(transparent,#0005);
 
 }
 
