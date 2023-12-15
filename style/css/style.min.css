@@ -1470,7 +1470,7 @@ element {
 .post-title {
     font-size: 35px;
     border-bottom: hidden;
-    font-family:'AGENCY';
+    /* font-family:'AGENCY'; */
     text-decoration: underline;
     text-shadow: #000000;
 }

@@ -26,6 +26,10 @@ defaults:
       path: "ZLG/AA/aa02"
     values:
       aa02: true
+  - scope:
+      path: "ZLG/CA/ca"
+    values:
+      ca: true
 comments :
   gitalk :
     clientID : xxx
