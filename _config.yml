@@ -30,6 +30,10 @@ defaults:
       path: "ZLG/CA/ca"
     values:
       ca: true
+  - scope:
+      path: "ZLG/SONG/ss"
+    values:
+      ss: true
 comments :
   gitalk :
     clientID : xxx
