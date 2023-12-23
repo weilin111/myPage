@@ -28,7 +28,7 @@ cate: Fun
 | [中国国际设计博物馆 (caa.edu.cn)](https://cdm.caa.edu.cn/#/home) |
 | [20th-CENTURY ARCHITECTURE (architecture-history.org)](http://architecture-history.org/index.h) |
 | [有方 – 高品质建筑资讯门户 (archiposition.com)](https://www.archiposition.com/) |
-| [[ArchDaily ](http://www.archdaily.cn/cn)                    |
+| [ArchDaily ](http://www.archdaily.cn/cn)                    |
 |                                                              |
 | [资源集 – 书格 (shuge.org)](https://www.shuge.org/collections/) |
 | [《宋画全集目录》-清华大学图书馆美术图书馆 (tsinghua.edu.cn)](https://lib.tsinghua.edu.cn/arts/info/1021/1141_5.htm) |
