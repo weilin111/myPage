@@ -27,6 +27,10 @@ defaults:
     values:
       aa02: true
   - scope:
+      path: "ZLG/AA/ag"
+    values:
+      ag: true
+  - scope:
       path: "ZLG/CA/ca"
     values:
       ca: true
