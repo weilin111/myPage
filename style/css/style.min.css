@@ -226,7 +226,7 @@ a:first-child h6 {
 
 a {
     text-decoration: none;
-    color: #6fa3ef;
+    color: #36ffc6;
     outline: 0;
 }
 
@@ -2258,7 +2258,7 @@ element {
     position: relative;
     z-index: 1;
     margin-top: 0;
-    padding-bottom: 200px;
+    padding-bottom: 10rem;
     background-color: #fff
 }
 
