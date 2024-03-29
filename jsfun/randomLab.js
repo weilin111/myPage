@@ -666,7 +666,7 @@ function add_game_canvas_to_container(container_id) {
             let cur_y = 0
             let font_mid = this.height / 5 + "px AGENCY"
     
-            this.ctx.clearRect(this.x, this.y, this.width, this.height)
+            // this.ctx.clearRect(this.x, this.y, this.width, this.height)
             this.ctx.fillStyle = this.color
             this.ctx.strokeStyle = this.color
             this.ctx.strokeRect(this.x, this.y, this.width, this.height)

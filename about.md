@@ -49,6 +49,6 @@ WEILIN
   <script src="{{ '/myScript/utils.js' | prepend: site.baseurl    }}   ">
     </script>
 <script>·
-    window.onload = show_visited_data()
+    // window.onload = show_visited_data()
 </script>
 

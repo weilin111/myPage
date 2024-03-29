@@ -64,6 +64,13 @@ html{
 } */
 
 
+.at-img:hover {
+    transform: scale(3.2);
+    transition: all 0.2s ease 0s;
+    z-index: 50;
+}
+
+
 body {
     /* font-family: "AGENCY","LXGW"; */
     /* font-family: "AGENCY","SY-LIGHT"; */
@@ -2883,6 +2890,7 @@ div .kx_bg_01{
 
 
 
+
 @media (max-width: 1080px) {
     .post-container {
         width: 100%;
@@ -2912,3 +2920,5 @@ div .kx_bg_01{
 /* #siriusPic_canvas:hover{
     box-shadow: 0 0px 6px #9400fe;
 } */
+
+
