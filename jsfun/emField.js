@@ -4,6 +4,8 @@ var getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+var clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+
 add_game_canvas_to_container("canva_container")
 
 function add_game_canvas_to_container(container_id) {
@@ -177,9 +179,12 @@ function add_game_canvas_to_container(container_id) {
 
                 }
             )
+
+            this.ctx.lineWidth=3.5*scale
             this.field_probe_list.forEach(
                 e => {
                     this.ctx.fillStyle=e.color
+                    this.ctx.strokeStyle=e.color
                     this.draw_field_probe(e)
                     let text=e.e_strength.toFixed(2)
                     this.ctx.font= e.r *5 + "px AGENCY"
@@ -201,6 +206,24 @@ function add_game_canvas_to_container(container_id) {
             this.ctx.arc(  probe.x,  probe.y, probe.r, 0, 2 * Math.PI)
             this.ctx.fill()
             this.ctx.closePath()
+
+            this.ctx.beginPath()
+            ctx.moveTo(probe.x,probe.y)
+
+            let draw_E_size=10
+
+            let dl=clamp(probe.e_strength,1.5,5)
+            
+            let dx=probe.ex/probe.e_strength*draw_E_size*dl
+            let dy=probe.ey/probe.e_strength*draw_E_size*dl
+            
+
+
+            this.ctx.lineTo(probe.x+dx , probe.y+dy)
+
+            this.ctx.closePath()
+            this.ctx.stroke()
+
         }
 
 
