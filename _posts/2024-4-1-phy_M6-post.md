@@ -30,3 +30,5 @@ cate: phy
 ## BUG 
 PRESS E R F
 ![image-20240401113642563](style/image/ALL_MY_MD_2/image-20240401113642563.png)
+
+![image-20240401121028263](style/image/ALL_MY_MD_2/image-20240401121028263.png)

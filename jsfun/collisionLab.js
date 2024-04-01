@@ -113,7 +113,7 @@ function add_game_canvas_to_container(container_id) {
             },
             {
                 mass: 0,
-                position: new CANNON.Vec3(1750, canvas.height / 2, 0),
+                position: new CANNON.Vec3(canvas.width-150, canvas.height / 2, 0),
                 velocity: new CANNON.Vec3(0, 0, 0),
                 shape: new CANNON.Box(new CANNON.Vec3(50, 1000, 1000))
             },
@@ -295,7 +295,7 @@ function add_game_canvas_to_container(container_id) {
         player = null
 
         press_emit_timer = 0
-        press_emit_timer_max = 8
+        press_emit_timer_max = getRandomInt(2,6)
 
         constructor(player, canvas) {
             this.player = player
@@ -629,6 +629,8 @@ function add_game_canvas_to_container(container_id) {
             "player_rotation",
             "mouse_X",
             "mouse_Y",
+            "fps",
+
         ]
 
         max_timer = 30
