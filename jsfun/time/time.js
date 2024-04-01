@@ -503,6 +503,11 @@ class Bullet {
         shape: new CANNON.Box(new CANNON.Vec3(10, 10, 1000))
     }
 
+
+    text="null"
+
+    text_char_list=["a","A","B"]
+
     constructor(timeWorld, position, velocity) {
         this.timeWorld = timeWorld
         this.bodyData.position = position
@@ -510,10 +515,20 @@ class Bullet {
         this.body = new CANNON.Body(this.bodyData)
         this.halfExtents = this.bodyData.shape.halfExtents
 
+        if (Math.random()>0.3){
+            this.text="A"
+        }
+        this.text="A"
+
     }
+
+
+
     update(deltaTime) { }
 
     draw() {
+
+
         ctx.fillStyle = this.color
         ctx.font = font_mid
 
@@ -531,12 +546,29 @@ class Bullet {
 
 
         ctx.translate(-1 * this.body.position.x, -1 * this.body.position.y)
-        ctx.fillRect(
-            this.body.position.x - this.halfExtents.x, this.body.position.y - this.halfExtents.y, 2 * this.halfExtents.x, 2 * this.halfExtents.y
-        )
-        ctx.fillStyle = this.color2
 
-        ctx.fillText(this.body.position.x.toFixed(1) + " " + this.body.position.y.toFixed(1), this.body.position.x, this.body.position.y)
+        if(this.text=="null"){
+
+            ctx.fillRect(
+                this.body.position.x - this.halfExtents.x, this.body.position.y - this.halfExtents.y, 2 * this.halfExtents.x, 2 * this.halfExtents.y
+            )
+    
+            ctx.fillStyle = this.color2
+    
+            ctx.fillText(this.body.position.x.toFixed(1) + " " + this.body.position.y.toFixed(1), this.body.position.x, this.body.position.y)
+        }
+        else{
+
+            // ctx.fillRect(
+            //     this.body.position.x - this.halfExtents.x, this.body.position.y - this.halfExtents.y, 2 * this.halfExtents.x, 2 * this.halfExtents.y
+            // )
+            // ctx.fillStyle = this.color2
+            
+            ctx.fillText(this.text,this.body.position.x,this.body.position.y)
+
+    
+        }
+
         ctx.restore()
 
     }
@@ -592,6 +624,10 @@ class Input {
         this.canvas = canvas
         this.add_listener(this.player)
     }
+
+
+
+
 
     add_listener(player) {
         window.addEventListener("keypress",
@@ -660,20 +696,29 @@ class Input {
         this.canvas.addEventListener("click", function (event) {
             let x = event.offsetX
             let y = event.offsetY
-            let dx = x - player.body.position.x
-            let dy = y - player.body.position.y
+            let dx = x - this.player.body.position.x
+            let dy = y - this.player.body.position.y
             let l = Math.sqrt(dx * dx + dy * dy)
             let speed = 1
             ctx.fillText("1", event.offsetX, event.offsetY)
             console.log(" " + event.offsetX + ":" + event.offsetY)
+            console.log(" " + player.body.position.x + ":" + player.body.position.y)
             let v = new CANNON.Vec3(dx / l, dy / l, 0)
             // console.log(dx,dy,v)
             // console.log(v)
-            player.emit_bullet(v)
+            this.player.emit_bullet(v)
+
+
+
         })
     }
 
 }
+
+
+
+
+
 
 
 // basic  class

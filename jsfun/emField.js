@@ -105,13 +105,13 @@ function add_game_canvas_to_container(container_id) {
         }
         draw_range = {
             left: this.draw_position.x + 0,
-            right: canvas.width * 0.9,
+            right: this.draw_position.x +canvas.width * 0.9,
             down: this.draw_position.y + 0,
-            up: canvas.height * 0.9,
+            up:this.draw_position.y + canvas.height * 0.9,
         }
 
 
-        dt=1*0.3
+        dt=1*0.2
 
         field_probe_list = []
         field_source_list = []
@@ -212,7 +212,7 @@ function add_game_canvas_to_container(container_id) {
 
             let draw_E_size=10
 
-            let dl=clamp(probe.e_strength,1.5,5)
+            let dl=clamp(probe.e_strength,2,4)
             
             let dx=probe.ex/probe.e_strength*draw_E_size*dl
             let dy=probe.ey/probe.e_strength*draw_E_size*dl
@@ -285,7 +285,7 @@ function add_game_canvas_to_container(container_id) {
             this.field_source_list.forEach(
                 e=>{
 
-                    let gap=100
+                    let gap=1
                     if (e.x-gap < this.draw_range.left || e.x+gap > this.draw_range.right) {
                         e.vx = e.vx * -0.9
                     }

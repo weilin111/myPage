@@ -3,6 +3,7 @@
 var getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+var clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 add_game_canvas_to_container("canva_container")
 
@@ -131,18 +132,20 @@ function add_game_canvas_to_container(container_id) {
 
 
         track_timer=0
-        max_track_timer=2
+        max_track_timer=1
 
-        g=600
+        g=300
+
+
         draw_position = {
             x: 0,
             y: 0,
         }
         draw_range = {
             left: this.draw_position.x + 0,
-            right: canvas.width * 0.9,
-            down: this.draw_position.y + 0,
-            up: canvas.height * 0.9,
+            right: canvas.width * 0.9 +this.draw_position.x,
+            down: this.draw_position.y +0,
+            up: canvas.height * 0.9 + this.draw_position.y,
         }
 
         constructor(game) {
@@ -150,7 +153,7 @@ function add_game_canvas_to_container(container_id) {
 
 
             for (let index = 0; index < getRandomInt(1,4); index++) {
-                this.body_list.push(this.get_random_body(50))
+                this.body_list.push(this.get_random_body(400))
             }
             let n = getRandomInt(2,20)
             for (let index = 0; index < n; index++) {
@@ -172,7 +175,7 @@ function add_game_canvas_to_container(container_id) {
                     this.ctx.fillStyle = e.color
                     this.ctx.strokeStyle=e.color
 
-                    this.draw_dot(e,e.r)
+                    this.draw_dot(e, clamp(e.r,1,60) )
                     this.drawtrack(e)
                     this.ctx.font = font_mid
                     this.ctx.fillStyle = e.color2
@@ -210,7 +213,7 @@ function add_game_canvas_to_container(container_id) {
             // this.ctx.fillRect(this.draw_position.x + position.x - width / 2, this.draw_position.y + position.y - height / 2, width, height)
             
             this.ctx.beginPath()
-            this.ctx.arc(this.draw_position.x + position.x, this.draw_position.y + position.y, size, 0, 2 * Math.PI)
+            this.ctx.arc(  position.x,  position.y, size, 0, 2 * Math.PI)
             this.ctx.fill()
             this.ctx.closePath()
 
@@ -240,7 +243,7 @@ function add_game_canvas_to_container(container_id) {
             this.body_list.forEach(
                 e => {
 
-                    let gap=100
+                    let gap=20
                     if (e.x-gap < this.draw_range.left || e.x+gap > this.draw_range.right) {
                         e.vx = e.vx * -0.8
                     }
@@ -347,8 +350,8 @@ function add_game_canvas_to_container(container_id) {
             let l0 = 500
             let v0 = 5
             return {
-                x: (Math.random()-0.5)*2 * l0+this.draw_position.x+canvas.width/2,
-                y: (Math.random()-0.5)*2 * l0+this.draw_position.y+canvas.height/2,
+                x: (Math.random() - 0.0) * (this.draw_range.right*0.9-this.draw_range.left),
+                y: (Math.random() - 0.0) * (this.draw_range.up*0.9-this.draw_range.down),
                 z: 0,
                 vx: (Math.random()-0.5)*2 * v0,
                 vy: (Math.random()-0.5)*2 * v0,
@@ -358,7 +361,7 @@ function add_game_canvas_to_container(container_id) {
                 color: get_random_Color(),
                 color2: get_random_Color(),
                 position_history: [],
-                body_max_track_pts: getRandomInt(15,60),
+                body_max_track_pts: getRandomInt(15,150),
                 track_timer:0,
             }
 
