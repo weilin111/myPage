@@ -241,16 +241,16 @@ h1:before{
 .direction-l .flag:before,
 .direction-r .flag:before {
   position: absolute;
-  top: -30px;
+  top: -60px;
 	left: 50%;
 	content: ' ';
 	display: block;
-	width: 12px;
-	height: 12px;
+	width: 36px;
+	height: 0px;
 	margin-left: -9px;
-	background: #fff;
+	background: aquamarine;
 	border-radius: 10px;
-	border: 4px solid rgb(255,80,80);
+	border: 0px solid aquamarine;
 	z-index: 10;
 }
 
@@ -288,7 +288,7 @@ h1:before{
 	position: relative;
 	margin: 1em 0 0 0;
 	padding: 1em;
-	background: rgb(245,245,245);
+	background: rgb(0,0,0);
 	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
 	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
 	box-shadow: 0 0 1px rgba(0,0,0,0.20);
@@ -335,7 +335,7 @@ h1:before{
   <li>
 		<div class="direction-{% cycle 'r', 'l' %}">
   		<div class="flag-wrapper">
-        <h1>{{ img.name }} {{ img.date }}</h1>
+        <h1 style="z-index:10 !important;">{{ img.name }} {{ img.date }}</h1>
 				<span class="flag">{{ img.name }} </span>
 				<span class="time-wrapper"><span class="time">年代: {{ img.date }}</span></span>
 			</div>
