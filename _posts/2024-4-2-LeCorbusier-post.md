@@ -315,6 +315,15 @@ h1:before{
 }
 
 }
+
+.at-img-lc{
+  z-index:10;
+}
+.at-img-lc:hover{
+    transform: scale(1.6);
+    transition: all 0.2s ease 0s;
+
+}
 </style>
 
 <script>

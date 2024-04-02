@@ -208,6 +208,8 @@ function add_game_canvas_to_container(container_id) {
 
         bullet_speed = 800
         angle = 0
+
+
         constructor(timeWorld) {
             this.timeWorld = timeWorld
             this.input = new Input(this, canvas)
@@ -466,17 +468,11 @@ function add_game_canvas_to_container(container_id) {
 
         text = "null"
 
+        font_base0="AGENCY"
+        font_base1="AGENCY"
+        font_base2="SY-LIGHT"
 
-        get_char_list() {
-
-            let res = []
-            for (let index = 0; index < 126+1-33; index++) {
-                res.push(String.fromCharCode(33 + index));
-
-            }
-            return res
-        }
-        text_char_list = this.get_char_list()
+        chinese="嘉元年夏大雨水奉诏祈晴于醴泉宫闻鸣蝉有感而赋云肃祠庭以祗事兮瞻玉宇之峥嵘收视听以清虑兮斋予心以荐诚因以静而求动兮见乎万物之情于时朝雨骤止微风不兴四无云以青天雷曳曳其余声乃席芳药临华轩古木数株空庭草间爰有一物鸣于树颠引清风以长啸抱纤柯而永叹嘒嘒非管泠泠若弦裂方号而复咽凄欲断而还连吐孤韵以难律含五音之自然吾不知其何物其名曰蝉岂非因物造形能变化者邪？出自粪壤慕清虚者邪？凌风高飞知所止者邪？嘉木茂树喜清阴者邪？呼吸风露能尸解者邪？绰约双鬓修婵娟者邪？其为声也不乐不哀非宫非徵胡然而鸣亦胡然而止吾尝悲夫万物莫不好鸣若乃四时代谢百鸟嘤兮；一气候至百虫惊兮；娇儿姹女语鹂庚兮；鸣机络纬响蟋蟀兮转喉弄舌诚可爱兮引腹动股岂勉强而为之兮？至于污池浊水得雨而聒兮；饮泉食土长夜而歌兮彼蟆固若有欲而蚯蚓又何求兮？其余大小万状不可悉名各有气类随其物形不知自止有若争能忽时变以物改咸漠然而无声呜呼！达士所齐万物一类人于其间所以为贵盖已巧其语言又能传于文字是以穷彼思虑耗其血气或吟哦其穷愁或发扬其志意虽共尽于万物乃长鸣于百世予亦安知其然哉？聊为乐以自喜方将考得失较同异俄而阴云复兴雷电俱击大雨既作蝉声遂息"
 
 
         constructor(timeWorld, position, velocity) {
@@ -493,8 +489,18 @@ function add_game_canvas_to_container(container_id) {
 
 
             if (Math.random() > 0.1) {
-                let index = Math.floor(this.text_char_list.length * Math.random())
-                this.text = this.text_char_list[index]
+                // let index = Math.floor(this.text_char_list.length * Math.random())
+
+                if (Math.random() > 0.5) {
+                    this.text = String.fromCharCode( getRandomInt(33,126) )
+                    this.font_base0=this.font_base1
+                }
+                else{
+                    // this.text = String.fromCharCode( getRandomInt(19968,40869) )
+                    this.text = this.chinese[  getRandomInt(0,this.chinese.length-1) ]
+                    this.font_base0=this.font_base2
+                
+                }
             }
 
 
@@ -543,10 +549,10 @@ function add_game_canvas_to_container(container_id) {
 
                 ctx.fillStyle = this.color2
 
-                let font = Math.trunc(this.halfExtents.x * 10 / 3) + "px AGENCY"
+                let font = Math.trunc(this.halfExtents.x * 10 / 3) + "px "+ this.font_base0
                 ctx.font = font
                 // console.log(font, this.halfExtents.x)
-                ctx.fillText(this.text, this.body.position.x - this.halfExtents.x / 8, this.body.position.y + this.halfExtents.y)
+                ctx.fillText(this.text, this.body.position.x - this.halfExtents.x / 2, this.body.position.y + this.halfExtents.y)
 
 
             }
