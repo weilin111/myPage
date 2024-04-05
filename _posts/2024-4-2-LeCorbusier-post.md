@@ -338,6 +338,7 @@ h1:before{
 
 <ul class="timeline">
 
+<!-- num= {{ site.data.leCorbusier.imgList.size }} -->
 
 {% for img in site.data.leCorbusier.imgList    %}
 		<!-- <p>{{ img.name }}  年代: {{ img.date }}   地点: {{ img.location }}</p> -->
@@ -346,7 +347,7 @@ h1:before{
   		<div class="flag-wrapper">
         <h1 style="z-index:10 !important;">{{ img.name }} {{ img.date }}</h1>
 				<span class="flag">{{ img.name }} </span>
-				<span class="time-wrapper"><span class="time">年代: {{ img.date }}</span></span>
+				<span class="time-wrapper"><span class="time">建成年代: {{ img.date }}</span></span>
 			</div>
 			<div class="desc">
        <p>{{ img.location }}</p> 

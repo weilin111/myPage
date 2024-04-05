@@ -52,3 +52,6 @@ WEILIN
     // window.onload = show_visited_data()
 </script>
 
+<script >
+$("#navigation")[0].innerHTML=""
+</script>

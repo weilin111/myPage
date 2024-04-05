@@ -23,6 +23,7 @@ cate: phy
 </script>
 
 <script src="{{ '/jsfun/cannon.js' | prepend: site.baseurl    }}   "></script>
+<script src="{{ '/jsfun/jsfun_utils.js' | prepend: site.baseurl    }}   "></script>
 <script src="{{ '/jsfun/collisionLab.js' | prepend: site.baseurl    }}   "></script>
 
 

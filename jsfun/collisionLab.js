@@ -15,7 +15,7 @@ function add_game_canvas_to_container(container_id) {
     var canvas = document.createElement("canvas")
     canvas_container.appendChild(canvas)
 
-    let scale = canvas_container.offsetWidth / 1600
+    let scale = canvas_container.offsetWidth / 1600 
 
     var unit = 500 * scale * 0.8
 
@@ -26,7 +26,8 @@ function add_game_canvas_to_container(container_id) {
     canvas.style.height = (height * scale) + 'px'
 
 
-    scale = scale * window.devicePixelRatio
+    var scale_factor=1.5
+    scale = scale * window.devicePixelRatio *scale_factor
     canvas.width = width * scale
     canvas.height = height * scale
 
@@ -55,7 +56,15 @@ function add_game_canvas_to_container(container_id) {
     var is_gameStop = false
 
 
-
+    var canvasInfo = {
+        scale: 1,
+        scale_step: 0.1,
+        max_scale: 3,
+        min_scale: 0.1,
+        offsetX: 0,
+        offsetY: 0,
+    }
+    
 
 
     class Game {
@@ -65,6 +74,7 @@ function add_game_canvas_to_container(container_id) {
 
         display = 0
         orbitSystem = 0
+        effect_list = []
 
         constructor(ctx, canvas) {
             this.ctx = ctx
@@ -85,7 +95,20 @@ function add_game_canvas_to_container(container_id) {
                     e.draw()
                 }
             )
+            this.effect_list.forEach(
+                e => {
+                    e.update()
+                    e.draw()
+                }
+            )
+            this.effect_list = this.effect_list.filter(
+                e => {
+                    return e.frame >= 0
+                }
+            )
         }
+
+
 
 
     }
@@ -115,7 +138,22 @@ function add_game_canvas_to_container(container_id) {
                 mass: 0,
                 position: new CANNON.Vec3(canvas.width-150, canvas.height / 2, 0),
                 velocity: new CANNON.Vec3(0, 0, 0),
-                shape: new CANNON.Box(new CANNON.Vec3(50, 1000, 1000))
+                shape: new CANNON.Box(new CANNON.Vec3(30, 1000, 1000))
+            },
+
+            {
+                mass: 0,
+                position: new CANNON.Vec3(canvas.width/5*1.5+150, canvas.height / 2+300, 0),
+                velocity: new CANNON.Vec3(0, 0, 0),
+                shape: new CANNON.Box(new CANNON.Vec3(300, 15, 1000))
+            },
+
+            {
+                mass: 0,
+                position: new CANNON.Vec3(canvas.width/4*3, canvas.height / 2-300, 0),
+                velocity: new CANNON.Vec3(0, 0, 0),
+                shape: new CANNON.Box(new CANNON.Vec3(200, 10, 1000)),
+                quaternion: new CANNON.Quaternion(0,0,Math.cos(3.1415/2/2/2),Math.sin(3.1415/2/2/2)  )
             },
 
             {
@@ -125,13 +163,16 @@ function add_game_canvas_to_container(container_id) {
                 shape: new CANNON.Box(new CANNON.Vec3(100, 20, 1000))
             },
 
+
         ]
         platforms = []
         bullets = []
         fps = 0
 
 
+        bullet_gun_list=[]
 
+        max_bullet_number=150
 
         constructor(game) {
             this.ctx = game.ctx
@@ -152,7 +193,14 @@ function add_game_canvas_to_container(container_id) {
                 }
             )
 
+            let bullet_gun=new BulletGun(this,this.ctx)
+            this.bullet_gun_list.push(bullet_gun)
 
+            bullet_gun=new BulletGun(this,this.ctx)
+            bullet_gun.gun_info.x=canvas.width/4*1.5
+            bullet_gun.gun_info.y=canvas.height/10*1
+            bullet_gun.chinese="把酒祝东风且共从容垂杨紫陌洛城东总是当时携手处游遍芳丛聚散苦匆匆此恨无穷今年花胜去年红可惜明年花更好知与谁同"
+            this.bullet_gun_list.push(bullet_gun)
         }
 
 
@@ -167,6 +215,12 @@ function add_game_canvas_to_container(container_id) {
 
 
             this.bullets.forEach(
+                e => {
+                    e.draw()
+                }
+            )
+
+            this.bullet_gun_list.forEach(
                 e => {
                     e.draw()
                 }
@@ -189,9 +243,32 @@ function add_game_canvas_to_container(container_id) {
             this.cannon_world.step(1 / 75, deltaTime , 3)
             this.fps = (1000 / deltaTime/1000).toFixed(0)
             // console.log(deltaTime)
+
+            this.bullet_gun_list.forEach(
+                e => {
+                    e.update()
+                }
+            )
+
+            if (this.bullets.length > this.max_bullet_number) {
+                this.cannon_world.removeBody(this.bullets.shift().body)
+                
+            }
+
         }
 
-
+        set_scroll(offset) {
+            this.platforms.forEach(
+                e => {
+                    e.body.position.x += offset
+                }
+            )
+            this.bullets.forEach(
+                e => {
+                    e.body.position.x += offset
+                }
+            )
+        }
     }
 
 
@@ -269,6 +346,8 @@ function add_game_canvas_to_container(container_id) {
             )
             this.timeWorld.cannon_world.addBody(b.body)
             this.timeWorld.bullets.push(b)
+            this.timeWorld.game.effect_list.push(new Effect( this.ctx,[this.body.position.x,this.body.position.y]))
+
 
         }
 
@@ -400,7 +479,7 @@ function add_game_canvas_to_container(container_id) {
 
                 })
 
-
+            
 
 
 
@@ -429,12 +508,56 @@ function add_game_canvas_to_container(container_id) {
             })
 
 
+            this.canvas.addEventListener("wheel",
+            e => {
+                e.preventDefault()
+                
+                let realPosition = {
+                    x: e.offsetX*2 - canvasInfo.offsetX,
+                    y: e.offsetY*2 - canvasInfo.offsetY
+                }
+
+                let { scale_step } = canvasInfo
+
+                let dx = realPosition.x / canvasInfo.scale * scale_step  
+                let dy = realPosition.y / canvasInfo.scale * scale_step  
+
+                if (e.wheelDelta > 0) {
+                    canvasInfo.offsetX -= dx
+                    canvasInfo.offsetY -= dy
+
+                    canvasInfo.scale += scale_step
+                }
+                else {
+                    canvasInfo.offsetX += dx
+                    canvasInfo.offsetY += dy
+                    // canvasInfo.offsetX = 0
+                    // canvasInfo.offsetY = 0
+
+                    canvasInfo.scale -= scale_step
+                }
+
+                if(canvasInfo.scale<0){
+                    canvasInfo = {
+                        scale: 1,
+                        scale_step: 0.1,
+                        max_scale: 3,
+                        min_scale: 0.1,
+                        offsetX: 0,
+                        offsetY: 0,
+                    }
+                }
+
+            }
+        )
+
+
         }
 
 
         add_bullet_then_emit(player, event) {
-            let x = event.offsetX * 2
-            let y = event.offsetY * 2
+            let x = event.offsetX * 2 *scale_factor
+            let y = event.offsetY * 2 *scale_factor
             let dx = x - player.body.position.x
             let dy = y - player.body.position.y
             let l = Math.sqrt(dx * dx + dy * dy)
@@ -447,6 +570,97 @@ function add_game_canvas_to_container(container_id) {
             player.emit_bullet(v)
         }
 
+
+
+    }
+
+
+
+    class BulletGun{
+
+
+        update_timer=0
+        max_update_timer=getRandomInt(30,60)
+
+        color=get_random_Color()
+        color2=get_random_Color()
+
+        gun_info={
+            x:canvas.width/2,
+            y:canvas.height/10,
+            dx:1,
+            dy:1,
+            size:getRandomInt(30,60),
+            bullet_text:"",
+            bullet_font:"",
+        }
+        bullet_speed=800
+
+        font_base0="AGENCY"
+        font_base1="AGENCY"
+        font_base2="SY-LIGHT"
+
+        chinese="嘉元年夏大雨水奉诏祈晴于醴泉宫闻鸣蝉有感而赋云肃祠庭以祗事兮瞻玉宇之峥嵘收视听以清虑兮斋予心以荐诚因以静而求动兮见乎万物之情于时朝雨骤止微风不兴四无云以青天雷曳曳其余声乃席芳药临华轩古木数株空庭草间爰有一物鸣于树颠引清风以长啸抱纤柯而永叹嘒嘒非管泠泠若弦裂方号而复咽凄欲断而还连吐孤韵以难律含五音之自然吾不知其何物其名曰蝉岂非因物造形能变化者邪？出自粪壤慕清虚者邪？凌风高飞知所止者邪？嘉木茂树喜清阴者邪？呼吸风露能尸解者邪？绰约双鬓修婵娟者邪？其为声也不乐不哀非宫非徵胡然而鸣亦胡然而止吾尝悲夫万物莫不好鸣若乃四时代谢百鸟嘤兮；一气候至百虫惊兮；娇儿姹女语鹂庚兮；鸣机络纬响蟋蟀兮转喉弄舌诚可爱兮引腹动股岂勉强而为之兮？至于污池浊水得雨而聒兮；饮泉食土长夜而歌兮彼蟆固若有欲而蚯蚓又何求兮？其余大小万状不可悉名各有气类随其物形不知自止有若争能忽时变以物改咸漠然而无声呜呼！达士所齐万物一类人于其间所以为贵盖已巧其语言又能传于文字是以穷彼思虑耗其血气或吟哦其穷愁或发扬其志意虽共尽于万物乃长鸣于百世予亦安知其然哉？聊为乐以自喜方将考得失较同异俄而阴云复兴雷电俱击大雨既作蝉声遂息"
+        chinese_index=0
+
+        
+
+
+        constructor(simulator,ctx){
+            this.ctx=ctx
+            this.simulator=simulator
+        }
+
+        update(){
+
+            this.update_timer+=1
+            if(this.update_timer>this.max_update_timer){
+
+
+                let x = this.gun_info.x
+                let y = this.gun_info.y
+                let dx = this.gun_info.dx - Math.random()*1.5
+                let dy =this.gun_info.dy -Math.random()
+                let l = Math.sqrt(dx * dx + dy * dy)
+                let speed = 1
+                let direction = new CANNON.Vec3(dx / l, dy / l, 0)
+
+                let b = new Bullet(this.simulator,
+                    new CANNON.Vec3(
+                        x,y, 0),
+                    // new CANNON.Vec3(100, 0, 0)
+                    new CANNON.Vec3(direction.x * this.bullet_speed, direction.y * this.bullet_speed, 0)
+                )
+
+                b.text=this.chinese[ this.chinese_index]
+                this.chinese_index+=1
+                this.chinese_index=this.chinese_index% this.chinese.length
+                b.font_base0=this.font_base2
+                
+
+                this.simulator.cannon_world.addBody(b.body)
+                this.simulator.bullets.push(b)
+
+
+
+                this.update_timer=0
+
+                this.simulator.game.effect_list.push(new Effect( this.ctx,[x,y]))
+
+            }
+
+        }
+
+        draw(){
+
+            ctx.strokeStyle = this.color
+            ctx.beginPath()
+            ctx.arc(this.gun_info.x, this.gun_info.y, this.gun_info.size, 0 * Math.PI, 2 * Math.PI)
+            ctx.closePath()
+            ctx.stroke()
+            ctx.fillStyle=this.color2
+            ctx.fillText(`${this.gun_info.x} ${this.gun_info.y}`,this.gun_info.x,  this.gun_info.y)
+        }
 
 
     }
@@ -582,7 +796,25 @@ function add_game_canvas_to_container(container_id) {
         update(deltaTime) { }
 
         draw() {
+    
+            ctx.save()
+            ctx.translate(this.body.position.x, this.body.position.y)
+
+            if (this.body.quaternion.z > 0) {
+                this.angle = Math.acos(this.body.quaternion.w) * 2
+            }
+            else {
+                this.angle = 2 * Math.PI - Math.acos(this.body.quaternion.w) * 2
+
+            }
+            ctx.rotate(this.angle)
+
+
+            ctx.translate(-1 * this.body.position.x, -1 * this.body.position.y)
+
+
             ctx.fillStyle = this.color
+    
             ctx.font = font_mid
             ctx.fillRect(
                 this.body.position.x - this.halfExtents.x, this.body.position.y - this.halfExtents.y, 2 * this.halfExtents.x, 2 * this.halfExtents.y
@@ -590,6 +822,7 @@ function add_game_canvas_to_container(container_id) {
             ctx.fillStyle = this.color2
             ctx.fillText(this.body.position.x.toFixed(1) + " " + this.body.position.y.toFixed(1), this.body.position.x, this.body.position.y)
 
+            ctx.restore()
         }
 
     }
@@ -755,6 +988,74 @@ function add_game_canvas_to_container(container_id) {
 
 
 
+    class EffectElement {
+        color = get_random_Color()
+        position = [0, 0]
+        direction = random_direction()
+        radius = 5 + 5 * Math.random()
+        speed = 0.5 + 1 * Math.random()
+        constructor(position) {
+            this.position = Array.from(position)
+        }
+    
+        update() {
+            this.position[0] += this.direction[0] * this.speed
+            this.position[1] += this.direction[1] * this.speed
+            if (this.radius > 0.1) { this.radius -= 0.1 }
+        }
+    
+    }
+    
+    
+    
+    class Effect {
+    
+        elements = []
+        last_time = 0
+        life = 500   //   500 ms
+        elementNumber = 5 + 5 * Math.random().toFixed(0)
+        frame = 60 + 20 * Math.random()
+    
+        constructor(ctx, position) {
+            this.ctx = ctx
+            // console.log(position)
+            for (let i = 0; i < this.elementNumber; i++) {
+                this.elements.push(new EffectElement(position))
+            }
+    
+        }
+    
+        update() {
+            this.elements.forEach(
+                e => {
+                    e.update()
+                    // e.radius=0.5*(1+ this.frame/50 )*e.radius
+                }
+            )
+            this.frame -= 1
+    
+        }
+    
+        draw() {
+            this.elements.forEach(
+                e => {
+                    ctx.fillStyle = e.color
+                    // ctx.fillRect(e.position[0],e.position[1],50,50)
+                    ctx.beginPath()
+                    ctx.arc(e.position[0], e.position[1], e.radius, 0 * Math.PI, 2 * Math.PI)
+                    ctx.fill()
+                    ctx.closePath()
+    
+    
+                }
+            )
+        }
+    
+    }
+    
+
+
+
     class DataManager {
 
         x_list = []
@@ -880,6 +1181,9 @@ function add_game_canvas_to_container(container_id) {
         }
         gameTime += deltaTime
         ctx.clearRect(0, 0, canvas.width, canvas.height)
+    
+        ctx.setTransform(canvasInfo.scale, 0, 0, canvasInfo.scale, canvasInfo.offsetX, canvasInfo.offsetY)
+
         game.update_and_draw(deltaTime / 1000)
     }
 

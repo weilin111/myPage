@@ -65,9 +65,3 @@ function fireKeyEvent(element, evtType, keyChar) {
     var evtObj = new KeyboardEvent(evtType, KeyboardEventInit);
     element.dispatchEvent(evtObj);
 }
-
-
-
-var getRandomInt = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
