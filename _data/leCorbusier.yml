@@ -78,6 +78,12 @@ imgList:
     location: 朗香 法国
     discription:  
   - img:
+    path: /ZLG/corbusier/联合公寓-雷泽01.webp
+    name: 联合公寓-雷泽
+    date: 1955
+    location: 雷泽 法国
+    discription: 
+  - img:
     path: /ZLG/corbusier/昌迪加尔高等法院01.jpg
     name: 昌迪加尔高等法院
     date: 1956
@@ -126,6 +132,12 @@ imgList:
     location: 麻省剑桥 美国
     discription: 
   - img:
+    path: /ZLG/corbusier/联合公寓-布里埃01.webp
+    name: 联合公寓-布里埃
+    date: 1963
+    location: 布里埃 法国
+    discription: 
+  - img:
     path: /ZLG/corbusier/昌迪加尔建筑学院01.jpeg
     name: 昌迪加尔建筑学院
     date: 1965
@@ -136,6 +148,12 @@ imgList:
     name: 柯布西耶展览馆
     date: 1967
     location: 苏黎世 瑞士
+    discription: 
+  - img:
+    path: /ZLG/corbusier/联合公寓-费尔米尼01.webp
+    name: 联合公寓-费尔米尼
+    date: 1967
+    location: 费尔米尼 法国
     discription: 
   - img:
     path: /ZLG/corbusier/费尔米尼综合体01.jpg
