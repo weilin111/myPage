@@ -1,7 +1,25 @@
-tripList:
-  - trip:
-    ima: /ZLG/corbusier/Roche别墅01.jpg
-    name: Roche别墅
-    date: 1925
-    location: 巴黎 法国
+imgList:
+  - img:
+    path: /ZLG/bj001/VID_20240416_020757.gif
+    name: 未名湖看水
+    date: 
+    location: 
+    discription: 
+  - img:
+    path: /ZLG/bj001/VID_20240416_021631.gif
+    name: 
+    date: 
+    location: 
+    discription: 
+  - img:
+    path: /ZLG/bj001/VID_20240416_021723.gif
+    name: 
+    date: 
+    location: 
+    discription: 
+  - img:
+    path: /ZLG/bj001/VID_20240416_021710.gif
+    name: 
+    date: 
+    location: 
     discription: 

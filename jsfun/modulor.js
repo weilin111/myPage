@@ -819,7 +819,7 @@ function add_game_canvas_to_container(container_id) {
         color3 = get_random_Color()
 
         seed_info={
-            num:getRandomInt(150,250),
+            num:getRandomInt(150,500),
             seed_size:8,
             length_base:getRandomInt(10,25),
             k:0.618
@@ -856,7 +856,7 @@ function add_game_canvas_to_container(container_id) {
             let r_max=length_base*Math.pow(this.seed_info.num,0.5)
 
             ctx.lineWidth = 2
-            ctx.strokeText(`k=${this.seed_info.k.toFixed(3)}`,x0+r_max,y0+r_max)
+            ctx.strokeText(`k=${this.seed_info.k.toFixed(3)}`,x0+r_max,y0-r_max)
 
             for (let i = 0; i < this.seed_info.num ; i++) {
                 
