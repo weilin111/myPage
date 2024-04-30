@@ -26,6 +26,9 @@
     --kx-color-01:rgb(0, 195, 255);
     --kx-color-02:rgb(205, 33, 214);
     --kx-color-03:rgb(246, 64, 3);
+    --kx-color-04:rgb(31, 246, 3);
+    --kx-color-05:rgb(241, 107, 62);
+    --kx-color-06:rgb(68, 3, 246);
     --kx-line-size-01: 15px;
 }
 
@@ -391,6 +394,70 @@
 
 }
 
+.bg_pat_a12 {
+    height: 300px;
+    background-color: #fff;
+    background-image:
+    radial-gradient(
+    circle,
+    transparent 1.4rem,
+    #ffffff 2rem
+
+    ),
+    linear-gradient( 
+        45deg,
+        #4c1392 .4rem,
+        transparent .4rem
+        ),
+    linear-gradient( 
+        90deg,
+        #25c8f5 .4rem,
+        transparent .4rem
+        );
+
+    background-size: 4rem 4rem,.5rem .5rem,.5rem .5rem;
+    background-position:3.4rem 3.2rem,0.9rem 1.4rem,1.2rem 0.2rem;
+    /* background-position-x: 20px; */
+    /* background-position: 0.0rem 4.0rem,1.8rem 4.2rem,-0.2rem 1.8rem; */
+    /* background-repeat: no-repeat;  */
+    animation: km-anmim 1.0s cubic-bezier(0.87, 0, 0.745, 0.715) infinite;
+
+}
 
 
 
+:root{
+    --bg_pat_a13_cl_1:hsl(0, 24%, 23%);
+    --bg_pat_a13_cl_2:hsl(0,60%,50%);
+}
+
+
+.bg_pat_a13 {
+    width: 100%;
+    height: 600px;
+    background-color: var(--bg_pat_a13_cl_1);
+    background-image:
+    linear-gradient( 
+        -45deg,
+        transparent 75%,
+        hsl(124, 100%, 38%) 75%
+        ),
+    linear-gradient( 
+        75deg,
+        transparent 75%,
+        hsl(188deg 78% 36%) 75%
+        ),
+    linear-gradient( 
+        -105deg,
+        transparent 75%,
+        hsl(0deg 0% 100%) 75%
+        ),
+    linear-gradient( 
+        135deg,
+        transparent 75%,
+        hsl(195, 98%, 59%) 75%
+        );
+    /* transform: rotate(180deg); */
+    background-size: 1rem 1.5rem;
+    background-position: 0;
+}

@@ -38,6 +38,10 @@ defaults:
       path: "ZLG/SONG/ss"
     values:
       ss: true
+  - scope:
+      path: "ZLG/bj001"
+    values:
+      bj001: true
 comments :
   gitalk :
     clientID : xxx

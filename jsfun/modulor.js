@@ -58,9 +58,9 @@ function add_game_canvas_to_container(container_id) {
 
     var canvasInfo = {
         scale: 1,
-        scale_step: 0.1,
-        max_scale: 3,
-        min_scale: 0.1,
+        scale_step: 0.02,
+        max_scale: 4,
+        min_scale: 0.01,
         offsetX: 0,
         offsetY: 0,
     }
@@ -162,6 +162,8 @@ function add_game_canvas_to_container(container_id) {
             this.graph_list.push(new goldenGrid())
             this.graph_list.push(new stationaryWaveLab())
             this.graph_list.push(new flowerFib())
+            this.graph_list.push(new goldenGridV2())
+            this.graph_list.push(new goldenGridV2Group())
 
         }
 
@@ -648,28 +650,270 @@ function add_game_canvas_to_container(container_id) {
 
     }
 
+
+    class Rect{
+
+
+        constructor(left,right,up,down){
+
+            this.left=left
+            this.right=right
+            this.up=up
+            this.down=down
+            this.color=get_random_Color()
+            this.color2=get_random_Color()
+            this.is_fill=(Math.random()>0.85)
+        }
+
+    }
+
     class goldenGridV2 {
+
+        update_timer_max=getRandomInt(12*2,12*6)
+        update_timer=0
+
+        width = canvas.width * 0.2
+        draw_info = {
+            x: canvas.width * 0.7,
+            y: canvas.height * 0.55,
+            width: this.width,
+            height: this.width * 0.618,
+        }
+
+        color = get_random_Color()
+        color2 = get_random_Color()
+        color3 = get_random_Color()
+
+        k=0.618
+
+        rect_list=[]
+        rect_to_split_list=[]
+
+
+
 
         constructor(draw_info) {
 
+
+            this.generate_grid()
+
+        }
+
+        generate_grid(){
+
+
+            let iter_num=10
+            let iter_num_timer=0
+            this.rect_list=[]
+            this.rect_to_split_list=[]
+
+
+            let  init_rect=new Rect( 
+                this.draw_info.x,
+                this.draw_info.x+this.draw_info.width,
+                this.draw_info.y,
+                this.draw_info.y+this.draw_info.height,
+              )
+
+            this.rect_list.push(init_rect)
+
+            this.rect_to_split_list.push(init_rect)
+
+            while (this.rect_to_split_list.length>0) {
+                let rect=this.rect_to_split_list.pop()
+                
+                let [rect1,rect2]=this.split_rect(rect)
+
+                this.rect_list.push(rect2)
+                this.rect_list.push(rect1)
+                
+                
+                iter_num_timer+=1
+                if (iter_num_timer<iter_num){
+                    this.rect_to_split_list.push(rect1)
+                    this.rect_to_split_list.push(rect2)
+                }
+            }
+        }
+
+        
+        rect_roll4(rect){
+            let index=getRandomInt(0,3)
+            let k=this.k
+            let direction_list=[
+                [k,1],
+                [1-k,1],
+                [1,1-k],
+                [1,k],
+            ]
+
+            return direction_list[index]
+        }
+
+        split_rect(rect){
+
+            let [k_x,k_y]=this.rect_roll4(rect)
+            let color=get_random_Color()
+            let width=rect.right-rect.left
+            let height=rect.up-rect.down
+            let rect1=new Rect(
+                rect.left,
+                rect.left+width*k_x,
+                rect.down+height*k_y,
+                rect.down,
+            )
+            let rect2={}
+            if (k_x==1){
+                rect2=new Rect(
+                    rect.left,
+                    rect.right,
+                    rect.down+height*k_y,
+                    rect.down,
+                )
+            }
+            else{
+                rect2=new Rect(
+                    rect1.right,
+                     rect.right,
+                     rect.down+height*k_y,
+                     rect.down,
+                  )
+            }
+
+            return [rect1,rect2]
         }
 
         draw() {
+            ctx.lineWidth = 7
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+            ctx.fillStyle = this.color2
+
+            ctx.lineWidth = 4
+            // ctx.strokeText(`k=${this.k.toFixed(3)}`, this.draw_info.x, this.draw_info.y)
+
+            this.rect_list.forEach(
+                e=>{
+                    if (e.is_fill){
+                        ctx.fillStyle=e.color2
+                        ctx.fillRect(e.left,
+                            e.up,
+                            e.right-e.left,
+                            e.down-e.up
+                        )
+                    }
+
+                    ctx.strokeStyle = e.color
+                    ctx.strokeRect(e.left,
+                        e.up,
+                        e.right-e.left,
+                        e.down-e.up
+                    )
+                    
+
+                }
+            )
 
 
         }
 
 
-        update() { }
+        update() { 
+
+            this.update_timer+=1
+            if(this.update_timer>this.update_timer_max){
+                this.generate_grid()
+                this.update_timer=0
+            }
+        }
 
     }
+
+
+    class goldenGridV2Group {
+
+
+        width = canvas.width * 0.2
+
+        draw_info = {
+            x: canvas.width * 0.32,
+            y: canvas.height * 0.15,
+            width: this.width,
+            height: this.width * 0.618,
+        }
+
+
+        grid_list=[]
+
+        constructor(){
+
+
+            let n_row=getRandomInt(3,8)
+            let n_col=getRandomInt(3,8)
+
+            for (let i = 0; i < n_row; i++) {
+
+                for (let j = 0; j < n_col; j++) {
+
+
+                    let width=this.width/n_row
+                    let height=width
+                    let gap=20
+
+                    let temp_grid=new goldenGridV2()
+
+                    temp_grid.draw_info={
+                        x: this.draw_info.x+j*(width+gap),
+                        y: this.draw_info.y+i*(height+gap),
+                        width: width,
+                        height: height,
+                    }
+                    temp_grid.generate_grid()
+                    this.grid_list.push(temp_grid)
+
+                }
+
+            }
+
+        }
+
+
+        draw(){
+
+            this.grid_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+        }
+
+        update(){
+            this.grid_list.forEach(
+                e=>{
+                    e.update()
+                }
+            )
+
+
+        }
+
+    }
+
+
+
+
 
     class stationaryWaveLab {
 
 
         draw_info = {
-            x: canvas.width * 0.65,
-            y: canvas.height * 0.55,
+            x: canvas.width * 0.75,
+            y: canvas.height * 0.10,
             width: canvas.width * 0.25,
             height: canvas.width * 0.1,
         }
@@ -820,7 +1064,7 @@ function add_game_canvas_to_container(container_id) {
 
         seed_info={
             num:getRandomInt(150,500),
-            seed_size:8,
+            seed_size:getRandomInt(6,9),
             length_base:getRandomInt(10,25),
             k:0.618
         }
@@ -870,7 +1114,11 @@ function add_game_canvas_to_container(container_id) {
                 a=Math.pow(a,2) *250
                 ctx.fillStyle=`hsl(${a},100%,50%)`
                 ctx.beginPath()
-                ctx.arc(x,y,this.seed_info.seed_size,0, 2 * Math.PI)
+                let draw_size=this.seed_info.seed_size * r/length_base/10
+                draw_size=Math.max(4,draw_size)
+                ctx.arc(x,y,
+                    draw_size,
+                    0, 2 * Math.PI)
                 ctx.fill()
                 ctx.closePath()
 
@@ -1054,6 +1302,8 @@ function add_game_canvas_to_container(container_id) {
                         case 80:
                             // p
                             game.is_stop = !game.is_stop
+                            break;
+
                         default:
                             break;
                     }
@@ -1078,6 +1328,7 @@ function add_game_canvas_to_container(container_id) {
                         case 80:
                             // p
                             game.is_stop = !game.is_stop
+                            break;
 
                         default:
                             break;
@@ -1109,8 +1360,8 @@ function add_game_canvas_to_container(container_id) {
                     e.preventDefault()
 
                     let realPosition = {
-                        x: e.offsetX * 2 - canvasInfo.offsetX,
-                        y: e.offsetY * 2 - canvasInfo.offsetY
+                        x: e.offsetX * 2 *scale_factor - canvasInfo.offsetX,
+                        y: e.offsetY * 2 *scale_factor - canvasInfo.offsetY
                     }
 
                     let { scale_step } = canvasInfo

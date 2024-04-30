@@ -75,6 +75,8 @@ function add_game_canvas_to_container(container_id) {
         display = 0
         orbitSystem = 0
         effect_list = []
+        is_stop = false
+
 
         constructor(ctx, canvas) {
             this.ctx = ctx
@@ -91,13 +93,15 @@ function add_game_canvas_to_container(container_id) {
         update_and_draw(deltaTime) {
             this.animate_list.forEach(
                 e => {
-                    e.update(deltaTime)
+                    if (!this.is_stop) { e.update(deltaTime) }
+
                     e.draw()
                 }
             )
             this.effect_list.forEach(
                 e => {
-                    e.update()
+                    if (!this.is_stop) { e.update() }
+
                     e.draw()
                 }
             )
@@ -194,13 +198,27 @@ function add_game_canvas_to_container(container_id) {
             )
 
             let bullet_gun=new BulletGun(this,this.ctx)
+            bullet_gun.font_base0=bullet_gun.font_base2
             this.bullet_gun_list.push(bullet_gun)
 
             bullet_gun=new BulletGun(this,this.ctx)
             bullet_gun.gun_info.x=canvas.width/4*1.5
             bullet_gun.gun_info.y=canvas.height/10*1
+            bullet_gun.font_base0=bullet_gun.font_base2
             bullet_gun.chinese="把酒祝东风且共从容垂杨紫陌洛城东总是当时携手处游遍芳丛聚散苦匆匆此恨无穷今年花胜去年红可惜明年花更好知与谁同"
             this.bullet_gun_list.push(bullet_gun)
+
+
+            bullet_gun=new BulletGun(this,this.ctx)
+            bullet_gun.gun_info.x=canvas.width/4*1.0
+            bullet_gun.gun_info.y=canvas.height/10*1
+            bullet_gun.font_base0="OCPOLY"
+            bullet_gun.chinese="ABCDEFGHIJKLMNOPQRSTUVWXYZzxcvbnmasdfghjklqwertyuiop"
+            this.bullet_gun_list.push(bullet_gun)
+
+
+
+
         }
 
 
@@ -390,6 +408,8 @@ function add_game_canvas_to_container(container_id) {
 
 
         add_listener(player, input) {
+            let game = player.timeWorld.game
+
             window.addEventListener("keypress",
                 e => {
                     // console.log(e, e.keyCode)
@@ -433,7 +453,10 @@ function add_game_canvas_to_container(container_id) {
                             }
 
                             break;
-
+                        case 80:
+                            // p
+                                game.is_stop = !game.is_stop
+                                break;
                         default:
                             break;
                     }
@@ -460,7 +483,10 @@ function add_game_canvas_to_container(container_id) {
                                 input.press_emit_timer=0
                             }
                             break;
-
+                        case 80:
+                                // p
+                                game.is_stop = !game.is_stop
+                                break;
                         case 82:
                             // input.press_emit_timer += 1
                             // if(input.press_emit_timer>input.press_emit_timer_max){
@@ -513,8 +539,8 @@ function add_game_canvas_to_container(container_id) {
                 e.preventDefault()
                 
                 let realPosition = {
-                    x: e.offsetX*2 - canvasInfo.offsetX,
-                    y: e.offsetY*2 - canvasInfo.offsetY
+                    x: e.offsetX*2*scale_factor - canvasInfo.offsetX,
+                    y: e.offsetY*2*scale_factor - canvasInfo.offsetY
                 }
 
                 let { scale_step } = canvasInfo
@@ -609,6 +635,7 @@ function add_game_canvas_to_container(container_id) {
         constructor(simulator,ctx){
             this.ctx=ctx
             this.simulator=simulator
+    
         }
 
         update(){
@@ -635,7 +662,7 @@ function add_game_canvas_to_container(container_id) {
                 b.text=this.chinese[ this.chinese_index]
                 this.chinese_index+=1
                 this.chinese_index=this.chinese_index% this.chinese.length
-                b.font_base0=this.font_base2
+                b.font_base0=this.font_base0
                 
 
                 this.simulator.cannon_world.addBody(b.body)
