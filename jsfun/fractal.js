@@ -155,7 +155,13 @@ function add_game_canvas_to_container(container_id) {
             this.ctx = game.ctx
             this.game = game
 
-            this.graph_list.push(new fractalTree())
+            let temp_tree=new fractalTree()
+            temp_tree.is_draw_rect=true
+            this.graph_list.push(temp_tree)
+            this.graph_list.push(new fractalTreeGroup())
+            this.graph_list.push(new cantorSet())
+            this.graph_list.push(new mandbotSet())
+            this.graph_list.push(new mandbotSetGroup())
 
         }
 
@@ -253,6 +259,7 @@ function add_game_canvas_to_container(container_id) {
         tree_node_list=[]
         temp_tree_node_list=[]
 
+        is_draw_rect=false
 
 
         constructor(draw_info){
@@ -265,20 +272,22 @@ function add_game_canvas_to_container(container_id) {
 
             this.generate_tree() 
 
-            console.log(this.tree_node_list)
+            // console.log(this.tree_node_list)
         
         }
 
         draw(){
-            
-            ctx.lineWidth = 8
+            if (this.is_draw_rect){
+                ctx.lineWidth = 8
 
-            ctx.strokeStyle = this.color
-            ctx.strokeRect(this.draw_info.x,
-                this.draw_info.y,
-                this.draw_info.width,
-                this.draw_info.height
-            )
+                ctx.strokeStyle = this.color
+                ctx.strokeRect(this.draw_info.x,
+                    this.draw_info.y,
+                    this.draw_info.width,
+                    this.draw_info.height
+                )
+            }
+
 
             ctx.strokeStyle=this.color1
             ctx.fillStyle=this.color2
@@ -293,12 +302,13 @@ function add_game_canvas_to_container(container_id) {
 
         generate_tree(){
 
-            let iter_num=10
+            let iter_num=getRandomInt(3,9)
             let iter_num_timer=0
 
             this.temp_tree_node_list=[]
             this.tree_node_list=[]
             this.temp_tree_node_list.push(this.root_node)
+            this.branch_length_base=this.draw_info.height/4
 
             while(this.temp_tree_node_list.length>0){
 
@@ -313,8 +323,8 @@ function add_game_canvas_to_container(container_id) {
                 temp_node.right=right
                 
                 let branch_length=this.branch_length_base/temp_node.level
-                left.angle=temp_node.angle-getRandomInt(15,30)
-                right.angle=temp_node.angle+getRandomInt(15,30)
+                left.angle=temp_node.angle-getRandomInt(2,30)
+                right.angle=temp_node.angle+getRandomInt(2,30)
 
 
                 left.position.x=temp_node.position.x + branch_length*Math.cos(left.angle/180*Math.PI)
@@ -342,26 +352,448 @@ function add_game_canvas_to_container(container_id) {
 
     }
 
-    class mandotSet{
-        width = canvas.width * 0.2
+
+
+    class fractalTreeGroup{
+
+        width = canvas.width * 0.75
         draw_info = {
-            x: canvas.width * 0.7,
-            y: canvas.height * 0.55,
+            x: canvas.width * 0.2,
+            y: canvas.height * 0.2,
             width: this.width,
-            height: this.width * 0.618,
+            height: this.width * (1-0.618),
         }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+
+        tree_list=[]
+        tree_number=getRandomInt(5,10)
 
         constructor(draw_info){
+            
+            for (let i = 0; i < this.tree_number; i++) {
 
-            if (draw_info){ this.draw_info=draw_info}
+
+                let x=this.draw_info.x+this.draw_info.width*Math.random()
+                let y=this.draw_info.y
+
+                let w=this.draw_info.width*Math.random()/5
+                let h=this.draw_info.height*Math.random()*1.1
+
+                x=x-w
+                y=y+this.draw_info.height-h
+
+
+                this.tree_list.push(
+                    new fractalTree(  
+                        {
+                            x: x,
+                            y: y,
+                            width: w,
+                            height: h,
+                        }
+                    )
+                )
+
+
+
+            }
+
         }
 
-        draw(){}
-        update(){}
+
+        draw(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+
+            this.tree_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+        }
+
+        update(){
+
+        }
+
+
     }
 
 
 
+
+
+
+    class cantorSet{
+
+        width = canvas.width * 0.2
+        draw_info = {
+            x: canvas.width * 0.75,
+            y: canvas.height * 0.10,
+            width: this.width,
+            height: this.width * 1.618,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+
+        branch_length_base=this.draw_info.height/4
+    
+        root_node= new cantorSetNode(null)
+
+        divide_k=3
+
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+            
+
+
+            this.generate_tree() 
+
+            console.log(this.tree_node_list)
+        
+        }
+
+        draw(){
+            
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+
+            ctx.strokeStyle=this.color1
+            ctx.fillStyle=this.color2
+            this.root_node.draw()
+        
+        }
+
+        update(){
+
+
+        }
+
+
+        generate_tree(){
+
+
+            this.root_node.position={x:this.draw_info.x+this.draw_info.width/2
+                                    ,y:this.draw_info.y}
+            this.root_node.bar_width =this.draw_info.width/2.2
+            this.root_node.bar_height=this.draw_info.height/40
+            this.root_node.color=`hsl(${1},100%,50%)`
+
+            let iter_num=11
+            let iter_num_timer=1
+
+            this.temp_tree_node_list=[]
+            this.tree_node_list=[]
+            this.temp_tree_node_list.push(this.root_node)
+
+            while(this.temp_tree_node_list.length>0){
+
+                let temp_node=this.temp_tree_node_list.pop()
+                
+                this.tree_node_list.push( temp_node)
+
+                let left=new cantorSetNode(temp_node)
+                let right=new cantorSetNode(temp_node)
+                
+                temp_node.left=left
+                temp_node.right=right
+                
+                let branch_length=this.branch_length_base*temp_node.level
+
+
+                let x=temp_node.position.x
+                let y=temp_node.position.y
+                let width=temp_node.bar_width
+                let height=Math.pow(temp_node.bar_height,1.06)
+                let divide_k=this.divide_k
+                let gap=10
+
+                left.position.x= x-width/divide_k
+                left.position.y= y+height +gap
+                left.bar_width= width/divide_k
+                left.bar_height=height
+
+                right.position.x= x+width/divide_k
+                right.position.y= y+height +gap
+                right.bar_width= width/divide_k
+                right.bar_height=height
+
+                let a=  (left.level/iter_num)  
+                a=Math.pow(a,2) *250
+                left.color=`hsl(${a},100%,50%)`
+                right.color=`hsl(${a},100%,50%)`
+                
+                
+                if(temp_node.level<iter_num){
+                    this.temp_tree_node_list.push(left)
+                    this.temp_tree_node_list.push(right)
+                }
+
+
+            }
+
+
+
+
+        }
+        
+
+    
+    }
+
+    class cantorSetNode{
+
+
+        left=null
+        right=null
+        level=1
+        position={x:0,y:0}
+        bar_width=10
+        bar_height=10        
+        angle=0
+        color=get_random_Color
+        constructor(parent){
+            this.parent=parent
+            if(parent) {this.level=parent.level+1}
+        }
+
+        draw(){
+
+                ctx.fillStyle=this.color
+                ctx.fillRect(  this.position.x-this.bar_width/2,
+                    this.position.y-this.bar_height/2,
+                    this.bar_width,
+                    this.bar_height )
+
+                if(this.left){this.left.draw()}
+                if(this.right){this.right.draw()}
+
+        }
+        
+
+
+    }
+
+
+
+
+
+
+
+    class mandbotSet{
+        width = canvas.width * 0.15
+        draw_info = {
+            x: canvas.width * 0.05,
+            y: canvas.height * 0.05,
+            width: this.width,
+            height: this.width,
+        }
+
+        n_row=getRandomInt(20,80)
+        n_col=this.n_row
+
+        z0=math.complex( Math.random(),Math.random())
+        max_repeat=100
+        max_radiu=2.5
+
+        data_list=[]
+        
+        color=get_random_Color()
+
+        constructor(draw_info,fractal_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+
+            if (fractal_info){
+                this.z0=fractal_info.z0
+                this.max_radiu=fractal_info.max_radiu
+            }
+
+            this.generate()
+        }
+
+
+        check_mandbot(c){
+            let repeat_temp=0
+            let z=math.complex(0,0)
+            for (let i = 0; i < this.max_repeat; i++) {
+
+                z=math.add(math.multiply(z,z),c)
+                repeat_temp=i
+                if (  z.abs() >this.max_radiu ){break}
+            }
+            return repeat_temp
+        }
+
+        draw(){
+            this.draw_bondrary_rect()
+
+            this.data_list.forEach(
+                e=>{                    
+                    let a= e.repeat/this.max_repeat
+                    a=1-a
+                    a=Math.pow(a,2) *250
+                    ctx.fillStyle=`hsl(${a},100%,50%)`
+                    // if(e.repeat<2){ctx.fillStyle="#000"}
+                    if(e.repeat>2){
+                        ctx.fillRect(e.x,e.y,e.w,e.h)
+                    }
+                }
+            )
+
+        }
+        update(){}
+
+
+        draw_bondrary_rect(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+        }
+
+
+        generate(){
+
+            let coor_scale=3
+            let x=this.draw_info.x
+            let y=this.draw_info.y
+            let width=this.draw_info.width
+            let height=this.draw_info.height
+
+
+            for (let i = 0; i < this.n_col; i++) {
+
+                for (let j = 0; j < this.n_row; j++) {
+
+                    let x1=( (i-this.n_col/2)/this.n_col -0.25)  *coor_scale
+                    let y1=(j-this.n_row/2)/this.n_row              *coor_scale
+                    let repeat=this.check_mandbot( math.complex(x1,y1) )
+                    this.data_list.push(
+                        {
+                            x:x+width/this.n_col*i,
+                            y:y+height/this.n_row*j,
+                            w:width/this.n_col,
+                            h:height/this.n_row,
+                            repeat:repeat,
+                            // x1:x1,
+                            // y1:y1,
+                        }
+                    )
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+
+    class mandbotSetGroup{
+
+        width = canvas.width * 0.5
+        draw_info = {
+            x: canvas.width * 0.2,
+            y: canvas.height * 0.05,
+            width: this.width,
+            height: this.width*0.2,
+        }
+
+        mandbotSet_list=[]
+
+        constructor(draw_info){
+
+            let n=5
+            for (let i = 0; i < n; i++) {
+    
+                let sub_draw_info = {
+                    x: this.draw_info.x+ i/n*this.draw_info.width,
+                    y: this.draw_info.y,
+                    width: this.draw_info.width/n,
+                    height: this.draw_info.height,
+                }
+                let fractal_info={
+                    z0:math.complex(Math.random()*50,math.random()*50),
+                    max_radiu:math.random()*2+1
+                }
+                this.mandbotSet_list.push(
+                    new mandbotSet(sub_draw_info,fractal_info)
+                )
+
+            }
+
+            console.log(this.mandbotSet_list)
+
+
+        }
+
+
+        draw(){
+            this.draw_bondrary_rect()
+
+            this.mandbotSet_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+
+        }
+
+        draw_bondrary_rect(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+
+
+
+
+        }
+
+        update(){
+
+        }
+
+
+    }
+
+
+
+    class sierpinskiTriangle{}
+
+    class sierpinskiCarpet{}
+
+    class disperation{}
 
 
 
