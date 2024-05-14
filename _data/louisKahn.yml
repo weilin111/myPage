@@ -1,0 +1,62 @@
+imgList:
+  - img:
+    path: /ZLG/kahn/耶鲁大学美术馆01.jpeg
+    name: 耶鲁大学美术馆
+    date: 1953
+    location: 纽黑文 美国
+    discription: 
+  - img:
+    path: /ZLG/kahn/理查德医学研究中心01.jpeg
+    name: 理查德医学研究中心
+    date: 1961
+    location: 费城 美国
+    discription: 
+  - img:
+    path: /ZLG/kahn/恩施里克住宅01.webp
+    name: 恩施里克住宅
+    date: 1961
+    location: 费城 美国
+    discription: 
+  - img:
+    path: /ZLG/kahn/萨尔克生物研究所01.jpeg
+    name: 萨尔克生物研究所
+    date: 1963
+    location: 拉霍亚 美国
+    discription: 
+  - img:
+    path: /ZLG/kahn/点对点第二音乐厅01.jpg
+    name: 点对点第二音乐厅
+    date: 1976
+    location: 一艘船
+    discription: 
+  - img:
+    path: /ZLG/kahn/罗切斯特唯一神教教堂01.jpg
+    name: 罗切斯特唯一神教教堂
+    date: 1969
+    location: 罗切斯特 美国
+    discription: 
+  - img:
+    path: /ZLG/kahn/埃克塞特图书馆03.jpeg
+    name: 埃克塞特图书馆
+    date: 1972
+    location: 埃克塞特 美国
+    discription: 
+  - img:
+    path: /ZLG/kahn/印度管理学院01.jpg
+    name: 印度管理学院
+    date: 1974
+    location: 艾哈迈达巴德 印度
+    discription: 
+  - img:
+    path: /ZLG/kahn/孟加拉国民议会大厦01.jpeg
+    name: 孟加拉国民议会大厦
+    date: 1982
+    location: 达卡 孟加拉
+    discription: 
+  - img:
+    path: /ZLG/kahn/富兰克林·罗斯福纪念碑01.png
+    name: 富兰克林·罗斯福纪念碑
+    date: 2012
+    location: 纽约 美国
+    discription: 
+
