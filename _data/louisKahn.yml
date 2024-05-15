@@ -6,6 +6,12 @@ imgList:
     location: 纽黑文 美国
     discription: 
   - img:
+    path: /ZLG/kahn/克莱弗住宅01.jpg
+    name: 克莱弗住宅
+    date: 1957
+    location: 新泽西 美国
+    discription: 
+  - img:
     path: /ZLG/kahn/理查德医学研究中心01.jpeg
     name: 理查德医学研究中心
     date: 1961
@@ -18,16 +24,23 @@ imgList:
     location: 费城 美国
     discription: 
   - img:
+    path: /ZLG/kahn/夏皮罗住宅01.jpg
+    name: 夏皮罗住宅
+    date: 1962
+    location: 宾州 美国
+    discription: 
+
+  - img:
     path: /ZLG/kahn/萨尔克生物研究所01.jpeg
     name: 萨尔克生物研究所
     date: 1963
     location: 拉霍亚 美国
     discription: 
   - img:
-    path: /ZLG/kahn/点对点第二音乐厅01.jpg
-    name: 点对点第二音乐厅
-    date: 1976
-    location: 一艘船
+    path: /ZLG/kahn/布瑞安·毛厄女子学院宿舍01.jpg
+    name: 布瑞安·毛厄女子学院宿舍
+    date: 1963
+    location: 宾州 美国
     discription: 
   - img:
     path: /ZLG/kahn/罗切斯特唯一神教教堂01.jpg
@@ -36,16 +49,34 @@ imgList:
     location: 罗切斯特 美国
     discription: 
   - img:
+    path: /ZLG/kahn/金贝尔美术馆01.jpg
+    name: 金贝尔美术馆
+    date: 1972
+    location: 沃斯堡 美国
+    discription: 
+  - img:
     path: /ZLG/kahn/埃克塞特图书馆03.jpeg
     name: 埃克塞特图书馆
     date: 1972
     location: 埃克塞特 美国
     discription: 
   - img:
+    path: /ZLG/kahn/柯曼住宅01.jpg
+    name: 柯曼住宅
+    date: 1973
+    location: 宾州 美国
+    discription: 
+  - img:
     path: /ZLG/kahn/印度管理学院01.jpg
     name: 印度管理学院
     date: 1974
     location: 艾哈迈达巴德 印度
+    discription: 
+  - img:
+    path: /ZLG/kahn/点对点第二音乐厅01.jpg
+    name: 点对点第二音乐厅
+    date: 1976
+    location: 一艘船
     discription: 
   - img:
     path: /ZLG/kahn/孟加拉国民议会大厦01.jpeg

@@ -350,10 +350,13 @@ h1:before{
 {:toc}
 
 
+
+
+
 <ul class="timeline">
 
 <!-- num= {{ site.data.leCorbusier.imgList.size }} -->
-
+<div class="a-container" style=""></div>
 {% for img in site.data.louisKahn.imgList    %}
   <li>
 		<div class="direction-{% cycle 'r', 'l' %}">
@@ -393,6 +396,8 @@ window.onload = function() {
   $("#header").css("backdrop-filter","blur(51px) saturate(13)")
   $("#header").css("z-index","16")
   $(".page-page")[0].remove()
+  $(".navbar-container").empty()
+  $(".a-container").append("<div><div style='margin:0 auto;margin-top:5%; width:60%; text-align:center;font-size:3.5rem'><span  style='color:white;'>Louis  Kahn</span></div> </div>")
 
 }
 </script>
