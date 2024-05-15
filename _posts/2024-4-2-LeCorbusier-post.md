@@ -33,14 +33,16 @@ body {
 
 
 .post-container .post-content{
-  box-shadow:rgb(0 0 255 / 90%)  20px 0px,
+  box-shadow:rgb(0 100 255 / 100%)  18px 0px,
              rgb(255 0 0 / 80%)  35px 0px,
              rgb(0 255 0 / 70%)  45px 0px, 
              rgb(0 255 0 / 45%)  50px 0px, 
              rgb(0 255 0 / 15%)  55px 0px ;
 }
 
-
+.post-content p{
+  text-indent:0rem;
+}
 
 .timeline {
   position: relative;
