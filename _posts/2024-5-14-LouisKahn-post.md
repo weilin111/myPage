@@ -252,6 +252,11 @@ h1:before{
 	z-index: 15;
 }
 
+.direction-r .flag,
+.direction-l .flag{
+ float:none;
+}
+
 .direction-l .flag:before,
 .direction-r .flag:before {
   position: absolute;
@@ -315,7 +320,6 @@ h1:before{
 	position: relative;
 	margin: 1em 1em 0 1em;
 	padding: 1em;
-	
   z-index: 15;
 }
 
@@ -397,7 +401,7 @@ window.onload = function() {
   $("#header").css("z-index","16")
   $(".page-page")[0].remove()
   $(".navbar-container").empty()
-  $(".a-container").append("<div><div style='margin:0 auto;margin-top:5%; width:60%; text-align:center;font-size:3.5rem'><span  style='color:white;'>Louis  Kahn</span></div> </div>")
+  $(".a-container").append("<div><div style='margin:0 auto;margin-top:5%; width:85%; text-align:center;font-size:3.5rem'><span  style='color:white;'>Louis  Kahn</span></div> </div>")
 
 }
 </script>

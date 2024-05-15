@@ -29,6 +29,19 @@ body {
 
 /* ================ The Timeline ================ */
 
+
+
+
+.post-container .post-content{
+  box-shadow:rgb(0 0 255 / 90%)  20px 0px,
+             rgb(255 0 0 / 80%)  35px 0px,
+             rgb(0 255 0 / 70%)  45px 0px, 
+             rgb(0 255 0 / 45%)  50px 0px, 
+             rgb(0 255 0 / 15%)  55px 0px ;
+}
+
+
+
 .timeline {
   position: relative;
   width: 660px;
@@ -134,7 +147,7 @@ h1:before{
   height: 4px;
   margin-top: -10px;
   background: aquamarine;
-  border-radius: 10px;
+  border-radius: 0px;
   border: 0px solid rgb(255,80,80);
   z-index: 10;
 }
@@ -339,6 +352,7 @@ h1:before{
 <ul class="timeline">
 
 <!-- num= {{ site.data.leCorbusier.imgList.size }} -->
+<div class="a-container" style=""></div>
 
 {% for img in site.data.leCorbusier.imgList    %}
 		<!-- <p>{{ img.name }}  年代: {{ img.date }}   地点: {{ img.location }}</p> -->
@@ -372,4 +386,16 @@ h1:before{
 
 <script >
 $("#navigation")[0].innerHTML=""
+
+$(".post-header")[0].innerHTML=""
+
+window.onload = function() {
+  $("#footer").remove()
+  $("#header").css("backdrop-filter","blur(51px) saturate(13)")
+  $("#header").css("z-index","16")
+  $(".page-page")[0].remove()
+  $(".navbar-container").empty()
+  $(".a-container").append("<div><div style='margin:0 auto;margin-top:5%; width:85%; text-align:center;font-size:3.5rem'><span  style='color:white;'>Le Corbusier</span></div> </div>")
+
+}
 </script>

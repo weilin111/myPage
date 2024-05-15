@@ -197,9 +197,11 @@ function add_game_canvas_to_container(container_id) {
     }
 
 
-    class GotoPhi{}
+    class GotoPhiCurve{}
 
-    class Circle{}
+    class GotoPhiElement{}
+
+    class steinerCircle{}
 
 
 
