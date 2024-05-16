@@ -155,10 +155,8 @@ function add_game_canvas_to_container(container_id) {
             this.ctx = game.ctx
             this.game = game
 
-            let temp_tree=new fractalTree()
-            temp_tree.is_draw_rect=true
-            this.graph_list.push(temp_tree)
-            this.graph_list.push(new mandbotSetGroup())
+            this.graph_list.push(new GotoPhiCurve())
+            this.graph_list.push(new steinerChain())
 
         }
 
@@ -197,11 +195,426 @@ function add_game_canvas_to_container(container_id) {
     }
 
 
-    class GotoPhiCurve{}
+    class GotoPhiCurve{
 
-    class GotoPhiElement{}
+        width = canvas.width * 0.5
+        draw_info = {
+            x: canvas.width * 0.25,
+            y: canvas.height * 0.1,
+            width: this.width,
+            height: this.width * 0.618,
+        }
 
-    class steinerCircle{}
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+        element_list=[]
+
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+            
+
+            let n=getRandomInt(5,20)*2
+
+            for (let i = 0; i < n; i++) {
+                
+                let w=this.draw_info.width/(n+1)
+                let h=this.draw_info.height*0.75
+                let draw_info={
+                    x: this.draw_info.x+w*0.1+ i*w,
+                    y: this.draw_info.y+h*0.1,
+                    width: w,
+                    height: h,
+                }
+                let element=new GotoPhiElement(draw_info)
+                element.k=Math.pow(5,0.5)/2-1/2+ (i-n/2)*0.02
+                this.element_list.push( element)
+
+                
+            }
+
+        
+        }
+
+
+        draw(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+
+
+            this.element_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+        }
+
+
+        update(){
+
+            this.element_list.forEach(
+                e=>{
+                    e.update()
+                }
+            )
+        }
+
+
+
+
+
+    }
+
+    class GotoPhiElement{
+
+
+        width = canvas.width * 0.1
+        draw_info = {
+            x: canvas.width * 0.5,
+            y: canvas.height * 0.10,
+            width: this.width,
+            height: this.width * 1.618,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+        color3=get_random_Color()
+
+        k=0.618
+        tolerance=1e-5
+
+        cur_pq={p:1,q:1}
+        
+        pq_list=[this.cur_pq]
+
+        max_step_num=1500
+
+        update_timer=0
+        update_timer_max=1
+
+
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+            
+
+        }
+
+
+        draw(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+
+            ctx.fillStyle=this.color2
+            let pq=this.pq_list[this.pq_list.length-1]
+
+
+
+            let draw_k=0.61803
+            ctx.fillStyle=this.color
+            ctx.fillRect(this.draw_info.x,this.draw_info.y+this.draw_info.height*draw_k,
+                this.draw_info.width*0.61803,
+                this.draw_info.height*(1-draw_k)* this.pq_list.length/ this.max_step_num  )
+            
+
+
+
+            this.pq_list.forEach(
+                (pq,index)=>{
+
+                    let x0=this.draw_info.x 
+                    let x1=this.draw_info.x+this.draw_info.width 
+                    ctx.lineWidth = 3
+                    let ratio=(index+1)/this.pq_list.length
+                    let a=Math.pow(ratio,0.5) *360
+                    ctx.strokeStyle=`hsl(${a},100%,50%)`
+                    let y=this.draw_info.y+this.draw_info.height*draw_k*pq.p/pq.q
+                    ctx.beginPath()
+                    ctx.moveTo(x0, y)
+                    ctx.lineTo(x1, y)
+                    ctx.closePath()
+                    ctx.stroke()
+
+
+                }
+            )
+
+            ctx.save()
+            ctx.translate(this.draw_info.x, this.draw_info.y)
+            ctx.rotate(Math.PI*0.5)
+
+            ctx.translate(this.draw_info.x*-1, this.draw_info.y*-1)
+            
+            ctx.font= this.draw_info.width / 2 + "px AGENCY"
+            ctx.fillStyle=this.color3
+            ctx.fillText(`k=${this.k.toFixed(3)}  p/q=${pq.p}/${pq.q}=${(pq.p/pq.q).toFixed(3)} n=${this.pq_list.length} `,
+            this.draw_info.x
+            ,this.draw_info.y
+            )
+            ctx.restore()
+
+        }
+
+        step(){
+            if(this.pq_list.length<this.max_step_num){
+
+                
+
+                let pq=this.pq_list[this.pq_list.length-1]
+                let ratio=this.k
+
+                if(Math.abs(pq.p/pq.q-ratio)<this.tolerance ){return}
+
+                let next_p_1=pq.p+1
+                let next_q_1=pq.q
+                let next_p_2=pq.p
+                let next_q_2=pq.q+1
+
+
+                let distance=Math.abs(next_p_1/next_q_1-ratio) -Math.abs(next_p_2/next_q_2-ratio)
+                let next_pq={p:1,q:1}
+                if (distance>0){
+                    next_pq.p=next_p_2
+                    next_pq.q=next_q_2
+                }
+                else{
+                    next_pq.p=next_p_1
+                    next_pq.q=next_q_1
+                }
+                this.pq_list.push(next_pq)
+            }
+        }
+
+        update(){
+
+            this.update_timer+=1
+            if (this.update_timer>this.update_timer_max){
+
+                this.step()
+                this.update_timer=0
+
+            }
+        }
+
+
+
+
+
+
+    }
+
+    class steinerChain{
+
+        width = canvas.width * 0.3
+        draw_info = {
+            x: canvas.width * 0.35,
+            y: canvas.height * 0.6,
+            width: this.width,
+            height: this.width * 0.618,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+        circle_a={x:this.draw_info.x+this.draw_info.width/2,
+                  y:this.draw_info.y+this.draw_info.height/2,
+                  r:this.draw_info.height/2,
+                  color:get_random_Color(),
+                }
+        circle_b={x:this.draw_info.x+this.draw_info.width/2,
+        y:this.draw_info.y+this.draw_info.height/2,
+        r:this.draw_info.height/2*0.9*Math.random(),
+        color:get_random_Color(),
+
+        }
+
+        circle_d={x:this.draw_info.x+this.draw_info.width/2 + this.draw_info.width*0.3,
+            y:this.draw_info.y+this.draw_info.height/2,
+            r:this.draw_info.height/2*(1+1.5*Math.random()),
+            color:get_random_Color(),
+
+         }
+
+
+        circle_c_list=[]
+        c_list_angle=0
+        circle_c_number=getRandomInt(6,25)
+        
+         
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+
+            let n=this.circle_c_number
+            let r_c=(this.circle_b.r+this.circle_a.r)/2
+            for (let i = 0; i < n; i++) {
+                
+                let r=(this.circle_a.r-this.circle_b.r)/2
+                let x=this.circle_a.x + r_c*Math.cos( i/n*2*Math.PI +this.c_list_angle )
+                let y=this.circle_a.y + r_c*Math.sin( i/n*2*Math.PI +this.c_list_angle )
+
+                this.circle_c_list.push(
+                    {x:x,
+                    y:y,
+                    r:r,
+                    color:get_random_Color(),
+                }
+                )
+            }
+
+        }
+
+
+        draw(){
+            ctx.lineWidth = 8
+
+            // ctx.strokeStyle = this.color
+            // ctx.strokeRect(this.draw_info.x,
+            //     this.draw_info.y,
+            //     this.draw_info.width,
+            //     this.draw_info.height
+            // )
+
+            let circle_to_draw=[this.circle_a,this.circle_b,this.circle_d]
+
+            circle_to_draw.forEach(
+                e=>{
+                    ctx.strokeStyle=e.color
+                    this.draw_circle(e)
+                    this.map_circle_and_draw(e)
+                }
+            )
+
+            this.circle_c_list.forEach(
+                e=>{
+                    ctx.strokeStyle=e.color
+                    this.draw_circle(e)
+                    this.map_circle_and_draw(e)
+                }
+            )
+            
+        }
+
+
+        map_circle_and_draw(circle){
+
+            let n=48
+            let xy_list=[]
+            
+            for (let i = 0; i < n; i++) {
+
+                let x=circle.x + circle.r*Math.cos( i/n*2*Math.PI  )
+                let y=circle.y + circle.r*Math.sin( i/n*2*Math.PI  )
+
+                
+
+                let x_d=this.circle_d.x
+                let y_d=this.circle_d.y
+                let r_d=this.circle_d.r
+                
+                let ratio=r_d*r_d/ ( (x_d-x)*(x_d-x)+(y_d-y)*(y_d-y) )
+
+                xy_list.push(
+                    {x:x_d*(1-ratio)+x*ratio ,
+                     y:y_d*(1-ratio)+y*ratio  }
+                )
+
+
+            }
+
+            // console.log(xy_list)
+            ctx.lineWidth = 3
+            ctx.beginPath()
+        
+            xy_list.forEach(
+                (e,index)=>{
+                    if(index>=(xy_list.length-1) ){    
+                        ctx.moveTo( e.x,e.y )
+                        ctx.lineTo( xy_list[0].x,xy_list[0].y )
+                        
+                    }
+                    else{
+                        ctx.moveTo( e.x,e.y )
+                        ctx.lineTo( xy_list[index+1].x,xy_list[index+1].y )
+                    }
+                }
+            )
+            ctx.closePath()
+            ctx.stroke()
+            
+
+        }
+
+        draw_circle(circle){
+
+
+            ctx.beginPath()
+            ctx.arc(circle.x, circle.y, circle.r, 0, 2 * Math.PI)
+            ctx.closePath()
+            ctx.stroke()
+
+        }
+
+
+        update(){
+            let factor_t0 = this.draw_info.x+this.draw_info.width/2 - this.draw_info.width*0.6
+            let factor_t1 = this.draw_info.x+this.draw_info.width/2 + this.draw_info.width*1.5
+
+            this.circle_d.x+=this.draw_info.width*0.3*0.01
+
+            if (this.circle_d.x  > factor_t1) {
+                this.circle_d.x = factor_t0
+            }
+
+
+            factor_t0 = 0
+            factor_t1 = Math.PI*2
+            this.c_list_angle+= Math.PI*2 *0.001
+            if (this.c_list_angle  > factor_t1) {
+                this.c_list_angle = factor_t0
+            }
+            this.set_rotate_c_circle_list(this.c_list_angle)
+
+            
+        }
+
+        set_rotate_c_circle_list(angle){
+
+            let r_c=(this.circle_b.r+this.circle_a.r)/2
+
+            let n= this.circle_c_number
+            this.circle_c_list.forEach(
+                (e,i)=>{
+                    e.x=  this.circle_a.x + r_c*Math.cos( i/n*2*Math.PI +this.c_list_angle )
+                    e.y=  this.circle_a.y + r_c*Math.sin( i/n*2*Math.PI +this.c_list_angle )
+                }
+            )
+
+
+        }
+
+
+
+    
+
+
+    }
 
 
 

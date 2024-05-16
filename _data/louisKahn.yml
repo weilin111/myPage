@@ -29,7 +29,6 @@ imgList:
     date: 1962
     location: 宾州 美国
     discription: 
-
   - img:
     path: /ZLG/kahn/萨尔克生物研究所01.jpeg
     name: 萨尔克生物研究所
@@ -71,6 +70,12 @@ imgList:
     name: 印度管理学院
     date: 1974
     location: 艾哈迈达巴德 印度
+    discription: 
+  - img:
+    path: /ZLG/kahn/耶鲁大学英国艺术中心01.jpeg
+    name: 耶鲁大学英国艺术中心
+    date: 1974
+    location: 纽黑文 美国
     discription: 
   - img:
     path: /ZLG/kahn/点对点第二音乐厅01.jpg

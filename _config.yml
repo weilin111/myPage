@@ -31,6 +31,10 @@ defaults:
     values:
       aa03: true
   - scope:
+      path: "ZLG/phy01"
+    values:
+      phy01: true
+  - scope:
       path: "ZLG/AA/ag"
     values:
       ag: true
