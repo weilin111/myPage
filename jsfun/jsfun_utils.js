@@ -8,6 +8,9 @@ function binomial(n, k) {
    for (x = 1; x <= k; x++) coeff /= x;
    return coeff;
 }
+var getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 
  function get_random_Color() {
@@ -65,3 +68,4 @@ function fireKeyEvent(element, evtType, keyChar) {
     var evtObj = new KeyboardEvent(evtType, KeyboardEventInit);
     element.dispatchEvent(evtObj);
 }
+

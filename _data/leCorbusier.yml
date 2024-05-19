@@ -12,6 +12,18 @@ imgList:
     location: 巴黎 法国
     discription: 
   - img:
+    path: /ZLG/corbusier/瓦赞规划01.jpeg
+    name: 瓦赞规划01
+    date: 1925(城市规划)
+    location: 巴黎 法国
+    discription: 
+  - img:
+    path: /ZLG/corbusier/魏森霍夫住宅01.webp
+    name: 魏森霍夫住宅
+    date: 1927
+    location: 斯图加特 德国
+    discription: 
+  - img:
     path: /ZLG/corbusier/加歇别墅01.png
     name: 加歇别墅
     date: 1928
@@ -30,6 +42,12 @@ imgList:
     location: 巴黎 法国
     discription: 
   - img:
+    path: /ZLG/corbusier/阿尔及尔规划01.jpeg
+    name: 阿尔及尔规划
+    date: 1931(城市规划)
+    location: 阿尔及尔 阿尔及利亚
+    discription: 
+  - img:
     path: /ZLG/corbusier/巴黎救世军总部大楼01.jpg
     name: 巴黎救世军总部大楼
     date: 1931
@@ -40,6 +58,18 @@ imgList:
     name: 莫斯科中央局大厦
     date: 1933
     location: 莫斯科 苏联
+    discription: 
+  - img:
+    path: /ZLG/corbusier/苏维埃宫竞赛方案01.jpeg
+    name: 苏维埃宫竞赛方案
+    date: 1930s(未建成)
+    location: 莫斯科 苏联
+    discription: 未建成
+  - img:
+    path: /ZLG/corbusier/usine duvai工厂01.webp
+    name: usine duvai 工厂
+    date: 1946
+    location: 圣迪耶德沃日 法国
     discription: 
   - img:
     path: /ZLG/corbusier/马赛公寓01.jpg
@@ -66,6 +96,18 @@ imgList:
     location: 艾哈迈达巴德 印度
     discription: 
   - img:
+    path: /ZLG/corbusier/Sanskar Kendra 博物馆01.jpg
+    name: Sanskar Kendra 博物馆
+    date: 1954
+    location: 艾哈迈达巴德 印度
+    discription: 
+  - img:
+    path: /ZLG/corbusier/张开的手纪念碑01.jpg
+    name: 张开的手纪念碑
+    date: 1954
+    location: 昌迪加尔 印度
+    discription: 
+  - img:
     path: /ZLG/corbusier/库鲁切特住宅01.jpg
     name: 库鲁切特住宅
     date: 1954
@@ -84,6 +126,12 @@ imgList:
     location: 雷泽 法国
     discription: 
   - img:
+    path: /ZLG/corbusier/萨拉巴伊别墅02.jpg
+    name: 萨拉巴伊别墅
+    date: 1955
+    location: 艾哈迈达巴德 印度
+    discription: 
+  - img:
     path: /ZLG/corbusier/昌迪加尔高等法院01.jpg
     name: 昌迪加尔高等法院
     date: 1956
@@ -94,6 +142,36 @@ imgList:
     name: 昌迪加尔秘书处大楼
     date: 1956
     location: 昌迪加尔 印度
+    discription:  
+  - img:
+    path: /ZLG/corbusier/肖特汉别墅01.jpg
+    name: 肖特汉别墅
+    date: 1956
+    location: 艾哈迈达巴德 印度
+    discription:  
+  - img:
+    path: /ZLG/corbusier/昌迪加尔建筑博物馆01.jpg
+    name: 昌迪加尔建筑博物馆
+    date: 1956
+    location: 昌迪加尔 印度
+    discription:  
+  - img:
+    path: /ZLG/corbusier/几何之丘01.jpg
+    name: 几何之丘
+    date: 1957
+    location: 昌迪加尔 印度
+    discription:  
+  - img:
+    path: /ZLG/corbusier/光影之塔02.png
+    name: 光影之塔
+    date: 1957
+    location: 昌迪加尔 印度
+    discription:  
+  - img:
+    path: /ZLG/corbusier/巴黎大学城巴西学生公寓01.webp
+    name: 巴黎大学城巴西学生公寓
+    date: 1958
+    location: 巴黎 法国
     discription:  
   - img:
     path: /ZLG/corbusier/飞利浦展馆01.webp
@@ -172,12 +250,6 @@ imgList:
     name: 巴格达体育馆
     date: 1982
     location: 巴格达 伊拉克
-    discription: 
-  - img:
-    path: /ZLG/corbusier/张开的手纪念碑01.jpg
-    name: 张开的手纪念碑
-    date: 1985
-    location: 昌迪加尔 印度
     discription: 
   - img:
     path: /ZLG/corbusier/圣皮埃尔教堂01.webp
