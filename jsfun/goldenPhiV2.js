@@ -157,6 +157,7 @@ function add_game_canvas_to_container(container_id) {
 
             this.graph_list.push(new GotoPhiCurve())
             this.graph_list.push(new steinerChain())
+            this.graph_list.push(new fieldGraph())
 
         }
 
@@ -617,7 +618,190 @@ function add_game_canvas_to_container(container_id) {
     }
 
 
+    class fieldGraph{
+        width = canvas.width * 0.15
+        draw_info = {
+            x: canvas.width * 0.15,
+            y: canvas.height * 0.55,
+            width: this.width,
+            height: this.width ,
+        }
 
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+        line_list=[]
+
+        xy_range={
+            x_min:-1,
+            x_max:10,
+            y_min:-1,
+            y_max:5
+        }
+
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+
+            let n=30
+            for (let i = 0; i < n; i++) {
+                
+                let start_xy={
+                    x:this.xy_range.x_min,
+                    y:this.xy_range.y_min+ i/n *(this.xy_range.y_max-this.xy_range.y_min)
+                }
+                let line_info={
+                    streamFunction:this.streamFunction,
+                    start_xy:start_xy,
+                    xy_range:this.xy_range
+                }
+                let temp_line=new fieldLine(this.draw_info,line_info)
+                this.line_list.push(temp_line)
+            }
+            for (let i = 0; i < n; i++) {
+                
+                let start_xy={
+                    x:this.xy_range.x_max,
+                    y:this.xy_range.y_min+ i/n *(this.xy_range.y_max-this.xy_range.y_min)
+                }
+                let line_info={
+                    streamFunction:this.streamFunction,
+                    start_xy:start_xy,
+                    xy_range:this.xy_range
+                }
+                let temp_line=new fieldLine(this.draw_info,line_info)
+                this.line_list.push(temp_line)
+            }
+
+        }
+
+        update(){
+
+
+
+
+        }
+
+        streamFunction(x,y){
+            return x*x-2*x*y+y*y*y
+        }
+
+        draw(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+
+            this.line_list.forEach(
+                e=>{e.draw()}
+            )
+
+        }
+    }
+    class fieldLine{
+        width = canvas.width * 0.3
+        draw_info = {
+            x: canvas.width * 0.25,
+            y: canvas.height * 0.6,
+            width: this.width,
+            height: this.width * 0.618,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+        
+        start_xy={
+            x:-1,
+            y:0
+        }
+        xy_list=[]
+
+        
+        constructor(draw_info,line_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+            this.streamFunction=line_info.streamFunction
+            this.start_xy=line_info.start_xy
+            this.line_info=line_info
+
+        for (let i = 0; i < 1500; i++) {
+            this.step()            
+        }
+
+        }
+
+        step(){
+
+            if (this.xy_list.length<1){
+                this.xy_list.push(this.start_xy)
+                return
+            }
+
+            let cur_xy=this.xy_list[this.xy_list.length-1]
+            let x=cur_xy.x
+            let y=cur_xy.y
+            let dt=0.01
+            let f=this.streamFunction
+            let direction=-1
+            let u= ( f(x+dt,y)-f(x,y) )/dt *direction
+            let v= ( f(x,y+dt)-f(x,y) )/dt *direction
+
+            let l=Math.sqrt(u*u,v*v)
+
+            this.xy_list.push(
+                {x:x+u/l*dt,
+                 y:y+v/l*dt}
+            )
+
+        }
+
+        update(){
+
+        }
+
+        map_xy_to_draw(xy){
+
+            let xy_range=this.line_info.xy_range
+            let x_range=(xy_range.x_max-xy_range.x_min)
+            let y_range=(xy_range.y_max-xy_range.y_min)
+
+
+            return {
+                x:this.draw_info.x+  this.draw_info.width*  (xy.x-xy_range.x_min)/ x_range ,
+                y:this.draw_info.y+  this.draw_info.height*  (xy.y-xy_range.y_min)/ y_range 
+            } 
+        }
+
+
+        draw(){
+            ctx.lineWidth=2.5
+            ctx.beginPath()
+            for (let i = 0; i < this.xy_list.length-2; i++) {
+
+                let cur_xy=this.map_xy_to_draw(this.xy_list[i])
+                let next_xy=this.map_xy_to_draw(this.xy_list[i+1])
+
+                let cur_x=cur_xy.x
+                let cur_y=cur_xy.y
+                let next_x=next_xy.x
+                let next_y=next_xy.y
+                ctx.moveTo(cur_x, cur_y)
+                ctx.lineTo(next_x, next_y)
+            }
+            ctx.closePath()
+            ctx.stroke()
+
+            
+
+
+        }
+    }
 
 
 

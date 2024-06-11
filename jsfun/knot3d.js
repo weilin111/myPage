@@ -1,7 +1,11 @@
-import { OrbitControls } from '/jsfun/threeOrbitControl.js';
-import { GUI } from '/jsfun/threeGUI.js';
-// import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/examples/jsm/controls/OrbitControls.js';
-// import { GUI } from 'https://threejsfundamentals.org/threejs/../3rdparty/dat.gui.module.js';
+// import { OrbitControls } from '/jsfun/threeOrbitControl.js';
+// import { GUI } from '/jsfun/threeGUI.js';
+
+// import { OrbitControls } from 'myPage/jsfun/threeOrbitControl.js';
+// import { GUI } from 'myPage/jsfun/threeGUI.js'; 
+
+import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/examples/jsm/controls/OrbitControls.js';
+import { GUI } from 'https://threejsfundamentals.org/threejs/../3rdparty/dat.gui.module.js';
 // import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/examples/jsm/loaders/GLTFLoader.js';
 
 
