@@ -82,7 +82,7 @@ function add_game_canvas_to_container(container_id) {
         constructor(ctx, canvas) {
             this.ctx = ctx
 
-            this.simulator = new goldenPhiV2Lab(this)
+            this.simulator = new funfontLab(this)
 
             this.canvas = canvas
             this.display = new Display(this, this.ctx)
@@ -135,7 +135,7 @@ function add_game_canvas_to_container(container_id) {
 
 
 
-    class goldenPhiV2Lab {
+    class funfontLab {
 
         draw_position = {
             x: canvas.width * 0.25,
@@ -155,11 +155,8 @@ function add_game_canvas_to_container(container_id) {
             this.ctx = game.ctx
             this.game = game
 
-            this.graph_list.push(new GotoPhiCurve())
-            this.graph_list.push(new steinerChain())
-            this.graph_list.push(new fieldGraph())
-            this.graph_list.push(new attractorPointSet())
-            this.graph_list.push(new pointSetGroup())
+            this.graph_list.push(new fontLooper())
+            this.graph_list.push(new fontLooperArrayManager())
 
         }
 
@@ -197,613 +194,6 @@ function add_game_canvas_to_container(container_id) {
 
     }
 
-
-    class GotoPhiCurve{
-
-        width = canvas.width * 0.5
-        draw_info = {
-            x: canvas.width * 0.15,
-            y: canvas.height * 0.1,
-            width: this.width,
-            height: this.width * 0.618,
-        }
-
-        color=get_random_Color()
-        color1=get_random_Color()
-        color2=get_random_Color()
-
-        element_list=[]
-
-        constructor(draw_info){
-
-            if (draw_info){ this.draw_info=draw_info}
-            
-
-            let n=getRandomInt(5,20)*2
-
-            for (let i = 0; i < n; i++) {
-                
-                let w=this.draw_info.width/(n+1)
-                let h=this.draw_info.height*0.75
-                let draw_info={
-                    x: this.draw_info.x+w*0.1+ i*w,
-                    y: this.draw_info.y+h*0.1,
-                    width: w,
-                    height: h,
-                }
-                let element=new GotoPhiElement(draw_info)
-                element.k=Math.pow(5,0.5)/2-1/2+ (i-n/2)*0.02
-                this.element_list.push( element)
-
-                
-            }
-
-        
-        }
-
-
-        draw(){
-            ctx.lineWidth = 8
-
-            ctx.strokeStyle = this.color
-            ctx.strokeRect(this.draw_info.x,
-                this.draw_info.y,
-                this.draw_info.width,
-                this.draw_info.height
-            )
-
-
-            this.element_list.forEach(
-                e=>{
-                    e.draw()
-                }
-            )
-        }
-
-
-        update(){
-
-            this.element_list.forEach(
-                e=>{
-                    e.update()
-                }
-            )
-        }
-
-
-
-
-
-    }
-
-    class GotoPhiElement{
-
-
-        width = canvas.width * 0.1
-        draw_info = {
-            x: canvas.width * 0.5,
-            y: canvas.height * 0.10,
-            width: this.width,
-            height: this.width * 1.618,
-        }
-
-        color=get_random_Color()
-        color1=get_random_Color()
-        color2=get_random_Color()
-        color3=get_random_Color()
-
-        k=0.618
-        tolerance=1e-5
-
-        cur_pq={p:1,q:1}
-        
-        pq_list=[this.cur_pq]
-
-        max_step_num=1500
-
-        update_timer=0
-        update_timer_max=1
-
-
-        constructor(draw_info){
-
-            if (draw_info){ this.draw_info=draw_info}
-            
-
-        }
-
-
-        draw(){
-            ctx.lineWidth = 8
-
-            ctx.strokeStyle = this.color
-            ctx.strokeRect(this.draw_info.x,
-                this.draw_info.y,
-                this.draw_info.width,
-                this.draw_info.height
-            )
-
-            ctx.fillStyle=this.color2
-            let pq=this.pq_list[this.pq_list.length-1]
-
-
-
-            let draw_k=0.61803
-            ctx.fillStyle=this.color
-            ctx.fillRect(this.draw_info.x,this.draw_info.y+this.draw_info.height*draw_k,
-                this.draw_info.width*0.61803,
-                this.draw_info.height*(1-draw_k)* this.pq_list.length/ this.max_step_num  )
-            
-
-
-
-            this.pq_list.forEach(
-                (pq,index)=>{
-
-                    let x0=this.draw_info.x 
-                    let x1=this.draw_info.x+this.draw_info.width 
-                    ctx.lineWidth = 3
-                    let ratio=(index+1)/this.pq_list.length
-                    let a=Math.pow(ratio,0.5) *360
-                    ctx.strokeStyle=`hsl(${a},100%,50%)`
-                    let y=this.draw_info.y+this.draw_info.height*draw_k*pq.p/pq.q
-                    ctx.beginPath()
-                    ctx.moveTo(x0, y)
-                    ctx.lineTo(x1, y)
-                    ctx.closePath()
-                    ctx.stroke()
-
-
-                }
-            )
-
-            ctx.save()
-            ctx.translate(this.draw_info.x, this.draw_info.y)
-            ctx.rotate(Math.PI*0.5)
-
-            ctx.translate(this.draw_info.x*-1, this.draw_info.y*-1)
-            
-            ctx.font= this.draw_info.width / 2 + "px AGENCY"
-            ctx.fillStyle=this.color3
-            ctx.fillText(`k=${this.k.toFixed(3)}  p/q=${pq.p}/${pq.q}=${(pq.p/pq.q).toFixed(3)} n=${this.pq_list.length} `,
-            this.draw_info.x
-            ,this.draw_info.y
-            )
-            ctx.restore()
-
-        }
-
-        step(){
-            if(this.pq_list.length<this.max_step_num){
-
-                
-
-                let pq=this.pq_list[this.pq_list.length-1]
-                let ratio=this.k
-
-                if(Math.abs(pq.p/pq.q-ratio)<this.tolerance ){return}
-
-                let next_p_1=pq.p+1
-                let next_q_1=pq.q
-                let next_p_2=pq.p
-                let next_q_2=pq.q+1
-
-
-                let distance=Math.abs(next_p_1/next_q_1-ratio) -Math.abs(next_p_2/next_q_2-ratio)
-                let next_pq={p:1,q:1}
-                if (distance>0){
-                    next_pq.p=next_p_2
-                    next_pq.q=next_q_2
-                }
-                else{
-                    next_pq.p=next_p_1
-                    next_pq.q=next_q_1
-                }
-                this.pq_list.push(next_pq)
-            }
-        }
-
-        update(){
-
-            this.update_timer+=1
-            if (this.update_timer>this.update_timer_max){
-
-                this.step()
-                this.update_timer=0
-
-            }
-        }
-
-
-
-
-
-
-    }
-
-    class steinerChain{
-
-        width = canvas.width * 0.3
-        draw_info = {
-            x: canvas.width * 0.35,
-            y: canvas.height * 0.6,
-            width: this.width,
-            height: this.width * 0.618,
-        }
-
-        color=get_random_Color()
-        color1=get_random_Color()
-        color2=get_random_Color()
-
-        circle_a={x:this.draw_info.x+this.draw_info.width/2,
-                  y:this.draw_info.y+this.draw_info.height/2,
-                  r:this.draw_info.height/2,
-                  color:get_random_Color(),
-                }
-        circle_b={x:this.draw_info.x+this.draw_info.width/2,
-        y:this.draw_info.y+this.draw_info.height/2,
-        r:this.draw_info.height/2*0.9*Math.random(),
-        color:get_random_Color(),
-
-        }
-
-        circle_d={x:this.draw_info.x+this.draw_info.width/2 + this.draw_info.width*0.3,
-            y:this.draw_info.y+this.draw_info.height/2,
-            r:this.draw_info.height/2*(1+1.5*Math.random()),
-            color:get_random_Color(),
-
-         }
-
-
-        circle_c_list=[]
-        c_list_angle=0
-        circle_c_number=getRandomInt(6,25)
-        
-         
-        constructor(draw_info){
-
-            if (draw_info){ this.draw_info=draw_info}
-
-            let n=this.circle_c_number
-            let r_c=(this.circle_b.r+this.circle_a.r)/2
-            for (let i = 0; i < n; i++) {
-                
-                let r=(this.circle_a.r-this.circle_b.r)/2
-                let x=this.circle_a.x + r_c*Math.cos( i/n*2*Math.PI +this.c_list_angle )
-                let y=this.circle_a.y + r_c*Math.sin( i/n*2*Math.PI +this.c_list_angle )
-
-                this.circle_c_list.push(
-                    {x:x,
-                    y:y,
-                    r:r,
-                    color:get_random_Color(),
-                }
-                )
-            }
-
-        }
-
-
-        draw(){
-            ctx.lineWidth = 8
-
-            // ctx.strokeStyle = this.color
-            // ctx.strokeRect(this.draw_info.x,
-            //     this.draw_info.y,
-            //     this.draw_info.width,
-            //     this.draw_info.height
-            // )
-
-            let circle_to_draw=[this.circle_a,this.circle_b,this.circle_d]
-
-            circle_to_draw.forEach(
-                e=>{
-                    ctx.strokeStyle=e.color
-                    this.draw_circle(e)
-                    this.map_circle_and_draw(e)
-                }
-            )
-
-            this.circle_c_list.forEach(
-                e=>{
-                    ctx.strokeStyle=e.color
-                    this.draw_circle(e)
-                    this.map_circle_and_draw(e)
-                }
-            )
-            
-        }
-
-
-        map_circle_and_draw(circle){
-
-            let n=48
-            let xy_list=[]
-            
-            for (let i = 0; i < n; i++) {
-
-                let x=circle.x + circle.r*Math.cos( i/n*2*Math.PI  )
-                let y=circle.y + circle.r*Math.sin( i/n*2*Math.PI  )
-
-                
-
-                let x_d=this.circle_d.x
-                let y_d=this.circle_d.y
-                let r_d=this.circle_d.r
-                
-                let ratio=r_d*r_d/ ( (x_d-x)*(x_d-x)+(y_d-y)*(y_d-y) )
-
-                xy_list.push(
-                    {x:x_d*(1-ratio)+x*ratio ,
-                     y:y_d*(1-ratio)+y*ratio  }
-                )
-
-
-            }
-
-            // console.log(xy_list)
-            ctx.lineWidth = 3
-            ctx.beginPath()
-        
-            xy_list.forEach(
-                (e,index)=>{
-                    if(index>=(xy_list.length-1) ){    
-                        ctx.moveTo( e.x,e.y )
-                        ctx.lineTo( xy_list[0].x,xy_list[0].y )
-                        
-                    }
-                    else{
-                        ctx.moveTo( e.x,e.y )
-                        ctx.lineTo( xy_list[index+1].x,xy_list[index+1].y )
-                    }
-                }
-            )
-            ctx.closePath()
-            ctx.stroke()
-            
-
-        }
-
-        draw_circle(circle){
-
-
-            ctx.beginPath()
-            ctx.arc(circle.x, circle.y, circle.r, 0, 2 * Math.PI)
-            ctx.closePath()
-            ctx.stroke()
-
-        }
-
-
-        update(){
-            let factor_t0 = this.draw_info.x+this.draw_info.width/2 - this.draw_info.width*0.6
-            let factor_t1 = this.draw_info.x+this.draw_info.width/2 + this.draw_info.width*1.5
-
-            this.circle_d.x+=this.draw_info.width*0.3*0.01
-
-            if (this.circle_d.x  > factor_t1) {
-                this.circle_d.x = factor_t0
-            }
-
-
-            factor_t0 = 0
-            factor_t1 = Math.PI*2
-            this.c_list_angle+= Math.PI*2 *0.001
-            if (this.c_list_angle  > factor_t1) {
-                this.c_list_angle = factor_t0
-            }
-            this.set_rotate_c_circle_list(this.c_list_angle)
-
-            
-        }
-
-        set_rotate_c_circle_list(angle){
-
-            let r_c=(this.circle_b.r+this.circle_a.r)/2
-
-            let n= this.circle_c_number
-            this.circle_c_list.forEach(
-                (e,i)=>{
-                    e.x=  this.circle_a.x + r_c*Math.cos( i/n*2*Math.PI +this.c_list_angle )
-                    e.y=  this.circle_a.y + r_c*Math.sin( i/n*2*Math.PI +this.c_list_angle )
-                }
-            )
-
-
-        }
-
-
-
-    
-
-
-    }
-
-
-    class fieldGraph{
-        width = canvas.width * 0.15
-        draw_info = {
-            x: canvas.width * 0.15,
-            y: canvas.height * 0.55,
-            width: this.width,
-            height: this.width ,
-        }
-
-        color=get_random_Color()
-        color1=get_random_Color()
-        color2=get_random_Color()
-
-        line_list=[]
-
-        xy_range={
-            x_min:-1,
-            x_max:10,
-            y_min:-1,
-            y_max:5
-        }
-
-        constructor(draw_info){
-
-            if (draw_info){ this.draw_info=draw_info}
-
-            let n=30
-            for (let i = 0; i < n; i++) {
-                
-                let start_xy={
-                    x:this.xy_range.x_min,
-                    y:this.xy_range.y_min+ i/n *(this.xy_range.y_max-this.xy_range.y_min)
-                }
-                let line_info={
-                    streamFunction:this.streamFunction,
-                    start_xy:start_xy,
-                    xy_range:this.xy_range
-                }
-                let temp_line=new fieldLine(this.draw_info,line_info)
-                this.line_list.push(temp_line)
-            }
-            for (let i = 0; i < n; i++) {
-                
-                let start_xy={
-                    x:this.xy_range.x_max,
-                    y:this.xy_range.y_min+ i/n *(this.xy_range.y_max-this.xy_range.y_min)
-                }
-                let line_info={
-                    streamFunction:this.streamFunction,
-                    start_xy:start_xy,
-                    xy_range:this.xy_range
-                }
-                let temp_line=new fieldLine(this.draw_info,line_info)
-                this.line_list.push(temp_line)
-            }
-
-        }
-
-        update(){
-
-
-
-
-        }
-
-        streamFunction(x,y){
-            return x*x-2*x*y+y*y*y
-        }
-
-        draw(){
-            ctx.lineWidth = 8
-
-            ctx.strokeStyle = this.color
-            ctx.strokeRect(this.draw_info.x,
-                this.draw_info.y,
-                this.draw_info.width,
-                this.draw_info.height
-            )
-
-            this.line_list.forEach(
-                e=>{e.draw()}
-            )
-
-        }
-    }
-    class fieldLine{
-        width = canvas.width * 0.3
-        draw_info = {
-            x: canvas.width * 0.25,
-            y: canvas.height * 0.6,
-            width: this.width,
-            height: this.width * 0.618,
-        }
-
-        color=get_random_Color()
-        color1=get_random_Color()
-        color2=get_random_Color()
-        
-        start_xy={
-            x:-1,
-            y:0
-        }
-        xy_list=[]
-
-        
-        constructor(draw_info,line_info){
-
-            if (draw_info){ this.draw_info=draw_info}
-            this.streamFunction=line_info.streamFunction
-            this.start_xy=line_info.start_xy
-            this.line_info=line_info
-
-        for (let i = 0; i < 1500; i++) {
-            this.step()            
-        }
-
-        }
-
-        step(){
-
-            if (this.xy_list.length<1){
-                this.xy_list.push(this.start_xy)
-                return
-            }
-
-            let cur_xy=this.xy_list[this.xy_list.length-1]
-            let x=cur_xy.x
-            let y=cur_xy.y
-            let dt=0.01
-            let f=this.streamFunction
-            let direction=-1
-            let u= ( f(x+dt,y)-f(x,y) )/dt *direction
-            let v= ( f(x,y+dt)-f(x,y) )/dt *direction
-
-            let l=Math.sqrt(u*u,v*v)
-
-            this.xy_list.push(
-                {x:x+u/l*dt,
-                 y:y+v/l*dt}
-            )
-
-        }
-
-        update(){
-
-        }
-
-        map_xy_to_draw(xy){
-
-            let xy_range=this.line_info.xy_range
-            let x_range=(xy_range.x_max-xy_range.x_min)
-            let y_range=(xy_range.y_max-xy_range.y_min)
-
-
-            return {
-                x:this.draw_info.x+  this.draw_info.width*  (xy.x-xy_range.x_min)/ x_range ,
-                y:this.draw_info.y+  this.draw_info.height*  (xy.y-xy_range.y_min)/ y_range 
-            } 
-        }
-
-
-        draw(){
-            ctx.lineWidth=2.5
-            ctx.beginPath()
-            for (let i = 0; i < this.xy_list.length-2; i++) {
-
-                let cur_xy=this.map_xy_to_draw(this.xy_list[i])
-                let next_xy=this.map_xy_to_draw(this.xy_list[i+1])
-
-                let cur_x=cur_xy.x
-                let cur_y=cur_xy.y
-                let next_x=next_xy.x
-                let next_y=next_xy.y
-                ctx.moveTo(cur_x, cur_y)
-                ctx.lineTo(next_x, next_y)
-            }
-            ctx.closePath()
-            ctx.stroke()
-
-            
-
-
-        }
-    }
 
 
 
@@ -856,11 +246,12 @@ function add_game_canvas_to_container(container_id) {
         
     }
 
-    class attractorPointSet{
-        width = canvas.width * 0.25
+
+    class fontLooper{
+        width = canvas.width * 0.10
         draw_info = {
-            x: canvas.width * 0.65,
-            y: canvas.height * 0.05,
+            x: canvas.width * 0.85,
+            y: canvas.height * 0.55,
             width: this.width,
             height: this.width ,
         }
@@ -869,145 +260,6 @@ function add_game_canvas_to_container(container_id) {
         color1=get_random_Color()
         color2=get_random_Color()
 
-        color_list=[]
-        color_index=0
-
-        draw_square_width=4
-
-        xy_range={
-            x_min:-25,
-            x_max:25,
-            y_min:-25,
-            y_max:25
-        }
-
-
-        xyz_list=[
-            {   x:10*  2*(Math.random()-0.5),
-                y:10*  2*(Math.random()-0.5),
-                z:10*  2*(Math.random()-0.5)}
-        ]
-
-        update_timer=0
-        update_timer_max=5
-
-        update_number=10+getRandomInt(2,10)
-
-        max_point_number=1000+500*getRandomInt(1,2)
-
-        
-
-        constructor(draw_info){
-
-            if (draw_info){ this.draw_info=draw_info}
-
-
-            for (let i = 0; i < getRandomInt(5,10); i++) {
-
-                this.color_list.push(get_random_Color())
-            }
-
-        }
-
-
-        update_ctx_color(){
-
-            this.color_index= (this.color_index+1) % (this.color_list.length-1)
-            ctx.fillStyle=this.color_list[this.color_index]
-        
-        }
-
-        step_function(xyz){
-
-            let {x,y,z}=xyz
-            let sigma=10 +10 *  2*(Math.random()-0.5)
-            let beta=8/3 +0.1* 2*(Math.random()-0.5)
-            let rho=14 + 10  *2 *(Math.random()-0.5)
-            let dt=0.01
-            let x1=x+(sigma*(y-x))*dt
-            let y1=y+(x*(rho-z)-y)*dt
-            let z1=z+(x*y-beta*z)*dt
-            return {x:x1,y:y1,z:z1}
-        }
-
-        step(){
-            let xyz= this.xyz_list[this.xyz_list.length-1]
-            this.xyz_list.push(   this.step_function(   xyz )    )
-            if(this.xyz_list.length>this.max_point_number){
-                this.xyz_list.shift()
-            }
-        }
-
-        update_single(){
-
-            this.update_timer+=1
-            if(this.update_timer>this.update_timer_max){
-                this.step()
-                this.update_timer=0
-            }
-        
-        }
-
-        update(){
-
-            for (let i = 0; i < this.update_number; i++) {
-                this.update_single()                
-            }
-        }
-
-
-        map_xy_to_draw(xy){
-
-            let xy_range=this.xy_range
-            let x_range=(xy_range.x_max-xy_range.x_min)
-            let y_range=(xy_range.y_max-xy_range.y_min)
-
-
-            return {
-                x:this.draw_info.x+  this.draw_info.width*  (xy.x-xy_range.x_min)/ x_range ,
-                y:this.draw_info.y+  this.draw_info.height*  (xy.y-xy_range.y_min)/ y_range 
-            } 
-        }
-
-
-        draw(){
-            ctx.lineWidth = 8
-            ctx.strokeStyle = this.color
-            ctx.strokeRect(this.draw_info.x,
-                this.draw_info.y,
-                this.draw_info.width,
-                this.draw_info.height
-                )
-                
-
-        this.xyz_list.forEach(
-                xyz=>{
-                    let {x,y}=this.map_xy_to_draw(xyz)
-                    
-
-                    this.update_ctx_color()
-
-                    let w=this.draw_square_width
-                    ctx.fillRect(x-w/2,y-w/2,w,w)
-                }
-            )
-
-        }
-        
-    }
-
-    class pointSetGroup{
-        width = canvas.width * 0.15
-        draw_info = {
-            x: canvas.width * 0.65,
-            y: canvas.height * 0.50,
-            width: this.width,
-            height: this.width ,
-        }
-
-        color=get_random_Color()
-        color1=get_random_Color()
-        color2=get_random_Color()
 
         xy_range={
             x_min:-1,
@@ -1016,12 +268,102 @@ function add_game_canvas_to_container(container_id) {
             y_max:5
         }
 
-        grid_list=[]
+
+        font_info={
+            font:"SY-LIGHT",
+            char_list:"嘉元年夏大雨水奉诏祈晴于醴泉宫闻鸣蝉有感而赋云肃祠庭以祗事兮瞻玉宇之峥嵘收视听以清虑兮斋予心以荐诚因以静而求动兮见乎万物之情于时朝雨骤止微风不兴四无云以青天雷曳曳其余声乃席芳药临华轩古木数株空庭草间爰有一物鸣于树颠引清风以长啸抱纤柯而永叹嘒嘒非管泠泠若弦裂方号而复咽凄欲断而还连吐孤韵以难律含五音之自然吾不知其何物其名曰蝉岂非因物造形能变化者邪？出自粪壤慕清虚者邪？凌风高飞知所止者邪？嘉木茂树喜清阴者邪？呼吸风露能尸解者邪？绰约双鬓修婵娟者邪？其为声也不乐不哀非宫非徵胡然而鸣亦胡然而止吾尝悲夫万物莫不好鸣若乃四时代谢百鸟嘤兮一气候至百虫惊兮娇儿姹女语鹂庚兮鸣机络纬响蟋蟀兮转喉弄舌诚可爱兮引腹动股岂勉强而为之兮？至于污池浊水得雨而聒兮饮泉食土长夜而歌兮彼蟆固若有欲而蚯蚓又何求兮？其余大小万状不可悉名各有气类随其物形不知自止有若争能忽时变以物改咸漠然而无声呜呼！达士所齐万物一类人于其间所以为贵盖已巧其语言又能传于文字是以穷彼思虑耗其血气或吟哦其穷愁或发扬其志意虽共尽于万物乃长鸣于百世予亦安知其然哉？聊为乐以自喜方将考得失较同异俄而阴云复兴雷电俱击大雨既作蝉声遂息",
+        }
+
+        is_stroke=false
+
+        update_info={
+            update_timer_max:getRandomInt(10,35),
+            update_timer:0
+        }
+
+        char_index=0
+
+        linewidth=getRandomInt(3,13)
+
+        constructor(draw_info,font_info,update_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+            if (font_info){ this.font_info=font_info}
+            if (update_info){ this.update_info=update_info}
+
+            if (Math.random()>0.5){
+                this.is_stroke=true
+            }
+        }
+
+        update(){
+
+            this.update_info.update_timer+=1
+            this.update_info.update_timer%=this.update_info.update_timer_max
+            if (this.update_info.update_timer==0){
+                this.char_index=(this.char_index+1)%this.font_info.char_list.length
+                this.update_timer_max=getRandomInt(5,15)
+                let temp=[false,true]
+                this.is_stroke= temp[getRandomInt(0,temp.length-1)]
+            }
+            // this.color=get_random_Color()
+            // this.color1=get_random_Color()
+        }
+
+
+        draw(){
+            ctx.lineWidth = this.linewidth
+
+            ctx.strokeStyle = this.color
+            // ctx.strokeRect(this.draw_info.x,
+            //     this.draw_info.y,
+            //     this.draw_info.width,
+            //     this.draw_info.height
+            // )
+
+            ctx.strokeStyle=this.color
+            ctx.fillStyle=this.color2
+
+            ctx.font= Math.trunc(this.draw_info.width) + `px ${this.font_info.font}`
+            let char=this.font_info.char_list[this.char_index]
+            
+            if (this.is_stroke){
+
+                ctx.strokeText(char,this.draw_info.x,this.draw_info.y+this.draw_info.height)
+            }
+            else{
+                ctx.fillText(char,this.draw_info.x,this.draw_info.y+this.draw_info.height)
+            }
+
+
+        }
+        
+    }
+
+    class arrayManager{
+        width = canvas.width * 0.15
+        draw_info = {
+            x: canvas.width * 0.55,
+            y: canvas.height * 0.55,
+            width: this.width,
+            height: this.width ,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+
+        xy_range={
+            x_min:-1,
+            x_max:10,
+            y_min:-1,
+            y_max:5
+        }
 
         constructor(draw_info){
 
             if (draw_info){ this.draw_info=draw_info}
-
             let n_row=getRandomInt(2,4)
             let n_col=getRandomInt(2,6)
 
@@ -1041,7 +383,130 @@ function add_game_canvas_to_container(container_id) {
                         width: width,
                         height: height,
                     }
-                    let temp_grid=new attractorPointSet(draw_info)
+                    // let temp_grid=new attractorPointSet(draw_info)
+                    // temp_grid.draw_square_width=2.5
+                    // this.grid_list.push(temp_grid)
+
+                }
+
+            }
+        }
+
+        update(){
+            this.grid_list.forEach(
+                e=>{
+                    e.update()
+                }
+            )
+
+        }
+
+
+        draw(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+            this.grid_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+
+
+
+        }
+        
+    }
+
+
+
+    class fontLooperArrayManager{
+        width = canvas.width * 0.4
+        draw_info = {
+            x: canvas.width * 0.1,
+            y: canvas.height * 0.15,
+            width: this.width,
+            height: this.width ,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+
+        xy_range={
+            x_min:-1,
+            x_max:10,
+            y_min:-1,
+            y_max:5
+        }
+
+
+        font_info_list=[
+            {
+                font:"SY-LIGHT",
+                char_list:"嘉元年夏大雨水奉诏祈晴于醴泉宫闻鸣蝉有感而赋云肃祠庭以祗事兮瞻玉宇之峥嵘收视听以清虑兮斋予心以荐诚因以静而求动兮见乎万物之情于时朝雨骤止微风不兴四无云以青天雷曳曳其余声乃席芳药临华轩古木数株空庭草间爰有一物鸣于树颠引清风以长啸抱纤柯而永叹嘒嘒非管泠泠若弦裂方号而复咽凄欲断而还连吐孤韵以难律含五音之自然吾不知其何物其名曰蝉岂非因物造形能变化者邪？出自粪壤慕清虚者邪？凌风高飞知所止者邪？嘉木茂树喜清阴者邪？呼吸风露能尸解者邪？绰约双鬓修婵娟者邪？其为声也不乐不哀非宫非徵胡然而鸣亦胡然而止吾尝悲夫万物莫不好鸣若乃四时代谢百鸟嘤兮一气候至百虫惊兮娇儿姹女语鹂庚兮鸣机络纬响蟋蟀兮转喉弄舌诚可爱兮引腹动股岂勉强而为之兮？至于污池浊水得雨而聒兮饮泉食土长夜而歌兮彼蟆固若有欲而蚯蚓又何求兮？其余大小万状不可悉名各有气类随其物形不知自止有若争能忽时变以物改咸漠然而无声呜呼！达士所齐万物一类人于其间所以为贵盖已巧其语言又能传于文字是以穷彼思虑耗其血气或吟哦其穷愁或发扬其志意虽共尽于万物乃长鸣于百世予亦安知其然哉？聊为乐以自喜方将考得失较同异俄而阴云复兴雷电俱击大雨既作蝉声遂息",
+            },
+            {
+                font:"SY-LIGHT",
+                char_list:"二月三日丕白岁月易得别来行复四年三年不见《东山》犹叹其远况乃过之思何可支！虽书疏往返未足解其劳结昔年疾疫亲故多离其灾徐陈应刘一时俱逝痛可言邪？昔日游处行则连舆止则接席何曾须臾相失！每至觞酌流行丝竹并奏酒酣耳热仰而赋诗当此之时忽然不自知乐也谓百年己分可长共相保何图数年之间零落略尽言之伤心顷撰其遗文都为一集观其姓名已为鬼录追思昔游犹在心目而此诸子化为粪壤可复道哉？观古今文人类不护细行鲜能以名节自立而伟长独怀文抱质恬淡寡欲有箕山之志可谓彬彬君子者矣著《中论》二十余篇成一家之言词义典雅足传于后此子为不朽矣德琏常斐然有述作之意其才学足以著书美志不遂良可痛惜间者历览诸子之文对之抆泪既痛逝者行自念也孔璋章表殊健微为繁富公干有逸气但未遒耳其五言诗之善者妙绝时人元瑜书记翩翩致足乐也仲宣独自善于辞赋惜其体弱不足起其文至于所善古人无以远过昔伯牙绝弦于钟期仲尼覆醢于子路痛知音之难遇伤门人之莫逮诸子但为未及古人自一时之儁也今之存者已不逮矣后生可畏来者难诬然恐吾与足下不及见也年行已长大所怀万端时有所虑至通夜不瞑志意何时复类昔日?已成老翁但未白头耳光武言年三十余在兵中十岁所更非一吾德不及之而年与之齐矣以犬羊之质服虎豹之文无众星之明假日月之光动见瞻观何时易乎？恐永不复得为昔日游也少壮真当努力年一过往何可攀援古人思秉烛夜游良有以也顷何以自娱？颇复有所述造不？东望於邑裁书叙心丕白",
+            },
+            {
+                font:"SY-LIGHT",
+                char_list:"天地果无初乎？吾不得而知之也生人果有初乎？吾不得而知之也然则孰为近？曰有初为近孰明之？由封建而明之也彼封建者更古圣王尧舜禹汤文武而莫能去之盖非不欲去之也势不可也势之来其生人之初乎？不初无以有封建封建非圣人意也彼其初与万物皆生草木榛榛鹿豕狉狉人不能搏噬而且无毛羽莫克自奉自卫荀卿有言必将假物以为用者也夫假物者必争争而不已必就其能断曲直者而听命焉其智而明者所伏必众告之以直而不改必痛之而后畏由是君长刑政生焉故近者聚而为群群之分其争必大大而后有兵有德又有大者众群之长又就而听命焉以安其属于是有诸侯之列则其争又有大者焉德又大者诸侯之列又就而听命焉以安其封于是有方伯连帅之类则其争又有大者焉德又大者方伯连帅之类又就而听命焉以安其人然后天下会于一是故有里胥而后有县大夫有县大夫而后有诸侯有诸侯而后有方伯连帅有方伯连帅而后有天子自天子至于里胥其德在人者死必求其嗣而奉之故封建非圣人意也势也夫尧舜禹汤之事远矣及有周而甚详周有天下裂土田而瓜分之设五等邦群后布履星罗四周于天下轮运而辐集合为朝觐会同离为守臣扞城然而降于夷王害礼伤尊下堂而迎觐者历于宣王挟中兴复古之德雄南征北伐之威卒不能定鲁侯之嗣陵夷迄于幽厉王室东徙而自列为诸侯厥后问鼎之轻重者有之射王中肩者有之伐凡伯诛苌弘者有之天下乖戾无君君之心余以为周之丧久矣徒建空名于公侯之上耳得非诸侯之盛强末大不掉之咎欤？遂判为十二合为七国威分于陪臣之邦国殄于后封之秦则周之败端其在乎此矣秦有天下裂都会而为之郡邑废侯卫而为之守宰据天下之雄图都六合之上游摄制四海运于掌握之内此其所以为得也不数载而天下大坏其有由矣亟役万人暴其威刑竭其货贿负锄梃谪戍之徒圜视而合从大呼而成群时则有叛人而无叛吏人怨于下而吏畏于上天下相合杀守劫令而并起咎在人怨非郡邑之制失也汉有天下矫秦之枉徇周之制剖海内而立宗子封功臣数年之间奔命扶伤之不暇困平城病流矢陵迟不救者三代后乃谋臣献画而离削自守矣然而封建之始郡国居半时则有叛国而无叛郡秦制之得亦以明矣继汉而帝者虽百代可知也唐兴制州邑立守宰此其所以为宜也然犹桀猾时起虐害方域者失不在于州而在于兵时则有叛将而无叛州州县之设固不可革也或者曰封建者必私其土子其人适其俗修其理施化易也守宰者苟其心思迁其秩而已何能理乎？余又非之周之事迹断可见矣列侯骄盈黩货事戎大凡乱国多理国寡侯伯不得变其政天子不得变其君私土子人者百不有一失在于制不在于政周事然也秦之事迹亦断可见矣有理人之制而不委郡邑是矣有理人之臣而不使守宰是矣郡邑不得正其制守宰不得行其理酷刑苦役而万人侧目失在于政不在于制秦事然也汉兴天子之政行于郡不行于国制其守宰不制其侯王侯王虽乱不可变也国人虽病不可除也及夫大逆不道然后掩捕而迁之勒兵而夷之耳大逆未彰奸利浚财怙势作威大刻于民者无如之何及夫郡邑可谓理且安矣何以言之？且汉知孟舒于田叔得魏尚于冯唐闻黄霸之明审睹汲黯之简靖拜之可也复其位可也卧而委之以辑一方可也有罪得以黜有能得以赏朝拜而不道夕斥之矣夕受而不法朝斥之矣设使汉室尽城邑而侯王之纵令其乱人戚之而已孟舒魏尚之术莫得而施黄霸汲黯之化莫得而行明谴而导之拜受而退已违矣下令而削之缔交合从之谋周于同列则相顾裂眦勃然而起幸而不起则削其半削其半民犹瘁矣曷若举而移之以全其人乎？汉事然也今国家尽制郡邑连置守宰其不可变也固矣善制兵谨择守则理平矣或者又曰夏商周汉封建而延秦郡邑而促尤非所谓知理者也魏之承汉也封爵犹建晋之承魏也因循不革而二姓陵替不闻延祚今矫而变之垂二百祀大业弥固何系于诸侯哉？或者又以为殷周圣王也而不革其制固不当复议也是大不然夫殷周之不革者是不得已也盖以诸侯归殷者三千焉资以黜夏汤不得而废归周者八百焉资以胜殷武王不得而易徇之以为安仍之以为俗汤武之所不得已也夫不得已非公之大者也私其力于己也私其卫于子孙也秦之所以革之者其为制公之大者也其情私也私其一己之威也私其尽臣畜于我也然而公天下之端自秦始夫天下之道理安斯得人者也使贤者居上不肖者居下而后可以理安今夫封建者继世而理继世而理者上果贤乎下果不肖乎？则生人之理乱未可知也将欲利其社稷以一其人之视听则又有世大夫世食禄邑以尽其封略圣贤生于其时亦无以立于天下封建者为之也岂圣人之制使至于是乎？吾固曰非圣人之意也势也",
+            },
+            {
+                font:"SY-LIGHT",
+                char_list:"相国中山公赋秋声以属天官太常伯唱和俱绝然皆得时行道之余兴犹动光阴之叹况伊郁老病者乎？吟之斐然以寄孤愤碧天如水兮窅窅悠悠百虫迎暮兮万叶吟秋欲辞林而萧飒潜命侣以啁啾送将归兮临水非吾土兮登楼晚枝多露蝉之思夕草起寒螿之愁至若松竹含韵梧楸圣脱惊绮疏之晓吹坠碧砌之凉月念塞外之征行顾闺中之骚屑夜蛩鸣兮机杼促朔雁叫兮音书绝远杵续兮何冷冷虚窗静兮空切切如吟如啸非竹非丝合自然之宫徵动终岁之别离废井苔冷荒园露滋草苍苍兮人寂寂树槭槭兮虫咿咿则有安石风流巨源多可平六符而佐主施九流而自我犹复感阴虫之鸣轩叹凉叶之初堕异宋玉之悲伤觉潘郎之幺么嗟乎！骥伏枥而已老鹰在韝而有情聆朔风而心动眄天籁而神惊力将痑兮足受绁犹奋迅于秋声",
+            },
+            {
+                font:"AGENCY",
+                char_list:"QWERTYUIOP[]ASDFGHJKL;'ZXCVBNM,./1234567890-=!@#$%^&*()_+qwertyuiop{}asdfghjkl:zxcvbnm<>?",
+            },
+            {
+                font:"OCPOLY",
+                char_list:"QWERTYUIOP[]ASDFGHJKL;'ZXCVBNM,./1234567890-=!@#$%^&*()_+qwertyuiop{}asdfghjkl:zxcvbnm<>?",
+            },
+        ]
+
+        grid_list=[]
+
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+            let n_row=getRandomInt(4,15)
+            let n_col=getRandomInt(4,15)
+
+            for (let i = 0; i < n_row; i++) {
+
+                for (let j = 0; j < n_col; j++) {
+
+
+                    let width=this.width/n_row
+                    let height=width
+                    let gap=20
+
+                    
+                    let draw_info={
+                        x: this.draw_info.x+j*(width+gap),
+                        y: this.draw_info.y+i*(height+gap),
+                        width: width,
+                        height: height,
+                    }
+                    let update_info={
+                        update_timer_max:getRandomInt(10,15),
+                        update_timer:0
+                    }
+
+                    let font_info_index=getRandomInt(0,this.font_info_list.length-1)
+                    let font_info=this.font_info_list[font_info_index]
+                    let temp_grid=new fontLooper(draw_info  ,font_info , update_info )
+                    
                     temp_grid.draw_square_width=2.5
                     this.grid_list.push(temp_grid)
 
@@ -1051,25 +516,24 @@ function add_game_canvas_to_container(container_id) {
         }
 
         update(){
-
             this.grid_list.forEach(
                 e=>{
                     e.update()
                 }
             )
+
         }
 
 
         draw(){
-            ctx.lineWidth = 5
+            ctx.lineWidth = 8
 
-            // ctx.strokeStyle = this.color
+            ctx.strokeStyle = this.color
             // ctx.strokeRect(this.draw_info.x,
             //     this.draw_info.y,
             //     this.draw_info.width,
             //     this.draw_info.height
             // )
-
             this.grid_list.forEach(
                 e=>{
                     e.draw()
@@ -1077,9 +541,67 @@ function add_game_canvas_to_container(container_id) {
             )
 
 
+
         }
         
     }
+
+
+
+
+
+    
+    class lineMovement{
+        width = canvas.width * 0.15
+        draw_info = {
+            x: canvas.width * 0.55,
+            y: canvas.height * 0.55,
+            width: this.width,
+            height: this.width ,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+
+        xy_range={
+            x_min:-1,
+            x_max:10,
+            y_min:-1,
+            y_max:5
+        }
+
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+
+        }
+
+        update(){
+
+
+        }
+
+
+        draw(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+
+
+        }
+        
+    }
+
+
+    
+
 
 
     class Input {
