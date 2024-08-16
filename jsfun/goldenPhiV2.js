@@ -920,9 +920,9 @@ function add_game_canvas_to_container(container_id) {
         step_function(xyz){
 
             let {x,y,z}=xyz
-            let sigma=10 +10 *  2*(Math.random()-0.5)
-            let beta=8/3 +0.1* 2*(Math.random()-0.5)
-            let rho=14 + 10  *2 *(Math.random()-0.5)
+            let sigma=10 
+            let beta=8/3 
+            let rho=14 
             let dt=0.01
             let x1=x+(sigma*(y-x))*dt
             let y1=y+(x*(rho-z)-y)*dt

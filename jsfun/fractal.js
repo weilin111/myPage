@@ -162,6 +162,8 @@ function add_game_canvas_to_container(container_id) {
             this.graph_list.push(new cantorSet())
             this.graph_list.push(new mandbotSet())
             this.graph_list.push(new mandbotSetGroup())
+            this.graph_list.push(new juliaSet())
+            this.graph_list.push(new juliaSetGroup())
 
         }
 
@@ -609,11 +611,11 @@ function add_game_canvas_to_container(container_id) {
             height: this.width,
         }
 
-        n_row=getRandomInt(20,80)
+        n_row=getRandomInt(20,280)
         n_col=this.n_row
 
         z0=math.complex( Math.random(),Math.random())
-        max_repeat=100
+        max_repeat=getRandomInt(25,250)
         max_radiu=2.5
 
         data_list=[]
@@ -744,6 +746,195 @@ function add_game_canvas_to_container(container_id) {
                 }
                 this.mandbotSet_list.push(
                     new mandbotSet(sub_draw_info,fractal_info)
+                )
+
+            }
+
+            console.log(this.mandbotSet_list)
+
+
+        }
+
+
+        draw(){
+            this.draw_bondrary_rect()
+
+            this.mandbotSet_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+
+        }
+
+        draw_bondrary_rect(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+
+
+
+
+        }
+
+        update(){
+
+        }
+
+
+    }
+    class juliaSet{
+        width = canvas.width * 0.15
+        draw_info = {
+            x: canvas.width * 0.55,
+            y: canvas.height * 0.35,
+            width: this.width,
+            height: this.width,
+        }
+
+        n_row=getRandomInt(50,350)
+        n_col=this.n_row
+
+        z0=math.complex( Math.random()*2-1,Math.random()*2-1)
+        max_repeat=getRandomInt(25,250)
+        max_radiu=2.5
+
+        data_list=[]
+        
+        color=get_random_Color()
+
+        constructor(draw_info,fractal_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+
+            if (fractal_info){
+                this.z0=fractal_info.z0
+                this.max_radiu=fractal_info.max_radiu
+            }
+
+            this.generate()
+        }
+
+
+        check_mandbot(c){
+            let repeat_temp=0
+            // let c=math.complex(0,0)
+            let z=this.z0
+            // let z=this.z0
+
+            for (let i = 0; i < this.max_repeat; i++) {
+
+                z=math.add(math.multiply(z,z),c)
+                repeat_temp=i
+                if (  z.abs() >this.max_radiu ){break}
+            }
+            return repeat_temp
+        }
+
+        draw(){
+            this.draw_bondrary_rect()
+
+            this.data_list.forEach(
+                e=>{                    
+                    let a= e.repeat/this.max_repeat
+                    a=1-a
+                    a=Math.pow(a,2) *250
+                    ctx.fillStyle=`hsl(${a},100%,50%)`
+                    // if(e.repeat<2){ctx.fillStyle="#000"}
+                    if(e.repeat>2){
+                        ctx.fillRect(e.x,e.y,e.w,e.h)
+                    }
+                }
+            )
+
+        }
+        update(){}
+
+
+        draw_bondrary_rect(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+        }
+
+
+        generate(){
+
+            let coor_scale=3
+            let x=this.draw_info.x
+            let y=this.draw_info.y
+            let width=this.draw_info.width
+            let height=this.draw_info.height
+
+
+            for (let i = 0; i < this.n_col; i++) {
+
+                for (let j = 0; j < this.n_row; j++) {
+
+                    let x1=( (i-this.n_col/2)/this.n_col -0.25)  *coor_scale
+                    let y1=(j-this.n_row/2)/this.n_row              *coor_scale
+                    let repeat=this.check_mandbot( math.complex(x1,y1) )
+                    this.data_list.push(
+                        {
+                            x:x+width/this.n_col*i,
+                            y:y+height/this.n_row*j,
+                            w:width/this.n_col,
+                            h:height/this.n_row,
+                            repeat:repeat,
+                            // x1:x1,
+                            // y1:y1,
+                        }
+                    )
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+
+    class juliaSetGroup{
+
+        width = canvas.width * 0.5
+        draw_info = {
+            x: canvas.width * 0.2,
+            y: canvas.height * 0.2,
+            width: this.width,
+            height: this.width*0.2,
+        }
+
+        mandbotSet_list=[]
+
+        constructor(draw_info){
+
+            let n=5
+            for (let i = 0; i < n; i++) {
+    
+                let sub_draw_info = {
+                    x: this.draw_info.x+ i/n*this.draw_info.width,
+                    y: this.draw_info.y,
+                    width: this.draw_info.width/n,
+                    height: this.draw_info.height,
+                }
+                let fractal_info={
+                    z0:math.complex(Math.random()*2-1,math.random()*2-1  ),
+                    max_radiu:math.random()*2+1
+                }
+                this.mandbotSet_list.push(
+                    new juliaSet(sub_draw_info,fractal_info)
                 )
 
             }

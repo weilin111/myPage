@@ -479,8 +479,8 @@ function add_game_canvas_to_container(container_id) {
         constructor(draw_info){
 
             if (draw_info){ this.draw_info=draw_info}
-            let n_row=getRandomInt(4,15)
-            let n_col=getRandomInt(4,15)
+            let n_row=getRandomInt(4,25)
+            let n_col=getRandomInt(4,25)
 
             for (let i = 0; i < n_row; i++) {
 
