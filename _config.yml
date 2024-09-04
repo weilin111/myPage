@@ -27,6 +27,10 @@ defaults:
     values:
       aa02: true
   - scope:
+      path: "ZLG/AA/chiwen"
+    values:
+      chiwen: true
+  - scope:
       path: "ZLG/AA/aa03"
     values:
       aa03: true
