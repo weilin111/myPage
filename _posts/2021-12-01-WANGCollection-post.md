@@ -17,35 +17,31 @@ cate: Fun
 | **FUN**                                                      |
 | ------------------------------------------------------------ |
 | [Everyday   Astronaut \| Upcoming Launches \| Prelaunch Previews](https://everydayastronaut.com/upcoming-launches/) |
-| [WantWords 反向词典](https://wantwords.net/)                 |
-| [Hello from THU Wiki](https://thu.wiki/docs/intro)           |
-| [Typst Documentation](https://typst.app/docs/)               |
 |                                                              |
+| [中国鸟类-专业的鸟类百科大全网站 (chinesebirds.net)](http://www.chinesebirds.net/) |
+| [artron.lib.tsinghua.edu.cn/#](https://artron.lib.tsinghua.edu.cn/#) |
+| [yishu.wiki 全新艺境 由此开启](https://b.yishu.wiki/)        |
+|                                                              |
+| [Algorithm Wiki (algorithm-wiki.org)](http://algorithm-wiki.org/wiki/Main_Page) |
+| [math.js \| an extensive math library for JavaScript and Node.js (mathjs.org)](https://mathjs.org/)[WantWords 反向词典](https://wantwords.net/) |
+| [中国建筑数字图书馆 (cabplink.com)](http://dlib.cabplink.com/indexs)[Hello from THU Wiki](https://thu.wiki/docs/intro) |
+| https://architecture.hetzeldesign.com/project/aerospace-museum-hebei-district |
+| /[Typst Documentation](https://typst.app/docs/)              |
+| [路易斯·康 Louis Kahn – AWhouse](https://www.awhouse.art/louis-kahn) |
 | [thi.ng - Open source building blocks for computational design. Est. 2006 (TypeScript, Clojure, C, SideFX Houdini, Java)](https://thi.ng/) |
 | [清华大学建筑学院 (tsinghua.edu.cn)](http://arch.tsinghua.edu.cn/column/rw) |
-| [技术美学杂志 — Retro Archive (retro-archive.ru)](https://retro-archive.ru/Журнал_«Техническая_эстетика») |
+| https://shop.bauhaus-movement.com/[技术美学杂志 — Retro Archive (retro-archive.ru)](https://retro-archive.ru/Журнал_«Техническая_эстетика») |
 | [馆藏撷英 (tsinghua.edu.cn)](http://www.artmuseum.tsinghua.edu.cn/cpsj/gndc/gcxy/) |
 | [中国国际设计博物馆 (caa.edu.cn)](https://cdm.caa.edu.cn/#/home) |
 | [20th-CENTURY ARCHITECTURE (architecture-history.org)](http://architecture-history.org/index.h) |
-| [有方 – 高品质建筑资讯门户 (archiposition.com)](https://www.archiposition.com/) |
-| [ArchDaily ](http://www.archdaily.cn/cn)                    |
-|                                                              |
+| [**https://parametric-architecture.com/le-corbusier-form-function-and-modernism-in-architecture/**](https://parametric-architecture.com/le-corbusier-form-function-and-modernism-in-architecture/) |
+| [**OMA**](https://www.oma.com/)                              |
 | [资源集 – 书格 (shuge.org)](https://www.shuge.org/collections/) |
-| [《宋画全集目录》-清华大学图书馆美术图书馆 (tsinghua.edu.cn)](https://lib.tsinghua.edu.cn/arts/info/1021/1141_5.htm) |
-|                                                              |
-| [Blog (deepmind.com)](https://www.deepmind.com/blog)         |
-| [OpenAI Blog](https://openai.com/blog/)                      |
-| [SpaceX - Starship](https://www.spacex.com/vehicles/starship/) |
-| [fermatslibrary](https://fermatslibrary.com/journal_club)    |
+| [分类:賦 - 维基文库，自由的图书馆 (wikisource.org)](https://zh.wikisource.org/wiki/Category:賦) |
+| [Blog Archives - Jianzheng Liu (jzliu.net)](http://www.jzliu.net/category/blog/)[OpenAI Blog](https://openai.com/blog/) |
+| [TensorSpace.js](https://tensorspace.org/index.html)         |
 | [IAEA PUBLICATION](https://www.iaea.org/publications)        |
-| [scipy.optimize.newton_krylov — SciPy v1.11.3 Manual](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.newton_krylov.html) |
-| [Beta - FusionWiki (fusenet.eu)](http://wiki.fusenet.eu/fusionwiki/index.php/Beta) |
-|                                                              |
-| [Documentation - Python Wiki](https://wiki.python.org/moin/Documentation) |
-| [CSS Shadow Palette Generator (joshwcomeau.com)](https://www.joshwcomeau.com/shadow-palette/) |
-|                                                              |
 | [BLEND SWAP](https://www.blendswap.com/)                     |
-|                                                              |
 |                                                              |
 | [Browse Fonts - Google Fonts](https://fonts.google.com/)     |
 | [A Survey of Free Math Fonts for TeX and LaTeX1 (kku.ac.th)](https://mirror.kku.ac.th/CTAN/info/Free_Math_Font_Survey/en/survey.html#fig:comicsans) |

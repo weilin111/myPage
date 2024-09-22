@@ -157,7 +157,9 @@ function add_game_canvas_to_container(container_id) {
 
             
             this.graph_list.push(new PA01() )
+            this.graph_list.push(new PA02() )
             this.graph_list.push(new arrayManager() )
+            // this.graph_list.push(new arrayManager2() )
 
         }
 
@@ -201,14 +203,301 @@ function add_game_canvas_to_container(container_id) {
 
    
 
+    class PA02{
+
+
+        width=canvas.width*0.5
+        height=canvas.height*0.5
+        draw_info = {
+            x: canvas.width * 0.1,
+            y: canvas.height * 0.0,
+            width: this.width,
+            height: this.height ,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+
+        node_list=[]
+
+
+        head_node_info={
+            pre:null,
+            next:null,
+            root:this,
+            x:this.draw_info.x+this.draw_info.width/2,
+            y:this.draw_info.y+this.draw_info.height/2,
+            r:this.width*Math.random()*0.2,
+        }   
+
+
+
+
+
+        target={
+            x:this.draw_info.x+this.draw_info.width*Math.random(),
+            y:this.draw_info.y+this.draw_info.height*Math.random(),      
+          }
+
+
+        target_update_timer=0
+        target_update_timer_max=getRandomInt(30*3,60*6)
+
+
+
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+
+            let node_num=getRandomInt(2,6)
+
+            
+            this.head_node=new paNode02(this.head_node_info)
+            this.node_list.push(this.head_node)
+
+
+            let pre_node=this.head_node
+            let node=null
+
+            for (let i = 0; i < node_num; i++) {
+                let r=this.width*Math.random()*0.2
+                let theta=2*Math.PI*Math.random()
+                let node_info={
+                    pre:null,
+                    next:null,
+                    root:this,
+                    x:pre_node.node_info.x+r*Math.cos(theta),
+                    y:pre_node.node_info.y+r*Math.sin(theta),
+                    r:r,
+                }   
+
+                node= new paNode02(node_info)     
+                node.level=node_num-i
+                this.node_list.push(node)
+                // node.node_info.r=pre_node.node_info.r+getRandomInt(0,3)
+
+                node.update()
+
+                pre_node.node_info.next=node
+                node.node_info.pre=pre_node
+
+                pre_node=node
+
+
+            }
+            console.log(this.node_list)
+
+
+        }
+
+        update(){
+            // this.node_list.forEach(
+            //     e=>{
+            //         e.update()
+            //     }
+            // )
+
+            let node=this.node_list[this.node_list.length-1]
+            while (node.node_info.pre) {
+                node.update()
+                node=node.node_info.pre
+            }
+
+
+            this.target_update_timer+=1
+            if(this.target_update_timer>this.target_update_timer_max){
+
+                this.target={
+                    x:this.draw_info.x+this.draw_info.width*Math.random(),
+                    y:this.draw_info.y+this.draw_info.height*Math.random(),      
+                  }
+                this.target_update_timer=0
+
+            }
+
+
+
+        }
+
+
+        draw(){
+
+
+            ctx.strokeStyle = this.color
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
+            this.node_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+
+            
+            ctx.fillStyle=this.color1
+            ctx.beginPath()
+            ctx.arc(this.target.x, this.target.y,15, 0, 2 * Math.PI)
+            ctx.closePath()
+            ctx.fill()
+
+
+
+        }
+
+
+        
+    }
+
+
+    class paNode02{
+
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+
+        node_info={
+            pre:null,
+            next:null,
+            root:null,
+            x:0,
+            y:0,
+            r:10,
+        }
+
+        node_size=10
+        last_d_delta=0
+        level=0
+
+        constructor(node_info){
+
+            if (node_info){ this.node_info=node_info}
+
+        }
+
+        update(){
+
+
+            let pre=this.node_info.pre
+            let next=this.node_info.next
+            let x_target=this.node_info.root.target.x
+            let y_target=this.node_info.root.target.y
+            if(next){
+                x_target=next.node_info.x
+                y_target=next.node_info.y
+            }
+
+            if(pre){
+
+                let dx=x_target-this.node_info.x
+                let dy=y_target-this.node_info.y
+                let dl=Math.sqrt(dx*dx+dy*dy)
+
+                let dx2=this.node_info.x-pre.node_info.x
+                let dy2=this.node_info.y-pre.node_info.y
+                let dl2=Math.sqrt(dx2*dx2+dy2*dy2)
+
+                let theta=this.get_theta(dx2,dy2)
+
+                let d_theta=1 -  (dx*dx2+dy*dy2)/dl/dl2   //cos
+
+                if(dl>15){
+
+
+                    
+                    let r= pre.node_info.r
+
+                    let omega=0.2*Math.pow(0.5,this.level)
+
+
+                    if(next){
+                        let reverse_propagate=next.last_d_delta*0.01
+                        d_theta+=reverse_propagate
+                        this.last_d_delta=reverse_propagate
+                    }
+
+
+                    this.node_info.x=pre.node_info.x + r* Math.cos(theta + d_theta*omega)
+                    this.node_info.y=pre.node_info.y + r* Math.sin(theta + d_theta*omega)
+
+
+                    if(!next){
+                        console.log( d_theta/Math.PI*180)
+                        this.last_d_delta=d_theta
+                    }
+                }
+
+
+
+
+            }
+
+        }
+
+
+
+        get_theta(x,y){
+
+            let theta =Math.atan(y/x) 
+            if (x<0){
+                return theta+Math.PI
+            }
+            return theta
+            
+
+        }
+
+
+        draw(){
+
+            
+
+            let pre=this.node_info.pre
+            if(pre){
+                ctx.beginPath()
+                ctx.moveTo(pre.node_info.x,pre.node_info.y)
+                ctx.lineTo(this.node_info.x,this.node_info.y)
+                ctx.closePath()
+            }
+            ctx.stroke()
+
+            ctx.beginPath()
+            ctx.arc(this.node_info.x, this.node_info.y, this.node_size, 0, 2 * Math.PI)
+            ctx.closePath()
+            ctx.fill()
+
+            
+
+
+
+
+
+
+
+
+
+        }
+
+
+        
+    }
+
+
+
+
     class PA01{
 
 
-        width=canvas.width*1.0
-        height=canvas.height
+        width=canvas.width*0.9
+        height=canvas.height*0.5
         draw_info = {
-            x: canvas.width * 0,
-            y: canvas.height * 0,
+            x: canvas.width * 0.1,
+            y: canvas.height * 0.5,
             width: this.width,
             height: this.height ,
         }
@@ -248,7 +537,7 @@ function add_game_canvas_to_container(container_id) {
 
             if (draw_info){ this.draw_info=draw_info}
 
-            let node_num=getRandomInt(5,25)
+            let node_num=getRandomInt(5,40)
 
             
             this.head_node=new paNode01(this.head_node_info)
@@ -258,13 +547,13 @@ function add_game_canvas_to_container(container_id) {
             let pre_node=this.head_node
             let node=null
             for (let i = 0; i < node_num; i++) {
+                let r=getRandomInt(5,25)
                 let node_info={
                     pre:null,
                     next:null,
-                    x:this.head_node_info.x-this.head_node_info.r*(i+1),
-                    y:this.head_node_info.y,
-                    // r:this.head_node_info.r,
-                    r:getRandomInt(15,55),
+                    x:pre_node.node_info.x-r,
+                    y:pre_node.node_info.y,
+                    r:r,
                 }   
 
                 node= new paNode01(node_info)         
@@ -280,7 +569,7 @@ function add_game_canvas_to_container(container_id) {
 
 
             }
-            console.log(this.node_list)
+            // console.log(this.node_list)
 
 
         }
@@ -326,11 +615,11 @@ function add_game_canvas_to_container(container_id) {
 
 
             ctx.strokeStyle = this.color
-            // ctx.strokeRect(this.draw_info.x,
-            //     this.draw_info.y,
-            //     this.draw_info.width,
-            //     this.draw_info.height
-            // )
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
+            )
             this.node_list.forEach(
                 e=>{
                     e.draw()
@@ -340,7 +629,7 @@ function add_game_canvas_to_container(container_id) {
             
             ctx.fillStyle=this.color1
             ctx.beginPath()
-            ctx.arc(this.target.x, this.target.y,30, 0, 2 * Math.PI)
+            ctx.arc(this.target.x, this.target.y,15, 0, 2 * Math.PI)
             ctx.closePath()
             ctx.fill()
 
@@ -414,6 +703,8 @@ function add_game_canvas_to_container(container_id) {
 
         
     }
+
+
 
 
     class template{
@@ -556,6 +847,92 @@ function add_game_canvas_to_container(container_id) {
                     }
                     
                     let temp_grid=new PA01()
+                    this.grid_list.push(temp_grid)
+
+                }
+
+            }
+        }
+
+        update(){
+            this.grid_list.forEach(
+                e=>{
+                    e.update()
+                }
+            )
+
+        }
+
+
+        draw(){
+            ctx.lineWidth = 8
+
+            ctx.strokeStyle = this.color
+            // ctx.strokeRect(this.draw_info.x,
+            //     this.draw_info.y,
+            //     this.draw_info.width,
+            //     this.draw_info.height
+            // )
+            this.grid_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+
+
+
+        }
+        
+    }
+
+
+    class arrayManager2{
+        width = canvas.width * 0.10
+        draw_info = {
+            x: canvas.width * 0.1,
+            y: canvas.height * 0.8,
+            width: this.width,
+            height: this.width ,
+        }
+
+        color=get_random_Color()
+        color1=get_random_Color()
+        color2=get_random_Color()
+
+
+        xy_range={
+            x_min:-1,
+            x_max:10,
+            y_min:-1,
+            y_max:5
+        }
+
+        grid_list=[]
+
+        constructor(draw_info){
+
+            if (draw_info){ this.draw_info=draw_info}
+            let n_row=getRandomInt(0,2)
+            let n_col=getRandomInt(0,2)
+
+            for (let i = 0; i < n_row; i++) {
+
+                for (let j = 0; j < n_col; j++) {
+
+
+                    let width=this.width/n_row
+                    let height=width
+                    let gap=20
+
+                    
+                    let draw_info={
+                        x: this.draw_info.x+j*(width+gap),
+                        y: this.draw_info.y+i*(height+gap),
+                        width: width,
+                        height: height,
+                    }
+                    
+                    let temp_grid=new PA02()
                     this.grid_list.push(temp_grid)
 
                 }
