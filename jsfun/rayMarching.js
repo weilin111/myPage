@@ -82,7 +82,7 @@ function add_game_canvas_to_container(container_id) {
         constructor(ctx, canvas) {
             this.ctx = ctx
 
-            this.simulator = new tkGeneratorLab(this)
+            this.simulator = new rayMarchingLab(this)
 
             this.canvas = canvas
             this.display = new Display(this, this.ctx)
@@ -135,7 +135,7 @@ function add_game_canvas_to_container(container_id) {
 
 
 
-    class tkGeneratorLab {
+    class rayMarchingLab {
 
         draw_position = {
             x: canvas.width * 0.25,
@@ -155,14 +155,7 @@ function add_game_canvas_to_container(container_id) {
             this.ctx = game.ctx
             this.game = game
 
-            
-            this.graph_list.push(new TK01() )
-            // this.graph_list.push(new PA02() )
-            if(Math.random()>0.5){
-
-                this.graph_list.push(new arrayManager() )
-            }
-            // this.graph_list.push(new arrayManager2() )
+            this.graph_list.push(new rayLab01() )
 
         }
 
@@ -217,7 +210,7 @@ function add_game_canvas_to_container(container_id) {
 
    
 
-    class TK01{
+    class rayLab01{
 
 
         width=canvas.width*0.8
@@ -233,80 +226,79 @@ function add_game_canvas_to_container(container_id) {
         color1=get_random_Color()
         color2=get_random_Color()
 
+        effect_list=[]
 
+        ray_list=[]
 
-        vessel_raw_section_rz_list=[
-            {r:1,z:1},
-            {r:2,z:1},
-            {r:2,z:0},
-            {r:2,z:-1},
-            {r:1,z:-1},
-            {r:1,z:0},
-        ]
-
-        vessel_info={
-            region_box:{left: 1 + 0.2*(Math.random()-0.5)*2  ,right:2+ 0.2*(Math.random()-0.5)*2,down: -1+ 0.2*(Math.random()-0.5)*2,up:   1+ 0.2*(Math.random()-0.5)*2,},
-            color:get_random_Color(),
-            lineWidth:this.draw_info.width/100/3*(Math.random()+0.5),
-
-        }
-
-
-        tf_info={
-            region_box:get_scale_box(this.vessel_info.region_box,1.2 + Math.random()*0.2 ),
-            w_range:[0.15,0.3],
-            h_range:[0.2,0.7],
-            box_list:[],
-            color:get_random_Color(),
-            number:getRandomInt(6,15),
-            thick:0.2+ 0.2* Math.random(),
-        }
-
-        cs_info={
-            region_box:{left: 0.1+0.5*Math.random(),right:this.tf_info.region_box.left,down: -2.0,up:   2.0,},
-            w_range:[0.15,0.3],
-            h_range:[0.2,0.7],
-            box_list:[],
-            color:get_random_Color(),
-        }
-        pf_info={
-            region_box:{left: this.cs_info.region_box.left,right:2.5+0.5*Math.random(),down: -2.0,up:   2.0,},
-            w_range:[0.05,0.25],
-            h_range:[0.2,0.7],
-            box_list:[],
-            color:get_random_Color(),
-
-        }
-
-        vessel_bessel=null
-        base_shape_list={
-
-        }
+        lineCollider_list=[]
 
         constructor(draw_info){
 
             if (draw_info){ this.draw_info=draw_info}
 
-            // let vessel_raw_section_xy_list=this.vessel_raw_section_rz_list.map(  (rz)=>{  return this.map_rz(rz)  }     )
-            // this.vessel_bessel=new BesselCurve(vessel_raw_section_xy_list)
+            this.get_big_box_collider()
 
-
-            this.pixel_per_meter=this.draw_info.width*0.1
-
-            let n_cs=10
-            for (let i = 0; i < n_cs; i++) {
-                this.propose_cs()                
+            for (let i = 0; i < getRandomInt(2,4); i++) {                
+                this.add_ray()
+            }
+            for (let i = 0; i < getRandomInt(3,20); i++) {                
+                this.add_random_collier()
             }
 
-            let n_pf=20
-            for (let i = 0; i < n_pf; i++) {
-                this.propose_pf()                
-            }
+
+
 
 
         }
 
+        add_ray(){
+            this.ray_list.push(
+                new ray(   this.get_random_position() ,this.get_random_diretion(),this.lineCollider_list )
+            )
+        }
+
+        get_random_position(){
+
+            return  [ this.draw_info.x+ Math.random()*this.draw_info.width  , this.draw_info.y+Math.random()*this.draw_info.height ]
+        }
+        get_random_diretion(){
+
+            let dx=math.random()-0.5
+            let dy=math.random()-0.5
+
+            let dl=Math.sqrt(dx*dx+dy*dy)
+
+            return  [ dx/dl,dy/dl ]
+        }
+
+
+        add_random_collier(){
+            this.lineCollider_list.push(  new lineCollider(  this.get_random_position(),this.get_random_position() )          )
+
+        }
+
+        get_curve_collider(){}
+
+        get_big_box_collider(){
+
+            this.lineCollider_list.push(  new lineCollider( [ this.draw_info.x ,this.draw_info.y  ],                                              [this.draw_info.x + this.draw_info.width ,this.draw_info.y ]    )   )
+            this.lineCollider_list.push(  new lineCollider( [ this.draw_info.x+this.draw_info.width ,this.draw_info.y  ],   [this.draw_info.x + this.draw_info.width ,this.draw_info.y+  this.draw_info.height ]    )   )
+            this.lineCollider_list.push(  new lineCollider( [ this.draw_info.x+this.draw_info.width ,this.draw_info.y+this.draw_info.height  ],   [this.draw_info.x  ,this.draw_info.y+this.draw_info.height ]    )   )
+            this.lineCollider_list.push(  new lineCollider( [ this.draw_info.x ,this.draw_info.y+this.draw_info.height  ],                         [this.draw_info.x  ,this.draw_info.y ]    )   )
+
+        }
+
         update(){
+
+            this.ray_list.forEach(
+                e=>{
+                    e.update()
+                }
+            )
+
+
+
+
         }
 
 
@@ -316,465 +308,284 @@ function add_game_canvas_to_container(container_id) {
             ctx.strokeStyle = this.color
             ctx.lineWidth=this.draw_info.width/100/4
 
-            // ctx.strokeRect(this.draw_info.x,
-            //     this.draw_info.y,
-            //     this.draw_info.width,
-            //     this.draw_info.height
-            // )
-
-
-            this.draw_vessel()
-            
-            this.draw_cs_coil()
-            this.draw_pf_coil()
-            this.draw_tf_coil()
-            this.draw_tk_plan()
-
-
-            ctx.closePath()
-            this.draw_center_cross_line()
-
-
-        }
-
-        draw_vessel(){
-
-            ctx.strokeStyle=this.vessel_info.color
-            ctx.save()
-            ctx.lineWidth=this.vessel_info.lineWidth
-            this.draw_box(this.vessel_info.region_box)
-            ctx.restore()
-
-        }
-
-
-        is_overlap(r1,r2){
-
-            let res=true
-
-            if (r1.right<=r2.left || r1.left>=r2.right) {
-                res=false
-            }
-
-            if (r1.up<=r2.down || r1.down>=r2.up) {
-                res=false
-                
-            }
-
-            return res
-        }
-
-
-        is_out(r1,r2){
-
-            let res=true
-
-            if (r1.left>r2.left && r1.right<r2.right ) {
-                if (r1.up<r2.up && r1.down>r2.down) {
-                    res=false
-                }
-            }
-                return res
-
-        }
-
-        draw_box(box){
-
-
-            let x_c= this.draw_info.x+this.draw_info.width/2
-            let y_c= this.draw_info.y+this.draw_info.height/2
-
-            let x=x_c +box.left *this.pixel_per_meter
-            let y=y_c +box.down  *this.pixel_per_meter
-
-            let w=(box.right-box.left)*this.pixel_per_meter
-            let h=(box.up-box.down)*this.pixel_per_meter
-            ctx.strokeRect( x,y,w,h )
-            ctx.stroke()
-
-
-        }
-        draw_box_fill(box){
-
-
-            let x_c= this.draw_info.x+this.draw_info.width/2
-            let y_c= this.draw_info.y+this.draw_info.height/2
-
-            let x=x_c +box.left *this.pixel_per_meter
-            let y=y_c +box.down  *this.pixel_per_meter
-
-            let w=(box.right-box.left)*this.pixel_per_meter
-            let h=(box.up-box.down)*this.pixel_per_meter
-            ctx.fillRect( x,y,w,h )
-            // ctx.stroke()
-
-
-        }
-
-
-        propose_box(rigion_box,w_range,h_range){
-
-            let left=rigion_box.left +  Math.random()*(rigion_box.right-rigion_box.left) 
-            let down=rigion_box.down +  Math.random()*(rigion_box.up-rigion_box.down) 
-            let new_box={
-                left : left,
-                right: left + w_range[0] +  Math.random()  *(w_range[1]-w_range[0]) ,
-                down : down, 
-                up   : down + h_range[0] +  Math.random()  *(h_range[1]-h_range[0]) ,
-            }
-            
-            if (this.is_out(new_box,rigion_box) ) {  return null }
-
-            return new_box
-        }
-
-        propose_cs(){
-
-            let box=this.propose_box(this.cs_info.region_box,this.cs_info.w_range,this.cs_info.h_range)
-
-
-            if (!box){return}
-
-            let overlap=false
-            this.cs_info.box_list.forEach(
-                e=>{
-                    if(this.is_overlap(e,box)){
-                        overlap=true
-                    }
-                }
-            )
-            if (overlap){return}
-
-            this.cs_info.box_list.push(box)
-            this.cs_info.box_list.push(this.get_symmetry_box(box))
-
-        }
-        propose_pf(){
-
-
-            let info=this.pf_info
-            let box=this.propose_box(info.region_box
-                                    ,info.w_range
-                                    ,info.h_range)
-
-
-            if (!box){return}
-
-            let overlap=false
-            info.box_list.forEach(
-                e=>{
-                    if(this.is_overlap(e,box)){
-                        overlap=true
-                    }
-                }
+            ctx.strokeRect(this.draw_info.x,
+                this.draw_info.y,
+                this.draw_info.width,
+                this.draw_info.height
             )
 
-            let box_list=[this.cs_info.region_box,
-                          this.vessel_info.region_box,
-                          this.tf_info.region_box ]
-            box_list.forEach(
+            this.ray_list.forEach(
                 e=>{
-                    if(this.is_overlap(e,box)){
-                        overlap=true
-                    }
+                    e.draw()
+                }
+            )
+            this.lineCollider_list.forEach(
+                e=>{
+                    e.draw()
                 }
             )
 
 
-            if (overlap){return}
-
-            info.box_list.push(box)
-            info.box_list.push(this.get_symmetry_box(box))
-
-        }
-
-
-
-
-        get_symmetry_box(box){
-
-            return {
-                left :box.left   ,
-                right:box.right  ,
-                up   :box.down*-1,
-                down :box.up  *-1,
-            }
-
-        }
-
-
-
-
-        draw_line(rz1,rz2){
-
-            ctx.beginPath()
-            let xy=this.map_rz(rz1)
-            let next_xy=this.map_rz(rz2)
-
-            ctx.moveTo( xy.x,xy.y  )
-            ctx.lineTo(next_xy.x,next_xy.y)
-
-            ctx.closePath()
-            ctx.stroke()
-
-        }
-
-        draw_center_cross_line(){
-
-
-            ctx.save()
-            ctx.lineWidth==this.draw_info.width/100/4
-            
-            this.draw_line( 
-                {r:3,z:0},
-                {r:-3,z:0}
-              )
-            this.draw_line( 
-                {r:0,z:3},
-                {r:0,z:-3}
-              )
-
-              ctx.restore()
- 
-
-        }
-
-        display_tk_parameter(){}
-
-        draw_cs_coil(){
-            ctx.strokeStyle=this.cs_info.color
-            this.cs_info.box_list.forEach(
-                e=>{
-                    this.draw_box(e)
-                }
-            )
-
-            // this.draw_box(this.cs_info.region_box)
-
-        }
-        draw_pf_coil(){
-
-            ctx.strokeStyle=this.pf_info.color
-            this.pf_info.box_list.forEach(
-                e=>{
-                    this.draw_box(e)
-                }
-            )
-
-            // this.draw_box(this.pf_info.region_box)
-
-        }
-
-
-        draw_tf_coil(){
-            ctx.strokeStyle=this.tf_info.color
-
-            this.draw_box(this.tf_info.region_box)
-
-        }
-
-
-        draw_tk_plan(){
-            
-
-            ctx.save()
-            
-            ctx.translate(-0.2*this.draw_info.width,0)
-            
-            
-            ctx.strokeStyle=this.vessel_info.color
-            let temp=ctx.lineWidth
-            ctx.lineWidth=this.vessel_info.lineWidth
-            this.draw_torus_from_box(this.vessel_info.region_box)
-            ctx.lineWidth=temp
-
-            ctx.strokeStyle=this.cs_info.color
-            
-            this.cs_info.box_list.forEach(
-                e=>{
-                    this.draw_torus_from_box(e)
-                }
-            )
-
-
-            ctx.strokeStyle=this.pf_info.color
-            this.pf_info.box_list.forEach(
-                e=>{
-                    this.draw_torus_from_box(e)
-                }
-            )
-            
-
-            ctx.strokeStyle=this.tf_info.color
-            let x_c= this.draw_info.x+this.draw_info.width/2
-            let y_c= this.draw_info.y+this.draw_info.height/2
-
-            let tf_plan_box={
-                            left: this.tf_info.region_box.left ,
-                            right:this.tf_info.region_box.right,
-                            up:   this.tf_info.thick/2         ,
-                            down: this.tf_info.thick/2*-1      ,
-                            }
-            
-            let n = this.tf_info.number
-            for (let i = 0; i < n; i++) {
-                ctx.translate(x_c,y_c)
-                ctx.rotate(  Math.PI*2  * 1/n   )
-                ctx.translate(-1*x_c,-1*y_c)
-
-                this.draw_box(tf_plan_box)
-            }
-
-
-
-            ctx.restore()
-
-
 
 
 
         }
-
-        draw_torus_from_box(box){
-            this.draw_circle(  box.left  )
-            this.draw_circle(  box.right  )
-        }
-
-        draw_circle(r){
-
-            let x_c= this.draw_info.x+this.draw_info.width/2
-            let y_c= this.draw_info.y+this.draw_info.height/2
-
-            ctx.beginPath()
-            ctx.arc(x_c, y_c, r*this.pixel_per_meter, 0, 2 * Math.PI)
-            ctx.closePath()
-            ctx.stroke()
-
-
-
-        }
-
-
-        map_rz(rz){
-
-            let x_c= this.draw_info.x+this.draw_info.width/2
-            let y_c= this.draw_info.y+this.draw_info.height/2
-
-            let x=x_c +rz.r*this.pixel_per_meter
-            let y=y_c +rz.z*this.pixel_per_meter
-
-            return  {x:x,y:y}
-
-        }
-
 
         
     }
 
 
 
+    class ray{
 
-    class BesselCurve {
+        
+        step_size=30
 
-        // position=[0,0]
+        position_list=[]
+        position_list_max=200
 
-        color = get_random_Color()
-        curve_color = get_random_Color()
-        control_points = [
-            { x: 100, y: 1500 },
-            { x: 200, y: 1600 },
-            { x: 300, y: 1500 },
-            // { x: 1300, y: 1500 },
-            { x: 400, y: 1600 },
-            // { x: 500, y: 1000 },
-        ]
-        curve_points = []
-        max_curve_points = 100
+        effect_list=[]
 
-        t = 0
-        t_direction = 1
+        color=get_random_Color()
 
-        constructor(control_points) {
-            if (control_points) {
-                this.control_points = control_points
-            }
-            this.make_bessel_curve()
+        constructor(position,direction,lineCollider_list){
+            this.position = position   //  [x,y]
+            this.direction= direction  //  [vx,vy]  in normal scale
+            this.lineCollider_list=lineCollider_list
+
+
+            console.log(lineCollider_list)
+
         }
 
-        update(deltaTime) {
 
-            this.t += deltaTime * this.t_direction
-            if (this.t > 1 || this.t < 0) {
-                this.t_direction *= -1
+        update(){
+            this.step()
+        }
+        
+        
+        draw(){
+            
+            
+            ctx.strokeStyle=this.color
+
+            for (let i = 0; i < this.position_list.length; i++) {
+                ctx.beginPath()
+                if(i<this.position_list.length-1){
+                    ctx.moveTo(  this.position_list[i][0],this.position_list[i][1] )
+                    ctx.lineTo(  this.position_list[i+1][0],this.position_list[i+1][1] )
+                }
+                ctx.closePath()
+                ctx.stroke()
+
             }
+
+
+            this.effect_list.forEach(
+                e => {
+                    if (!this.is_stop) { e.update() }
+                    e.draw()
+                }
+            )
+
+
+            this.effect_list = this.effect_list.filter(
+                e => {
+                    return e.frame >= 0
+                }
+            )
         }
 
-        draw() {
 
-            let move_point = this.get_point_along_curve(this.t)
+        step(){
 
-            ctx.fillStyle = this.color
-            // ctx.beginPath()
-            // ctx.arc(move_point[0], move_point[1], 8, 0, Math.PI * 2)
-            // ctx.fill()
-            // ctx.closePath()
 
-            // this.control_points.forEach(
-            //     e => {
-            //         ctx.fillStyle = this.color
-            //         ctx.beginPath()
-            //         ctx.arc(e.x, e.y, 10, 0, Math.PI * 2)
-            //         ctx.fill()
-            //         ctx.closePath()
-            //     }
-            // )
+            let next_pos=[this.position[0]+ this.direction[0] * this.step_size,
+                          this.position[1]+ this.direction[1] * this.step_size ]
 
-            ctx.beginPath()
-            this.curve_points.forEach(
-                (e, i) => {
-                    // console.log(e)
-                    if (i != this.curve_points.length - 1) {
-                        if (i == 0) {
-                            ctx.moveTo(e[0], e[1])
-                        }
-                        ctx.strokeStyle = this.curve_color
-                        ctx.lineTo(this.curve_points[i + 1][0], this.curve_points[i + 1][1])
+
+            let bool_trigger=false
+            this.lineCollider_list.forEach(
+                lc=>{
+                if(lc.check_trigger(this.position,next_pos)){
+                        let cross_point=lc.change_ray_direction(this,next_pos)
+                        this.effect_list.push( new Effect(ctx,this.position) )
+                        bool_trigger=true
+                        // console.log("trigger")
                     }
                 }
             )
-            let i = this.curve_points.length - 1
-            // ctx.moveTo(this.curve_points[i][0], this.curve_points[i][1])
-            // ctx.lineTo(this.curve_points[0][0], this.curve_points[0][1])
+            if (bool_trigger==false){
+                this.position=next_pos
+                this.position_list.push(   next_pos  )
+            }
+
+            if (this.position_list.length>this.position_list_max){ 
+                this.position_list.shift()
+              }
+
+        }
+
+    }
+
+
+    class wave{}
+
+    class waveSource{}
+
+
+    class curveCollider{
+
+    }
+
+
+    
+    class lineCollider{
+
+
+        constructor(p1,p2){
+            this.p1=p1
+            this.p2=p2
+
+            let v=[p2[0]-p1[0],p2[1]-p1[1]]
+            let n=[-1*v[1],v[0]]
+            this.normal=this.normalize(n)
+
+        }
+        color=get_random_Color()
+
+        check_trigger(pos,next_post){
+
+            let a=this.p1
+            let b=this.p2
+
+            let c=pos
+            let d=next_post
+
+            // console.log(c,d)
+
+
+            if (  Math.max(c[0],d[0])<Math.min(a[0],b[0]) ||  Math.max(a[0],b[0])<Math.min(c[0],d[0]) ||  Math.max(c[1],d[1])<Math.min(a[1],b[1]) ||  Math.max(a[1],b[1])<Math.min(c[1],d[1])       ){
+                return false
+            }
+
+            let dc=[c[0]-d[0], c[1]-d[1]]
+            let db=[b[0]-d[0], b[1]-d[1]]
+            let da=[a[0]-d[0], a[1]-d[1]]
+
+            let bd=[d[0]-b[0], d[1]-b[1]]
+            let bc=[c[0]-b[0], c[1]-b[1]]
+            let ba=[a[0]-b[0], a[1]-b[1]]
+
+            // console.log(c,d)
+
+            if ( this.cross(da,dc)*this.cross(db,dc)>0 ||  this.cross(bd,ba)*this.cross(bc,ba)>0        ){
+                return false
+
+            }
+
+
+            return true
+
+        }
+
+        cross(v1,v2){
+
+            return v1[0]*v2[1]-v1[1]*v2[0]
+        }
+
+        dot(v1,v2){
+            return v1[0]*v2[0]+v1[1]*v2[1]
+        }
+
+        normalize(v){
+            let dl=Math.sqrt( v[0]*v[0]+v[1]*v[1] )
+
+            return [ v[0]/dl,v[1]/dl ]
+        }
+
+
+        get_cross_point(pos,next_pos){
+
+            let a=this.p1
+            let b=this.p2
+            let c=pos
+            let d=next_pos
+
+
+            let ca=[a[0]-c[0],a[1]-c[1]]
+            let dc=[c[0]-d[0],c[1]-d[1]]
+            let ba=[a[0]-b[0],a[1]-b[1]]
+
+            let t=this.cross(ca,dc)/this.cross(ba,dc)
+
+            //https://www.cnblogs.com/huntto/p/17492406.html
+            let p=[ a[0]+t* (b[0]-a[0]),
+                    a[1]+t* (b[1]-a[1])   ]
+
+
+            return p
+
+
+        }
+
+        change_ray_direction(ray,next_pos){
+
+
+            let p= this.get_cross_point(ray.position,next_pos)
+
+            let dot_value=this.dot(ray.direction,this.normal)
+            let direction_sign= dot_value<0 ? 1:-1
+            dot_value=Math.abs(dot_value)
+            let vec_n= [direction_sign * dot_value *this.normal[0],direction_sign * dot_value *this.normal[1] ]              //projection
+
+            // console.log([p,dot_value,direction_sign,this.normal,vec_n,ray.direction])
+
+            let new_direction= [ray.direction[0]+vec_n[0]*2,ray.direction[1]+vec_n[1]*2]
+            ray.direction=new_direction
+
+            ray.position_list.push(p)
+
+            let new_position=[p[0]+new_direction[0]*ray.step_size,p[1]+new_direction[1]*ray.step_size]
+            ray.position=new_position
+            ray.position_list.push(new_position)
+
+            // ray.color=get_random_Color()
+
+            return p
+
+        }
+
+        update(){}
+
+        draw(){
+
+            ctx.save()
+
+            ctx.lineWidth=10
+            ctx.strokeStyle=this.color
+            this.draw_line(this.p1,this.p2)
+
+            ctx.restore()
+
+        }
+
+
+        draw_line(p1,p2){
+
+
+            ctx.beginPath()
+
+            ctx.moveTo( p1[0],p1[1]  )
+            ctx.lineTo( p2[0],p2[1]  )
 
             ctx.closePath()
-            ctx.fillStyle = this.color
-            ctx.fill()
-            // ctx.stroke()
-        }
+            ctx.stroke()
 
-
-        get_point_along_curve(t) {
-            // t  in [0,1]
-            let n = this.control_points.length - 1
-            let position = [0, 0]
-            for (let i = 0; i < this.control_points.length; i++) {
-                position[0] += binomial(n, i) * this.control_points[i].x * Math.pow((1 - t), n - i) * Math.pow((t), i)
-                position[1] += binomial(n, i) * this.control_points[i].y * Math.pow((1 - t), n - i) * Math.pow((t), i)
-            }
-            return position
-        }
-
-        make_bessel_curve() {
-            let t = 0
-            for (let i = 0; i <= this.max_curve_points; i++) {
-                this.curve_points.push(this.get_point_along_curve(t))
-                t = i / this.max_curve_points
-            }
         }
 
 
     }
-
 
 
 
@@ -832,45 +643,6 @@ function add_game_canvas_to_container(container_id) {
 
 
 
-    var random_select=(list)=>{
-
-        let res = null
-        res= list[ Math.floor(  Math.random()*list.length )  ]
-        return res
-    }
-
-    var random_range=(range,width)=>{
-
-        let left=range[0]
-        let right=range[1]
-
-
-
-        let bigWidth=right-left
-        let new_left =0
-        let new_right=0
-
-        if (bigWidth>width){
-            new_left=left + Math.random()*(bigWidth-width)
-            new_right=new_left+width
-        }
-        else{
-            new_left=left + Math.random()*(bigWidth-width)
-            new_right=new_left+width
-        }
-
-
-
-
-        return [new_left,new_right]
-    }
-    var random_value=(range)=>{
-        let width=range[1]-range[0]
-        return range[0]+Math.random()*width
-    }
-
-
-
 
 
     class arrayManager{
@@ -919,93 +691,7 @@ function add_game_canvas_to_container(container_id) {
                         height: height,
                     }
                     
-                    let temp_grid=new TK01(draw_info)
-                    this.grid_list.push(temp_grid)
-
-                }
-
-            }
-        }
-
-        update(){
-            this.grid_list.forEach(
-                e=>{
-                    e.update()
-                }
-            )
-
-        }
-
-
-        draw(){
-            ctx.lineWidth = 8
-
-            ctx.strokeStyle = this.color
-            // ctx.strokeRect(this.draw_info.x,
-            //     this.draw_info.y,
-            //     this.draw_info.width,
-            //     this.draw_info.height
-            // )
-            this.grid_list.forEach(
-                e=>{
-                    e.draw()
-                }
-            )
-
-
-
-        }
-        
-    }
-
-
-    class arrayManager2{
-        width = canvas.width * 0.25
-        draw_info = {
-            x: canvas.width * 0.1,
-            y: canvas.height * 0.7,
-            width: this.width,
-            height: this.width ,
-        }
-
-        color=get_random_Color()
-        color1=get_random_Color()
-        color2=get_random_Color()
-
-
-        xy_range={
-            x_min:-1,
-            x_max:10,
-            y_min:-1,
-            y_max:5
-        }
-
-        grid_list=[]
-
-        constructor(draw_info){
-
-            if (draw_info){ this.draw_info=draw_info}
-            let n_row=getRandomInt(0,2)
-            let n_col=getRandomInt(0,2)
-
-            for (let i = 0; i < n_row; i++) {
-
-                for (let j = 0; j < n_col; j++) {
-
-
-                    let width=this.width/n_row
-                    let height=width
-                    let gap=20
-
-                    
-                    let draw_info={
-                        x: this.draw_info.x+j*(width+gap),
-                        y: this.draw_info.y+i*(height+gap),
-                        width: width,
-                        height: height,
-                    }
-                    
-                    let temp_grid=new PA02()
+                    let temp_grid=new rayLab01(draw_info)
                     this.grid_list.push(temp_grid)
 
                 }
@@ -1046,10 +732,6 @@ function add_game_canvas_to_container(container_id) {
 
 
 
- 
-
-
-    
 
 
 
@@ -1077,8 +759,8 @@ function add_game_canvas_to_container(container_id) {
                         case 68:
                             break;
                         case 97:
-                        case 65:
                             break;
+
                         case 115:
                         case 83:
                             break;
@@ -1121,6 +803,12 @@ function add_game_canvas_to_container(container_id) {
                         case 80:
                             // p
                             game.is_stop = !game.is_stop
+                            break;
+                        case 65:
+                            game.simulator.graph_list[0].add_ray()
+                            break;
+                        case 83:
+                            game.simulator.graph_list[0].add_random_collier()
                             break;
 
                         default:
