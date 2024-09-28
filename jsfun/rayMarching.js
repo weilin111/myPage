@@ -229,6 +229,8 @@ function add_game_canvas_to_container(container_id) {
         effect_list=[]
 
         ray_list=[]
+        
+        wave_source_list=[]
 
         lineCollider_list=[]
 
@@ -241,9 +243,14 @@ function add_game_canvas_to_container(container_id) {
             for (let i = 0; i < getRandomInt(2,4); i++) {                
                 this.add_ray()
             }
+            for (let i = 0; i < getRandomInt(2,4); i++) {                
+                this.add_wave_source()
+            }
             for (let i = 0; i < getRandomInt(3,20); i++) {                
                 this.add_random_collier()
             }
+
+
 
 
 
@@ -254,6 +261,11 @@ function add_game_canvas_to_container(container_id) {
         add_ray(){
             this.ray_list.push(
                 new ray(   this.get_random_position() ,this.get_random_diretion(),this.lineCollider_list )
+            )
+        }
+        add_wave_source(){
+            this.wave_source_list.push(
+                new waveSource(   this.get_random_position() ,this.lineCollider_list )
             )
         }
 
@@ -296,6 +308,12 @@ function add_game_canvas_to_container(container_id) {
                 }
             )
 
+            this.wave_source_list.forEach(
+                e=>{
+                    e.update()
+                }
+            )
+
 
 
 
@@ -324,6 +342,11 @@ function add_game_canvas_to_container(container_id) {
                     e.draw()
                 }
             )
+            this.wave_source_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
 
 
 
@@ -339,7 +362,7 @@ function add_game_canvas_to_container(container_id) {
     class ray{
 
         
-        step_size=30
+        step_size=15
 
         position_list=[]
         position_list_max=200
@@ -358,6 +381,7 @@ function add_game_canvas_to_container(container_id) {
 
         }
 
+        is_draw_line=true
 
         update(){
             this.step()
@@ -367,6 +391,8 @@ function add_game_canvas_to_container(container_id) {
         draw(){
             
             
+            if (!this.is_draw_line){return}
+
             ctx.strokeStyle=this.color
 
             for (let i = 0; i < this.position_list.length; i++) {
@@ -429,9 +455,152 @@ function add_game_canvas_to_container(container_id) {
     }
 
 
-    class wave{}
+    class wave{
 
-    class waveSource{}
+        color=get_random_Color()
+
+
+        life=0
+
+
+        constructor(position,lineCollider_list){
+
+            this.position=position
+            this.ray_list=[]
+            this.broken_link={}
+
+            let n=480
+            for (let i = 0; i < n; i++) {
+
+                let theta=i/n*Math.PI*2
+                let direction=[ Math.sin(theta),Math.cos(theta)  ]
+                let ray_instance=new ray(position,direction,lineCollider_list)
+                ray_instance.is_draw_line=false
+                ray_instance.step_size*=0.2
+                ray_instance.position_list_max=2
+                this.ray_list.push(ray_instance)
+
+
+            }
+
+
+        }
+
+
+        update(){
+
+            this.life+=1
+
+            this.ray_list.forEach(
+                e=>{
+                    e.update()
+                }
+            )
+        }
+        
+        draw(){
+
+            ctx.strokeStyle=this.color
+            ctx.beginPath()
+
+            let link_distance_max=80
+
+            for (let i = 0; i < this.ray_list.length; i++) {
+                if(i<this.ray_list.length-1){
+
+                    let p1=this.ray_list[i].position
+                    let p2=this.ray_list[i+1].position
+                    if ( this.get_disrance(p1,p2)>link_distance_max  ){
+                        this.broken_link[""+i]=1
+                    }
+                    if(this.broken_link[""+i]){continue}
+                    ctx.moveTo(   p1[0],p1[1] )
+                    ctx.lineTo(   p2[0],p2[1] )
+                }
+                else{
+
+
+                    let p1=this.ray_list[i].position
+                    let p2=this.ray_list[0].position
+                    if ( this.get_disrance(p1,p2)>link_distance_max  ){
+                        this.broken_link[""+i]=1
+                    }
+                    if(this.broken_link[""+i]){continue}
+                    ctx.moveTo(   p1[0],p1[1] )
+                    ctx.lineTo(   p2[0],p2[1] )
+                }
+            }
+            ctx.closePath()
+            ctx.stroke()
+
+
+        }
+
+        get_disrance(p1,p2){
+            let dx=p2[0]-p1[0]
+            let dy=p2[1]-p1[1]
+            return math.sqrt( dx*dx+dy*dy )
+        }
+
+
+
+
+
+    }
+
+    class waveSource{
+
+        timer=0
+        timer_max=250
+
+        wave_list=[]
+
+        wave_life_max=10000
+
+        constructor(position,lineCollider_list){
+            this.position=position
+            this.lineCollider_list=lineCollider_list
+            this.wave_list.push(new wave(this.position,this.lineCollider_list))
+
+            console.log("13")
+
+        }
+
+
+        update(){
+
+            this.timer+=1
+            if (this.timer>this.timer_max){
+                this.timer=0
+                this.wave_list.push(new wave(this.position,this.lineCollider_list))
+            }
+
+
+            this.wave_list.filter(
+                e=>{
+                    e.life<=this.wave_life_max
+                }
+            )
+
+            this.wave_list.forEach(
+                e=>{
+                    e.update()
+                }
+            )
+        }
+
+        draw(){
+
+            this.wave_list.forEach(
+                e=>{
+                    e.draw()
+                }
+            )
+
+        }
+
+
+    }
 
 
     class curveCollider{
@@ -546,7 +715,7 @@ function add_game_canvas_to_container(container_id) {
 
             ray.position_list.push(p)
 
-            let new_position=[p[0]+new_direction[0]*ray.step_size,p[1]+new_direction[1]*ray.step_size]
+            let new_position=[p[0]+new_direction[0]*ray.step_size*0.05,p[1]+new_direction[1]*ray.step_size*0.05]
             ray.position=new_position
             ray.position_list.push(new_position)
 
