@@ -234,6 +234,8 @@ function add_game_canvas_to_container(container_id) {
 
         lineCollider_list=[]
 
+        curve_lineCollider_list=[]
+
         constructor(draw_info){
 
             if (draw_info){ this.draw_info=draw_info}
@@ -246,9 +248,13 @@ function add_game_canvas_to_container(container_id) {
             for (let i = 0; i < getRandomInt(2,4); i++) {                
                 this.add_wave_source()
             }
-            for (let i = 0; i < getRandomInt(3,20); i++) {                
+            for (let i = 0; i < getRandomInt(3,10); i++) {                
                 this.add_random_collier()
             }
+            for (let i = 0; i < getRandomInt(2,4); i++) {                
+                this.add_random_curve_collider()
+            }
+
 
 
 
@@ -289,7 +295,10 @@ function add_game_canvas_to_container(container_id) {
 
         }
 
-        get_curve_collider(){}
+        add_random_curve_collider(){
+            this.curve_lineCollider_list.push(  new curveCollider(  this.get_random_position(),this.get_random_position(), -1+2*Math.random(),25,this.lineCollider_list  )          )
+
+        }
 
         get_big_box_collider(){
 
@@ -394,6 +403,7 @@ function add_game_canvas_to_container(container_id) {
             if (!this.is_draw_line){return}
 
             ctx.strokeStyle=this.color
+            ctx.lineWidth=5
 
             for (let i = 0; i < this.position_list.length; i++) {
                 ctx.beginPath()
@@ -605,6 +615,65 @@ function add_game_canvas_to_container(container_id) {
 
     class curveCollider{
 
+
+        sub_lineCollider_list=[]
+        constructor(p1,p2,factor,point_number,lineCollider_list){
+
+            this.p1=p1
+            this.p2=p2
+            this.factor=factor
+            this.lineCollider_list=lineCollider_list
+            this.color=get_random_Color()
+            let dx=p2[0]-p1[0]
+            let dy=p2[1]-p1[1] 
+            let dl=Math.sqrt( dx*dx+dy*dy  )
+        
+            let x_vector=[ dx/dl, dy/dl  ]
+            let y_vector=[ -dy/dl,dx/dl  ]
+
+            let temp_p=[ p2[0]/2+p1[0]/2, p2[1]/2+p1[1]/2 ]  // mid point of p1 and p2
+
+
+            this.p0=[  temp_p[0] + factor*y_vector[0]   ,temp_p[1] + factor*y_vector[1]       ]
+
+            let a=Math.abs(  factor*4  )  // y=ax^2
+
+            let temp_point_list=[]
+            for (let i = 0; i <= point_number; i++) {
+                
+                let x=-0.5+ (i/point_number *  1)
+                let y= a*x*x
+                temp_point_list.push(   this.map_vector(this.p0,x*dl,y*dl,x_vector,y_vector) )
+
+            }
+
+
+            for (let i = 0; i < temp_point_list.length-1; i++) {
+
+                let p1=temp_point_list[i]
+                let p2=temp_point_list[i+1]
+                let lc=new lineCollider(  p1,p2 ) 
+                lc.color=this.color
+                this.lineCollider_list.push(lc)
+                this.sub_lineCollider_list.push(lc)
+            }
+
+
+        }
+
+
+        map_vector(p0,x,y,v_x,v_y){
+            
+            
+            
+            return [p0[0]+x*v_x[0] +y*v_y[0]  ,  p0[1]+ x*v_x[1] +y*v_y[1]   ]
+
+        }
+
+
+
+
+
     }
 
 
@@ -619,9 +688,9 @@ function add_game_canvas_to_container(container_id) {
             let v=[p2[0]-p1[0],p2[1]-p1[1]]
             let n=[-1*v[1],v[0]]
             this.normal=this.normalize(n)
+            this.color=get_random_Color()
 
         }
-        color=get_random_Color()
 
         check_trigger(pos,next_post){
 
